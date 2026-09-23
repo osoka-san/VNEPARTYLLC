@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "sdk_version": "3.0.1",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "vne-portal",
+      "version": "0.1.0",
+      "title": "VNE Portal"
+    },
+    "tools": [
+      {
+        "name": "get_brand_identity",
+        "title": "Айдентика ВНЕ",
+        "description": "Публичные материалы бренда ВНЕ: палитра, шрифты и векторный знак Flow.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_portal_links",
+        "title": "Звенья портала",
+        "description": "Три звена эмблемы портала ВНЕ: порядок, цвет, точка привязки и файлы SVG.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_site_copy",
+        "title": "Тексты первого экрана",
+        "description": "Публичные русские тексты первого экрана сайта ВНЕ: надписи, кнопки и текст диалога.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
