@@ -1,0 +1,201 @@
+{
+  "version": 2,
+  "date": "2026-09-23",
+  "files": [
+    {
+      "path": "KNOWLEDGE.md",
+      "bytes": 5873,
+      "sha256": "a90391c3d7ea6f1ac953e7d7ba2d9258b7c0f088950683e7a8b36fe0105d5c69"
+    },
+    {
+      "path": "PROMPT.md",
+      "bytes": 32992,
+      "sha256": "16a09da38bd672d02776f481fc4a958eec5659f924464df83471d3d99c65ca2e"
+    },
+    {
+      "path": "README_RU.md",
+      "bytes": 9136,
+      "sha256": "ae4a777181866d2fee0033ca68bb83bf77c6d2b7b5e942ce49a35f0bc797e6d4"
+    },
+    {
+      "path": "docs/VNE_Fonts_Preview.png",
+      "bytes": 99269,
+      "sha256": "ee219da7ebd1bca660e9c20e95fb257106166469399ac926ae3f2743c83dde20"
+    },
+    {
+      "path": "docs/font-audit.json",
+      "bytes": 96295,
+      "sha256": "b724fd663499d4f834f55469b16d6a7418e5105c4b017edce66d5b7b57c03ff0"
+    },
+    {
+      "path": "fonts/HealthGoth-Regular.woff2",
+      "bytes": 21376,
+      "sha256": "af28e09389991c595c0e04bdab5dd4c6cafa64c503993295490b52ad002e3942"
+    },
+    {
+      "path": "fonts/Onest-Variable.woff2",
+      "bytes": 84012,
+      "sha256": "7d1b7816399d18ebcd6ac95de85e07a2baef435a5d11e8ff0963e4204041724f"
+    },
+    {
+      "path": "fonts/README.md",
+      "bytes": 3985,
+      "sha256": "408c130e0ccd1332df0ffe9182d97f432e5cf0ff29b9c21e36a4634c57ff44e4"
+    },
+    {
+      "path": "fonts/Unbounded-Variable.woff2",
+      "bytes": 259524,
+      "sha256": "509ba447407886d147ebda9a6520afeb6d13f3e76e9e1948bd0f09ed0472237d"
+    },
+    {
+      "path": "fonts/fonts.css",
+      "bytes": 1190,
+      "sha256": "6310e014f31a54632ef009b35e7302365bf7a0b2f70b670b1e3e7d2010632479"
+    },
+    {
+      "path": "fonts/licenses/HealthGoth-OFL.txt",
+      "bytes": 4365,
+      "sha256": "8753c016d5342415d33fe5db887e8ac2283f62f1401bea9a47b55f47e1532aef"
+    },
+    {
+      "path": "fonts/licenses/HealthGoth-README.txt",
+      "bytes": 494,
+      "sha256": "a01f092b9aef284ebbbd381b1f8e5cd1f24bc087e6e7c7341a6c4d4e4b0ded10"
+    },
+    {
+      "path": "fonts/licenses/Onest-OFL.txt",
+      "bytes": 4384,
+      "sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc"
+    },
+    {
+      "path": "fonts/licenses/Unbounded-OFL.txt",
+      "bytes": 4485,
+      "sha256": "8f34e6e20f569b9ca4cd645e30726cf373c0c937f5cab5bd437eae7da23adda6"
+    },
+    {
+      "path": "public/brand/portal/portal-front-profiles-preview.png",
+      "bytes": 19878,
+      "sha256": "6166b8c1320933ca30809f50c8fdf05d17687d41c034243bce46f961dd0a40f6"
+    },
+    {
+      "path": "public/brand/portal/portal-front-profiles.svg",
+      "bytes": 1583,
+      "sha256": "f7f20ab573b15669f39f53e628d2f7c62aa1a94767592026dfe88d8c0f213fae"
+    },
+    {
+      "path": "public/brand/portal/portal-geometry-only.svg",
+      "bytes": 1833,
+      "sha256": "78bffc3a1fab1a2b6e3d388e076b5d90c3c9309e553c85ef4863791ffac7bbe9"
+    },
+    {
+      "path": "public/brand/portal/portal-link-01-front-profile.svg",
+      "bytes": 731,
+      "sha256": "f30efedde34dd3b2ae738afe935c1174530327c43f9b0e08af8a231f78472dbb"
+    },
+    {
+      "path": "public/brand/portal/portal-link-01.svg",
+      "bytes": 3352,
+      "sha256": "47c5518af118116b0b0820a161353791f71dc16617c677c5f4caa3f3768b9fd8"
+    },
+    {
+      "path": "public/brand/portal/portal-link-02-front-profile.svg",
+      "bytes": 744,
+      "sha256": "e222c4e0495397531f17a66da5b9b6166b29a56fbbc5f71834a031c5f80c3d95"
+    },
+    {
+      "path": "public/brand/portal/portal-link-02.svg",
+      "bytes": 3390,
+      "sha256": "c1f79e6e0f27105da1562d740537c55ff73952c126ec660b5496324fdf83e4a3"
+    },
+    {
+      "path": "public/brand/portal/portal-link-03-front-profile.svg",
+      "bytes": 751,
+      "sha256": "9d9ec7df5baf148a8c4966acd841c2315218344f66a1e1918e3a19b6f64bd8ed"
+    },
+    {
+      "path": "public/brand/portal/portal-link-03.svg",
+      "bytes": 3403,
+      "sha256": "aae9b5f4c4be79940895fc73ed2cb70fb77930aa2735ace5f9234b0765efd3bb"
+    },
+    {
+      "path": "public/brand/portal/portal-manifest.json",
+      "bytes": 7904,
+      "sha256": "19d54ebcd3abf07465325daaf8e4bf933b8ed0e93748c66c7d83baeb87d6835f"
+    },
+    {
+      "path": "public/brand/portal/portal-master.svg",
+      "bytes": 4938,
+      "sha256": "8986481793ce85aeffbae291adf070845ab529e00f2bc8f4b4106c31bf37198d"
+    },
+    {
+      "path": "public/brand/portal/portal-preview-dark.png",
+      "bytes": 23710,
+      "sha256": "98d9d9b270dbc47f8f79dc15f45eca4a4833b9dc5bde1d4f91327cde1f62c007"
+    },
+    {
+      "path": "public/brand/wordmark/wordmark-flow-light.svg",
+      "bytes": 11991,
+      "sha256": "3f62bd914c9b371a18c02a8eb0be447a1789df85db8f2a94e6e8b4e15abd6900"
+    },
+    {
+      "path": "public/brand/wordmark/wordmark-flow-preview-dark.png",
+      "bytes": 70082,
+      "sha256": "28b612440de658de304a7f4c83e89bf29102bc0487f51a3da2390fda8c883a79"
+    },
+    {
+      "path": "public/brand/wordmark/wordmark-flow.svg",
+      "bytes": 11984,
+      "sha256": "e2e77405bf458fb8315b03d828f8e8b0790807927cdc35c594b9ca764d1b42e5"
+    },
+    {
+      "path": "public/brand/wordmark/wordmark-manifest.json",
+      "bytes": 1156,
+      "sha256": "4e3295536cd014c99c60fa0e92dd080932bee45ae52265fb0d194ef6627f6cda"
+    },
+    {
+      "path": "public/fonts/HealthGoth-Regular.woff2",
+      "bytes": 21376,
+      "sha256": "af28e09389991c595c0e04bdab5dd4c6cafa64c503993295490b52ad002e3942"
+    },
+    {
+      "path": "public/fonts/Onest-Variable.woff2",
+      "bytes": 84052,
+      "sha256": "7d1cf238acc03d8181e44b512af02516a33f93646a571581e29788644df9f088"
+    },
+    {
+      "path": "public/fonts/README.md",
+      "bytes": 3985,
+      "sha256": "408c130e0ccd1332df0ffe9182d97f432e5cf0ff29b9c21e36a4634c57ff44e4"
+    },
+    {
+      "path": "public/fonts/Unbounded-Variable.woff2",
+      "bytes": 259688,
+      "sha256": "3cdead71a29c8feac5ff40a02ff1e5544c83488b6f57e5fb405a13bae183f644"
+    },
+    {
+      "path": "public/fonts/fonts.css",
+      "bytes": 1190,
+      "sha256": "6310e014f31a54632ef009b35e7302365bf7a0b2f70b670b1e3e7d2010632479"
+    },
+    {
+      "path": "public/fonts/licenses/HealthGoth-OFL.txt",
+      "bytes": 4365,
+      "sha256": "8753c016d5342415d33fe5db887e8ac2283f62f1401bea9a47b55f47e1532aef"
+    },
+    {
+      "path": "public/fonts/licenses/HealthGoth-README.txt",
+      "bytes": 494,
+      "sha256": "a01f092b9aef284ebbbd381b1f8e5cd1f24bc087e6e7c7341a6c4d4e4b0ded10"
+    },
+    {
+      "path": "public/fonts/licenses/Onest-OFL.txt",
+      "bytes": 4384,
+      "sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc"
+    },
+    {
+      "path": "public/fonts/licenses/Unbounded-OFL.txt",
+      "bytes": 4485,
+      "sha256": "8f34e6e20f569b9ca4cd645e30726cf373c0c937f5cab5bd437eae7da23adda6"
+    }
+  ]
+}
