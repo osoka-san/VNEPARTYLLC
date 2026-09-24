@@ -1,0 +1,56 @@
+
+ ⛅️ wrangler 4.136.3
+────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mIgnoring this import because "server/_runtime.mjs" was marked as having no side effects[0m [ignored-bare-import]
+
+    server/_ssr/server-CsSRifWF.mjs:1:7:
+[37m      1 │ import [32m"../_runtime.mjs"[37m;
+        ╵        [32m~~~~~~~~~~~~~~~~~[0m
+
+  "sideEffects" is false in the enclosing "package.json" file:
+
+    ../package.json:4:2:
+[37m      4 │   [32m"sideEffects"[37m: false,
+        ╵   [32m~~~~~~~~~~~~~[0m
+
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://localhost:4173
+[wrangler:info] GET / 200 OK (266ms)
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mkj::getCaughtExceptionAsKj() = rust/cxx/kj-rs-io/ffi.rs:159: disconnected: write(): Connection reset by peer (os error 104)[0m
+
+  stack: /tmp/bunx-0-wrangler@latest/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5684373 /tmp/bunx-0-wrangler@latest/node_modules/@cloudflare/workerd-linux-64/bin/workerd@56881b7 /tmp/bunx-0-wrangler@latest/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5688528 /tmp/bunx-0-wrangler@latest/node_modules/@cloudflare/workerd-linux-64/bin/workerd@3089bd0 /tmp/bunx-0-wrangler@latest/node_modules/@cloudflare/workerd-linux-64/bin/workerd@21e2e77
+
+
+[wrangler:info] GET / 200 OK (15ms)
+[wrangler:info] GET /brand/wordmark/wordmark-flow-light.svg 200 OK (7ms)
+[wrangler:info] GET /assets/routes-Caz60NJy.js 200 OK (15ms)
+[wrangler:info] GET /assets/PortalLoadingFallback-ChbRlBsf.js 200 OK (15ms)
+[wrangler:info] GET /fonts/fonts.css 200 OK (17ms)
+[wrangler:info] GET /assets/styles-Tbz-6LPB.css 200 OK (17ms)
+[wrangler:info] GET /assets/index-CmVko8va.js 200 OK (17ms)
+[wrangler:info] GET /fonts/Onest-Variable.woff2 200 OK (5ms)
+[wrangler:info] GET /fonts/Unbounded-Variable.woff2 200 OK (6ms)
+[wrangler:info] GET /assets/PortalScene-BWCeDAcX.js 200 OK (8ms)
+[wrangler:info] GET / 200 OK (16ms)
+[wrangler:info] GET /brand/wordmark/wordmark-flow-light.svg 200 OK (11ms)
+[wrangler:info] GET /assets/routes-Caz60NJy.js 200 OK (11ms)
+[wrangler:info] GET /assets/styles-Tbz-6LPB.css 200 OK (15ms)
+[wrangler:info] GET /fonts/fonts.css 200 OK (16ms)
+[wrangler:info] GET /assets/index-CmVko8va.js 200 OK (15ms)
+[wrangler:info] GET /assets/PortalLoadingFallback-ChbRlBsf.js 200 OK (30ms)
+[wrangler:info] GET /fonts/Unbounded-Variable.woff2 200 OK (5ms)
+[wrangler:info] GET /fonts/Onest-Variable.woff2 200 OK (9ms)
+[wrangler:info] GET /brand/portal/portal-master.svg 200 OK (7ms)
+[wrangler:info] GET / 200 OK (9ms)
+[wrangler:info] GET /brand/wordmark/wordmark-flow-light.svg 200 OK (6ms)
+[wrangler:info] GET /fonts/fonts.css 200 OK (5ms)
+[wrangler:info] GET /assets/styles-Tbz-6LPB.css 200 OK (6ms)
+[wrangler:info] GET /assets/index-CmVko8va.js 200 OK (11ms)
+[wrangler:info] GET /assets/PortalLoadingFallback-ChbRlBsf.js 200 OK (11ms)
+[wrangler:info] GET /assets/routes-Caz60NJy.js 200 OK (11ms)
+[wrangler:info] GET /fonts/Onest-Variable.woff2 200 OK (3ms)
+[wrangler:info] GET /fonts/Unbounded-Variable.woff2 200 OK (5ms)
+[wrangler:info] GET /assets/PortalScene-BWCeDAcX.js 200 OK (3ms)
+[wrangler:info] GET /brand/portal/portal-master.svg 200 OK (5ms)
+🪵  Logs were written to "/root/.config/.wrangler/logs/wrangler-2026-09-23_12-52-51_061.log"

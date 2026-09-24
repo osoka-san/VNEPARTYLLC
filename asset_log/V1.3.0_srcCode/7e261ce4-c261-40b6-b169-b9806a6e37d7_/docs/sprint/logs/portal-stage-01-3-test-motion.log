@@ -1,0 +1,15 @@
+$ bun test tests/portal-motion.test.ts
+bun test v1.3.3 (274e01c7)
+
+tests/portal-motion.test.ts:
+(pass) portal premium motion > damping follows the same path at 30, 60, and 120 Hz [17.61ms]
+(pass) portal premium motion > damping never overshoots in either direction [2.53ms]
+(pass) portal premium motion > long resume delta is clamped [0.23ms]
+(pass) portal premium motion > quintic easing has fixed endpoints and continuous endpoint velocity [0.77ms]
+(pass) portal premium motion > hidden and assembled endpoints remain exact [1.87ms]
+(pass) portal premium motion > every link keeps moving after reveal until final hold [1.29ms]
+
+ 6 pass
+ 0 fail
+ 977 expect() calls
+Ran 6 tests across 1 file. [143.00ms]

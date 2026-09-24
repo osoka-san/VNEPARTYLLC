@@ -1,0 +1,35 @@
+{
+  "scale": 2,
+  "viewBox": [
+    -24,
+    -12,
+    424,
+    424
+  ],
+  "links": [
+    {
+      "link": "portal-link-01",
+      "iou": 0.9429,
+      "maxOutsideSvgUnits": 1.8,
+      "maxMissingSvgUnits": 0.0,
+      "sourceAreaPx": 132504,
+      "projectedAreaPx": 140533
+    },
+    {
+      "link": "portal-link-02",
+      "iou": 0.9262,
+      "maxOutsideSvgUnits": 1.8,
+      "maxMissingSvgUnits": 0.0,
+      "sourceAreaPx": 51611,
+      "projectedAreaPx": 55725
+    },
+    {
+      "link": "portal-link-03",
+      "iou": 0.8703,
+      "maxOutsideSvgUnits": 2.12,
+      "maxMissingSvgUnits": 0.0,
+      "sourceAreaPx": 8653,
+      "projectedAreaPx": 9942
+    }
+  ]
+}
