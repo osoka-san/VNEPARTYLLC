@@ -4,6 +4,7 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BottomDock } from "@/components/vne/BottomDock";
 import { DockOccluder } from "@/components/vne/DockOccluder";
+import { GalleryBackground } from "@/components/vne/GalleryBackground";
 import { InvitationDialog } from "@/components/vne/InvitationDialog";
 import { PortalLoadingFallback } from "@/components/vne/PortalLoadingFallback";
 import { PortalSceneLoader } from "@/components/vne/PortalSceneLoader";
@@ -191,6 +192,7 @@ function Index() {
         data-mode={staticMode ? "static" : "interactive"}
       >
         <div className="sticky top-0 h-[100svh] overflow-hidden">
+          <GalleryBackground scene="hero" />
           <ClientOnly fallback={<PortalLoadingFallback />}>
             {staticMode ? (
               <StaticFallback />
@@ -207,17 +209,17 @@ function Index() {
             )}
           </ClientOnly>
           <div className="pointer-events-none absolute inset-0 z-10 bg-atmosphere" />
-          <div className="portal-copy-layer pointer-events-none relative z-30 mx-auto flex h-full max-w-[1600px] flex-col px-5 pb-[14vh] pt-[16vh] sm:px-8 sm:pt-[13vh] lg:px-12">
+          <div className="portal-copy-layer pointer-events-none relative z-30 mx-auto flex h-full max-w-[1600px] flex-col px-5 pb-[14vh] pt-[12vh] sm:px-8 sm:pt-[13vh] lg:px-12">
             <div className="portal-copy w-[82vw] max-w-[690px] sm:w-[48vw]">
               <p className="mb-5 font-display text-xs uppercase text-muted-foreground">
                 {vneContent.eyebrow}
               </p>
-              <h1 id="vne-title" className="sr-only">
-                ВНЕ
-              </h1>
               <Wordmark />
-              <p className="mt-4 font-body text-sm text-muted-foreground sm:text-base">
+              <h1 id="vne-title" className="mt-5 max-w-[16ch] font-display text-[clamp(1.4rem,2.1vw,2.5rem)] leading-[1.2] text-foreground">
                 {vneContent.tagline}
+              </h1>
+              <p className="mt-3 max-w-[38ch] font-body text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Музыка, пространство и люди встречаются за пределами привычного.
               </p>
             </div>
             <div className="portal-actions pointer-events-auto mt-6 flex flex-col items-start gap-3 sm:mt-auto sm:flex-row sm:items-center">
@@ -255,16 +257,81 @@ function Index() {
         </div>
       </section>
       <section
-        id="night"
-        className="flex min-h-[36vh] items-center border-t border-border bg-surface px-5 py-16 sm:px-12"
+        id="manifesto"
+        className="gallery-manifesto flex min-h-[80svh] items-center px-5 py-24 sm:px-12"
+        aria-labelledby="manifesto-title"
       >
-        <div className="mx-auto w-full max-w-[1500px]">
-          <p className="font-display text-xs text-mint">02 / ДАЛЬШЕ</p>
-          <p className="mt-4 max-w-lg font-body text-lg text-muted-foreground">
-            История продолжится после утверждения первого порога.
-          </p>
+        <div className="mx-auto w-full max-w-[1400px]">
+          <p className="gallery-eyebrow">02 / МАНИФЕСТ</p>
+          <h2 id="manifesto-title" className="gallery-heading max-w-[19ch]">
+            Ночь начинается с выбора быть рядом.
+          </h2>
+          <div className="gallery-manifesto-copy mt-10 grid max-w-[900px] gap-5 font-body text-lg leading-relaxed text-muted-foreground sm:grid-cols-2">
+            <p>ВНЕ — пространство частных музыкальных событий. Здесь важны не только звук, но и место, в котором он звучит.</p>
+            <p>Мы собираем людей вокруг общей атмосферы. Интерес к проекту начинается с приглашения; участие в конкретном событии подтверждается отдельно.</p>
+          </div>
+          <a className="gallery-text-link mt-10 inline-flex" href="#space">О пространстве <ArrowDown size={18} aria-hidden="true" /></a>
         </div>
       </section>
+      <section id="space" className="gallery-panel gallery-space" aria-labelledby="space-title">
+        <GalleryBackground scene="space" />
+        <div className="gallery-frame gallery-space-frame">
+          <div className="gallery-space-copy">
+            <p className="gallery-eyebrow">03 / ПРОСТРАНСТВО</p>
+            <h2 id="space-title" className="gallery-heading">За стенами — воздух.</h2>
+            <p className="mt-5 max-w-[35ch] font-body text-base leading-relaxed text-foreground/90">
+              Лес и архитектура задают настроение этой галереи света. Изображение — художественный образ, а не фотография площадки.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="next-night" className="gallery-next-night flex min-h-[65svh] items-center px-5 py-24 sm:px-12" aria-labelledby="night-title">
+        <div className="mx-auto grid w-full max-w-[1400px] gap-12 md:grid-cols-[1.4fr_1fr] md:items-end">
+          <div>
+            <p className="gallery-eyebrow">04 / БЛИЖАЙШАЯ НОЧЬ</p>
+            <h2 id="night-title" className="gallery-heading">Следующая встреча</h2>
+          </div>
+          <div id="night" className="border-t border-border pt-6">
+            <p className="font-display text-xl text-foreground">Дата будет объявлена</p>
+            <p className="mt-4 font-body text-base leading-relaxed text-muted-foreground">Подробности появятся после подтверждения программы. Пока можно познакомиться с идеей ВНЕ.</p>
+            <a href="#invitation" className="gallery-text-link mt-7 inline-flex">Интерес к проекту <ArrowDown size={18} aria-hidden="true" /></a>
+          </div>
+        </div>
+      </section>
+      <section id="belonging" className="gallery-panel gallery-belonging" aria-labelledby="belonging-title">
+        <GalleryBackground scene="belonging" />
+        <div className="gallery-frame gallery-belonging-frame">
+          <div className="gallery-belonging-copy">
+            <p className="gallery-eyebrow">05 / ПРИНАДЛЕЖНОСТЬ</p>
+            <h2 id="belonging-title" className="gallery-heading max-w-[18ch]">Быть частью ночи — значит разделять её ритм.</h2>
+            <p className="mt-6 max-w-[39ch] font-body text-base leading-relaxed text-foreground/90">
+              Интерес к сообществу, приглашение и подтверждённое участие — разные шаги. Заявка сама по себе не даёт права входа.
+            </p>
+            <a href="#invitation" className="gallery-text-link mt-8 inline-flex">Как начать <ArrowDown size={18} aria-hidden="true" /></a>
+          </div>
+        </div>
+      </section>
+      <section id="invitation" className="gallery-panel gallery-invitation" aria-labelledby="invitation-title">
+        <GalleryBackground scene="invitation" />
+        <div className="gallery-frame gallery-invitation-frame">
+          <div className="gallery-invitation-copy">
+            <p className="gallery-eyebrow">06 / ПРИГЛАШЕНИЕ</p>
+            <h2 id="invitation-title" className="gallery-heading max-w-[17ch]">У каждой ночи есть свой порог.</h2>
+            <p className="mt-6 max-w-[37ch] font-body text-base leading-relaxed text-foreground/90">
+              Оставьте интерес к проекту. Сейчас это демонстрационный шаг: данные не отправляются и не сохраняются.
+            </p>
+            <div className="mt-8"><InvitationDialog onOpenChange={setDialogOpen} /></div>
+          </div>
+        </div>
+      </section>
+      <footer className="gallery-footer px-5 py-12 sm:px-12">
+        <div className="mx-auto flex max-w-[1400px] flex-col justify-between gap-8 sm:flex-row sm:items-end">
+          <div><Wordmark compact /><p className="mt-5 font-body text-sm text-muted-foreground">Закрытые музыкальные события. Художественные изображения пространства.</p></div>
+          <nav aria-label="Навигация внизу страницы" className="flex flex-wrap gap-5 font-body text-sm text-foreground">
+            <a href="#threshold">Начало</a><a href="#space">Пространство</a><a href="#belonging">Сообщество</a><a href="#invitation">Приглашение</a>
+          </nav>
+        </div>
+      </footer>
     </main>
   );
 }

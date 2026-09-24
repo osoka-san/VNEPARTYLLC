@@ -20,7 +20,7 @@ export function SiteHeader({
         aria-label="Основная навигация"
         className="flex items-center gap-5 font-body text-xs text-muted-foreground sm:gap-7"
       >
-        <a href="#night" className="hidden transition-colors hover:text-foreground sm:inline">
+        <a href="#next-night" className="hidden transition-colors hover:text-foreground sm:inline">
           Ближайшая ночь
         </a>
         <DemoDialog onOpenChange={onDialogOpenChange} />
