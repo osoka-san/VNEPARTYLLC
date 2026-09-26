@@ -1,0 +1,52 @@
+/*
+ * VNE typography kit.
+ * Copy this folder to public/fonts/ and load /fonts/fonts.css once.
+ * The three font licenses are retained in ./licenses/.
+ * Unbounded and Onest were losslessly packaged as WOFF2 with the full
+ * source glyph sets and variable weight axes. HealthGoth is unmodified.
+ */
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("./Unbounded-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("./Onest-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HealthGoth";
+  src: url("./HealthGoth-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-display: "Unbounded", sans-serif;
+  --font-body: "Onest", system-ui, sans-serif;
+  --font-accent: "HealthGoth", "Unbounded", sans-serif;
+}
+
+.vne-font-display {
+  font-family: var(--font-display);
+}
+
+.vne-font-body {
+  font-family: var(--font-body);
+}
+
+.vne-font-accent {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+}
