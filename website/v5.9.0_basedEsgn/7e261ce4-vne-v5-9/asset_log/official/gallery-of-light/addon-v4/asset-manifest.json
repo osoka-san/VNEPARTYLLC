@@ -1,0 +1,675 @@
+{
+  "library": "VNE Gallery of Light — addon v4",
+  "version": "v4",
+  "sourceArchive": "vNe05asset_addon_v1.zip",
+  "sourceCommit": "2c5c2932074b987a46e99a662a7cbba7dd76308d",
+  "notes": [
+    "Eight RGB PNG files decoded successfully.",
+    "No upscale; AVIF and WebP derivatives preserve source aspect ratios.",
+    "Light Interval D selected; A retained as candidate. Stone Sculpture retained as reserve and is not a third event."
+  ],
+  "assets": [
+    {
+      "id": "vne-threshold-gallery-v4-c-desktop",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/ — 01 Порог, desktop",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-threshold-gallery-v4-c-desktop.png",
+      "sourceWidth": 1672,
+      "sourceHeight": 941,
+      "sourceMode": "RGB",
+      "sourceBytes": 2135449,
+      "sourceSha256": "f5404ed4e79335301b992325c8b6b44803fd1e2e6eb79b1725f75df481c9004c",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.5,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1280.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 69130,
+          "sha256": "5fe141e1c71fe99fc9b58ffed5fc04e066d080104c1ceff145fa4d0d9248a86b"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1280.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 47636,
+          "sha256": "20bf47c41a016307eb3f8b86932d822740b17f52ecc0a3a47ff6d35b68978f67"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1672.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 108604,
+          "sha256": "3f8f727d217fbe924a038056b4150f01cc2ea1e586247b69a3248def6327dc39"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1672.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-desktop-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 74641,
+          "sha256": "c41550e85cdf5068f7a442271d3fe1b0d20537733bb4e5735e3bedead2317c42"
+        }
+      ]
+    },
+    {
+      "id": "vne-threshold-gallery-v4-c-mobile",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/ — 01 Порог, mobile",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-threshold-gallery-v4-c-mobile.png",
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "sourceMode": "RGB",
+      "sourceBytes": 1904289,
+      "sourceSha256": "02660726e78c9f8d31d263ffa6561cbee783a282910ff0392d40996191650f55",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.58,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 26052,
+          "sha256": "f173c1992df92f1c8592a662bacfbfc0ddf18579c21d37376c6d5bd9e4f89516"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 17245,
+          "sha256": "889f3ed241a8d56f0bcdf8a8d7cdf98fbd3227f8f56d00e51fa19a60565eeee4"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-768.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 62794,
+          "sha256": "d9d2115ec8b0dde30e962eb3da1ce18d8d1160d6ccd6530ba7cf7b5d6171cb43"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-768.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 41830,
+          "sha256": "67182826ea3aa6a4a8506b540f70be5b0e5c9a460de3593a164f4f2f07671883"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-941.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 87992,
+          "sha256": "2bea0147a77da7bb3b1e453d6a4cc755dd4bf80fda454472287c0f521a2287f0"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-941.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-threshold-gallery-v4-c-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 58769,
+          "sha256": "09de56c9add99fbf3a7f87c98930e9c60911db2fa74d7dc5b34edc94f1baf58c"
+        }
+      ]
+    },
+    {
+      "id": "vne-belonging-gallery-v4-b-mobile",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/ — 05 Принадлежность, mobile; desktop 05-C сохранён",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-belonging-gallery-v4-b-mobile.png",
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "sourceMode": "RGB",
+      "sourceBytes": 1834631,
+      "sourceSha256": "e320259083f63cea876244a05b22dc4f2f41ca5189ae09ae21aea26a9fa3c2fb",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.48,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 23452,
+          "sha256": "27f972f020b39a0f744f6238717705329d59569173673377cc021821a6b1e222"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 15342,
+          "sha256": "3e6e473fcdf6e739b6ea31fd475570f48a1fe95b9351510950184e3b60a176f0"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-768.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 55612,
+          "sha256": "fe208e85ff49a884f96b3e007cf15b3999d38da6228e2807e10e6dedd4d583d6"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-768.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 36636,
+          "sha256": "8bd604779eb34c908de246d2d12b04f61fbd405fe6e463a145169f30c2193f9d"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-941.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 77644,
+          "sha256": "ddb94e7b6d557baad38cb00dc8d8f544200deb44e1b8047cf90af37986773f9a"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-941.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-belonging-gallery-v4-b-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 50961,
+          "sha256": "d37426f962fbeed5128dab967a259b7ce27217c55ae8954751e6f0d0241fc575"
+        }
+      ]
+    },
+    {
+      "id": "vne-invitation-gallery-v4-a-mobile",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/ — 06 Приглашение, mobile",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-invitation-gallery-v4-a-mobile.png",
+      "sourceWidth": 941,
+      "sourceHeight": 1672,
+      "sourceMode": "RGB",
+      "sourceBytes": 2013917,
+      "sourceSha256": "3556dc3a76471004a5d0f38af94562d639a941f6f58ae571fea163e94f4199cb",
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.55,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 15186,
+          "sha256": "a2ba24705fc2ac3e22da06f2ff7f6b5089a1190f32f9aaa55d4e65d665a9553a"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 7604,
+          "sha256": "f4ab7e4590f03b9c796af7a22276a384fcb3345a2dc4a7303e7024ebc8eae664"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-768.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 48520,
+          "sha256": "6d38cabb78275045267e80616d4d2255efa069d6151cbe6c9fe6a15ae662f5c6"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-768.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 24491,
+          "sha256": "d33d5cd37b9fd6f6a3c65777cfc45e11878fb40257f7f5dd1aacdf7821710460"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-941.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 72052,
+          "sha256": "b10299db9e1b894439810815f19d7df2a663ab81b8cb78ea899f446d6bbe3b26"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-941.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-invitation-gallery-v4-a-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 39029,
+          "sha256": "7d4ce569d2468a829e1b0cf5a6009001b838c3ce67d8806bb31aa126fafe6c9a"
+        }
+      ]
+    },
+    {
+      "id": "vne-event-light-interval-v4-d",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/events и /events/threshold-study-02",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-event-light-interval-v4-d.png",
+      "sourceWidth": 1586,
+      "sourceHeight": 992,
+      "sourceMode": "RGB",
+      "sourceBytes": 2108585,
+      "sourceSha256": "6da9114c285958122a8916a578e9cf52d4ce28524478c8ba73572606aa969a71",
+      "focalPoint": {
+        "x": 0.62,
+        "y": 0.52,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 9912,
+          "sha256": "65fd6f9f27e25def7a1ab9adbda97aeadbcc7c31e8fc01450625a425d46a8c7c"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 6312,
+          "sha256": "b684d686572a7edb979f898365ad0d2aac3f6937a0ab7600c072dc62caf61fa5"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-800.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 29932,
+          "sha256": "ec0ba8300ecb68061ab5e9de462afdc713ec08fb4933c74365178ee4e972cae6"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-800.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 19957,
+          "sha256": "da1b80cad11a979dcf300fa4e68c31ebcd06ad179eed70cb957bf82b2de720c8"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1280.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 76706,
+          "sha256": "fbd5dd8db854472b52c95b1a9e866ef8847c2fe8cc15e531e1ecfd59f33be08a"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1280.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 52537,
+          "sha256": "329835a6ec7801d7c497015bf305cde571fa22b18cb72441572b5e54664ad3c8"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1586.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 107366,
+          "sha256": "4c76d976e2a238433d16da8512c0ad67b39e4a386c23f71a16b2b60ef7db468a"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1586.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-d-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 75138,
+          "sha256": "eb73df822c72daa29a13ccd79df17509ffe02259ae1662adc9d2d10132c331d2"
+        }
+      ]
+    },
+    {
+      "id": "vne-event-light-interval-v4-a",
+      "version": "v4",
+      "status": "candidate",
+      "usage": "альтернатива событию; не подключена",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-event-light-interval-v4-a.png",
+      "sourceWidth": 1586,
+      "sourceHeight": 992,
+      "sourceMode": "RGB",
+      "sourceBytes": 2180531,
+      "sourceSha256": "b3a0a8b48893ee1167fd11ce8b75d6411ea7fa2fb42531bad67825790886eaa8",
+      "focalPoint": {
+        "x": 0.55,
+        "y": 0.52,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": null,
+      "approvedAt": null,
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 8516,
+          "sha256": "421e8cf7276d24cce48f5e29904962e1a7ae972074854d387564225b78a1e25d"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 5244,
+          "sha256": "a8c41d01d0d88c43ee6533e97a0e4df57a50b343adae14c2b99b0c62cd67fc53"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-800.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 30722,
+          "sha256": "76a6fc326015e78aa933b36cbdf10128763023923d980a9554edfb2008a98a53"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-800.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 20210,
+          "sha256": "2bb075027485373c5d7b1aaafc31caf655c2580a5e76ee29ce6559bc93fe8511"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1280.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 81144,
+          "sha256": "7abf1919f5e3aafbf9314d04b0dcf5645ed2ef8e0eb9c8ebcb805c28be06f803"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1280.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 59563,
+          "sha256": "f3a4bab3ed2bd292d6b1e023e2410711b66f0823aa4e05d8967620989c0b131d"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1586.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 113640,
+          "sha256": "5e8410df323d553df5c4395d69d663cd70c2edfe21d0b25207a077c3147fce63"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1586.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-light-interval-v4-a-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 85234,
+          "sha256": "66568aa9627e825163dba05496b10a8c4edfee6e4b5c58323607a4460cd46666"
+        }
+      ]
+    },
+    {
+      "id": "vne-about-stone-detail-v4-b",
+      "version": "v4",
+      "status": "in-use",
+      "usage": "/about — камень",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-about-stone-detail-v4-b.png",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "sourceMode": "RGB",
+      "sourceBytes": 2103749,
+      "sourceSha256": "096702070bfc67e5915ca9889ff50cf2d755ef3833f0114072e3e40260abd530",
+      "focalPoint": {
+        "x": 0.58,
+        "y": 0.5,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": "owner selection in chat",
+      "approvedAt": "2026-09-25",
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 16746,
+          "sha256": "db3883ecd5794a65713c75b8a9eb8b17bbfa332473ad3bb1da8eee86d2668aeb"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 360,
+          "bytes": 12082,
+          "sha256": "0a1a58e5b3209a819040c96174bdd3e2669e799dfbba4b0385014003cdf24610"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-800.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 47708,
+          "sha256": "61e55db37ea5fc2d42042e2a2c3c7a2076729dad01996e135f24ef929003e93d"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-800.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 600,
+          "bytes": 37355,
+          "sha256": "ca5431b48fad5844cb3428eac0e9c2abe632ac2d63f1a104066e856eead817ec"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1280.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 105818,
+          "sha256": "d0f1c0909aee4fd1dccc4fcff4f50ae4b0796dfb5caf97241686e169d4a8c982"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1280.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 960,
+          "bytes": 80908,
+          "sha256": "096408990b730b7c25c819cb4c202af3f5d365af9b75cfff72146a2f4a9abc2d"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1448.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1448.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 125764,
+          "sha256": "fed8f5f68936ba49f527fd5631615fd4680d7f84a09303be3c3f97a136954a71"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1448.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-about-stone-detail-v4-b-1448.avif",
+          "format": "avif",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 96922,
+          "sha256": "7371a520c7274bf1d420cfb6ccd4da937ca826c3c0819a5b38ce7f95a4c9ecb4"
+        }
+      ]
+    },
+    {
+      "id": "vne-event-stone-sculpture-v4-c",
+      "version": "v4",
+      "status": "reserve",
+      "usage": "резерв; не является третьим событием",
+      "sourcePath": "asset_log/official/gallery-of-light/addon-v4/source/vne-event-stone-sculpture-v4-c.png",
+      "sourceWidth": 1586,
+      "sourceHeight": 992,
+      "sourceMode": "RGB",
+      "sourceBytes": 2197063,
+      "sourceSha256": "00fd5b924ed83a8dee029e175d4220fd77efa9bc4d8fb93c3af2197ebea53714",
+      "focalPoint": {
+        "x": 0.52,
+        "y": 0.5,
+        "estimated": true
+      },
+      "provenance": "vNe05asset_addon_v1.zip, supplied by owner 2026-09-25",
+      "approvedBy": null,
+      "approvedAt": null,
+      "derivatives": [
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-480.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 13540,
+          "sha256": "d11c33a2454e47206d1f6878d88440085a21d44662ac99a2e2bb8b26003aa784"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-480.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 9339,
+          "sha256": "88d3a59ec8d26b959a37761ac411c0421e22ddd24710ceed0caa1bce6534449e"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-800.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 38838,
+          "sha256": "ae4edf1929944d3e21c19338906f7643364a4e9bb3d50cf09d6aef479836267a"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-800.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 27306,
+          "sha256": "8e60457f0185b41f237b633120207e09d0665f91c3afb78b02bc262c62df3908"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1280.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 94026,
+          "sha256": "819f96d38e94b2b203d2f006519a7e15a384c69c453a2c8e8923e593347731ac"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1280.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 64950,
+          "sha256": "9c36971d33ec18517945bee31c42b6683e3b0324f96ae4fcb8ed64b242720355"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1586.webp",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 129114,
+          "sha256": "236c4a8ba65de5d681a6b5700d542897fa304f37931c44fa6c5751ac0d116b6c"
+        },
+        {
+          "path": "public/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1586.avif",
+          "url": "/media/gallery-of-light/addon-v4/vne-event-stone-sculpture-v4-c-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 90268,
+          "sha256": "1729eb8dcc621d921323248af2bfc25763ee8a37a9522da0235fe0ac68d138bb"
+        }
+      ]
+    }
+  ]
+}

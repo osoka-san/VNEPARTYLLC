@@ -1,0 +1,608 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "./styles/brand-tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system definition.
+ *
+ * The @theme inline block maps CSS custom properties to Tailwind utility
+ * classes (e.g. --color-primary -> bg-primary, text-primary).
+ *
+ * The :root and .dark blocks define the actual color values using oklch.
+ * All colors MUST use oklch format.
+ *
+ * To add a new semantic color:
+ * 1. Add the variable to :root (light value) and .dark (dark value)
+ * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-surface: var(--surface);
+  --color-dock: var(--dock);
+  --color-mint: var(--mint);
+  --color-orange: var(--orange);
+  --color-blue: var(--blue);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --font-body: "Onest", system-ui, sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-accent: "HealthGoth", "Unbounded", sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+  --popover: var(--surface);
+  --popover-foreground: var(--foreground);
+  --primary: var(--mint);
+  --primary-foreground: var(--background);
+  --secondary: oklch(0.2566 0.0113 175.78); /* surface +6% L */
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.2466 0.0113 175.78); /* surface +5% L */
+  --accent: var(--orange);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.3966 0.0113 175.78 / 45%); /* surface +20% L */
+  --input: oklch(0.3966 0.0113 175.78 / 55%);
+  --ring: var(--mint);
+  --dock: oklch(0.1686 0.0113 175.78); /* surface −3% L */
+  --cta: var(--orange);
+  --cta-foreground: var(--background);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  html {
+    background-color: var(--color-background);
+    overflow-x: clip;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+  button,
+  a {
+    letter-spacing: 0;
+  }
+}
+
+@utility bg-atmosphere {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--background) 18%, transparent) 0%,
+      transparent 42%,
+      color-mix(in oklab, var(--background) 46%, transparent) 100%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--background) 76%, transparent) 0%,
+      color-mix(in oklab, var(--background) 22%, transparent) 46%,
+      transparent 72%
+    ),
+    radial-gradient(
+      ellipse at 52% 67%,
+      color-mix(in oklab, var(--mint) 9%, transparent) 0%,
+      transparent 36%
+    );
+}
+
+@utility bg-gallery-edge {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--background) 62%, transparent) 0%,
+    transparent 58%
+  );
+}
+
+.gallery-background {
+  background-color: var(--surface);
+  background-position: var(--gallery-position-desktop);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery-background img {
+  object-position: var(--gallery-position-desktop);
+}
+
+.chapter-shade {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--background) 88%, transparent) 0%,
+    color-mix(in oklab, var(--background) 54%, transparent) 38%,
+    transparent 68%
+  );
+}
+
+.chapter-rule {
+  position: relative;
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  [data-dock] {
+    left: auto;
+    right: 1.5rem;
+    width: 38%;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-dock] {
+    left: auto;
+    right: 3rem;
+    width: 46%;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 580px) {
+  [data-dock] {
+    bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+}
+
+.chapter-rule::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 1px;
+  content: "";
+  background: var(--border);
+}
+
+.space-copy,
+.belonging-copy,
+.invitation-copy {
+  text-shadow: 0 1px 18px color-mix(in oklab, var(--background) 80%, transparent);
+}
+
+.threshold-scroll {
+  height: var(--scroll-desktop);
+}
+.threshold-scroll[data-mode="static"] {
+  height: var(--scroll-static);
+}
+
+@media (width < 640px) {
+  .threshold-scroll {
+    height: var(--scroll-mobile);
+  }
+
+  .gallery-background {
+    background-position: var(--gallery-position-mobile);
+  }
+
+  .gallery-background img {
+    object-position: var(--gallery-position-mobile);
+  }
+
+  .chapter-shade {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--background) 86%, transparent) 0%,
+      color-mix(in oklab, var(--background) 34%, transparent) 48%,
+      color-mix(in oklab, var(--background) 78%, transparent) 100%
+    );
+  }
+
+  .belonging-copy {
+    margin-inline: -1rem;
+    padding: 1rem;
+    background: linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--background) 82%, transparent) 0%,
+      color-mix(in oklab, var(--background) 58%, transparent) 72%,
+      transparent 100%
+    );
+  }
+
+  .space-copy {
+    margin-inline: -1rem;
+    padding: 1rem;
+    background: linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--background) 76%, transparent) 0%,
+      transparent 100%
+    );
+  }
+
+  .invitation-copy {
+    margin-inline: -1rem;
+    padding: 1rem;
+    background: linear-gradient(
+      90deg,
+      color-mix(in oklab, var(--background) 84%, transparent) 0%,
+      color-mix(in oklab, var(--background) 52%, transparent) 72%,
+      transparent 100%
+    );
+  }
+}
+
+/* Short landscape: the copy becomes a left column and the emblem sits beside it. */
+@media (height < 600px) and (width >= 640px) {
+  .portal-copy-layer {
+    padding-block: 2.5rem 8rem;
+  }
+  [data-dock] {
+    inset-block-end: calc(max(4.5rem, env(safe-area-inset-bottom)) + 0.5rem);
+  }
+  .portal-copy {
+    width: min(46vw, 25rem);
+  }
+  .portal-copy > p:first-child {
+    margin-block-end: 0.5rem;
+  }
+  .portal-copy img {
+    max-height: 7.25rem;
+    width: auto;
+    max-width: 100%;
+  }
+  .portal-copy > p:last-child {
+    margin-block-start: 0.5rem;
+  }
+  .portal-actions {
+    margin-block-start: 1rem;
+  }
+  .portal-hint {
+    display: none;
+  }
+  .static-portal {
+    justify-content: flex-end;
+    padding-inline-end: 5vw;
+  }
+}
+
+/* Short portrait: keep the full-width copy but free vertical room for the emblem. */
+@media (height < 700px) and (width < 640px) {
+  .portal-copy-layer {
+    padding-block: 7vh 8vh;
+  }
+  .portal-copy > p:first-child {
+    margin-block-end: 0.5rem;
+  }
+  .portal-copy img {
+    max-height: 5.25rem;
+    width: auto;
+    max-width: 100%;
+  }
+  .portal-copy > p:last-child {
+    margin-block-start: 0.5rem;
+  }
+  .portal-actions {
+    margin-block-start: 1rem;
+  }
+  .portal-hint {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.vne-dialog-overlay,
+.vne-sheet-overlay {
+  animation: vne-overlay-out var(--vne-dialog-duration, 0.4s) var(--vne-motion-ease) both;
+}
+.vne-dialog-overlay[data-state="open"],
+.vne-sheet-overlay[data-state="open"] {
+  animation-name: vne-overlay-in;
+}
+.vne-dialog-content {
+  animation: vne-dialog-out var(--vne-dialog-duration, 0.4s) var(--vne-motion-ease) both;
+}
+.vne-dialog-content[data-state="open"] {
+  animation-name: vne-dialog-in;
+}
+
+[data-vne-faq-content] {
+  animation-duration: var(--vne-faq-duration, 0.26s);
+}
+[data-vne-faq-chevron] {
+  transition-duration: var(--vne-faq-duration, 0.26s);
+}
+[data-motion-faq="false"] [data-vne-faq-content],
+[data-reduce-motion="true"] [data-vne-faq-content],
+[data-motion-faq="false"] [data-vne-faq-chevron],
+[data-reduce-motion="true"] [data-vne-faq-chevron] {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+[data-animated-background-item] > a,
+[data-animated-background-item] > button {
+  min-height: 44px;
+}
+.vne-sheet-content {
+  transition: transform var(--vne-motion-duration, 0.4s) var(--vne-motion-ease);
+}
+.vne-sheet-content[data-state="closed"] {
+  transform: translateX(100%);
+}
+.vne-sheet-content[data-state="open"] {
+  transform: translateX(0);
+}
+html[data-motion-blur="true"] .vne-sheet-overlay {
+  backdrop-filter: blur(12px);
+}
+@keyframes vne-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes vne-overlay-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Centering is done only by the Tailwind `translate` property on DialogContent;
+   keyframes animate opacity/scale so the two never stack (03.8-01). */
+@keyframes vne-dialog-in {
+  from {
+    opacity: 0;
+    scale: 0.97;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes vne-dialog-out {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 0.97;
+  }
+}
+
+.vne-glow {
+  transition: box-shadow var(--vne-motion-duration, 0.4s) var(--vne-motion-ease);
+}
+.vne-glow[data-enabled="true"]:hover {
+  box-shadow: 0 0 28px color-mix(in oklab, var(--mint) 18%, transparent);
+}
+.vne-shimmer {
+  background: none;
+}
+.vne-shimmer[data-enabled="true"] {
+  background: linear-gradient(105deg, currentColor 35%, var(--foreground) 48%, currentColor 61%);
+  background-size: 220% 100%;
+  background-position: 100% 0;
+  background-clip: text;
+  color: transparent;
+  animation: vne-shimmer 1.1s var(--vne-motion-ease) 1 0.25s both;
+}
+@keyframes vne-shimmer {
+  to {
+    background-position: -100% 0;
+  }
+}
+
+html[data-reduce-motion="true"] {
+  scroll-behavior: auto;
+}
+
+html[data-reduce-motion="true"] *,
+html[data-reduce-motion="true"] *::before,
+html[data-reduce-motion="true"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.admin-preview-sticky {
+  position: sticky;
+  top: 4.5rem;
+  z-index: 20;
+  align-self: start;
+}
+
+.admin-preview-body {
+  max-height: min(28rem, calc(100svh - 13rem));
+}
+
+@media (min-width: 1024px) {
+  .admin-preview-sticky {
+    top: 6rem;
+  }
+
+  .admin-preview-body {
+    max-height: calc(100svh - 15rem);
+  }
+}
+
+@media (max-height: 650px) {
+  .admin-preview-sticky {
+    position: static;
+  }
+
+  .admin-preview-body {
+    max-height: 19rem;
+  }
+}
+
+/* Stage 03.6 — hero entrance sequence (SSR-safe CSS, tokens mirror src/lib/motion.ts) */
+@keyframes vne-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.hero-seq {
+  animation: vne-rise var(--vne-motion-duration, 0.8s)
+    var(--vne-motion-ease, cubic-bezier(0.22, 1, 0.36, 1)) both;
+}
+.hero-seq-1 {
+  animation-delay: calc(var(--vne-hero-step, 0.2s) * 1.5);
+}
+.hero-seq-2 {
+  animation-delay: calc(var(--vne-hero-step, 0.2s) * 2.5);
+}
+.hero-seq-3 {
+  animation-delay: calc(var(--vne-hero-step, 0.2s) * 3.75);
+}
+.hero-seq-4 {
+  animation-delay: calc(var(--vne-hero-step, 0.2s) * 4.75);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-seq {
+    animation: none;
+  }
+}
+html[data-reduce-motion="true"] .hero-seq {
+  animation: none;
+}
+html[data-reduce-motion="true"] .vne-shimmer,
+html[data-reduce-motion="true"] .vne-dialog-overlay,
+html[data-reduce-motion="true"] .vne-dialog-content,
+html[data-reduce-motion="true"] .vne-sheet-overlay,
+html[data-motion-menu="false"] .vne-sheet-overlay,
+html[data-motion-dialog="false"] .vne-dialog-overlay,
+html[data-motion-dialog="false"] .vne-dialog-content {
+  animation: none;
+}
+/* 03.8-08: menuMotion=false / reduced — the sheet appears in place; the
+   static dimmed/blurred backdrop and navigation stay available. */
+html[data-reduce-motion="true"] .vne-sheet-content,
+html[data-motion-menu="false"] .vne-sheet-content {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-sheet-content {
+    transition: none;
+  }
+  .vne-dialog-overlay,
+  .vne-dialog-content,
+  .vne-sheet-overlay {
+    animation: none;
+  }
+}

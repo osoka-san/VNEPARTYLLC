@@ -1,0 +1,220 @@
+{
+  "series": "VNE Gallery of Light — three additional subjects",
+  "assets": [
+    {
+      "id": "vne-about-pine-canopy-v1",
+      "title": "Кроны над тишиной",
+      "version": "v1",
+      "usage": "/about — утверждённая единая композиция",
+      "targetAspectRatio": "4:3",
+      "origin": "image_gen; fictional artistic candidate; original reference used for palette/material/light only; two targeted generation revisions",
+      "promptDate": "2026-09-24",
+      "reference": {
+        "file": "vne-about-stone-detail-v2.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGBA",
+        "format": "PNG",
+        "bytes": 3250491,
+        "sha256": "29559a9ce872f5655156eda51828a7326234c4589cfaf6ee99050cb736460442"
+      },
+      "source": {
+        "file": "vne-about-pine-canopy-v1.png",
+        "width": 1448,
+        "height": 1086,
+        "mode": "RGB",
+        "format": "PNG",
+        "bytes": 2141172,
+        "sha256": "36456eb6f816da35164481e27b03d4c44a3aae75c71e215c32fce61cd79f96ad"
+      },
+      "derivatives": [
+        {
+          "file": "vne-about-pine-canopy-v1-480.webp",
+          "width": 480,
+          "height": 360,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 24160,
+          "sha256": "85c836e4cb654ca7937cd0654be84b48a1c667d12a8b7555ae0203a7a8587e0b",
+          "path": "web/vne-about-pine-canopy-v1-480.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-pine-canopy-v1-480.avif",
+          "width": 480,
+          "height": 360,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 30291,
+          "sha256": "ad9af2a926a005ee67ee6f7053b0f813631b67562988b9f86e7e5aea7c19a1b3",
+          "path": "web/vne-about-pine-canopy-v1-480.avif",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-pine-canopy-v1-960.webp",
+          "width": 960,
+          "height": 720,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 86568,
+          "sha256": "4321e335e3222652b2541a89557ce114724e93bad13c29106006ad683e5b4c6f",
+          "path": "web/vne-about-pine-canopy-v1-960.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-pine-canopy-v1-960.avif",
+          "width": 960,
+          "height": 720,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 106709,
+          "sha256": "9ba9c86df48e302ca6cf5709ccd358aa259f5bc60139482989565f45c84d0666",
+          "path": "web/vne-about-pine-canopy-v1-960.avif",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-pine-canopy-v1-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 152430,
+          "sha256": "809b255cbede1f278fcd88eeea66a836a04f4b1f337074557f7c58d38bcfe0fd",
+          "path": "web/vne-about-pine-canopy-v1-1448.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-pine-canopy-v1-1448.avif",
+          "width": 1448,
+          "height": 1086,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 189907,
+          "sha256": "b6134408f4b45bb0b6727829208069910d57de0dd51bbea7727dc3204c7a2703",
+          "path": "web/vne-about-pine-canopy-v1-1448.avif",
+          "geometry": "same aspect ratio; no upscale"
+        }
+      ],
+      "status": "INTEGRATED",
+      "evidence": "Source and derivatives verified against supplied SHA-256 manifest; responsive AVIF candidates decoded in /about at 1280 and 390 px without network failures.",
+      "approvedBy": "owner instruction",
+      "approvedAt": "2026-09-24",
+      "integrated": true,
+      "verifiedInPage": true,
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "estimated": true
+      },
+      "notes": "Локальный свет на нижней коре; экспозиция тёмная и намеренно сдержанная."
+    },
+    {
+      "id": "vne-about-dark-water-reflection-v1",
+      "title": "Тихое отражение",
+      "version": "v1",
+      "usage": "/about — утверждённая единая композиция",
+      "targetAspectRatio": "16:9",
+      "origin": "image_gen; fictional artistic candidate; original reference used for palette/material/light only; two targeted generation revisions",
+      "promptDate": "2026-09-24",
+      "reference": {
+        "file": "vne-social-preview-background-v2(1).png",
+        "width": 1732,
+        "height": 908,
+        "mode": "RGBA",
+        "format": "PNG",
+        "bytes": 2946076,
+        "sha256": "c43236ded59531f963badb5c7c6f5efe4e56fe1d1cb88a06e7afa80f894c4b2c"
+      },
+      "source": {
+        "file": "vne-about-dark-water-reflection-v1.png",
+        "width": 1672,
+        "height": 941,
+        "mode": "RGB",
+        "format": "PNG",
+        "bytes": 1088259,
+        "sha256": "383fc0268a8f159a92deceff76d769dfafcf2a7c124fa28520294469a5a8c0c7"
+      },
+      "derivatives": [
+        {
+          "file": "vne-about-dark-water-reflection-v1-480.webp",
+          "width": 480,
+          "height": 270,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 3548,
+          "sha256": "0bda74a01bf34de81ed789f42d7882e7a0e0da9627489834404a0ac40e449f08",
+          "path": "web/vne-about-dark-water-reflection-v1-480.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-dark-water-reflection-v1-480.avif",
+          "width": 480,
+          "height": 270,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 3832,
+          "sha256": "fc47bcb14878bd5033277846465133b26c4aa1ff4cfd2ddff1cf919d0670b201",
+          "path": "web/vne-about-dark-water-reflection-v1-480.avif",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-dark-water-reflection-v1-960.webp",
+          "width": 960,
+          "height": 540,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 9616,
+          "sha256": "9294286a5e2f7f782848ef65f5237c99c778dc17d5b0b4ff18e55cae5a2e5cce",
+          "path": "web/vne-about-dark-water-reflection-v1-960.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-dark-water-reflection-v1-960.avif",
+          "width": 960,
+          "height": 540,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 9601,
+          "sha256": "e4e3ac49aa59159bb8bb67c29466a8999817351566e930db3d56d3d9e3d3a0e6",
+          "path": "web/vne-about-dark-water-reflection-v1-960.avif",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-dark-water-reflection-v1-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "mode": "RGB",
+          "format": "WEBP",
+          "bytes": 21554,
+          "sha256": "6714e3dbfb709254137d62e08344d488ea844adbe535dc43e1af1d51e95682b6",
+          "path": "web/vne-about-dark-water-reflection-v1-1672.webp",
+          "geometry": "same aspect ratio; no upscale"
+        },
+        {
+          "file": "vne-about-dark-water-reflection-v1-1672.avif",
+          "width": 1672,
+          "height": 941,
+          "mode": "RGB",
+          "format": "AVIF",
+          "bytes": 20530,
+          "sha256": "0b2aa336d0416019a40db62ab3173e0accb58f6d6d9c7a4350619e91c0694605",
+          "path": "web/vne-about-dark-water-reflection-v1-1672.avif",
+          "geometry": "same aspect ratio; no upscale"
+        }
+      ],
+      "status": "INTEGRATED",
+      "evidence": "Source and derivatives verified against supplied SHA-256 manifest; responsive AVIF candidates decoded in /about at 1280 and 390 px without network failures.",
+      "approvedBy": "owner instruction",
+      "approvedAt": "2026-09-24",
+      "integrated": true,
+      "verifiedInPage": true,
+      "focalPoint": {
+        "x": 0.68,
+        "y": 0.5,
+        "estimated": true
+      },
+      "notes": "Отражение короткое и не касается краёв; некоторые светлые гребни чуть тоньше и резче заданных широких размытых пятен."
+    }
+  ],
+  "decision": "Selected for integration by owner instruction: implement unified concept. Source statuses are historical; update integration evidence after actual deployment."
+}
