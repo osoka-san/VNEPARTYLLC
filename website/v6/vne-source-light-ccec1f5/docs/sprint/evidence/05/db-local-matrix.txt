@@ -1,0 +1,421 @@
+migrate: 20260925151336_22c550e1-3671-44e9-89fb-d6beac5a3081.sql
+migrate: 20260925155817_c1fb0e2d-953c-47fa-a099-5cba7a8ffb46.sql
+migrate: 20260925194152_6f6b7fef-ce92-4e84-be1f-8a2b200517db.sql
+migrate: 20260925194216_1b338b8e-53b2-42bc-a579-f5c1fa0dd089.sql
+migrate: 20260925194328_751e314b-5540-491d-bb10-02b76982044f.sql
+migrate: 20260925200419_399ee261-a0e0-4cc9-b222-0ba391bce75e.sql
+migrate: 20260925203231_8dfef9be-3878-4606-8f8a-8e968ed7c944.sql
+migrate: 20260925203248_dc6a8d60-ae39-45a1-9ad1-93bcf90e680b.sql
+migrate: 20260925215727_33cb9769-1b09-471a-ac9f-d04564a4d0bc.sql
+migrate: 20260925220434_9ee92d9e-e678-499e-a854-afc294e3f74a.sql
+migrate: 20260925220648_c06535cb-f16b-43fd-9738-58293cfe7cd9.sql
+migrate: 20260925221846_b9e374e2-42ce-4e8f-883b-f401681c2af6.sql
+migrate: 20260925222613_782add91-243a-46b1-8d1c-e0b621f781b4.sql
+migrate: 20260925223251_c4bd5a7b-a06a-4d28-b007-d0379affe60b.sql
+migrate: 20260925223809_80c71e68-c3d2-4c86-a742-83f069cc462b.sql
+migrate: 20260925224649_cc1a7738-8bd9-4018-bc0c-e518d9208905.sql
+NOTICE:  policy "private-docs: owner read" for relation "storage.objects" does not exist, skipping
+NOTICE:  policy "private-docs: owner upload" for relation "storage.objects" does not exist, skipping
+NOTICE:  policy "private-docs: owner update" for relation "storage.objects" does not exist, skipping
+NOTICE:  policy "private-docs: owner delete" for relation "storage.objects" does not exist, skipping
+migrate: 20260925225023_d3ada04d-c353-41f0-9eb9-a124eb0ea997.sql
+migrate: 20260925225626_61ae74a8-c42e-4831-9228-d1819f4e0f35.sql
+PASS: anon sees only published events
+
+PASS (denied): anon cannot read applications
+
+PASS (denied): anon cannot read profiles
+
+PASS (denied): anon cannot call review RPC
+
+PASS (denied): anon cannot read audit
+
+
+PASS: guest A sees only own application
+
+PASS: guest A cannot read guest B
+
+PASS: guest A sees only own profile
+
+PASS (denied): guest A cannot insert as user B (user_id spoof)
+
+PASS (denied): guest A cannot self-approve on insert
+
+PASS (denied): guest A cannot apply to draft event
+
+PASS (denied): guest A cannot approve own application
+
+PASS (denied): guest A cannot change owner column
+
+PASS (denied): guest A cannot grant self a role
+
+PASS (denied): guest A cannot call review RPC
+
+PASS (denied): guest A cannot bootstrap owner
+
+PASS (denied): guest A cannot update B (no direct write)
+
+PASS (denied): guest A cannot withdraw B via RPC (id substitution)
+
+PASS: DB unchanged: B application still submitted
+
+PASS: DB unchanged: A owner/status intact after denied updates
+
+PASS: DB unchanged: no role rows for guest A
+
+
+PASS (denied): guest A stale version rejected
+
+PASS (denied): guest A NULL version rejected
+
+PASS: guest A can withdraw own application via RPC
+
+
+PASS: moderator aal1 sees no guest applications
+
+PASS (denied): moderator aal1 cannot review (MFA required)
+
+
+PASS: moderator aal2 sees assigned event applications
+
+PASS (denied): legacy review_application removed: moderator aal2 cannot bypass CAS/history/outbox
+
+PASS (denied): moderator NULL version rejected
+
+PASS (denied): moderator stale version rejected
+
+PASS: moderator aal2 takes via CAS path
+
+PASS: moderator aal2 approves only via moderate_application (version+history+outbox)
+
+PASS (denied): moderator cannot review withdrawn (invalid transition)
+
+PASS (denied): moderator cannot revoke staff
+
+
+PASS: foreign-event moderator sees nothing
+
+
+PASS: revoked moderator sees nothing
+
+
+PASS: after logout old aal2 JWT sees nothing
+
+PASS (denied): after logout old JWT cannot review
+
+PASS: DB unchanged after post-logout attempt
+
+
+revoked
+
+PASS: moderator loses access immediately after revoke
+
+
+PASS (denied): revoked role with old JWT cannot review
+
+PASS: DB unchanged after revoked-role attempt
+
+PASS: no legacy review audit entries
+
+PASS: approval recorded in history
+
+PASS: audit ok entry for revoke
+
+PASS: audit contains no secrets
+
+PASS: outbox written, nothing sent
+
+PASS: anon has no EXECUTE on any SECURITY DEFINER function
+
+PASS: all SECURITY DEFINER functions pin search_path
+
+PASS: RLS enabled on all public tables
+
+PASS staff rpc: admin aal2 allowed; aal1, dead/logged-out session, guest, event moderator(scan), revoked, unknown area denied
+PASS anon cannot execute my_staff_access
+PASS: concurrent bootstrap serialized (first ok, second waited and was rejected, owners=1)
+PASS: unauthorized review denied without waiting on row lock
+PASS: legacy default privileges active for public tables
+
+PASS: authenticated cannot UPDATE applications.id
+PASS: authenticated cannot UPDATE applications.event_id
+PASS: authenticated cannot UPDATE applications.user_id
+PASS: authenticated cannot UPDATE applications.note
+PASS: authenticated cannot UPDATE applications.reviewed_by
+PASS: authenticated cannot UPDATE applications.created_at
+PASS: authenticated cannot UPDATE applications.updated_at
+
+
+
+
+
+
+
+PASS: day05: authenticated has no direct UPDATE applications.status (RPC only)
+
+PASS: authenticated cannot INSERT applications.id
+PASS: authenticated cannot INSERT applications.user_id
+PASS: authenticated cannot INSERT applications.status
+PASS: authenticated cannot INSERT applications.reviewed_by
+PASS: authenticated cannot INSERT applications.created_at
+PASS: authenticated cannot INSERT applications.updated_at
+
+
+
+
+
+
+PASS: day05: authenticated has no direct INSERT on applications (RPC only)
+
+PASS: authenticated cannot UPDATE profiles.id
+PASS: authenticated cannot UPDATE profiles.created_at
+
+
+PASS: anon has no DELETE on public.profiles
+PASS: anon has no DELETE on public.events
+PASS: anon has no DELETE on public.staff_assignments
+PASS: anon has no DELETE on public.applications
+PASS: authenticated has no DELETE on public.profiles
+PASS: authenticated has no DELETE on public.events
+PASS: authenticated has no DELETE on public.staff_assignments
+PASS: authenticated has no DELETE on public.applications
+PASS: anon has no TRUNCATE on public.profiles
+PASS: anon has no TRUNCATE on public.events
+PASS: anon has no TRUNCATE on public.staff_assignments
+PASS: anon has no TRUNCATE on public.applications
+PASS: authenticated has no TRUNCATE on public.profiles
+PASS: authenticated has no TRUNCATE on public.events
+PASS: authenticated has no TRUNCATE on public.staff_assignments
+PASS: authenticated has no TRUNCATE on public.applications
+PASS: anon has no REFERENCES on public.profiles
+PASS: anon has no REFERENCES on public.events
+PASS: anon has no REFERENCES on public.staff_assignments
+PASS: anon has no REFERENCES on public.applications
+PASS: authenticated has no REFERENCES on public.profiles
+PASS: authenticated has no REFERENCES on public.events
+PASS: authenticated has no REFERENCES on public.staff_assignments
+PASS: authenticated has no REFERENCES on public.applications
+PASS: anon has no TRIGGER on public.profiles
+PASS: anon has no TRIGGER on public.events
+PASS: anon has no TRIGGER on public.staff_assignments
+PASS: anon has no TRIGGER on public.applications
+PASS: authenticated has no TRIGGER on public.profiles
+PASS: authenticated has no TRIGGER on public.events
+PASS: authenticated has no TRIGGER on public.staff_assignments
+PASS: authenticated has no TRIGGER on public.applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PASS: anon has no INSERT on public.events
+PASS: anon has no INSERT on public.staff_assignments
+PASS: authenticated has no INSERT on public.events
+PASS: authenticated has no INSERT on public.staff_assignments
+PASS: anon has no UPDATE on public.events
+PASS: anon has no UPDATE on public.staff_assignments
+PASS: authenticated has no UPDATE on public.events
+PASS: authenticated has no UPDATE on public.staff_assignments
+
+
+
+
+
+
+
+
+PASS: anon has no SELECT on public.profiles
+PASS: anon has no INSERT on public.profiles
+PASS: anon has no UPDATE on public.profiles
+PASS: anon has no SELECT on public.staff_assignments
+PASS: anon has no INSERT on public.staff_assignments
+PASS: anon has no UPDATE on public.staff_assignments
+PASS: anon has no SELECT on public.applications
+PASS: anon has no INSERT on public.applications
+PASS: anon has no UPDATE on public.applications
+
+
+
+
+
+
+
+
+
+PASS: anon has no execute on RPC despite default privileges
+
+
+PASS (42501): guest cannot change event_id while withdrawing
+
+PASS (42501): guest cannot change id while withdrawing
+
+PASS (42501): guest cannot set reviewed_by while withdrawing
+
+PASS (42501): guest cannot change timestamps while withdrawing
+
+PASS (42501): guest cannot insert id/reviewed_by/created_at
+
+PASS: application row byte-identical after tampering attempts
+
+
+withdrawn
+PASS: legit withdraw via RPC changes only status/version
+
+
+PASS: admin with another user's session_id denied
+
+
+PASS: admin with expired session (not_after) denied
+
+
+PASS: admin aal1 on valid session still denied (MFA not weakened)
+
+
+PASS: admin aal2 on own unexpired session allowed
+
+
+PASS: revoke active → revoked
+
+PASS: repeat revoke → already_revoked (idempotent)
+
+PASS (P0002): revoke nonexistent → not found
+
+
+PASS (42501): revoke owner → forbidden
+
+PASS: exactly one ok audit (no false success)
+
+PASS: repeat logged as noop
+
+PASS: owner still active after forbidden revoke
+
+PASS (42501): repeat bootstrap rejected
+
+PASS: exactly one owner after concurrent + repeat bootstrap
+
+
+PASS: editor: content allowed
+
+PASS: editor: membership denied
+
+PASS: editor: team denied
+
+PASS (42501): editor cannot decide membership
+
+
+PASS: event moderator: admin shell allowed (any current assignment)
+
+PASS: event moderator: membership denied
+
+PASS: moderator: own event allowed
+
+PASS: moderator: other event denied
+
+PASS: moderator: null event denied
+
+
+PASS: revoked moderator: shell denied
+
+
+PASS: moderator aal1: shell denied
+
+
+PASS (22023): event role without event rejected
+
+PASS (22023): expiry in past rejected
+
+PASS (22023): event role without expiry rejected (RPC)
+
+PASS (22023): global role with event rejected
+
+PASS (42501): owner not grantable
+
+PASS (42501): admin cannot grant admin
+
+PASS: scoped moderator grant ok
+
+PASS: admin approves once
+
+PASS: second decision is noop
+
+PASS: repeat approve is noop
+
+PASS: exactly one active invite
+
+PASS: one held outbox job, no delivery
+
+PASS: noop decisions audited
+
+PASS (23505): second active invite blocked by index
+
+{"role":"service_role"}
+PASS: no token → denied
+
+PASS: replaced/old token of same user cannot accept new current invite
+
+PASS: revoked invite link denied
+
+PASS: expired invite link denied
+
+PASS: token of another user never accepts for them
+
+PASS: foreign-user attempt changed nothing
+
+PASS: current token accepted
+
+PASS: active member recovery/login not broken
+
+PASS: user without invites (recovery/login) unaffected
+
+PASS (22023): mark sent without token hash rejected
+
+
+
+PASS: owner/admin-scoped staff takes (v1→v2)
+
+PASS (PT409): second moderator with stale version rejected
+
+PASS (22023): request_info requires public message
+
+
+PASS (42501): other-event moderator denied
+
+
+PASS (42501): revoked moderator denied
+
+
+PASS (22023): age not confirmed rejected
+
+PASS (22023): missing consent version rejected
+
+PASS (22023): arbitrary consent version rejected
+
+PASS: no column INSERT/UPDATE grants for anon/authenticated
+DB ACCESS MATRIX: ALL PASS
