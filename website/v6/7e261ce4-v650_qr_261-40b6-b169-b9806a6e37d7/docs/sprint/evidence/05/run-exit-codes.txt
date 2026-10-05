@@ -1,0 +1,14 @@
+run 2026-09-25 23:1x UTC
+staff-matrix exit=0
+e2e-application exit=0
+
+# 2026-09-25T23:18:04Z
+idempotency-fingerprint exit=0
+e2e-application exit=0
+
+# 2026-09-25T23:23:07Z (admission fix)
+invite-revoke exit=0
+staff-matrix exit=0
+idempotency-fingerprint exit=0
+e2e-application exit=0
+unit exit=0

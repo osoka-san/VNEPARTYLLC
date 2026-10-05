@@ -1,0 +1,187 @@
+{
+  "cancellation_postdecode_precommit": {
+    "before": [
+      {
+        "src": "",
+        "chapter": null,
+        "naturalWidth": 0,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": null,
+        "pendingGeneration": null
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 0.914777,
+        "inlineOpacity": "1",
+        "sourceKey": "hero:mobile:480:480:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "postdecode_precommit": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.avif",
+        "chapter": null,
+        "naturalWidth": 480,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": "space:mobile:480:480:1",
+        "pendingGeneration": "3"
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 0.0362088,
+        "inlineOpacity": "0",
+        "sourceKey": "hero:mobile:480:480:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "after_cancel": [
+      {
+        "src": "",
+        "chapter": null,
+        "naturalWidth": 0,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": null,
+        "pendingGeneration": null
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 0.844081,
+        "inlineOpacity": "0.844081",
+        "sourceKey": "hero:mobile:480:480:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "measured_visible": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 0.844081,
+        "inlineOpacity": "0.844081",
+        "sourceKey": "hero:mobile:480:480:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "pass": true
+  },
+  "obsolete_rejection_ownership": {
+    "first_request": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+        "chapter": null,
+        "naturalWidth": 1280,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": "space:desktop:1280:1280:1",
+        "pendingGeneration": "3"
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+        "chapter": "hero",
+        "naturalWidth": 1280,
+        "opacity": 0.808523,
+        "inlineOpacity": "0.342593",
+        "sourceKey": "hero:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "newer_before_obsolete_reject": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+        "chapter": null,
+        "naturalWidth": 1280,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": "space:desktop:1280:1280:1",
+        "pendingGeneration": "5"
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+        "chapter": "hero",
+        "naturalWidth": 1280,
+        "opacity": 0.328966,
+        "inlineOpacity": "0.143519",
+        "sourceKey": "hero:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "newer_after_obsolete_reject": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+        "chapter": null,
+        "naturalWidth": 1280,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": null,
+        "pendingKey": "space:desktop:1280:1280:1",
+        "pendingGeneration": "5"
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+        "chapter": "hero",
+        "naturalWidth": 1280,
+        "opacity": 0.164853,
+        "inlineOpacity": "0.143519",
+        "sourceKey": "hero:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "final_commit": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+        "chapter": "space",
+        "naturalWidth": 1280,
+        "opacity": 0.957085,
+        "inlineOpacity": "1",
+        "sourceKey": "space:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+        "chapter": "hero",
+        "naturalWidth": 1280,
+        "opacity": 0,
+        "inlineOpacity": "0",
+        "sourceKey": "hero:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "measured_visible": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+        "chapter": "space",
+        "naturalWidth": 1280,
+        "opacity": 0.957085,
+        "inlineOpacity": "1",
+        "sourceKey": "space:desktop:1280:1280:1",
+        "pendingKey": null,
+        "pendingGeneration": null
+      }
+    ],
+    "marker_unchanged": true,
+    "pass": true
+  }
+}

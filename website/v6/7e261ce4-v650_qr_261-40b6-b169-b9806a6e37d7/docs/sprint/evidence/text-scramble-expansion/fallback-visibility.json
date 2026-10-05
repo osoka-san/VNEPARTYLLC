@@ -1,0 +1,6 @@
+{
+  "fallback_without_observer": "final",
+  "protected_disclosure_count": 0,
+  "visible_before_hide": "final",
+  "after_hide": "final"
+}

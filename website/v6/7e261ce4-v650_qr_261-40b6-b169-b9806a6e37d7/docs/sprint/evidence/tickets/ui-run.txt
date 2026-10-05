@@ -1,0 +1,17 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+1440 GENERAL after flip side= back
+1440 VIP after flip side= back
+1440 SECURITY after flip side= back
+1440 ARTIST after flip side= back
+1440 drag inertia x: 879 1138 1221
+1440 paused stable: True
+390 VIP after flip side= back
+390 drag inertia x: 35 323 366
+390 paused stable: True
+reduced still: True sway disabled: True
+unconfigured issue buttons: 0 notice: 0
+/pass -> /pass | Нужна персональная ссылка
+/pass#short -> /pass#short | Пропуск не найден
+/pass#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -> /pass#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | Пропуски пока недоступны
+/admin/tickets -> /login?redirect=%2Fadmin | Вход В х о д
+errors: []

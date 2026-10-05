@@ -1,1 +1,0 @@
-{"captured_at":"2026-09-25T23:23:07Z","query":"read-only: private.member_admission join staff_assignments","rows":[{"state":"exempt","source":"legacy_owner","role":"owner"}],"member_admission_total":1,"auth_users_total":1,"note":"Единственный существующий аккаунт — владелец; email/uuid не публикуются; пароль/роли/данные не менялись; писем не отправлялось."}

@@ -1,0 +1,36 @@
+# run 2026-09-25T23:23:07Z
+PASS A guest submit via public RPC → own row, submitted, server consent
+PASS A direct table insert by guest denied
+PASS B before revoke: same aal2 JWT sees event application
+PASS B JWT unchanged between checks (no re-login)
+PASS B after revoke: same JWT sees nothing
+PASS B staff_can flips true→false in same JWT
+PASS C setup: two invites, first replaced
+PASS C old replaced link → /login?error=invite
+PASS C old replaced link → no new auth cookies issued
+PASS C current invite untouched by old link
+PASS D replaced token redeemed directly in Auth: my_admission=pending
+PASS D replaced token redeemed directly in Auth: profiles → успешный SELECT, 0 строк
+PASS D replaced token redeemed directly in Auth: own applications → успешный SELECT, 0 строк
+PASS D replaced token redeemed directly in Auth: submit_application_v2 → 42501
+PASS D replaced token redeemed directly in Auth: private-docs upload denied
+PASS D replaced token redeemed directly in Auth: self-admission RPC → denied
+PASS C revoke current invite id2
+PASS C revoked link → denied, no new auth cookies
+PASS D revoked token redeemed directly in Auth: my_admission=pending
+PASS D revoked token redeemed directly in Auth: profiles → успешный SELECT, 0 строк
+PASS D revoked token redeemed directly in Auth: own applications → успешный SELECT, 0 строк
+PASS D revoked token redeemed directly in Auth: submit_application_v2 → 42501
+PASS D revoked token redeemed directly in Auth: private-docs upload denied
+PASS D revoked token redeemed directly in Auth: self-admission RPC → denied
+PASS D no application created by bypass attempts
+PASS C setup: new current invite id3
+PASS C current bound link → /member with session cookie
+PASS C current invite accepted
+PASS E accepted: my_admission=admitted
+PASS E accepted: own profile visible
+PASS E accepted: submit via RPC works
+PASS E accepted member regular login not broken
+cleanup(manifest run=a6f2e649): requested users=3 events=1 apps=2 assignments=1; remaining {"applications":0,"assignments":0,"events":0,"invites":0,"requests":0,"users":0}; VERIFIED removed
+RESULT: ALL PASS
+exit=0

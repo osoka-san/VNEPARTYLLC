@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "threshold-desktop",
+      "role": "01 / Порог · desktop",
+      "layout": "desktop",
+      "stem": "vne-threshold-gallery-v5-c-desktop",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-threshold-gallery-v5-c-desktop.png",
+      "source_sha256": "1319d3f39c77adf667a4164fe3e0b1d9d53ee5745edf2681c52fe4082217695f",
+      "source_file": "vne-threshold-gallery-v5-c-desktop.png"
+    },
+    {
+      "id": "threshold-mobile",
+      "role": "01 / Порог · mobile",
+      "layout": "mobile",
+      "stem": "vne-threshold-gallery-v5-c-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-threshold-gallery-v5-c-mobile.png",
+      "source_sha256": "92a85d05daaa26683fdc5fff7ec27321a78fbfeb575c0b7c0cd36055a153c6c4",
+      "source_file": "vne-threshold-gallery-v5-c-mobile.png"
+    },
+    {
+      "id": "space-desktop",
+      "role": "03 / Пространство · desktop",
+      "layout": "desktop",
+      "stem": "vne-space-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-space-gallery-v6-desktop.png",
+      "source_sha256": "3eb7a53b0ff8da25723cf88013e35b99f984d18845aab1bc8e1214091a92bde5",
+      "source_file": "exec-31c8d532-677a-4a67-8f0b-62b4c6c039be.png"
+    },
+    {
+      "id": "space-mobile",
+      "role": "03 / Пространство · mobile",
+      "layout": "mobile",
+      "stem": "vne-space-gallery-v6-mobile",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-space-gallery-v6-mobile.png",
+      "source_sha256": "2705c36cd43f891225b410cdea8762096754f255557808417e6a2a93e9de09f0",
+      "source_file": "exec-d0bfd230-5f97-4aec-ac8d-0de14aefb693.png"
+    },
+    {
+      "id": "belonging-desktop",
+      "role": "05 / Свои · desktop",
+      "layout": "desktop",
+      "stem": "vne-belonging-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-belonging-gallery-v6-desktop.png",
+      "source_sha256": "b97206b816679d81cb0b65576f86234b307c7e61f6a7505c0071465ef0601bb0",
+      "source_file": "exec-2b95e1f9-43c1-4d73-92eb-a660acf0d49d.png"
+    },
+    {
+      "id": "belonging-mobile",
+      "role": "05 / Свои · mobile",
+      "layout": "mobile",
+      "stem": "vne-belonging-gallery-v5-d-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-belonging-gallery-v5-d-mobile.png",
+      "source_sha256": "861241242826a431c62efa230ad52bfefd0e159f3235ab80d1cd22f3ad961cfc",
+      "source_file": "vne-belonging-gallery-v5-d-mobile.png"
+    },
+    {
+      "id": "invitation-desktop",
+      "role": "06 / Приглашение · desktop",
+      "layout": "desktop",
+      "stem": "vne-invitation-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-invitation-gallery-v6-desktop.png",
+      "source_sha256": "c6558ba97042212b73c5c950b05d9b15ff997a2c132cd62d41239f00fa2f6cbb",
+      "source_file": "exec-275d5770-17d8-47f3-818b-47ba156ee344.png"
+    },
+    {
+      "id": "invitation-mobile",
+      "role": "06 / Приглашение · mobile",
+      "layout": "mobile",
+      "stem": "vne-invitation-gallery-v5-c-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-invitation-gallery-v5-c-mobile.png",
+      "source_sha256": "ff45b464316c88ab2a98c9760e05842f6966b884015d4499b34790d4ebb4ba70",
+      "source_file": "vne-invitation-gallery-v5-c-mobile.png"
+    },
+    {
+      "id": "event-interval",
+      "role": "Событие / Интервал света",
+      "layout": "editorial",
+      "stem": "vne-event-light-interval-v5-c",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-event-light-interval-v5-c.png",
+      "source_sha256": "1853cbb42efcb9622d13952593ac4f7b9145dee910078e9aaf5e93b5b3c31943",
+      "source_file": "vne-event-light-interval-v5-c.png"
+    },
+    {
+      "id": "event-resonance",
+      "role": "Событие / Ритм в камне",
+      "layout": "editorial",
+      "stem": "vne-event-resonance-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-event-resonance-v6.png",
+      "source_sha256": "a2358e4c12b887cd447e0ede3c91b8b286b6690cd32d5702e822860e8763bc67",
+      "source_file": "exec-06b746a6-db19-451e-b7e5-5c7ecc482074.png"
+    },
+    {
+      "id": "about-stone",
+      "role": "О проекте / Камень",
+      "layout": "editorial",
+      "stem": "vne-about-stone-detail-v5-d",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-about-stone-detail-v5-d.png",
+      "source_sha256": "32d3e97ffd92553e3e58d9dba2acc1dbdb7b1219d052915aeb9224cb9f2493f4",
+      "source_file": "vne-about-stone-detail-v5-d.png"
+    },
+    {
+      "id": "about-pines",
+      "role": "О проекте / Сосны",
+      "layout": "editorial",
+      "stem": "vne-about-pine-canopy-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-about-pine-canopy-v6.png",
+      "source_sha256": "5250dae1f5cd585741cdb5b40185a9acf8e726fc3d0ed3e5930a0de9b270e458",
+      "source_file": "exec-bcaec570-33f7-421b-9ff8-8e67197f9a09.png"
+    },
+    {
+      "id": "about-water",
+      "role": "О проекте / Вода",
+      "layout": "editorial",
+      "stem": "vne-about-dark-water-reflection-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-about-dark-water-reflection-v6.png",
+      "source_sha256": "eb87a2d3a0a68f31a098b072625a11d4a7f5c477cb1c37ddfa19145a381364a8",
+      "source_file": "exec-e9ca3a4e-235f-466d-9c29-d5cda4f45a5c.png"
+    },
+    {
+      "id": "sculpture-reserve",
+      "role": "Каменная скульптура / Резерв",
+      "layout": "editorial",
+      "stem": "vne-event-stone-sculpture-v5-c",
+      "status": "user-selected-preserved",
+      "placement": "reserve-only",
+      "master": "masters/vne-event-stone-sculpture-v5-c.png",
+      "source_sha256": "3c0309de1d9c9dcb7ab3f5042f78233e9e2c0dc6db922fb159723bb88f3dc5dc",
+      "source_file": "vne-event-stone-sculpture-v5-c.png"
+    }
+  ]
+}

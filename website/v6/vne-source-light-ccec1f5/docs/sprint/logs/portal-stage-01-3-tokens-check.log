@@ -1,2 +1,0 @@
-$ bun scripts/check-brand-tokens.ts
-Brand tokens match designConfig.
