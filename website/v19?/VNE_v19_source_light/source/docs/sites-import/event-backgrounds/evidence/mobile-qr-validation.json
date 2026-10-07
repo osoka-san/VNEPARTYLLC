@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "size": 144,
+  "total": 64,
+  "failures": [],
+  "payload": "synthetic ticket token",
+  "renderer": "sharp SVG rasterization",
+  "decoder": "jsQR",
+  "physicalScan": "NOT VERIFIED"
+}

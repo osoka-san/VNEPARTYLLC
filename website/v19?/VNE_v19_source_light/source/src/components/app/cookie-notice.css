@@ -1,0 +1,194 @@
+.vne-cookie-notice {
+  position: fixed;
+  right: 24px;
+  bottom: calc(4.9rem + env(safe-area-inset-bottom));
+  z-index: 45;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 168px;
+  width: min(710px, calc(100% - 48px));
+  max-height: calc(100dvh - 10rem);
+  overflow: auto;
+  border: 1px solid oklch(0.717 0.207 32 / 0.4);
+  border-radius: 10px;
+  background: oklch(0.18 0.012 175 / 0.97);
+  color: var(--foreground);
+  box-shadow: 0 18px 70px oklch(0 0 0 / 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.vne-cookie-notice[data-motion="true"] {
+  animation: vne-cookie-enter 0.35s ease-out both;
+}
+.vne-cookie-copy {
+  padding: 24px;
+}
+.vne-cookie-copy h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.vne-cookie-copy h2 > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vne-neon-coral);
+  box-shadow: 0 0 12px var(--vne-neon-coral);
+}
+.vne-cookie-copy p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+.vne-cookie-copy .vne-cookie-scope {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.vne-cookie-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 36px;
+  margin-top: 5px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.vne-cookie-accept {
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
+  border-left: 1px solid oklch(0.717 0.207 32 / 0.24);
+  color: var(--vne-neon-coral);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.vne-cookie-accept-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  position: absolute;
+  top: 22px;
+  left: 17px;
+  right: 17px;
+  font-size: 10px;
+}
+.vne-cookie-ok {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  font-family: var(--font-display);
+  font-size: 96px;
+  font-weight: 650;
+  letter-spacing: -0.1em;
+  line-height: 1;
+  padding-right: 0.08em;
+  opacity: 0.8;
+  transform: translateX(-50%);
+  transition:
+    bottom 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    text-shadow 0.3s,
+    opacity 0.3s;
+}
+.vne-cookie-accept:focus-visible {
+  outline: 2px solid var(--vne-neon-coral);
+  outline-offset: -5px;
+  background: oklch(0.717 0.207 32 / 0.09);
+}
+.vne-cookie-accept:focus-visible .vne-cookie-ok {
+  bottom: 12px;
+  opacity: 1;
+  text-shadow:
+    0 0 18px oklch(0.717 0.207 32 / 0.8),
+    0 0 44px oklch(0.717 0.207 32 / 0.45);
+}
+.vne-cookie-notice:focus-visible,
+.vne-cookie-details:focus-visible {
+  outline: 2px solid var(--vne-neon-coral);
+  outline-offset: 4px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .vne-cookie-accept:hover {
+    background: oklch(0.717 0.207 32 / 0.09);
+  }
+  .vne-cookie-accept:hover .vne-cookie-ok {
+    bottom: 12px;
+    opacity: 1;
+    text-shadow:
+      0 0 18px oklch(0.717 0.207 32 / 0.8),
+      0 0 44px oklch(0.717 0.207 32 / 0.45);
+  }
+}
+@media (max-width: 599px) {
+  .vne-cookie-notice {
+    right: 12px;
+    width: calc(100% - 24px);
+    grid-template-columns: minmax(0, 1fr) 92px;
+    bottom: calc(4.7rem + env(safe-area-inset-bottom));
+  }
+  .vne-cookie-copy {
+    padding: 16px 14px;
+  }
+  .vne-cookie-copy h2 {
+    font-size: 9px;
+    gap: 6px;
+  }
+  .vne-cookie-copy p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+  .vne-cookie-copy .vne-cookie-scope {
+    font-size: 10px;
+  }
+  .vne-cookie-accept-hint {
+    left: 10px;
+    right: 10px;
+    top: 16px;
+    font-size: 9px;
+    gap: 4px;
+  }
+  .vne-cookie-accept-hint svg {
+    width: 12px;
+  }
+  .vne-cookie-ok {
+    font-size: 52px;
+    bottom: -27px;
+  }
+}
+@media (hover: none) {
+  .vne-cookie-ok {
+    opacity: 1;
+    text-shadow: 0 0 18px oklch(0.717 0.207 32 / 0.45);
+  }
+  .vne-cookie-accept:active .vne-cookie-ok {
+    bottom: 12px;
+  }
+}
+.vne-cookie-notice[data-motion="false"],
+.vne-cookie-notice[data-motion="false"] * {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-cookie-notice,
+  .vne-cookie-notice * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@keyframes vne-cookie-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

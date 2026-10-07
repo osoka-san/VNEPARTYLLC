@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "note": "Final successful generation prompts only. The 7 selected v5 originals were not regenerated. Reference filenames and packaged master paths replace machine-specific absolute paths.",
+  "jobs": [
+    {
+      "id": "space-desktop",
+      "stem": "vne-space-gallery-v6-desktop",
+      "aspect_request": "16:9 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio 16:9 landscape.\nChapter03 Space: A NEW outward-facing camera position, standing under the terrace roof on the forest side of THIS house. The camera looks AWAY from the lounge into tall natural pines and rocks. Do NOT show any sofa, coffee table, lounge doorway or room beyond! Show a large EMPTY covered graphite terrace continuing into the forest; broad square pier at the left edge and one at the right edge support a straight roof; pine forest fills the view outside, a low rectangular reflecting basin can just be glimpsed at far right. Photographic straight verticals, real structural junctions. This must be a DISTINCT forest-facing terrace scene, not a copy of the entrance composition. Same house and time/materials as references. On DESKTOP keep left40% dark shaded stone pier/wall as uninterrupted readable copy area, forest and airy terrace in right60%. Calm low highlights along right floor only.",
+      "reference_images": [
+        {
+          "filename": "exec-bcaec570-33f7-421b-9ff8-8e67197f9a09.png",
+          "package_master": "masters/vne-about-pine-canopy-v6.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-31c8d532-677a-4a67-8f0b-62b4c6c039be.png"
+    },
+    {
+      "id": "belonging-desktop",
+      "stem": "vne-belonging-gallery-v6-desktop",
+      "aspect_request": "16:9 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio: 16:9 landscape.\nSpecific scene: Chapter 05 Belonging desktop companion of image1 mobile: faithfully reconstruct the SAME doorway into the sunken lounge, same sofa, monolithic low coffee table, low plinth steps and rear pine-window. Widen the camera horizontally to reveal more of the same dark left wall, not a different room. Camera stands a little deeper at the inner portal compared with the entrance reference. Left 44% a calm shaded graphite wall for existing white heading/paragraph. Lounge furniture and warm light arranged in right 56%, bright accents below middle. Wide spacious room not cramped.",
+      "reference_images": [
+        {
+          "filename": "vne-belonging-gallery-v5-d-mobile.png",
+          "package_master": "masters/vne-belonging-gallery-v5-d-mobile.png"
+        },
+        {
+          "filename": "vne-threshold-gallery-v5-c-desktop.png",
+          "package_master": "masters/vne-threshold-gallery-v5-c-desktop.png"
+        }
+      ],
+      "source_filename": "exec-2b95e1f9-43c1-4d73-92eb-a660acf0d49d.png"
+    },
+    {
+      "id": "invitation-desktop",
+      "stem": "vne-invitation-gallery-v6-desktop",
+      "aspect_request": "16:9 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio: 16:9 landscape.\nSpecific scene: Chapter 06 Invitation desktop counterpart of reference1. Reverse view from the SAME lounge back to the SAME pine courtyard and covered entrance corridor. Same square pylons, sliding glazing, planted gravel bed, dark slab table and charcoal sofa. Shift camera slightly LEFT so left 45% is quiet shaded stone wall/ceiling and subtle sofa in shadow for a long white call-to-action; recognizable pine and open court at right center. Keep the far portal aligned plausibly with the entrance reference. Warm practical light confined right and low. Left copy must not cross the tree, lamp, book or bowl. This scene visually closes the route back toward chapter01.",
+      "reference_images": [
+        {
+          "filename": "vne-invitation-gallery-v5-c-mobile.png",
+          "package_master": "masters/vne-invitation-gallery-v5-c-mobile.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-275d5770-17d8-47f3-818b-47ba156ee344.png"
+    },
+    {
+      "id": "about-pines",
+      "stem": "vne-about-pine-canopy-v6",
+      "aspect_request": "4:3 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio: 4:3 landscape.\nSpecific scene: About editorial still, portrait of the pine courtyard of THIS house. Looking slightly upward from the terrace at a natural mature pine trunk and its asymmetrical branches under blue-hour sky. Thin dark horizontal roof edge and single square stone pier frame the left/bottom third, grounding the forest in the same actual architecture; a restrained warm grazing light falls on lower bark only. Pine needles with individually plausible branches, natural botanical detail, no duplicated trees or glowing foliage. No headline over this image, caption is outside; allow interesting balanced image throughout. No orange sunset or bright cyan sky.",
+      "reference_images": [
+        {
+          "filename": "vne-threshold-gallery-v5-c-desktop.png",
+          "package_master": "masters/vne-threshold-gallery-v5-c-desktop.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-bcaec570-33f7-421b-9ff8-8e67197f9a09.png"
+    },
+    {
+      "id": "about-water",
+      "stem": "vne-about-dark-water-reflection-v6",
+      "aspect_request": "16:9 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio: 16:9 landscape.\nSpecific scene: About editorial still of a shallow rectangular reflecting basin in a SIDE courtyard of the SAME house, seen at low but natural camera height. Dark still water in foreground reflects one straight stone pier and pine branches with physically correct small ripples. Basin has clean constructible stone coping and a narrow terrace behind, one restrained warm recessed light under coping, pine forest beyond and the same square piers. Image still readable with real visible water details, not a black blank field. Dry surrounding graphite floor, not a wet glossy fantasy. No infinity-edge floating slabs, no impossible reflection or underwater stair.",
+      "reference_images": [
+        {
+          "filename": "vne-threshold-gallery-v5-c-desktop.png",
+          "package_master": "masters/vne-threshold-gallery-v5-c-desktop.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-e9ca3a4e-235f-466d-9c29-d5cda4f45a5c.png"
+    },
+    {
+      "id": "event-resonance",
+      "stem": "vne-event-resonance-v6",
+      "aspect_request": "16:10 landscape",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio: 16:10 landscape.\nSpecific scene: Event cover Rhythm in Stone, a quiet side chamber in the SAME house. Five thick low graphite stone fins form a restrained sculptural horizontal rhythm on a grounded continuous low plinth. Wide slightly curved upright stone plates at knee to chest height with believable thickness, clear support and separated silhouettes. Camera eye level, long horizontal stone bench in shadow, pine trees through a single wide opening at far right, one soft warm side light. Harmonize with the selected bench sculpture reference without making a copy. No stage, DJ, speakers, text or event crowd. All geometry must be physically possible; event caption is below the picture.",
+      "reference_images": [
+        {
+          "filename": "vne-event-stone-sculpture-v5-c.png",
+          "package_master": "masters/vne-event-stone-sculpture-v5-c.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-06b746a6-db19-451e-b7e5-5c7ecc482074.png"
+    },
+    {
+      "id": "space-mobile",
+      "stem": "vne-space-gallery-v6-mobile",
+      "aspect_request": "9:16 portrait",
+      "prompt": "Use case: photorealistic-natural. Create ONE finished architectural photograph for the VNE website, no contact sheet. All supplied images are exact visual reference for ONE unified, realistically constructible private house. Match their graphite stone, charcoal upholstery, broad low ceilings, square piers, thin black glazing frames, subdued warm recessed lighting and crisp blue-hour pine forest; match exposure and restrained color, do not invent a different building. Full photographic realism, correctly straight lines and coherent perspective, physically supported ceilings and joins, subtle fine stone texture with believable real scale, real pine needles and bark, no plastic CGI, no painterly smoothing or blur, no hazy veil, no fake HDR halos, no excessive porous noise, no futuristic objects. No people, text, logos, labels, typography or watermark. Calm monumental spacious private residence, not abandoned ruins or a hotel. Sharp architectural image with natural deep focus. Keep upper and lower edges quiet and dark enough for website CSS transitions; do not paint artificial gradients or borders into the picture.\nAspect ratio 9:16 portrait.\nChapter03 Space: A NEW outward-facing camera position, standing under the terrace roof on the forest side of THIS house. The camera looks AWAY from the lounge into tall natural pines and rocks. Do NOT show any sofa, coffee table, lounge doorway or room beyond! Show a large EMPTY covered graphite terrace continuing into the forest; broad square pier at the left edge and one at the right edge support a straight roof; pine forest fills the view outside, a low rectangular reflecting basin can just be glimpsed at far right. Photographic straight verticals, real structural junctions. This must be a DISTINCT forest-facing terrace scene, not a copy of the entrance composition. Same house and time/materials as references. MOBILE version of that terrace: upper43% broad continuous shaded stone soffit for white heading and paragraph, below a horizontal opening onto crisp pine trees, ground plane bottom third. Tree trunks visible primarily lower half. No bright light in top43%. Deep clear perspective below copy.",
+      "reference_images": [
+        {
+          "filename": "exec-bcaec570-33f7-421b-9ff8-8e67197f9a09.png",
+          "package_master": "masters/vne-about-pine-canopy-v6.png"
+        },
+        {
+          "filename": "vne-event-light-interval-v5-c.png",
+          "package_master": "masters/vne-event-light-interval-v5-c.png"
+        }
+      ],
+      "source_filename": "exec-d0bfd230-5f97-4aec-ac8d-0de14aefb693.png"
+    }
+  ]
+}

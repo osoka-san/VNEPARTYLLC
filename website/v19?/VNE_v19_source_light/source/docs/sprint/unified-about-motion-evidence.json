@@ -1,0 +1,43 @@
+{
+  "imageReveal_false": [
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    },
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    },
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    }
+  ],
+  "revealStyle_none": [
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    },
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    },
+    {
+      "opacity": "1",
+      "transform": "none",
+      "animations": []
+    }
+  ],
+  "mobile_dom_order": [
+    "space",
+    "Художественный образ пространства",
+    "community",
+    "Материал и свет",
+    "Тишина и отражение"
+  ]
+}

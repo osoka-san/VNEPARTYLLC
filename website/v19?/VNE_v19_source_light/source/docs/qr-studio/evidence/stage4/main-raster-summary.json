@@ -1,0 +1,1 @@
+{"cases": 40, "zxing_checks": 200, "zxing_failures": [], "opencv_failures": [["syncopa-15", "900"], ["syncopa-17", "900"], ["flow-17", "900"]]}

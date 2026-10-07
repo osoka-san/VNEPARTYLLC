@@ -1,0 +1,29 @@
+bun test v1.3.3 (274e01c7)
+
+tests/tickets-contract.test.ts:
+(pass) config > no config → null [0.16ms]
+(pass) config > http localhost only in development [0.29ms]
+(pass) config > short admin key is ignored [0.05ms]
+(pass) manual contract > valid [0.37ms]
+(pass) manual contract > name or telegram [0.05ms]
+(pass) manual contract > bad telegram [0.04ms]
+(pass) manual contract > bad access [0.02ms]
+(pass) manual contract > past validUntil [0.02ms]
+(pass) manual contract > non-integer total [0.03ms]
+(pass) manual contract > bad date [0.02ms]
+(pass) admin actions fail closed > no config → not_configured, no network [0.53ms]
+(pass) admin actions fail closed > unauthorized staff → no network [1.24ms]
+(pass) admin actions fail closed > cross origin → forbidden, staff not even checked [0.29ms]
+(pass) admin actions fail closed > invalid action / input [0.31ms]
+(pass) admin actions fail closed > issue: fixed path, bearer + idempotency, sanitized DTO, site pass path [1.69ms]
+(pass) admin actions fail closed > service unauthorized hides details [0.27ms]
+(pass) read pass > invalid token, no network [0.18ms]
+(pass) read pass > unconfigured [0.05ms]
+(pass) read pass > no admin key sent; revoked has no QR [0.14ms]
+(pass) read pass > network failure → unavailable, never active [0.29ms]
+(pass) read pass > helpers [0.04ms]
+
+ 21 pass
+ 0 fail
+ 42 expect() calls
+Ran 21 tests across 1 file. [34.00ms]

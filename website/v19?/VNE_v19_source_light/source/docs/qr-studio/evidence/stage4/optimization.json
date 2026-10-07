@@ -1,0 +1,1 @@
+{"status":"PASS","cases":[{"name":"syncopa-01","bytes":15,"ms":1492,"unchanged":true},{"name":"flow-01","bytes":15,"ms":1209,"unchanged":true},{"name":"syncopa-2","bytes":220,"ms":12603,"unchanged":true},{"name":"flow-2","bytes":220,"ms":12872,"unchanged":true}]}

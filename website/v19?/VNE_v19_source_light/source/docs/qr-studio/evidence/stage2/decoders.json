@@ -1,0 +1,1242 @@
+[
+  {
+    "name": "syncopa-01",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-02",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-03",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-04",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-05",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-06",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-07",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-08",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-09",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-10",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-11",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-12",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-13",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-14",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-15",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-16",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-17",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-18",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-19",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-20",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-01",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-02",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-03",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-04",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-05",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-06",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-07",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-08",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-09",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-10",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-11",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-12",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-13",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-14",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-15",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-16",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-17",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-18",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-19",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-20",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  }
+]

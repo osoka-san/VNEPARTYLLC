@@ -1,0 +1,140 @@
+.vne-admin-navigation {
+  position: fixed;
+  top: max(10px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  width: min(1180px, calc(100% - 24px));
+  border: 1px solid #ffffff24;
+  background: #0b100ef5;
+  box-shadow: 0 12px 32px #0006;
+  color: #edf2ee;
+  padding: 8px 10px 10px;
+  backdrop-filter: blur(18px);
+}
+.vne-admin-navigation-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  color: #9aaea2;
+  padding: 0 6px 5px;
+}
+.vne-admin-navigation-title > a {
+  color: #30e5ad;
+  padding: 3px 0;
+}
+.vne-admin-navigation ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.vne-admin-navigation li {
+  flex: 1 0 auto;
+}
+.vne-admin-navigation nav a,
+.vne-admin-navigation nav button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  padding: 9px 13px;
+  border: 1px solid transparent;
+  color: #c0cec5;
+  text-decoration: none;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.vne-admin-navigation nav a:hover {
+  background: #ffffff0c;
+  color: #fff;
+}
+.vne-admin-navigation nav a.is-active {
+  background: #30e5ad;
+  color: #070a09;
+  border-color: #30e5ad;
+}
+.vne-admin-navigation a:focus-visible,
+.vne-admin-navigation button:focus-visible {
+  outline: 2px solid #e55330;
+  outline-offset: 2px;
+}
+@media (max-width: 700px) {
+  .vne-admin-navigation {
+    padding: 5px 6px 7px;
+    width: calc(100% - 16px);
+    top: max(6px, env(safe-area-inset-top));
+  }
+  .vne-admin-navigation-title {
+    padding: 0 4px 3px;
+  }
+  .vne-admin-navigation ul {
+    gap: 3px;
+  }
+  .vne-admin-navigation nav a,
+  .vne-admin-navigation nav button {
+    font-size: 0.875rem;
+    padding: 7px 9px;
+  }
+  .vne-admin-navigation li {
+    flex: 1 0 22%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-admin-navigation nav a,
+  .vne-admin-navigation nav button {
+    transition: none;
+  }
+}
+
+.vne-admin-navigation nav button.is-unavailable {
+  color: #859188;
+  cursor: pointer;
+  background: transparent;
+  gap: 7px;
+  width: 100%;
+}
+.vne-admin-navigation nav button.is-unavailable:hover {
+  color: #adbbb1;
+  background: #ffffff07;
+}
+.vne-nav-dot {
+  width: 4px;
+  height: 4px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.vne-admin-navigation-title > span {
+  letter-spacing: 0.025em;
+  text-align: right;
+  overflow-wrap: anywhere;
+  max-width: 70%;
+}
+
+.vne-admin-navigation-title > .vne-admin-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid #30e5ad75;
+  border-radius: 6px;
+  background: #30e5ad12;
+  color: #30e5ad;
+  letter-spacing: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.vne-admin-navigation-title > .vne-admin-back:hover {
+  background: #30e5ad;
+  color: #070a09;
+}

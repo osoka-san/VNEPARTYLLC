@@ -1,0 +1,158 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "unconfigured",
+  "browser": "NOT VERIFIED",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "htmlBytes": 73311
+    },
+    {
+      "route": "/events",
+      "status": 200,
+      "htmlBytes": 40217
+    },
+    {
+      "route": "/events/light-study-01",
+      "status": 200,
+      "htmlBytes": 57758
+    },
+    {
+      "route": "/events/threshold-study-02",
+      "status": 200,
+      "htmlBytes": 52401
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "htmlBytes": 43774
+    },
+    {
+      "route": "/rules",
+      "status": 200,
+      "htmlBytes": 31540
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "htmlBytes": 32815
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "htmlBytes": 24901
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "htmlBytes": 23752
+    },
+    {
+      "route": "/admin/tickets",
+      "status": 200,
+      "htmlBytes": 64660
+    },
+    {
+      "route": "/admin/qr-studio",
+      "status": 200,
+      "htmlBytes": 62488
+    },
+    {
+      "route": "/admin/qr-studio?template=marble",
+      "status": 200,
+      "htmlBytes": 37746
+    },
+    {
+      "route": "/admin/tickets?view=preview&template=enamel",
+      "status": 200,
+      "htmlBytes": 52617
+    },
+    {
+      "route": "/admin/events",
+      "status": 200,
+      "htmlBytes": 20438
+    },
+    {
+      "route": "/admin/applications",
+      "status": 200,
+      "htmlBytes": 18929
+    },
+    {
+      "route": "/admin/orders",
+      "status": 200,
+      "htmlBytes": 18788
+    },
+    {
+      "route": "/admin?section=accounts",
+      "status": 200,
+      "htmlBytes": 21033
+    },
+    {
+      "route": "/admin?section=team",
+      "status": 200,
+      "htmlBytes": 22530
+    },
+    {
+      "route": "/admin?section=content",
+      "status": 200,
+      "htmlBytes": 22598
+    },
+    {
+      "route": "/admin?section=operations",
+      "status": 200,
+      "htmlBytes": 22498
+    },
+    {
+      "route": "/admin?section=overview",
+      "status": 200,
+      "htmlBytes": 23780
+    },
+    {
+      "route": "/admin?section=motion",
+      "status": 200,
+      "htmlBytes": 197631
+    },
+    {
+      "route": "/admin/tickets?view=preview&template=marble&access=GENERAL",
+      "status": 200,
+      "htmlBytes": 52621
+    },
+    {
+      "route": "/admin/tickets?view=preview&template=marble&access=VIP",
+      "status": 200,
+      "htmlBytes": 52582
+    },
+    {
+      "route": "/admin/tickets?view=preview&template=marble&access=SECURITY",
+      "status": 200,
+      "htmlBytes": 52633
+    },
+    {
+      "route": "/admin/tickets?view=preview&template=marble&access=ARTIST",
+      "status": 200,
+      "htmlBytes": 52597
+    },
+    {
+      "route": "/admin/qr-studio?access=VIP",
+      "status": 200,
+      "htmlBytes": 62058
+    },
+    {
+      "route": "/admin?section=requests",
+      "status": 200,
+      "htmlBytes": 22495
+    },
+    {
+      "route": "/pass",
+      "status": 200,
+      "htmlBytes": 8126
+    },
+    {
+      "route": "/scan",
+      "status": 200,
+      "htmlBytes": 22893
+    }
+  ]
+}

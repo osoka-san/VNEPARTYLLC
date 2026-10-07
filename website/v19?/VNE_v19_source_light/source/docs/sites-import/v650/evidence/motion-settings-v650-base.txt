@@ -1,0 +1,25 @@
+bun test v1.3.3 (274e01c7)
+
+../v650-baseline/tests/motion-settings.test.ts:
+(pass) motion settings v6 > exports v6 and round-trips all known settings [0.86ms]
+(pass) motion settings v6 > migrates v1-v5 and preserves new current values [0.79ms]
+57 |     expect(settings.scrambleDuration).toBe(1.5);
+58 |     expect(settings.scrambleTick).toBe(0.025);
+59 |     expect(settings.scrambleDelay).toBe(0.5);
+60 |     expect(settings.scrambleIntensity).toBe(1);
+61 |     expect(settings.scrambleDirection).toBe("left");
+62 |     expect(settings.scrambleCharset).toBe("auto");
+                                          ^
+error: expect(received).toBe(expected)
+
+Expected: "auto"
+Received: "symbols"
+
+      at <anonymous> (/workspace/scratch/b9be800b9f4a/v650-baseline/tests/motion-settings.test.ts:62:38)
+(fail) motion settings v6 > rejects invalid shapes and clamps v6 ranges [0.28ms]
+(pass) motion settings v6 > legacy partial target maps preserve current known values and discard unknown ids [0.17ms]
+
+ 3 pass
+ 1 fail
+ 40 expect() calls
+Ran 4 tests across 1 file. [13.00ms]

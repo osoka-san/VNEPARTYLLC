@@ -1,0 +1,90 @@
+/* Adapted from Matrix digital rain by whoisyourdeadie; MIT notice: /licenses/uiverse-matrix.txt */
+.event-rain {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  contain: paint;
+  pointer-events: none;
+  background: var(--rain-background, #070a09);
+  background: color-mix(in srgb, var(--rain-background, #070a09) 30%, #070a09);
+}
+.event-rain__streams {
+  position: absolute;
+  inset: 0;
+  opacity: var(--rain-opacity);
+}
+.event-rain__column {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1.4em;
+  font:
+    600 var(--rain-size) / 1.35 ui-monospace,
+    monospace;
+  opacity: var(--rain-column-opacity);
+  animation: event-rain-fall var(--rain-duration) var(--rain-delay) linear infinite;
+}
+.event-rain__column > span {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  letter-spacing: 0.18em;
+  color: var(--rain-color);
+  background: linear-gradient(
+    to bottom,
+    var(--rain-highlight) 0%,
+    var(--rain-color) 12%,
+    var(--rain-color) 45%,
+    transparent 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 var(--rain-glow) var(--rain-color));
+}
+.event-rain__veil {
+  position: absolute;
+  inset: 0;
+  /* A persistent dark layer keeps all original event copy readable, even with pale palettes. */
+  background:
+    linear-gradient(90deg, rgb(7 10 9 / 72%), rgb(7 10 9 / 55%) 60%, rgb(7 10 9 / 68%)),
+    linear-gradient(0deg, #070a09 0%, transparent 25%, transparent 85%, rgb(7 10 9 / 50%));
+}
+.event-rain[data-direction="up"] .event-rain__column {
+  animation-direction: reverse;
+}
+.event-rain[data-visible="false"] .event-rain__column {
+  animation-play-state: paused;
+}
+.event-rain[data-motion="static"] .event-rain__column {
+  animation: none;
+  transform: translateY(var(--rain-static-y));
+}
+.event-rain--compact .event-rain__column {
+  font-size: calc(var(--rain-size) * 0.8);
+}
+@keyframes event-rain-fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 640px) {
+  .event-rain:not(.event-rain--compact) .event-rain__column:nth-child(even) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .event-rain .event-rain__column {
+    animation: none !important;
+    transform: translateY(var(--rain-static-y));
+  }
+}
+:root[data-reduce-motion="true"] .event-rain__column {
+  animation: none !important;
+  transform: translateY(var(--rain-static-y));
+}

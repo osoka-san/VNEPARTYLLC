@@ -1,0 +1,312 @@
+{
+  "desktop-1440": {
+    "overflow": false,
+    "gallery": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+        "complete": true,
+        "nw": 1440,
+        "nh": 810
+      }
+    ],
+    "footer_visible": true,
+    "allocated": "88",
+    "pictures": 2,
+    "imgs": 2,
+    "canvases": 1,
+    "deep_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      }
+    ],
+    "reverse_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      }
+    ],
+    "menu_open": "desktop-na",
+    "frozen": true,
+    "errors": []
+  },
+  "desktop-1920": {
+    "overflow": false,
+    "gallery": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+        "complete": true,
+        "nw": 1920,
+        "nh": 1080
+      }
+    ],
+    "footer_visible": true,
+    "allocated": "88",
+    "pictures": 2,
+    "imgs": 2,
+    "canvases": 1,
+    "deep_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      }
+    ],
+    "reverse_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+        "complete": true,
+        "nw": 1672,
+        "nh": 941
+      }
+    ],
+    "menu_open": "desktop-na",
+    "frozen": true,
+    "errors": []
+  },
+  "mobile-360": {
+    "overflow": false,
+    "gallery": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 360,
+        "nh": 639
+      }
+    ],
+    "footer_visible": true,
+    "allocated": "88",
+    "pictures": 2,
+    "imgs": 2,
+    "canvases": 1,
+    "deep_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "reverse_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "menu_open": true,
+    "frozen": true,
+    "errors": []
+  },
+  "mobile-390": {
+    "overflow": false,
+    "gallery": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 389,
+        "nh": 693
+      }
+    ],
+    "footer_visible": true,
+    "allocated": "88",
+    "pictures": 2,
+    "imgs": 2,
+    "canvases": 1,
+    "deep_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "reverse_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "menu_open": true,
+    "frozen": true,
+    "errors": []
+  },
+  "mobile-430": {
+    "overflow": false,
+    "gallery": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 430,
+        "nh": 764
+      }
+    ],
+    "footer_visible": true,
+    "allocated": "88",
+    "pictures": 2,
+    "imgs": 2,
+    "canvases": 1,
+    "deep_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "reverse_scene": [
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      },
+      {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "complete": true,
+        "nw": 480,
+        "nh": 853
+      }
+    ],
+    "menu_open": true,
+    "frozen": true,
+    "errors": []
+  },
+  "editorials": {
+    "about": {
+      "url": "http://localhost:8080/about",
+      "images": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1280.avif",
+          "complete": true,
+          "nw": 734,
+          "nh": 550
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-480.avif",
+          "complete": true,
+          "nw": 406,
+          "nh": 304
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-800.avif",
+          "complete": true,
+          "nw": 734,
+          "nh": 412
+        }
+      ],
+      "overflow": false
+    },
+    "events": {
+      "url": "http://localhost:8080/events",
+      "images": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-event-resonance-v6-800.avif",
+          "complete": true,
+          "nw": 592,
+          "nh": 370
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-800.avif",
+          "complete": true,
+          "nw": 592,
+          "nh": 370
+        }
+      ],
+      "overflow": false
+    },
+    "event-resonance": {
+      "url": "http://localhost:8080/events/light-study-01",
+      "images": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-event-resonance-v6-1280.avif",
+          "complete": true,
+          "nw": 840,
+          "nh": 525
+        }
+      ],
+      "overflow": false
+    },
+    "event-interval": {
+      "url": "http://localhost:8080/events/threshold-study-02",
+      "images": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1586.avif",
+          "complete": true,
+          "nw": 840,
+          "nh": 525
+        }
+      ],
+      "overflow": false
+    },
+    "errors": []
+  },
+  "history": {
+    "active": 1,
+    "before": 11221,
+    "after": 11221,
+    "delta": 0
+  }
+}

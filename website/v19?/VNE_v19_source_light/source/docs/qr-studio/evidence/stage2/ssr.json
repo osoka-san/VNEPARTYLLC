@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "unconfigured",
+  "browser": "NOT VERIFIED",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "htmlBytes": 73294
+    },
+    {
+      "route": "/events",
+      "status": 200,
+      "htmlBytes": 40200
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "htmlBytes": 43757
+    },
+    {
+      "route": "/rules",
+      "status": 200,
+      "htmlBytes": 31523
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "htmlBytes": 32783
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "htmlBytes": 24884
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "htmlBytes": 180209
+    },
+    {
+      "route": "/admin/tickets",
+      "status": 200,
+      "htmlBytes": 102738
+    },
+    {
+      "route": "/admin/qr-studio",
+      "status": 200,
+      "htmlBytes": 33714
+    },
+    {
+      "route": "/admin/events",
+      "status": 200,
+      "htmlBytes": 15705
+    },
+    {
+      "route": "/admin/applications",
+      "status": 200,
+      "htmlBytes": 16447
+    },
+    {
+      "route": "/admin/orders",
+      "status": 200,
+      "htmlBytes": 16685
+    },
+    {
+      "route": "/admin?section=team",
+      "status": 200,
+      "htmlBytes": 23535
+    },
+    {
+      "route": "/admin?section=content",
+      "status": 200,
+      "htmlBytes": 23554
+    },
+    {
+      "route": "/admin?section=operations",
+      "status": 200,
+      "htmlBytes": 23537
+    },
+    {
+      "route": "/admin?section=overview",
+      "status": 200,
+      "htmlBytes": 36328
+    },
+    {
+      "route": "/admin?section=requests",
+      "status": 200,
+      "htmlBytes": 23589
+    },
+    {
+      "route": "/pass",
+      "status": 200,
+      "htmlBytes": 8209
+    },
+    {
+      "route": "/scan",
+      "status": 200,
+      "htmlBytes": 26841
+    }
+  ]
+}

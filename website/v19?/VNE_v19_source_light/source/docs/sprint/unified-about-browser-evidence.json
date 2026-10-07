@@ -1,0 +1,156 @@
+{
+  "viewports": {
+    "360": {
+      "status": 200,
+      "overflow": false,
+      "images": 3,
+      "decoded": [
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-pine-canopy-v1-480.avif",
+          "width": 334
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v1/vne-about-stone-detail-v2-480.avif",
+          "width": 334
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-dark-water-reflection-v1-480.avif",
+          "width": 334
+        }
+      ],
+      "failed_assets": []
+    },
+    "390": {
+      "status": 200,
+      "overflow": false,
+      "images": 3,
+      "decoded": [
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-pine-canopy-v1-480.avif",
+          "width": 366
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v1/vne-about-stone-detail-v2-480.avif",
+          "width": 366
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-dark-water-reflection-v1-480.avif",
+          "width": 366
+        }
+      ],
+      "failed_assets": []
+    },
+    "430": {
+      "status": 200,
+      "overflow": false,
+      "images": 3,
+      "decoded": [
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-pine-canopy-v1-480.avif",
+          "width": 390
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v1/vne-about-stone-detail-v2-480.avif",
+          "width": 408
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-dark-water-reflection-v1-480.avif",
+          "width": 408
+        }
+      ],
+      "failed_assets": []
+    },
+    "1280": {
+      "status": 200,
+      "overflow": false,
+      "images": 3,
+      "decoded": [
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-pine-canopy-v1-960.avif",
+          "width": 677
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v1/vne-about-stone-detail-v2-480.avif",
+          "width": 373
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-dark-water-reflection-v1-960.avif",
+          "width": 708
+        }
+      ],
+      "failed_assets": []
+    },
+    "1920": {
+      "status": 200,
+      "overflow": false,
+      "images": 3,
+      "decoded": [
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-pine-canopy-v1-960.avif",
+          "width": 677
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v1/vne-about-stone-detail-v2-480.avif",
+          "width": 373
+        },
+        {
+          "ok": true,
+          "src": "http://localhost:8080/media/gallery-of-light/editorial-v2/vne-about-dark-water-reflection-v1-960.avif",
+          "width": 708
+        }
+      ],
+      "failed_assets": []
+    }
+  },
+  "motion": {
+    "reduced": {
+      "count": 3,
+      "transitions": [
+        "1e-05s",
+        "1e-05s",
+        "1e-05s"
+      ],
+      "opacity": [
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "manual_off": {
+      "transitions": [
+        "1e-05s",
+        "1e-05s",
+        "1e-05s"
+      ],
+      "opacity": [
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  },
+  "no_js": {
+    "status": 200,
+    "heading": 1,
+    "images": 3,
+    "text_visible": 2
+  },
+  "links": {
+    "faq": "/faq#access",
+    "apply": "/apply"
+  }
+}

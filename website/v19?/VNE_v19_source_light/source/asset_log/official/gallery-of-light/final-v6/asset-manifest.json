@@ -1,0 +1,1238 @@
+{
+  "schema_version": 1,
+  "collection": "VNE final-v6",
+  "created": "2026-09-26",
+  "public_base": "/media/gallery-of-light/final-v6",
+  "counts": {
+    "total": 14,
+    "selected_preserved": 7,
+    "new_generated": 7,
+    "active_scene_roles": 13,
+    "reserve_only": 1
+  },
+  "assets": [
+    {
+      "id": "threshold-desktop",
+      "role": "01 / Порог · desktop",
+      "layout": "desktop",
+      "stem": "vne-threshold-gallery-v5-c-desktop",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-threshold-gallery-v5-c-desktop.png",
+      "source_sha256": "1319d3f39c77adf667a4164fe3e0b1d9d53ee5745edf2681c52fe4082217695f",
+      "source_file": "vne-threshold-gallery-v5-c-desktop.png",
+      "width": 1672,
+      "height": 941,
+      "source_mode": "RGB",
+      "source_bytes": 2519945,
+      "master_sha256": "1319d3f39c77adf667a4164fe3e0b1d9d53ee5745edf2681c52fe4082217695f",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        1280,
+        1672
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 197660,
+          "sha256": "fa9c96e565d85e31710a783741d12ca8d9fa1fce2dc9b6190ae900eda66453a9",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 130228,
+          "sha256": "f7ffdfa9e01b6230bc5c43c8c1688d4455032c239e6755be586531b617e100e8",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 307566,
+          "sha256": "bf308ac3b3d20b360dbf8c58685ef66e596f1ffaf4d2fad956dca59ded42a472",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 204584,
+          "sha256": "82e414b9835023c2aab45a9b452b07626b6e31a86253bb92f6e42da3b804d78e",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "threshold-mobile",
+      "role": "01 / Порог · mobile",
+      "layout": "mobile",
+      "stem": "vne-threshold-gallery-v5-c-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-threshold-gallery-v5-c-mobile.png",
+      "source_sha256": "92a85d05daaa26683fdc5fff7ec27321a78fbfeb575c0b7c0cd36055a153c6c4",
+      "source_file": "vne-threshold-gallery-v5-c-mobile.png",
+      "width": 941,
+      "height": 1672,
+      "source_mode": "RGB",
+      "source_bytes": 2257916,
+      "master_sha256": "92a85d05daaa26683fdc5fff7ec27321a78fbfeb575c0b7c0cd36055a153c6c4",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        768,
+        941
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 72272,
+          "sha256": "9143d4f25c2743c5990886a6b5ee053b32a462b64b31b68d81e29dfe30b8198b",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 46896,
+          "sha256": "97a53a396e1417cc06ca2c741bb0b863381a0703634906f2ae2473c7982f2123",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-768.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 163796,
+          "sha256": "308293f0a337e3f82b8577abc2d03ba1e44fe0857f8042d406f90b7921faa287",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-768.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 115784,
+          "sha256": "04553b686a5d08f1f29ea57d6472cb5afad35a3f21e3f4279fa282038a98b832",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-941.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 222546,
+          "sha256": "380694c6a64a793930f6c7b61fed77a60c89d5cb2c3ffcde7983a5fe2ed356fe",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-941.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 165032,
+          "sha256": "b89b8d69b63ddeed8c24a16dd9651522a9f18f7e5202040faedc02e467307b75",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "space-desktop",
+      "role": "03 / Пространство · desktop",
+      "layout": "desktop",
+      "stem": "vne-space-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-space-gallery-v6-desktop.png",
+      "source_sha256": "3eb7a53b0ff8da25723cf88013e35b99f984d18845aab1bc8e1214091a92bde5",
+      "source_file": "exec-31c8d532-677a-4a67-8f0b-62b4c6c039be.png",
+      "width": 1672,
+      "height": 941,
+      "source_mode": "RGB",
+      "source_bytes": 2573171,
+      "master_sha256": "3eb7a53b0ff8da25723cf88013e35b99f984d18845aab1bc8e1214091a92bde5",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        1280,
+        1672
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 232550,
+          "sha256": "30ed08014f45719a6d82c9d68b2136f6b3aa3567bafa9b760ffaadd36827da78",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 152172,
+          "sha256": "1b32368b1554ba591fa328d6705e79e74c288eb3141b80fe6277acb1f9e1edba",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 353916,
+          "sha256": "ee9540d1f1a02370c45d54732b27e22da6868fdb19f5e2ea6b0c94f3a7904f28",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 234572,
+          "sha256": "9a98589262b497eecefde7c87591be3b209dda41be24d41616cc5d91e7eee70f",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "space-mobile",
+      "role": "03 / Пространство · mobile",
+      "layout": "mobile",
+      "stem": "vne-space-gallery-v6-mobile",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-space-gallery-v6-mobile.png",
+      "source_sha256": "2705c36cd43f891225b410cdea8762096754f255557808417e6a2a93e9de09f0",
+      "source_file": "exec-d0bfd230-5f97-4aec-ac8d-0de14aefb693.png",
+      "width": 941,
+      "height": 1672,
+      "source_mode": "RGB",
+      "source_bytes": 2554473,
+      "master_sha256": "2705c36cd43f891225b410cdea8762096754f255557808417e6a2a93e9de09f0",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        768,
+        941
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 112396,
+          "sha256": "e6226c9a7c98b2f88a142838795253e43596a3e6b25ca31229566884a70c934f",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 72276,
+          "sha256": "f63d6ba3a1e3131882ab09fc613a1b3a18ef4f7b023d77a9b39f2eb4d6ab501a",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-768.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 257776,
+          "sha256": "4159191579df1a78de0a53c27ca1043bd3019ecfe6ade3fceb25f43e09897ab3",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-768.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 170126,
+          "sha256": "7a0cd50df3448de5e5198237337c1498dcda89667da29f7c413b4a358d98ca4a",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-941.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 350946,
+          "sha256": "825215262b01a0aa4bb2014417756231fbea534f75e41ac4b25257367e3ec711",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-941.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-space-gallery-v6-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 234791,
+          "sha256": "39253734fb5fc6ed61e64d314a2f6298f7384554c088d6a1407881b2ec3e59f7",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "belonging-desktop",
+      "role": "05 / Свои · desktop",
+      "layout": "desktop",
+      "stem": "vne-belonging-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-belonging-gallery-v6-desktop.png",
+      "source_sha256": "b97206b816679d81cb0b65576f86234b307c7e61f6a7505c0071465ef0601bb0",
+      "source_file": "exec-2b95e1f9-43c1-4d73-92eb-a660acf0d49d.png",
+      "width": 1672,
+      "height": 941,
+      "source_mode": "RGB",
+      "source_bytes": 2455213,
+      "master_sha256": "b97206b816679d81cb0b65576f86234b307c7e61f6a7505c0071465ef0601bb0",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        1280,
+        1672
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 191344,
+          "sha256": "9b21529a6d9c9269466db08765ff07755a37eb5e6e1135d27d8899dc6443548f",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 125364,
+          "sha256": "fdb696c8717a149b786b134985e8a0cbffe9df3df94bba8f63e3188d88b00e99",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 280002,
+          "sha256": "797f69985cb262cacd96d8f45d5e9a4316ee92fe6d7df5da917ba20eb7ad6cff",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 198361,
+          "sha256": "8d5f58c2349c71d16498c5fd2a0439c96770482a909fe5df6dfd54c9fd3ad541",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "belonging-mobile",
+      "role": "05 / Свои · mobile",
+      "layout": "mobile",
+      "stem": "vne-belonging-gallery-v5-d-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-belonging-gallery-v5-d-mobile.png",
+      "source_sha256": "861241242826a431c62efa230ad52bfefd0e159f3235ab80d1cd22f3ad961cfc",
+      "source_file": "vne-belonging-gallery-v5-d-mobile.png",
+      "width": 941,
+      "height": 1672,
+      "source_mode": "RGB",
+      "source_bytes": 2009204,
+      "master_sha256": "861241242826a431c62efa230ad52bfefd0e159f3235ab80d1cd22f3ad961cfc",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        768,
+        941
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 48094,
+          "sha256": "6455b3b81d48f5cfbed43ea80b3a5100fc5aa40f0a7828210d9a92d84e4f432e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 33284,
+          "sha256": "c52dd3c97e1836ce3e2352c98735447426b4b624e63578d891659f64c125aed2",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-768.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 116956,
+          "sha256": "ba8fab9923473a2070004f0896344155149ff3c10ffb6c0cf06d81acb9e121af",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-768.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 83628,
+          "sha256": "aaa3338eca0090e6e96a22c70bceb143c0dfc1767897106c739a8eef08a119be",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-941.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 160954,
+          "sha256": "065e9b2cda6ca3f30c8a0356b08fc1443cd6780a01b8c7789df7f0ec5f2a5311",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-941.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-belonging-gallery-v5-d-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 119537,
+          "sha256": "c8adcc93552a1a5c4192357dab888706c07f4c888a9eb8fb30883b304f4a293a",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "invitation-desktop",
+      "role": "06 / Приглашение · desktop",
+      "layout": "desktop",
+      "stem": "vne-invitation-gallery-v6-desktop",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-invitation-gallery-v6-desktop.png",
+      "source_sha256": "c6558ba97042212b73c5c950b05d9b15ff997a2c132cd62d41239f00fa2f6cbb",
+      "source_file": "exec-275d5770-17d8-47f3-818b-47ba156ee344.png",
+      "width": 1672,
+      "height": 941,
+      "source_mode": "RGB",
+      "source_bytes": 2178560,
+      "master_sha256": "c6558ba97042212b73c5c950b05d9b15ff997a2c132cd62d41239f00fa2f6cbb",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        1280,
+        1672
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 143994,
+          "sha256": "058851a8d94968c5f65dcd2ce5dc20c2e56455386b2f9334feb6cbc6351ca6dd",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 102615,
+          "sha256": "47522ecd7722171921eb3e5febd7d58952a489986451817e9b39e313e3f2a842",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 218070,
+          "sha256": "c93d4cdc0d0e3baa494c1f4bce172118b01e51fd48fa4f25b0be7d0e4ec71ba3",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 160026,
+          "sha256": "6cf378679589523bca0e292461d6878346cb12d431883bcf0fa42a7bde073776",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "invitation-mobile",
+      "role": "06 / Приглашение · mobile",
+      "layout": "mobile",
+      "stem": "vne-invitation-gallery-v5-c-mobile",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-invitation-gallery-v5-c-mobile.png",
+      "source_sha256": "ff45b464316c88ab2a98c9760e05842f6966b884015d4499b34790d4ebb4ba70",
+      "source_file": "vne-invitation-gallery-v5-c-mobile.png",
+      "width": 941,
+      "height": 1672,
+      "source_mode": "RGB",
+      "source_bytes": 1945378,
+      "master_sha256": "ff45b464316c88ab2a98c9760e05842f6966b884015d4499b34790d4ebb4ba70",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        768,
+        941
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 47472,
+          "sha256": "38461a1b5e7f4999cf1b0ec6c8bcb9e4b5e326ea8cfb2a8a670da47a38c4fe6b",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 853,
+          "bytes": 32202,
+          "sha256": "7d93870110c12b7131a7352409662d9f2dac86f482e3fc258f9cb4cb146a91f6",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-768.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-768.webp",
+          "format": "webp",
+          "width": 768,
+          "height": 1365,
+          "bytes": 112386,
+          "sha256": "60fe13c8c422d35e8b629912e842f80562627ca9b5bbda863a2672e48afec9e6",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-768.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-768.avif",
+          "format": "avif",
+          "width": 768,
+          "height": 1365,
+          "bytes": 79621,
+          "sha256": "294043219fa5fb759a0302d36defe502382c14c34983ae9018b1fcb39bf9a67c",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-941.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-941.webp",
+          "format": "webp",
+          "width": 941,
+          "height": 1672,
+          "bytes": 156434,
+          "sha256": "ee39546c1a87e497610bd7c0d99f0d66e6dc2ae48935f2e72dcb8a62db01ee4f",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-941.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-invitation-gallery-v5-c-mobile-941.avif",
+          "format": "avif",
+          "width": 941,
+          "height": 1672,
+          "bytes": 112635,
+          "sha256": "6e4f12d2b02cd5cbd0ccd381f7e3cdc49f94e4d4e879c2f6a4556f98710226a4",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "event-interval",
+      "role": "Событие / Интервал света",
+      "layout": "editorial",
+      "stem": "vne-event-light-interval-v5-c",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-event-light-interval-v5-c.png",
+      "source_sha256": "1853cbb42efcb9622d13952593ac4f7b9145dee910078e9aaf5e93b5b3c31943",
+      "source_file": "vne-event-light-interval-v5-c.png",
+      "width": 1586,
+      "height": 992,
+      "source_mode": "RGB",
+      "source_bytes": 2305252,
+      "master_sha256": "1853cbb42efcb9622d13952593ac4f7b9145dee910078e9aaf5e93b5b3c31943",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1586
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 28530,
+          "sha256": "f73bec69f1c86bc3afc8ba23cf52a759e37cfa94fa8a91e616c76e3d3c61a24e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 18273,
+          "sha256": "6e9010a466528f55b19a3e7a9a9f7ce233cf8e272db8ed785c75a1db52fb01cc",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 81224,
+          "sha256": "e3ed5f81fb90606335164b1264dd44b059491feb77f83b877bdd50992e347449",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 50867,
+          "sha256": "a35a18b350c361995608a9a73c1a546d12eb1d34b814ee5fad25b8c02575b345",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 179486,
+          "sha256": "e82dd792716306c7c07c819420cff1527c30e722d5601b648a9a12a7b62e7f9a",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 126634,
+          "sha256": "78e717c4a220d59974e517ef4488b0e0e88146281c8b0ce55c5761a7ba220059",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1586.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 246632,
+          "sha256": "f8d254b6364566dd77d82a37147ab03ea934d97083abf86552d17a2419a72ce7",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1586.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-light-interval-v5-c-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 180445,
+          "sha256": "164fd78d99b53ede7d67aecfdffa6344756f716ab261719f605131b98b6a28f9",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "event-resonance",
+      "role": "Событие / Ритм в камне",
+      "layout": "editorial",
+      "stem": "vne-event-resonance-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-event-resonance-v6.png",
+      "source_sha256": "a2358e4c12b887cd447e0ede3c91b8b286b6690cd32d5702e822860e8763bc67",
+      "source_file": "exec-06b746a6-db19-451e-b7e5-5c7ecc482074.png",
+      "width": 1586,
+      "height": 992,
+      "source_mode": "RGB",
+      "source_bytes": 2495969,
+      "master_sha256": "a2358e4c12b887cd447e0ede3c91b8b286b6690cd32d5702e822860e8763bc67",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1586
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 33154,
+          "sha256": "88e45baafad0155a7e6d2821f8f794c563bd8673c83f4f4cca20ae898d31d579",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 20841,
+          "sha256": "841fcbaca112ab424d5a414f2a1602347a1f41265e5dea1d7e935105a6042994",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 96542,
+          "sha256": "ade2a1bbbf5d143740576895f97f1c1514269c53e8eaa5934e3bb51a2c4ae7f4",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 60078,
+          "sha256": "9217252fe919dcf340913b30402bee4df27077a94e6434a9937c3dbd745f5885",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 234990,
+          "sha256": "8fbc335e37d401bf3f062f6487aba5ced54d20184d8d9b99cfc16ab9ac50742c",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 150303,
+          "sha256": "c02f3c20fc49dc020c3f3252b14d6dca940eb6ae1ca97249b0b382f0db5f21b6",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-1586.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 333890,
+          "sha256": "69f2c2bf00998e586f579dbbbc8c062988f25427b6b79b657f7dffd589bc9eda",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-resonance-v6-1586.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-resonance-v6-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 215764,
+          "sha256": "7c52168222792744225db5d0b32b142f6b7b37296ee6a274bdb6754775595cef",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "about-stone",
+      "role": "О проекте / Камень",
+      "layout": "editorial",
+      "stem": "vne-about-stone-detail-v5-d",
+      "status": "user-selected-preserved",
+      "placement": "site-scene",
+      "master": "masters/vne-about-stone-detail-v5-d.png",
+      "source_sha256": "32d3e97ffd92553e3e58d9dba2acc1dbdb7b1219d052915aeb9224cb9f2493f4",
+      "source_file": "vne-about-stone-detail-v5-d.png",
+      "width": 1448,
+      "height": 1086,
+      "source_mode": "RGB",
+      "source_bytes": 2377829,
+      "master_sha256": "32d3e97ffd92553e3e58d9dba2acc1dbdb7b1219d052915aeb9224cb9f2493f4",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1448
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 39402,
+          "sha256": "1a3e7fad388754cc80bb8f35a80696bcffc550553a6469e2567ebd1a81a50f53",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 360,
+          "bytes": 24955,
+          "sha256": "915e32158bbc150111ddf4edd9e5fc90ada9db32d5ed1b4eddad7bafe2522172",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 103570,
+          "sha256": "8e5e509c5ebb5d2c0ceb3a8e70c1d848e4ea94ba517cbcec31f7c581da983291",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 600,
+          "bytes": 69894,
+          "sha256": "db2496b9577fcac5c32237b331a1a18e4668ad876d77d11179c512e844a22c52",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 226648,
+          "sha256": "7af0ca4c196b0a3bb8c80294512c40ea3082a56651e69448301bca8babaec40e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 960,
+          "bytes": 151953,
+          "sha256": "a6d67aae1a794906667308152217e214ebdaea5e897c488a0140740d6b519472",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1448.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1448.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 273338,
+          "sha256": "4d98d497c832e61d55cd7efc8852b1b6912a37cdc10488ec04eb1d688425c1f0",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1448.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-stone-detail-v5-d-1448.avif",
+          "format": "avif",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 183966,
+          "sha256": "a8b54c3a77475b2ec5e8ffdefa27fe39566539278e57c853ebaef602421314ed",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "about-pines",
+      "role": "О проекте / Сосны",
+      "layout": "editorial",
+      "stem": "vne-about-pine-canopy-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-about-pine-canopy-v6.png",
+      "source_sha256": "5250dae1f5cd585741cdb5b40185a9acf8e726fc3d0ed3e5930a0de9b270e458",
+      "source_file": "exec-bcaec570-33f7-421b-9ff8-8e67197f9a09.png",
+      "width": 1448,
+      "height": 1086,
+      "source_mode": "RGB",
+      "source_bytes": 2731698,
+      "master_sha256": "5250dae1f5cd585741cdb5b40185a9acf8e726fc3d0ed3e5930a0de9b270e458",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1448
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 58206,
+          "sha256": "98f04a5358b06c8d267d65ce7fc068787bb34d77e7008ed184fb008c1fa147a1",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 360,
+          "bytes": 36965,
+          "sha256": "f54a0dda8f68810d021be726a3a91b0db8c63640782f609d7eb90bc5b81f437e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 600,
+          "bytes": 152490,
+          "sha256": "8b67ab69f89a4d10bdfad89170d895b740c3a826a85b3524348d18d2e99b8f27",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 600,
+          "bytes": 96935,
+          "sha256": "623cfbde76ed0d55b06f62a5b23b9ca75b9f095c7ed38efd90d459477ee9c9eb",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 960,
+          "bytes": 329448,
+          "sha256": "39d86239daebc2853e6871753aae7fd58db67d454a1f192ef780c2d70cefe5ba",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 960,
+          "bytes": 214705,
+          "sha256": "606a4385dabbc9db2970abcea4dbbd1bb12052c02d040648503c1dfb92104703",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1448.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1448.webp",
+          "format": "webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 396182,
+          "sha256": "bde1f3de8c720f7adc462ab73b4c744cdcda50d572f952a697ede30bae5b12d7",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1448.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-pine-canopy-v6-1448.avif",
+          "format": "avif",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 261922,
+          "sha256": "5295d3a3656810d25e077e06444fe918aeb92813e77aac40e77d190f04baaa5b",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "about-water",
+      "role": "О проекте / Вода",
+      "layout": "editorial",
+      "stem": "vne-about-dark-water-reflection-v6",
+      "status": "new-generated-v6",
+      "placement": "site-scene",
+      "master": "masters/vne-about-dark-water-reflection-v6.png",
+      "source_sha256": "eb87a2d3a0a68f31a098b072625a11d4a7f5c477cb1c37ddfa19145a381364a8",
+      "source_file": "exec-e9ca3a4e-235f-466d-9c29-d5cda4f45a5c.png",
+      "width": 1672,
+      "height": 941,
+      "source_mode": "RGB",
+      "source_bytes": 2592702,
+      "master_sha256": "eb87a2d3a0a68f31a098b072625a11d4a7f5c477cb1c37ddfa19145a381364a8",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1672
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 270,
+          "bytes": 39118,
+          "sha256": "d2eb07088d0da534a11765aec516b10fe4732c09bacdcc477e9ec94720efcf89",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 270,
+          "bytes": 25183,
+          "sha256": "ba38676c1318bc8de2a022871314c94460b108853e8148f5b8f9694e438d1b0e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 450,
+          "bytes": 104838,
+          "sha256": "d2619349439bbb164d326810d9a8fda21296f379d4214a202390b0da49bd0250",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 450,
+          "bytes": 65959,
+          "sha256": "53483d38da3cf931e880ec533f3df61d3708fe961d34306ad81bb79192a797f0",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 720,
+          "bytes": 234702,
+          "sha256": "7f8ff648bccde2b12354508edc2eee99f21c5d0411d995ac3155eb3b0a0a5684",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 720,
+          "bytes": 154792,
+          "sha256": "d95b338af52f6b280f63e2ea78cccad9aa0c5e32d3c0926ee399d008d64d2c44",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1672.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1672.webp",
+          "format": "webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 361978,
+          "sha256": "28c1bb83807fd71e8848075eb257dca3b93e96cef73371e9e5d7b7a9318a9834",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1672.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-about-dark-water-reflection-v6-1672.avif",
+          "format": "avif",
+          "width": 1672,
+          "height": 941,
+          "bytes": 236670,
+          "sha256": "5c71f2fab0bf82e87705be060657e34f546cf55905a6a1e5da4fb220024faeff",
+          "decoded_verified": true
+        }
+      ]
+    },
+    {
+      "id": "sculpture-reserve",
+      "role": "Каменная скульптура / Резерв",
+      "layout": "editorial",
+      "stem": "vne-event-stone-sculpture-v5-c",
+      "status": "user-selected-preserved",
+      "placement": "reserve-only",
+      "master": "masters/vne-event-stone-sculpture-v5-c.png",
+      "source_sha256": "3c0309de1d9c9dcb7ab3f5042f78233e9e2c0dc6db922fb159723bb88f3dc5dc",
+      "source_file": "vne-event-stone-sculpture-v5-c.png",
+      "width": 1586,
+      "height": 992,
+      "source_mode": "RGB",
+      "source_bytes": 2312267,
+      "master_sha256": "3c0309de1d9c9dcb7ab3f5042f78233e9e2c0dc6db922fb159723bb88f3dc5dc",
+      "master_preserved_byte_for_byte": true,
+      "widths": [
+        480,
+        800,
+        1280,
+        1586
+      ],
+      "exports": [
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-480.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-480.webp",
+          "format": "webp",
+          "width": 480,
+          "height": 300,
+          "bytes": 25524,
+          "sha256": "d3aa3538e42dd3755316126f82d1a2c25a22ab5f6ac10a4cf94fb7bf217249a6",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-480.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-480.avif",
+          "format": "avif",
+          "width": 480,
+          "height": 300,
+          "bytes": 16924,
+          "sha256": "d5dca5c739f61b8a78c930c9b94919aee0d155bfedc6eb32ad01d2153156572e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-800.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-800.webp",
+          "format": "webp",
+          "width": 800,
+          "height": 500,
+          "bytes": 76578,
+          "sha256": "46fc553af84214fde588f658a89135b217466595a185add9b0f55f04c51f2ab1",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-800.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-800.avif",
+          "format": "avif",
+          "width": 800,
+          "height": 500,
+          "bytes": 51162,
+          "sha256": "7c3158c7848b796bcab2b75776b7171b545259c6b75f24261078dad986e3e287",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1280.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1280.webp",
+          "format": "webp",
+          "width": 1280,
+          "height": 801,
+          "bytes": 180320,
+          "sha256": "b7b82b7019d0937c616d700ec5b2fc67a181837e064db44214c361bd44ced12e",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1280.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1280.avif",
+          "format": "avif",
+          "width": 1280,
+          "height": 801,
+          "bytes": 127856,
+          "sha256": "f66f9f33d5c4b76d35a701e6b161f8c574076edfd9cc8058c1a818bbf12377d2",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1586.webp",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1586.webp",
+          "format": "webp",
+          "width": 1586,
+          "height": 992,
+          "bytes": 250590,
+          "sha256": "0fc76d947e35b4aa5cfc282f6a82f4348eaf4b1d3ad4530b082170f18976a463",
+          "decoded_verified": true
+        },
+        {
+          "path": "public/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1586.avif",
+          "url": "/media/gallery-of-light/final-v6/vne-event-stone-sculpture-v5-c-1586.avif",
+          "format": "avif",
+          "width": 1586,
+          "height": 992,
+          "bytes": 179374,
+          "sha256": "3b63b02db1eaaeb624205a2c51ee0bd02bd9997baddc5fbf2ed9a8228bcf19bd",
+          "decoded_verified": true
+        }
+      ]
+    }
+  ],
+  "integrity_repair": {
+    "date": "2026-09-26",
+    "repaired_export_count": 5,
+    "scope": "Re-encoded damaged zero-byte exports from unchanged packaged PNG masters. All 88 actual export byte payloads subsequently matched manifest and decoded."
+  }
+}

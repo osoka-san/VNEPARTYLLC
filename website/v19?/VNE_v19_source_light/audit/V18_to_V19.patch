@@ -1,0 +1,3018 @@
+diff --git a/docs/sites-import/cabinet-navbar/README.md b/docs/sites-import/cabinet-navbar/README.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..3b241f061706f66178b9ffe3b1028f42567c61db
+--- /dev/null
++++ b/docs/sites-import/cabinet-navbar/README.md
+@@ -0,0 +1,31 @@
++# Кабинет, навбар и цвет собственного ответа
++
++Дата: 2026-10-06. База: опубликованная версия 18, commit `09d6bda750c2cb72a44316a623f91a774ce673f6`.
++
++## Изменения
++
++- Отдельная группа `navbar` в общих настройках: 8 числовых параметров, 3 фирменных акцента, подпись приглашения, показ верхних ссылок и глав главной. Рабочее встроенное меню в панели управления. Сохранение только владельцем, проверка версии, сброс, актуализация и импорт/экспорт; схема настроек 9 совместима с прежними данными.
++- Кнопки собственного ответа в Bloom и вверху анкеты: голубой `#86ABFF`, тёмный текст `#070A09`, наведение `#E55330`.
++- `/member` в текущем Sites-режиме: список собственных заявок из формы, фильтры, страницы по 20, карточка с исходными ответами, история, обновление каждые 30 секунд в активной вкладке и вручную, ответ на уточнение.
++- Администратор задаёт отдельный вопрос для гостя. Только явно выделенный вопрос виден в кабинете; старые и новые внутренние заметки остаются в админке. Ответ гостя возвращает заявку на рассмотрение, сохраняется в истории и журнале; повтор запроса не дублирует запись.
++- Профиль: сохранение имени, смена пароля с проверкой текущего и повтором нового, ограничение попыток, завершение других сеансов при смене пароля, выход. Смена имени сохраняет действующие сеансы.
++- После отправки анкеты добавлен переход в кабинет. Сохранены все обязательные вопросы и лимит до трёх ответов.
++
++## Границы
++
++Кабинет обслуживает существующие тестовые учётные записи Sites. При подключённом основном backend этот API отключён; существующие проверки допуска и staff/MFA не заменяются тестовым входом. Административные записи заявок не привязываются к гостю по совпадению email. Новая регистрация, реальные платежи, Telegram и выпуск пропуска не подключены этой правкой. Новые схемы БД и внешние уведомления не добавлены.
++
++## Проверки
++
++- TypeScript — PASS.
++- `node --test tests/site-member.test.mjs tests/site-requests.test.mjs tests/questionnaire.test.mjs tests/site-loading.test.mjs tests/sites-admin-gate.test.mjs tests/preview-defaults.test.mjs` — 33 PASS.
++- После уточнения поведения смены имени повторно пройден весь тест кабинета — 6 PASS.
++- Пакетная сборка — PASS. SSR и авторизация Worker — 35 маршрутов PASS; см. `ssr-check.json`.
++- Синтетическая локальная БД, внешняя сеть отключена в тестах. Проверены авторизация, происхождение запроса, изоляция чужих заявок/внутренних заметок, версии, идемпотентность, обмен вопросом и ответом, сохранение профиля/пароля и отзыв сеансов.
++- Настройки: 69 параметров верхнего уровня, 9 групп; проверены ограничение значений, перенос старых настроек, частичный импорт, права владельца и сохранение между сессиями.
++- Адаптив задан в CSS: узкий навбар с ограничением логотипа и кнопки, меню доступно всегда, кабинет в одну колонку, модальное окно в пределах экрана, перенос длинных значений, reduced motion.
++- Визуальная браузерная проверка на 360/390/430 и 1440/1920 — NOT VERIFIED. Результаты SSR не подменяют проверку мобильного взаимодействия.
++
++## Тексты
++
++Две готовые версии текста о текущем состоянии сайта и отчёт переданы пользователю до начала изменений. Расширенный комплект и итоговая готовность передаются отдельным файлом. Маркетинговые альтернативы для главной не заменяют существующие опубликованные блоки автоматически.
+diff --git a/docs/sites-import/cabinet-navbar/ssr-check.json b/docs/sites-import/cabinet-navbar/ssr-check.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..1d11e9e219c7bdef18fc2c08377788260136e29b
+--- /dev/null
++++ b/docs/sites-import/cabinet-navbar/ssr-check.json
+@@ -0,0 +1,183 @@
++{
++  "status": "PASS",
++  "network": "disabled",
++  "backend": "unconfigured",
++  "browser": "NOT VERIFIED",
++  "routes": [
++    {
++      "route": "/",
++      "status": 200,
++      "htmlBytes": 71666
++    },
++    {
++      "route": "/events",
++      "status": 200,
++      "htmlBytes": 38144
++    },
++    {
++      "route": "/events/light-study-01",
++      "status": 200,
++      "htmlBytes": 55816
++    },
++    {
++      "route": "/events/threshold-study-02",
++      "status": 200,
++      "htmlBytes": 50459
++    },
++    {
++      "route": "/about",
++      "status": 200,
++      "htmlBytes": 41801
++    },
++    {
++      "route": "/rules",
++      "status": 200,
++      "htmlBytes": 29564
++    },
++    {
++      "route": "/faq",
++      "status": 200,
++      "htmlBytes": 30852
++    },
++    {
++      "route": "/contact",
++      "status": 200,
++      "htmlBytes": 22925
++    },
++    {
++      "route": "/apply",
++      "status": 200,
++      "htmlBytes": 58477
++    },
++    {
++      "route": "/apply?event=light-study-01",
++      "status": 200,
++      "htmlBytes": 58651
++    },
++    {
++      "route": "/member",
++      "status": 200,
++      "htmlBytes": 23929
++    },
++    {
++      "route": "/member?event=light-study-01",
++      "status": 200,
++      "htmlBytes": 23985
++    },
++    {
++      "route": "/cookies",
++      "status": 200,
++      "htmlBytes": 26147
++    },
++    {
++      "route": "/admin",
++      "status": 200,
++      "htmlBytes": 29169
++    },
++    {
++      "route": "/admin/tickets",
++      "status": 200,
++      "htmlBytes": 69071
++    },
++    {
++      "route": "/admin/qr-studio",
++      "status": 200,
++      "htmlBytes": 66899
++    },
++    {
++      "route": "/admin/qr-studio?template=marble",
++      "status": 200,
++      "htmlBytes": 42157
++    },
++    {
++      "route": "/admin/tickets?view=preview&template=enamel",
++      "status": 200,
++      "htmlBytes": 57033
++    },
++    {
++      "route": "/admin/events",
++      "status": 200,
++      "htmlBytes": 24829
++    },
++    {
++      "route": "/admin/applications",
++      "status": 200,
++      "htmlBytes": 26188
++    },
++    {
++      "route": "/admin/orders",
++      "status": 200,
++      "htmlBytes": 23179
++    },
++    {
++      "route": "/admin?section=accounts",
++      "status": 200,
++      "htmlBytes": 26364
++    },
++    {
++      "route": "/admin?section=team",
++      "status": 200,
++      "htmlBytes": 27861
++    },
++    {
++      "route": "/admin?section=content",
++      "status": 200,
++      "htmlBytes": 27929
++    },
++    {
++      "route": "/admin?section=operations",
++      "status": 200,
++      "htmlBytes": 27829
++    },
++    {
++      "route": "/admin?section=overview",
++      "status": 200,
++      "htmlBytes": 29197
++    },
++    {
++      "route": "/admin?section=motion",
++      "status": 200,
++      "htmlBytes": 260400
++    },
++    {
++      "route": "/admin/tickets?view=preview&template=marble&access=GENERAL",
++      "status": 200,
++      "htmlBytes": 57037
++    },
++    {
++      "route": "/admin/tickets?view=preview&template=marble&access=VIP",
++      "status": 200,
++      "htmlBytes": 56998
++    },
++    {
++      "route": "/admin/tickets?view=preview&template=marble&access=SECURITY",
++      "status": 200,
++      "htmlBytes": 57049
++    },
++    {
++      "route": "/admin/tickets?view=preview&template=marble&access=ARTIST",
++      "status": 200,
++      "htmlBytes": 57013
++    },
++    {
++      "route": "/admin/qr-studio?access=VIP",
++      "status": 200,
++      "htmlBytes": 66469
++    },
++    {
++      "route": "/admin?section=requests",
++      "status": 200,
++      "htmlBytes": 30461
++    },
++    {
++      "route": "/pass",
++      "status": 200,
++      "htmlBytes": 11422
++    },
++    {
++      "route": "/scan",
++      "status": 200,
++      "htmlBytes": 20917
++    }
++  ]
++}
+diff --git a/scripts/auth/admin-gate.mjs b/scripts/auth/admin-gate.mjs
+index 7c34c4495a8c0a7829d26fd6f6f34c4018104a09..a071ba9e844483b0e7053fb1ec7c22c79e26428b 100644
+--- a/scripts/auth/admin-gate.mjs
++++ b/scripts/auth/admin-gate.mjs
+@@ -109,10 +109,12 @@ export default function gate(worker) {
+           return json({ ok: false, error: "PERMISSION_DENIED" }, 403);
+         }
+         if (url.pathname === "/login" && !env.VNE_SUPABASE_URL && !env.SUPABASE_URL)
+-          return redirect(can(actor, "admin.view") ? "/admin" : "/");
++          return redirect(safe(url.searchParams.get("redirect") || "/member"));
+         const forwarded = new Headers(request.headers);
+         forwarded.delete("x-vne-site-admin-access");
+         forwarded.set("x-vne-site-admin-access", can(actor, "admin.view") ? "allowed" : "denied");
++        forwarded.delete("x-vne-site-preview");
++        if (!env.VNE_SUPABASE_URL && !env.SUPABASE_URL) forwarded.set("x-vne-site-preview", "true");
+         const response = await worker.fetch(new Request(request, { headers: forwarded }), env, ctx);
+         const resultHeaders = new Headers(response.headers);
+         for (const [k, v] of Object.entries(PRIVATE)) resultHeaders.set(k, v);
+diff --git a/scripts/auth/member-api.ts b/scripts/auth/member-api.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..e18546ac3a14e6cee94235593d2e043bafef9a67
+--- /dev/null
++++ b/scripts/auth/member-api.ts
+@@ -0,0 +1,244 @@
++import {
++  getSiteSession,
++  json,
++  boundedText,
++  digest,
++  passwordHash,
++  passwordMatches,
++  tokenFrom,
++} from "./site-access.mjs";
++import { REQUEST_STATUSES } from "../../src/lib/site-requests";
++
++const fail = (error: string, status = 400) => json({ ok: false, error }, status);
++const uuid = (v: unknown): v is string =>
++  typeof v === "string" &&
++  /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(v);
++const profile = (a: any) => ({
++  username: a.username,
++  displayName: a.displayName,
++  version: a.version,
++  createdAt: a.createdAt,
++});
++// Never return moderation notes, staff identities, credentials or other guests' requests.
++const item = (r: any) => ({
++  id: r.id,
++  name: r.name,
++  email: r.email,
++  telegram: r.telegram,
++  eventKey: r.event_key,
++  eventTitle: r.event_title,
++  details: r.details,
++  status: r.status,
++  version: r.version,
++  createdAt: r.created_at,
++  updatedAt: r.updated_at,
++});
++
++export async function memberApi(request: Request, env: any) {
++  try {
++    const actor = await getSiteSession(request, env),
++      url = new URL(request.url);
++    if (!actor) return fail("AUTH_REQUIRED", 401);
++    if (env.VNE_SUPABASE_URL || env.SUPABASE_URL) return fail("REQUESTS_MODE_DISABLED", 409);
++    if (!["GET", "POST"].includes(request.method)) return fail("METHOD_NOT_ALLOWED", 405);
++    if (request.headers.get("sec-fetch-site") === "cross-site") return fail("ORIGIN_REJECTED", 403);
++    const path = url.pathname.slice("/api/site-member".length);
++    if (request.method === "GET") {
++      if (path) return fail("NOT_FOUND", 404);
++      const id = url.searchParams.get("id");
++      if (id) {
++        if (!uuid(id)) return fail("REQUEST_INVALID_INPUT");
++        const row = await env.DB.prepare(
++          "SELECT * FROM site_review_requests WHERE id = ? AND created_by = ? AND source = 'form'",
++        )
++          .bind(id, actor.id)
++          .first();
++        if (!row) return fail("NOT_FOUND", 404);
++        const history = await env.DB.prepare(
++          "SELECT id, action, from_status AS fromStatus, to_status AS toStatus, CASE WHEN action = 'member_reply' AND actor_id = ? THEN note ELSE '' END AS reply, CASE WHEN action = 'guest_question' THEN note ELSE '' END AS message, created_at AS createdAt FROM site_review_request_history WHERE request_id = ? AND (action IN ('created', 'member_reply', 'guest_question') OR from_status != to_status) ORDER BY created_at, rowid LIMIT 500",
++        )
++          .bind(actor.id, id)
++          .all();
++        return json({ ok: true, item: item(row), history: history.results });
++      }
++      const page = Number(url.searchParams.get("page") || 0),
++        status = url.searchParams.get("status") || "";
++      if (
++        !Number.isSafeInteger(page) ||
++        page < 0 ||
++        page > 10000 ||
++        (status && !Object.hasOwn(REQUEST_STATUSES, status))
++      )
++        return fail("REQUEST_INVALID_INPUT");
++      const filter = "created_by = ? AND source = 'form' AND (? = '' OR status = ?)";
++      const count = await env.DB.prepare(
++        `SELECT COUNT(*) AS total FROM site_review_requests WHERE ${filter}`,
++      )
++        .bind(actor.id, status, status)
++        .first();
++      const rows = await env.DB.prepare(
++        `SELECT * FROM site_review_requests WHERE ${filter} ORDER BY created_at DESC, id DESC LIMIT 20 OFFSET ?`,
++      )
++        .bind(actor.id, status, status, page * 20)
++        .all();
++      return json({
++        ok: true,
++        profile: profile(actor),
++        items: rows.results.map(item),
++        total: count.total,
++        page,
++        pageSize: 20,
++        mode: "preview",
++      });
++    }
++    if (request.headers.get("origin") !== url.origin) return fail("ORIGIN_REJECTED", 403);
++    if (!request.headers.get("content-type")?.startsWith("application/json"))
++      return fail("INVALID_INPUT");
++    const data = JSON.parse(await boundedText(request, 5000));
++    if (!data || typeof data !== "object" || Array.isArray(data)) return fail("INVALID_INPUT");
++    const now = new Date().toISOString();
++    if (path === "/profile" || path === "/password") {
++      if (!Number.isSafeInteger(data.version) || data.version !== actor.version)
++        return fail("VERSION_CONFLICT", 409);
++      const changingPassword = path === "/password";
++      const name = typeof data.displayName === "string" ? data.displayName.trim() : "";
++      if (!changingPassword && (!name || name.length > 80 || /[\u0000-\u001f]/.test(name)))
++        return fail("PROFILE_INVALID_INPUT");
++      let hash: string | null = null;
++      if (changingPassword) {
++        if (
++          typeof data.currentPassword !== "string" ||
++          data.currentPassword.length > 200 ||
++          typeof data.password !== "string" ||
++          data.password.length < 12 ||
++          data.password.length > 200 ||
++          data.password !== data.confirmPassword
++        )
++          return fail("PASSWORD_INVALID_INPUT");
++        const key = await digest("member-password:" + actor.id + env.VNE_ADMIN_SESSION_SECRET),
++          stamp = Date.now();
++        const count = await env.DB.prepare(
++          "INSERT INTO site_login_limits (key, attempts, until) VALUES (?, 1, ?) ON CONFLICT(key) DO UPDATE SET attempts = CASE WHEN until > ? THEN attempts + 1 ELSE 1 END, until = CASE WHEN until > ? THEN until ELSE ? END RETURNING attempts",
++        )
++          .bind(key, stamp + 900000, stamp, stamp, stamp + 900000)
++          .first();
++        if (count.attempts > 5) return fail("PASSWORD_RATE_LIMITED", 429);
++        const current = await env.DB.prepare("SELECT password_hash FROM site_accounts WHERE id = ?")
++          .bind(actor.id)
++          .first();
++        if (!(await passwordMatches(data.currentPassword, current.password_hash)))
++          return fail("PASSWORD_INCORRECT", 400);
++        hash = await passwordHash(data.password);
++      }
++      const sessionHash = await digest(tokenFrom(request) + env.VNE_ADMIN_SESSION_SECRET);
++      const updated = await env.DB.batch([
++        env.DB.prepare(
++          "UPDATE site_accounts SET display_name = ?, password_hash = COALESCE(?, password_hash), version = version + 1 WHERE id = ? AND version = ? AND disabled = 0 RETURNING id",
++        ).bind(changingPassword ? actor.displayName : name, hash, actor.id, data.version),
++        changingPassword
++          ? env.DB.prepare(
++              "UPDATE site_sessions SET account_version = account_version + 1 WHERE token_hash = ? AND account_id = ? AND account_version = ? AND changes() > 0",
++            ).bind(sessionHash, actor.id, data.version)
++          : env.DB.prepare(
++              "UPDATE site_sessions SET account_version = account_version + 1 WHERE account_id = ? AND account_version = ? AND changes() > 0",
++            ).bind(actor.id, data.version),
++        env.DB.prepare(
++          "INSERT INTO site_audit (id, account_id, actor_name, action, target, created_at) SELECT ?, ?, ?, ?, ?, ? WHERE changes() > 0",
++        ).bind(
++          crypto.randomUUID(),
++          actor.id,
++          actor.displayName,
++          changingPassword ? "member.password_changed" : "member.profile_updated",
++          actor.id,
++          now,
++        ),
++      ]);
++      if (!updated[0].results?.length) return fail("VERSION_CONFLICT", 409);
++      return json({
++        ok: true,
++        profile: {
++          ...profile(actor),
++          displayName: changingPassword ? actor.displayName : name,
++          version: data.version + 1,
++        },
++      });
++    }
++    if (path !== "/reply") return fail("NOT_FOUND", 404);
++    const reply = typeof data.reply === "string" ? data.reply.trim() : "";
++    if (
++      !uuid(data.id) ||
++      !uuid(data.operationId) ||
++      !Number.isSafeInteger(data.version) ||
++      data.version < 1 ||
++      reply.length < 3 ||
++      reply.length > 1000
++    )
++      return fail("REPLY_INVALID_INPUT");
++    const row = await env.DB.prepare(
++      "SELECT id, version, status FROM site_review_requests WHERE id = ? AND created_by = ? AND source = 'form'",
++    )
++      .bind(data.id, actor.id)
++      .first();
++    if (!row) return fail("NOT_FOUND", 404);
++    const fingerprint = await digest(
++      JSON.stringify({ action: "member_reply", id: data.id, version: data.version, reply }),
++    );
++    const duplicate = await env.DB.prepare(
++      "SELECT fingerprint, actor_id FROM site_review_request_history WHERE operation_id = ?",
++    )
++      .bind(data.operationId)
++      .first();
++    if (duplicate)
++      return duplicate.fingerprint === fingerprint && duplicate.actor_id === actor.id
++        ? json({ ok: true })
++        : fail("VERSION_CONFLICT", 409);
++    if (row.version !== data.version) return fail("VERSION_CONFLICT", 409);
++    if (row.status !== "needs_info") return fail("REQUEST_TRANSITION_INVALID", 409);
++    const changed = await env.DB.batch([
++      env.DB.prepare(
++        "UPDATE site_review_requests SET status = 'under_review', version = version + 1, updated_at = ? WHERE id = ? AND created_by = ? AND source = 'form' AND status = 'needs_info' AND version = ? RETURNING id",
++      ).bind(now, data.id, actor.id, data.version),
++      env.DB.prepare(
++        "INSERT INTO site_review_request_history (id, request_id, operation_id, fingerprint, action, from_status, to_status, note, actor_id, actor_name, created_at) SELECT ?, ?, ?, ?, 'member_reply', 'needs_info', 'under_review', ?, ?, ?, ? WHERE changes() > 0",
++      ).bind(
++        crypto.randomUUID(),
++        data.id,
++        data.operationId,
++        fingerprint,
++        reply,
++        actor.id,
++        actor.displayName,
++        now,
++      ),
++      env.DB.prepare(
++        "INSERT INTO site_audit (id, account_id, actor_name, action, target, created_at) SELECT ?, ?, ?, 'request.member_reply', ?, ? WHERE changes() > 0",
++      ).bind(crypto.randomUUID(), actor.id, actor.displayName, data.id, now),
++    ]);
++    if (changed[0].results?.length) return json({ ok: true });
++    const retry = await env.DB.prepare(
++      "SELECT fingerprint, actor_id FROM site_review_request_history WHERE operation_id = ?",
++    )
++      .bind(data.operationId)
++      .first();
++    return retry?.fingerprint === fingerprint && retry.actor_id === actor.id
++      ? json({ ok: true })
++      : fail("VERSION_CONFLICT", 409);
++  } catch (e: any) {
++    if (e instanceof SyntaxError || e?.message === "INVALID_INPUT") return fail("INVALID_INPUT");
++    if (e?.message === "BODY_TOO_LARGE") return fail("BODY_TOO_LARGE", 413);
++    if (String(e).includes("UNIQUE constraint")) return fail("VERSION_CONFLICT", 409);
++    return fail("STORAGE_UNAVAILABLE", 503);
++  }
++}
++export default function withMember(worker: {
++  fetch: (r: Request, env: any, ctx: any) => Promise<Response>;
++}) {
++  return {
++    fetch(request: Request, env: any, ctx: any) {
++      const path = new URL(request.url).pathname;
++      return path === "/api/site-member" || path.startsWith("/api/site-member/")
++        ? memberApi(request, env)
++        : worker.fetch(request, env, ctx);
++    },
++  };
++}
+diff --git a/scripts/auth/requests-api.ts b/scripts/auth/requests-api.ts
+index a0f5a44f9cfd28a386103be0bfca8a15428e861e..0a34b22bac214323bf2e8792db54492f09e1b509 100644
+--- a/scripts/auth/requests-api.ts
++++ b/scripts/auth/requests-api.ts
+@@ -231,11 +231,23 @@ export async function requestsApi(request: Request, env: any) {
+     )
+       return fail("REQUEST_INVALID_INPUT");
+     const action = data.action as RequestAction;
+-    const note = data.note.trim();
++    const guestMessage =
++      action === "request_info" && typeof data.guestMessage === "string"
++        ? data.guestMessage.trim()
++        : "";
++    if (guestMessage && (guestMessage.length < 3 || guestMessage.length > 1000))
++      return fail("REQUEST_INVALID_INPUT");
++    const note = data.note.trim() || (guestMessage ? "Запрошено уточнение через кабинет" : "");
+     if (["request_info", "resume", "reject", "reopen", "note"].includes(action) && note.length < 3)
+       return fail("REQUEST_NOTE_REQUIRED");
+     const fingerprint = await digest(
+-      JSON.stringify({ id: data.id, action, note, version: data.version }),
++      JSON.stringify({
++        id: data.id,
++        action,
++        note,
++        version: data.version,
++        ...(guestMessage ? { guestMessage } : {}),
++      }),
+     );
+     const duplicate = await env.DB.prepare(
+       "SELECT fingerprint, actor_id FROM site_review_request_history WHERE operation_id = ?",
+@@ -276,6 +288,24 @@ export async function requestsApi(request: Request, env: any) {
+         actor.displayName,
+         now,
+       ),
++      ...(guestMessage
++        ? [
++            env.DB.prepare(
++              "INSERT INTO site_review_request_history (id, request_id, operation_id, fingerprint, action, from_status, to_status, note, actor_id, actor_name, created_at) SELECT ?, ?, ?, ?, 'guest_question', ?, ?, ?, ?, ?, ? WHERE changes() > 0",
++            ).bind(
++              crypto.randomUUID(),
++              data.id,
++              crypto.randomUUID(),
++              fingerprint,
++              target,
++              target,
++              guestMessage,
++              actor.id,
++              actor.displayName,
++              now,
++            ),
++          ]
++        : []),
+       env.DB.prepare(
+         "INSERT INTO site_audit (id, account_id, actor_name, action, target, created_at) SELECT ?, ?, ?, ?, ?, ? WHERE changes() > 0",
+       ).bind(
+diff --git a/scripts/auth/site-access.mjs b/scripts/auth/site-access.mjs
+index 861a9e46267fd73cb0753584fa3bae54693eb51a..cd3e5450d79f846ce0eb2818192a851c67d39d53 100644
+--- a/scripts/auth/site-access.mjs
++++ b/scripts/auth/site-access.mjs
+@@ -41,7 +41,7 @@ export async function passwordHash(password, salt = random()) {
+   );
+   return `pbkdf2:100000:${salt}:${hex(result)}`;
+ }
+-async function passwordMatches(password, expected) {
++export async function passwordMatches(password, expected) {
+   if (typeof expected !== "string" || !/^pbkdf2:100000:[a-f0-9]{64}:[a-f0-9]{64}$/.test(expected))
+     return false;
+   const actual = await passwordHash(password, expected.split(":")[2]);
+@@ -117,7 +117,7 @@ function account(row) {
+     lastLoginAt: row.last_login_at,
+   };
+ }
+-function tokenFrom(request) {
++export function tokenFrom(request) {
+   const value = request.headers
+     .get("cookie")
+     ?.split(";")
+diff --git a/scripts/prepare-sites-output.mjs b/scripts/prepare-sites-output.mjs
+index cf1a4f57a58382c79fdb87944edfcb4c7dd28d88..82c0f89fd443d972770fd0c906ace61cba92eb80 100644
+--- a/scripts/prepare-sites-output.mjs
++++ b/scripts/prepare-sites-output.mjs
+@@ -66,11 +66,19 @@ await build({
+   target: "es2022",
+ });
+ await mkdir(path.join(dist, ".openai"), { recursive: true });
++await build({
++  entryPoints: [path.join(root, "scripts/auth/member-api.ts")],
++  outfile: path.join(dist, "server/member-api.mjs"),
++  bundle: true,
++  format: "esm",
++  platform: "neutral",
++  target: "es2022",
++});
+ await cp(path.join(root, ".openai/hosting.json"), path.join(dist, ".openai/hosting.json"));
+ await cp(path.join(root, "drizzle"), path.join(dist, ".openai/drizzle"), { recursive: true });
+ await writeFile(
+   path.join(dist, "server/index.js"),
+-  'import worker from "./index.mjs";\nimport gate from "./admin-gate.mjs";\nimport withLibrary from "./qr-library.mjs";\nimport withPublicPass from "./public-pass.mjs";\nimport withDefaults from "./preview-defaults.mjs";\nimport withLoadingPresentation from "./loading-presentation.mjs";\nimport withRequests from "./requests-api.mjs";\nexport default withLoadingPresentation(withPublicPass(withRequests(withDefaults(withLibrary(gate(worker)))),worker));\n',
++  'import worker from "./index.mjs";\nimport gate from "./admin-gate.mjs";\nimport withLibrary from "./qr-library.mjs";\nimport withPublicPass from "./public-pass.mjs";\nimport withDefaults from "./preview-defaults.mjs";\nimport withLoadingPresentation from "./loading-presentation.mjs";\nimport withRequests from "./requests-api.mjs";\nimport withMember from "./member-api.mjs";\nexport default withLoadingPresentation(withPublicPass(withMember(withRequests(withDefaults(withLibrary(gate(worker))))),worker));\n',
+ );
+ console.log(
+   JSON.stringify({ status: "ready", worker: "dist/server/index.js", assets: "dist/client" }),
+diff --git a/scripts/verify-sites-build.mjs b/scripts/verify-sites-build.mjs
+index e3f4516e5de4a441e394eb22cb6bbca7b0f0490d..02919696a74fe62e04d3834b8bf140c3fa892e28 100644
+--- a/scripts/verify-sites-build.mjs
++++ b/scripts/verify-sites-build.mjs
+@@ -29,7 +29,9 @@ assert.match(loginHtml, /data-gate-loading hidden/);
+ assert.match(loginHtml, /loading\/wormhole.css/);
+ assert.match(loginHtml, /loading\/gate.js/);
+ assert.match(loginHtml, /vne-loading-brand[^>]*role="img"[^>]*aria-label="ВНЕ"/);
+-assert.ok(loginHtml.indexOf('class="vne-loading-brand"') < loginHtml.indexOf('class="vne-wormhole"'));
++assert.ok(
++  loginHtml.indexOf('class="vne-loading-brand"') < loginHtml.indexOf('class="vne-wormhole"'),
++);
+ assert.match(loginHtml, /id="vne-loading-defaults"/);
+ assert.match(loginHtml, /--loading-blur:12.5px/);
+ assert.match(loginHtml, /form method="post" action="\/admin-login"/);
+@@ -66,6 +68,8 @@ for (const route of [
+   "/contact",
+   "/apply",
+   "/apply?event=light-study-01",
++  "/member",
++  "/member?event=light-study-01",
+   "/cookies",
+   "/admin",
+   "/admin/tickets",
+@@ -113,6 +117,13 @@ for (const route of [
+     assert.match(html, /до 3 ответов в сумме/);
+     assert.match(html, /Заполни все вопросы/);
+   }
++  if (route.startsWith("/member")) {
++    assert.match(html, /Твои заявки, ответы и настройки профиля/);
++    assert.match(html, /Мои заявки/);
++    assert.match(html, /Профиль и вход/);
++    assert.match(html, /Тестовый режим/);
++    assert.doesNotMatch(html, /Личное пространство готовится|Кабинет недоступен/);
++  }
+   assert.match(
+     html,
+     /data-site-loading="true"|data-site-loading=""/,
+@@ -158,6 +169,8 @@ for (const route of [
+     );
+   }
+   if (route === "/admin?section=motion") {
++    assert.match(html, /id="navbar-settings"/);
++    assert.match(html, /Плотность на главной/);
+     for (const label of [
+       "Фоны событий",
+       "Световая сессия 01",
+diff --git a/src/components/admin/AdminMotionPreview.tsx b/src/components/admin/AdminMotionPreview.tsx
+index 43be20ce22ade02792253e223754926084d9b76f..4a5c8d6512efd7d1d347c57ee617176b307c6e58 100644
+--- a/src/components/admin/AdminMotionPreview.tsx
++++ b/src/components/admin/AdminMotionPreview.tsx
+@@ -107,6 +107,7 @@ export const settingPreviews: Record<keyof MotionSettings, SettingPreview> = {
+   sectionEnd: { group: "sections", label: "Завершение подсветки" },
+   eventBackgrounds: { group: "extras", label: "Фоны событий" },
+   loading: { group: "extras", label: "Загрузка сайта" },
++  navbar: { group: "extras", label: "Навбар" },
+ };
+ 
+ const groupLabels: Record<PreviewGroup, string> = {
+diff --git a/src/components/admin/MotionControlPanel.tsx b/src/components/admin/MotionControlPanel.tsx
+index 68cbdcc2cafa46a2922d2953dbf6d106a7bd8b21..23193eae32e95c801a955ea08f7fea7f793435c2 100644
+--- a/src/components/admin/MotionControlPanel.tsx
++++ b/src/components/admin/MotionControlPanel.tsx
+@@ -20,6 +20,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
+ import { AdminMotionPreview } from "./AdminMotionPreview";
+ import { EventBackgroundControls } from "./EventBackgroundControls";
+ import { LoadingControls } from "./LoadingControls";
++import { NavbarControls } from "./NavbarControls";
+ import {
+   defaultMotionSettings,
+   matchPreset,
+@@ -383,6 +384,7 @@ export function MotionControlPanel() {
+   return (
+     <div className="grid gap-10 lg:grid-cols-12">
+       <LoadingControls />
++      <NavbarControls />
+       <EventBackgroundControls />
+       <div className="space-y-8 lg:col-span-7">
+         <section>
+diff --git a/src/components/admin/NavbarControls.tsx b/src/components/admin/NavbarControls.tsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..38091fb8bb097ef05049168ff29be6ff32725698
+--- /dev/null
++++ b/src/components/admin/NavbarControls.tsx
+@@ -0,0 +1,215 @@
++import { useEffect, useId, useState } from "react";
++import { AppHeader } from "@/components/app/AppHeader";
++import { useMotionEnv } from "@/components/motion/MotionProvider";
++import { useSiteAccess } from "@/lib/site-admin";
++import {
++  defaultNavbarSettings,
++  NAVBAR_ACCENTS,
++  NAVBAR_RANGES,
++  type NavbarSettings,
++} from "@/lib/navbar-settings";
++import { Slider } from "@/components/ui/slider";
++import { Switch } from "@/components/ui/switch";
++import { Button } from "@/components/ui/button";
++
++export function NavbarControls() {
++  const motion = useMotionEnv(),
++    access = useSiteAccess(),
++    id = useId();
++  const config = motion.settings.navbar;
++  const [label, setLabel] = useState(config.inviteLabel);
++  useEffect(() => {
++    setLabel((current) => (current.trim() === config.inviteLabel ? current : config.inviteLabel));
++  }, [config.inviteLabel]);
++  const [busy, setBusy] = useState(false),
++    [message, setMessage] = useState("");
++  const dirty = JSON.stringify(config) !== JSON.stringify(motion.siteDefault.navbar);
++  const update = (patch: Partial<NavbarSettings>) => {
++    motion.updateSettings({ navbar: { ...config, ...patch } });
++    setMessage("");
++  };
++  return (
++    <section
++      id="navbar-settings"
++      className="eb-panel lg:col-span-12"
++      aria-labelledby={`${id}-title`}
++      data-admin-static="true"
++    >
++      <div className="eb-heading">
++        <div>
++          <p className="eb-kicker">ВНЕ / НАВИГАЦИЯ</p>
++          <h3 id={`${id}-title`}>Навбар</h3>
++        </div>
++        <span className="eb-type">Живое изменение</span>
++      </div>
++      <p className="eb-description">
++        Верхняя панель и раскрывающееся меню меняются сразу. На телефоне размеры ограничены шириной
++        экрана; все страницы всегда доступны через «Меню».
++      </p>
++      <div
++        style={{
++          containerType: "inline-size",
++          marginBlock: 24,
++          border: "1px solid #35473b",
++          borderRadius: 12,
++          background: "#101a14",
++          paddingBlock: 12,
++        }}
++      >
++        <AppHeader preview />
++      </div>
++      <p className="eb-note">
++        Это действующее меню: можно раскрыть его и проверить переходы. Сохраните настройки перед
++        обновлением страницы.
++      </p>
++      <div className="lc-modes">
++        <p className="eb-note">Цвет кнопки, активных ссылок и большого меню</p>
++        <div className="lc-mode-grid">
++          {Object.entries(NAVBAR_ACCENTS).map(([key, item]) => (
++            <button
++              type="button"
++              key={key}
++              aria-pressed={config.accent === key}
++              onClick={() => update({ accent: key as NavbarSettings["accent"] })}
++            >
++              <span
++                aria-hidden="true"
++                style={{
++                  background: item.color,
++                  display: "inline-block",
++                  width: 12,
++                  height: 12,
++                  borderRadius: "50%",
++                  marginRight: 8,
++                }}
++              />
++              {item.label}
++            </button>
++          ))}
++        </div>
++      </div>
++      <div className="eb-ranges mt-6">
++        {(Object.keys(NAVBAR_RANGES) as (keyof typeof NAVBAR_RANGES)[]).map((key) => {
++          const range = NAVBAR_RANGES[key],
++            value = config[key],
++            labelId = `${id}-${key}`;
++          const valueText =
++            range.unit === "%" ? `${Math.round(value * 100)}%` : `${value} ${range.unit}`;
++          return (
++            <div key={key} className="eb-control">
++              <div className="eb-control-heading">
++                <span id={labelId}>{range.label}</span>
++                <output>{valueText}</output>
++              </div>
++              <Slider
++                thumbLabelledBy={labelId}
++                thumbValueText={valueText}
++                value={[value]}
++                min={range.min}
++                max={range.max}
++                step={range.step}
++                onValueChange={([next]) => update({ [key]: next ?? value })}
++              />
++            </div>
++          );
++        })}
++      </div>
++      <label className="lc-direction mt-6">
++        Подпись кнопки приглашения
++        <input
++          className="min-h-11 min-w-0 rounded border border-border bg-background px-3"
++          value={label}
++          maxLength={18}
++          onChange={(e) => {
++            const value = e.target.value;
++            setLabel(value);
++            if (value.trim()) update({ inviteLabel: value });
++          }}
++          onBlur={() => {
++            if (!label.trim()) {
++              setLabel(defaultNavbarSettings.inviteLabel);
++              update({ inviteLabel: defaultNavbarSettings.inviteLabel });
++            }
++          }}
++        />
++      </label>
++      <div className="eb-toggles mt-6">
++        {(
++          [
++            ["showInvite", "Кнопка приглашения"],
++            ["showEvents", "События в верхней панели"],
++            ["showAbout", "О проекте в верхней панели"],
++            ["showMember", "Кабинет в верхней панели"],
++            ["showChapters", "Главы главной в раскрытом меню"],
++          ] as const
++        ).map(([key, label]) => (
++          <label key={key}>
++            {label}
++            <Switch
++              checked={config[key]}
++              onCheckedChange={(checked) => update({ [key]: checked })}
++            />
++          </label>
++        ))}
++      </div>
++      <div className="lc-actions mt-6">
++        <Button
++          type="button"
++          variant="outline"
++          disabled={busy}
++          onClick={() => {
++            motion.updateSettings({ navbar: { ...defaultNavbarSettings } });
++            setMessage("Фирменный навбар восстановлен в текущем просмотре.");
++          }}
++        >
++          Сбросить навбар
++        </Button>
++        <Button
++          type="button"
++          variant="outline"
++          disabled={busy || !motion.sharedDefaultsAvailable}
++          onClick={async () => {
++            setBusy(true);
++            setMessage("");
++            try {
++              await motion.refreshSiteDefaults();
++              setMessage("Общие настройки обновлены.");
++            } catch (e) {
++              setMessage(e instanceof Error ? e.message : "Не удалось обновить настройки.");
++            } finally {
++              setBusy(false);
++            }
++          }}
++        >
++          Актуализировать настройки
++        </Button>
++        {access.actor?.role === "owner" && (
++          <Button
++            type="button"
++            disabled={busy || !dirty || !motion.sharedDefaultsAvailable}
++            onClick={async () => {
++              setBusy(true);
++              setMessage("");
++              try {
++                await motion.saveSiteDefaults(["navbar"]);
++                setMessage("Навбар сохранён для всех следующих открытий сайта.");
++              } catch (e) {
++                setMessage(e instanceof Error ? e.message : "Не удалось сохранить навбар.");
++              } finally {
++                setBusy(false);
++              }
++            }}
++          >
++            Сохранить навбар для всех
++          </Button>
++        )}
++      </div>
++      <p className="eb-note mt-3">
++        {dirty ? "Есть несохранённые изменения." : "Навбар соответствует общим настройкам."}
++      </p>
++      <p role="status" className="lc-message">
++        {message}
++      </p>
++    </section>
++  );
++}
+diff --git a/src/components/admin/SiteRequestsPanel.tsx b/src/components/admin/SiteRequestsPanel.tsx
+index 5c64ade9a1793510f3230d9925abf3d8b5454340..a8d70c09fd07732815a15e924ec477feef4bd7dc 100644
+--- a/src/components/admin/SiteRequestsPanel.tsx
++++ b/src/components/admin/SiteRequestsPanel.tsx
+@@ -422,6 +422,7 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+     retry: false,
+   });
+   const [note, setNote] = useState(""),
++    [guestMessage, setGuestMessage] = useState(""),
+     [message, setMessage] = useState(""),
+     [pending, setPending] = useState(false);
+   const operation = useRef({ signature: "", id: "" });
+@@ -429,7 +430,13 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+   const item = query.data?.item;
+   const act = async (action: RequestAction) => {
+     if (!item || !manage || pending) return;
+-    const payload = { id, version: item.version, action, note };
++    const payload = {
++      id,
++      version: item.version,
++      action,
++      note,
++      ...(action === "request_info" ? { guestMessage } : {}),
++    };
+     const signature = JSON.stringify(payload);
+     if (operation.current.signature !== signature)
+       operation.current = { signature, id: crypto.randomUUID() };
+@@ -438,6 +445,7 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+     try {
+       await siteAdminRequest("requests", { ...payload, operationId: operation.current.id });
+       setNote("");
++      setGuestMessage("");
+       setMessage("Изменение сохранено в истории.");
+       await client.invalidateQueries({ queryKey: ["site-requests"] });
+     } catch (e) {
+@@ -495,7 +503,7 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+       {manage ? (
+         <div className="rq-form">
+           <label>
+-            Комментарий к решению
++            Внутренний комментарий к решению
+             <textarea
+               rows={3}
+               maxLength={2000}
+@@ -504,12 +512,30 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+               placeholder="Для отказа, уточнения и пересмотра решения укажите причину"
+             />
+           </label>
++          {item.source === "form" &&
++            allowedRequestActions(item.status).includes("request_info") && (
++              <label>
++                Вопрос гостю — будет виден в кабинете
++                <textarea
++                  rows={3}
++                  maxLength={1000}
++                  value={guestMessage}
++                  onChange={(e) => setGuestMessage(e.target.value)}
++                  placeholder="Что именно нужно уточнить? Этот текст увидит автор заявки."
++                />
++              </label>
++            )}
+           <div className="rq-actions">
+             {allowedRequestActions(item.status).map((action) => (
+               <button
+                 key={action}
+                 className={"aw-button " + (action === "approve" ? "" : "secondary")}
+-                disabled={pending}
++                disabled={
++                  pending ||
++                  (action === "request_info" &&
++                    item.source === "form" &&
++                    guestMessage.trim().length < 3)
++                }
+                 onClick={() => void act(action)}
+               >
+                 {REQUEST_ACTIONS[action].label}
+@@ -535,7 +561,11 @@ function RequestDetails({ id, manage }: { id: string; manage: boolean }) {
+                 <strong>
+                   {h.action === "created"
+                     ? "Заявка создана"
+-                    : REQUEST_ACTIONS[h.action as RequestAction]?.label || h.action}
++                    : h.action === "member_reply"
++                      ? "Ответ гостя"
++                      : h.action === "guest_question"
++                        ? "Вопрос гостю в кабинете"
++                        : REQUEST_ACTIONS[h.action as RequestAction]?.label || h.action}
+                 </strong>
+                 <time dateTime={h.createdAt}>{date(h.createdAt)} МСК</time>
+               </div>
+diff --git a/src/components/app/AppHeader.tsx b/src/components/app/AppHeader.tsx
+index ac8fa3e98b4d6910c3786f9695538a8431e57d0f..49e666c9c1495d64a01c6bf90d65367e1f31fc7c 100644
+--- a/src/components/app/AppHeader.tsx
++++ b/src/components/app/AppHeader.tsx
+@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties } from "re
+ import { Wordmark } from "@/components/vne/Wordmark";
+ import { chapterNavigation, primaryNavigation } from "@/content/site-content";
+ import { useMotionEnv } from "@/components/motion/MotionProvider";
++import { navbarVariables } from "@/lib/navbar-settings";
+ import "./navigation.css";
+ 
+ const menuLinks = [...primaryNavigation, { label: "Приглашение", to: "/apply" }] as const;
+@@ -17,9 +18,11 @@ const secondaryLinks = [
+ 
+ export function AppHeader({
+   transparent = false,
++  preview = false,
+   onOpenChange,
+ }: {
+   transparent?: boolean;
++  preview?: boolean;
+   onOpenChange?: (open: boolean) => void;
+ }) {
+   const [open, setOpen] = useState(false);
+@@ -27,6 +30,15 @@ export function AppHeader({
+   const previousPath = useRef(pathname);
+   const { reduced, settings } = useMotionEnv();
+   const motion = !reduced && settings.menuMotion;
++  const config = settings.navbar;
++  const variables = navbarVariables(config) as CSSProperties;
++  const visibleLinks = primaryNavigation.filter((item) =>
++    item.to === "/events"
++      ? config.showEvents
++      : item.to === "/about"
++        ? config.showAbout
++        : config.showMember,
++  );
+   const updateOpen = useCallback(
+     (next: boolean) => {
+       setOpen(next);
+@@ -44,13 +56,19 @@ export function AppHeader({
+ 
+   return (
+     <Dialog.Root open={open} onOpenChange={updateOpen}>
+-      <header className="vne-navbar" data-transparent={transparent} data-motion={motion}>
++      <header
++        className="vne-navbar"
++        data-transparent={transparent}
++        data-motion={motion}
++        data-preview={preview}
++        style={variables}
++      >
+         <div className="vne-navbar-inner">
+           <Link to="/" aria-label="ВНЕ — главная" className="vne-navbar-brand">
+             <Wordmark compact />
+           </Link>
+           <nav aria-label="Основная навигация" className="vne-navbar-links">
+-            {primaryNavigation.map((item) => (
++            {visibleLinks.map((item) => (
+               <Link
+                 key={item.to}
+                 to={item.to}
+@@ -65,9 +83,11 @@ export function AppHeader({
+             ))}
+           </nav>
+           <div className="vne-navbar-actions">
+-            <Link to="/apply" search={{ event: undefined }} className="vne-navbar-invite">
+-              Приглашение <ArrowUpRight size={15} aria-hidden="true" />
+-            </Link>
++            {config.showInvite && (
++              <Link to="/apply" search={{ event: undefined }} className="vne-navbar-invite">
++                {config.inviteLabel} <ArrowUpRight size={15} aria-hidden="true" />
++              </Link>
++            )}
+             <Dialog.Trigger className="vne-menu-trigger" aria-label="Открыть меню">
+               <span>Меню</span>
+               <span className="vne-menu-mark" aria-hidden="true">
+@@ -80,7 +100,7 @@ export function AppHeader({
+       </header>
+       <Dialog.Portal>
+         <Dialog.Overlay className="vne-menu-overlay" data-motion={motion} />
+-        <Dialog.Content className="vne-menu-panel" data-motion={motion}>
++        <Dialog.Content className="vne-menu-panel" data-motion={motion} style={variables}>
+           <Dialog.Title className="sr-only">Навигация ВНЕ</Dialog.Title>
+           <Dialog.Description className="sr-only">
+             Страницы проекта и главы главной. Escape закрывает меню.
+@@ -114,7 +134,9 @@ export function AppHeader({
+                     <span className="vne-menu-number" aria-hidden="true">
+                       0{index + 1}
+                     </span>
+-                    <span className="vne-menu-label">{item.label}</span>
++                    <span className="vne-menu-label">
++                      {item.to === "/apply" ? config.inviteLabel : item.label}
++                    </span>
+                     <ArrowUpRight className="vne-menu-arrow" aria-hidden="true" />
+                   </Link>
+                 </Dialog.Close>
+@@ -126,17 +148,19 @@ export function AppHeader({
+                 <br />
+                 Больше присутствия.
+               </p>
+-              <nav aria-label="Главы главной" className="vne-menu-chapters">
+-                <p className="vne-menu-eyebrow">Начать с главной</p>
+-                {chapterNavigation.map((item) => (
+-                  <Dialog.Close asChild key={item.hash}>
+-                    <Link to="/" hash={item.hash}>
+-                      {item.label}
+-                      <ArrowUpRight size={15} aria-hidden="true" />
+-                    </Link>
+-                  </Dialog.Close>
+-                ))}
+-              </nav>
++              {config.showChapters && (
++                <nav aria-label="Главы главной" className="vne-menu-chapters">
++                  <p className="vne-menu-eyebrow">Начать с главной</p>
++                  {chapterNavigation.map((item) => (
++                    <Dialog.Close asChild key={item.hash}>
++                      <Link to="/" hash={item.hash}>
++                        {item.label}
++                        <ArrowUpRight size={15} aria-hidden="true" />
++                      </Link>
++                    </Dialog.Close>
++                  ))}
++                </nav>
++              )}
+             </div>
+           </div>
+           <div className="vne-menu-bottom">
+diff --git a/src/components/app/bloom-answer-menu.css b/src/components/app/bloom-answer-menu.css
+index 3f74106aeca830b3fccef66ba4d5c090b2833cbb..de7968643cbdc5b41641bb1768e91aebf46624b7 100644
+--- a/src/components/app/bloom-answer-menu.css
++++ b/src/components/app/bloom-answer-menu.css
+@@ -146,12 +146,12 @@
+   color: #70f0c6;
+ }
+ .vne-bloom-option[data-custom="true"] {
+-  background: #263c2e;
+-  color: #edf2ee;
++  background: #86abff;
++  color: #070a09;
+   font-weight: 600;
+ }
+ .vne-bloom-option[data-custom="true"] .vne-bloom-option-mark {
+-  color: #b6c1bb;
++  color: #070a09;
+ }
+ .vne-bloom-option:focus-visible {
+   outline: 2px solid #070a09;
+diff --git a/src/components/app/navigation.css b/src/components/app/navigation.css
+index 386a89580adb402bd5a698fed30b19feca502cf2..551374ccb6b4fb3e5f7127c3cd4a6a5e2b5f8794 100644
+--- a/src/components/app/navigation.css
++++ b/src/components/app/navigation.css
+@@ -2,25 +2,25 @@
+   position: fixed;
+   inset: 0 0 auto;
+   z-index: 40;
+-  padding: 6px 16px;
++  padding: var(--navbar-offset, 6px) 16px;
+ }
+ .vne-navbar-inner {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+-  max-width: 1136px;
+-  min-height: 52px;
++  max-width: var(--navbar-width, 1136px);
++  min-height: var(--navbar-height, 52px);
+   margin: 0 auto;
+   padding: 4px 6px 4px 18px;
+   border: 1px solid oklch(1 0 0 / 0.13);
+-  border-radius: 12px;
+-  background: oklch(0.17 0.008 175 / 0.94);
+-  backdrop-filter: blur(22px);
+-  -webkit-backdrop-filter: blur(22px);
++  border-radius: var(--navbar-radius, 12px);
++  background: oklch(0.17 0.008 175 / var(--navbar-opacity, 0.94));
++  backdrop-filter: blur(var(--navbar-blur, 22px));
++  -webkit-backdrop-filter: blur(var(--navbar-blur, 22px));
+   box-shadow: 0 6px 30px oklch(0 0 0 / 0.12);
+ }
+ .vne-navbar[data-transparent="true"] .vne-navbar-inner {
+-  background: oklch(0.17 0.008 175 / 0.67);
++  background: oklch(0.17 0.008 175 / var(--navbar-hero-opacity, 0.67));
+ }
+ .vne-navbar-brand {
+   flex-shrink: 0;
+@@ -44,7 +44,7 @@
+   color: var(--muted-foreground);
+ }
+ .vne-navbar-link[aria-current="page"] {
+-  color: var(--vne-neon-coral);
++  color: var(--navbar-accent, var(--vne-neon-coral));
+ }
+ .vne-nav-roll {
+   display: grid;
+@@ -56,7 +56,7 @@
+   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+ }
+ .vne-nav-roll > span + span {
+-  color: var(--vne-neon-coral);
++  color: var(--navbar-accent, var(--vne-neon-coral));
+ }
+ .vne-navbar-actions {
+   display: flex;
+@@ -77,7 +77,7 @@
+ }
+ .vne-navbar-invite {
+   color: var(--vne-nav-ink);
+-  background: var(--vne-neon-coral);
++  background: var(--navbar-accent, var(--vne-neon-coral));
+   transition:
+     box-shadow 0.2s,
+     background 0.2s;
+@@ -102,10 +102,10 @@
+   justify-self: end;
+ }
+ .vne-menu-trigger[aria-expanded="true"] {
+-  color: var(--vne-neon-coral);
++  color: var(--navbar-accent, var(--vne-neon-coral));
+ }
+ .vne-navbar :is(a, button):focus-visible {
+-  outline: 2px solid var(--vne-neon-coral);
++  outline: 2px solid var(--navbar-accent, var(--vne-neon-coral));
+   outline-offset: 3px;
+ }
+ .vne-navbar-invite:focus-visible {
+@@ -126,7 +126,7 @@
+   overflow-y: auto;
+   overscroll-behavior: contain;
+   border-radius: 16px;
+-  background: var(--vne-neon-coral);
++  background: var(--navbar-accent, var(--vne-neon-coral));
+   color: var(--vne-nav-ink);
+   padding: 0 clamp(20px, 4vw, 64px);
+   outline: none;
+@@ -143,7 +143,7 @@
+   position: sticky;
+   top: 0;
+   z-index: 2;
+-  background: var(--vne-neon-coral);
++  background: var(--navbar-accent, var(--vne-neon-coral));
+   display: flex;
+   align-items: center;
+   gap: 28px;
+@@ -303,10 +303,10 @@
+   }
+   .vne-navbar-invite:hover {
+     box-shadow: 0 0 25px oklch(0.717 0.207 32 / 0.4);
+-    background: oklch(0.78 0.16 32);
++    filter: brightness(1.1);
+   }
+   .vne-menu-trigger:hover {
+-    color: var(--vne-neon-coral);
++    color: var(--navbar-accent, var(--vne-neon-coral));
+   }
+   .vne-menu-trigger:hover .vne-menu-mark i:last-child {
+     transform: translateX(-6px);
+@@ -476,3 +476,43 @@ html[data-reduce-motion="true"] :is(.vne-navbar, .vne-menu-panel) * {
+     transition: none !important;
+   }
+ }
++
++.vne-navbar-brand img {
++  width: var(--navbar-logo-width, 80px);
++  height: auto;
++}
++.vne-navbar-actions {
++  margin-left: auto;
++}
++.vne-navbar[data-preview="true"] {
++  position: relative;
++  inset: auto;
++  z-index: 0;
++}
++@container (max-width: 760px) {
++  .vne-navbar[data-preview="true"] .vne-navbar-links {
++    display: none;
++  }
++}
++.vne-menu-label {
++  overflow-wrap: anywhere;
++}
++.vne-navbar-invite {
++  text-align: center;
++  overflow-wrap: anywhere;
++}
++@media (max-width: 599px) {
++  .vne-navbar-brand img {
++    width: min(var(--navbar-logo-width, 80px), 72px);
++  }
++  .vne-navbar-invite {
++    max-width: 124px;
++    line-height: 1.3;
++  }
++  .vne-navbar-inner {
++    gap: 6px;
++  }
++  .vne-navbar-actions {
++    gap: 4px;
++  }
++}
+diff --git a/src/components/app/questionnaire.css b/src/components/app/questionnaire.css
+index bf535093085dafbaac14f17f60b97ea42773b2e0..f21085d66c47823c435888d4bd3c93ff0106c767 100644
+--- a/src/components/app/questionnaire.css
++++ b/src/components/app/questionnaire.css
+@@ -18,9 +18,9 @@
+   max-width: 100%;
+   min-height: 48px;
+   padding: 13px 17px;
+-  border: 1px solid #e55330;
++  border: 1px solid #86abff;
+   border-radius: 8px;
+-  background: #e55330;
++  background: #86abff;
+   color: #070a09;
+   font-size: 13px;
+   font-weight: 650;
+@@ -291,8 +291,8 @@
+ }
+ @media (hover: hover) {
+   .vne-questionnaire-mode-button:not(:disabled):hover {
+-    background: #f36b49;
+-    border-color: #f36b49;
++    background: #e55330;
++    border-color: #e55330;
+   }
+   .vne-questionnaire-clear:not(:disabled):hover {
+     color: #edf2ee;
+diff --git a/src/components/member/SiteMember.tsx b/src/components/member/SiteMember.tsx
+new file mode 100644
+index 0000000000000000000000000000000000000000..02cb91fd61e49a7b3588dd9b59075da3ec9f3db4
+--- /dev/null
++++ b/src/components/member/SiteMember.tsx
+@@ -0,0 +1,539 @@
++import { useEffect, useRef, useState, type FormEvent } from "react";
++import { Link } from "@tanstack/react-router";
++import { useQuery, useQueryClient } from "@tanstack/react-query";
++import {
++  ArrowUpRight,
++  ChevronRight,
++  RefreshCw,
++  UserRound,
++  FileText,
++  ShieldCheck,
++} from "lucide-react";
++import { PageShell } from "@/components/app/PageShell";
++import { Button } from "@/components/ui/button";
++import {
++  Dialog,
++  DialogContent,
++  DialogHeader,
++  DialogTitle,
++  DialogDescription,
++} from "@/components/ui/dialog";
++import { REQUEST_STATUSES } from "@/lib/site-requests";
++import {
++  MemberApiError,
++  memberRequest,
++  MEMBER_STATUS_TEXT,
++  type MemberList,
++  type MemberDetail,
++  type MemberProfile,
++} from "@/lib/site-member";
++import "./site-member.css";
++
++const date = (v: string) =>
++  new Date(v).toLocaleString("ru-RU", {
++    timeZone: "Europe/Moscow",
++    day: "2-digit",
++    month: "long",
++    year: "numeric",
++    hour: "2-digit",
++    minute: "2-digit",
++  });
++const errorText = (e: unknown) =>
++  e instanceof MemberApiError ? e.message : "Нет связи. Действие не подтверждено. Повтори попытку.";
++function Failure({ error, retry }: { error: unknown; retry: () => void }) {
++  return (
++    <div className="sm-error" role="alert">
++      <p>{errorText(error)}</p>
++      {error instanceof MemberApiError && error.code === "AUTH_REQUIRED" ? (
++        <a href="/admin-login?next=%2Fmember">Войти снова</a>
++      ) : (
++        <Button type="button" variant="outline" onClick={retry}>
++          Повторить
++        </Button>
++      )}
++    </div>
++  );
++}
++export function SiteMember({ event }: { event?: string | undefined }) {
++  const [tab, setTab] = useState<"requests" | "profile">("requests"),
++    [status, setStatus] = useState(""),
++    [page, setPage] = useState(0),
++    [selected, setSelected] = useState<string | null>(null);
++  const query = useQuery({
++    queryKey: ["site-member", status, page],
++    queryFn: () =>
++      memberRequest<MemberList>(`?${new URLSearchParams({ status, page: String(page) })}`),
++    retry: false,
++    staleTime: 10000,
++    refetchInterval: 30000,
++    refetchIntervalInBackground: false,
++  });
++  useEffect(() => {
++    if (query.data && page > 0 && page * 20 >= query.data.total)
++      setPage(Math.max(0, Math.ceil(query.data.total / 20) - 1));
++  }, [query.data, page]);
++  const data = query.data;
++  return (
++    <PageShell
++      eyebrow="ВНЕ / КАБИНЕТ"
++      title={data?.profile.displayName ? `Привет, ${data.profile.displayName}` : "Кабинет"}
++      intro="Твои заявки, ответы и настройки профиля — в одном месте."
++      density="compact"
++    >
++      <section className="sm-layout">
++        <div className="sm-notice">
++          <span>Тестовый режим</span>
++          <p>
++            Здесь показаны заявки, отправленные из этой учётной записи. Используй вымышленные
++            данные. Одобрение в тестовой очереди не означает допуска на событие.
++          </p>
++        </div>
++        <nav className="sm-tabs" aria-label="Разделы кабинета">
++          <button
++            type="button"
++            aria-current={tab === "requests" ? "page" : undefined}
++            onClick={() => setTab("requests")}
++          >
++            <FileText size={17} />
++            Мои заявки
++          </button>
++          <button
++            type="button"
++            aria-current={tab === "profile" ? "page" : undefined}
++            onClick={() => setTab("profile")}
++          >
++            <UserRound size={17} />
++            Профиль и вход
++          </button>
++        </nav>
++        {query.isPending && (
++          <p role="status" className="sm-empty">
++            Загружаем кабинет…
++          </p>
++        )}
++        {query.error && <Failure error={query.error} retry={() => void query.refetch()} />}
++        {data && !query.isError && (
++          <>
++            {tab === "requests" ? (
++              <div className="sm-columns">
++                <div className="sm-main">
++                  <div className="sm-heading">
++                    <div>
++                      <p className="sm-kicker">ЛИЧНОЕ / ЗАЯВКИ</p>
++                      <h2>Твой следующий шаг</h2>
++                    </div>
++                    <button
++                      className="sm-refresh"
++                      type="button"
++                      disabled={query.isFetching}
++                      onClick={() => void query.refetch()}
++                    >
++                      <RefreshCw size={16} />
++                      {query.isFetching ? "Обновляем…" : "Обновить"}
++                    </button>
++                  </div>
++                  <div className="sm-toolbar">
++                    <label>
++                      Статус
++                      <select
++                        value={status}
++                        onChange={(e) => {
++                          setStatus(e.target.value);
++                          setPage(0);
++                        }}
++                      >
++                        <option value="">Все статусы</option>
++                        {Object.entries(REQUEST_STATUSES).map(([key, label]) => (
++                          <option key={key} value={key}>
++                            {label}
++                          </option>
++                        ))}
++                      </select>
++                    </label>
++                    <Link to="/apply" search={{ event }} className="sm-primary">
++                      Подать заявку <ArrowUpRight size={17} />
++                    </Link>
++                  </div>
++                  {!data.items.length ? (
++                    <div className="sm-empty">
++                      <FileText size={26} aria-hidden="true" />
++                      <h3>{status ? "Заявок с таким статусом нет" : "Начнём со знакомства"}</h3>
++                      <p>
++                        {status
++                          ? "Выбери другой статус или посмотри все заявки."
++                          : "Пройди анкету — после отправки она появится здесь вместе со статусом рассмотрения."}
++                      </p>
++                      {status && (
++                        <Button variant="outline" onClick={() => setStatus("")}>
++                          Показать все
++                        </Button>
++                      )}
++                    </div>
++                  ) : (
++                    <div className="sm-requests">
++                      {data.items.map((item) => (
++                        <button
++                          type="button"
++                          key={item.id}
++                          className="sm-request"
++                          onClick={() => setSelected(item.id)}
++                        >
++                          <span className="sm-request-top">
++                            <span className="sm-badge" data-status={item.status}>
++                              {REQUEST_STATUSES[item.status]}
++                            </span>
++                            <ChevronRight size={18} aria-hidden="true" />
++                          </span>
++                          <strong>{item.eventTitle || "Знакомство с ВНЕ"}</strong>
++                          <span className="sm-request-description">
++                            {MEMBER_STATUS_TEXT[item.status]}
++                          </span>
++                          <span className="sm-date">{date(item.createdAt)} · МСК</span>
++                        </button>
++                      ))}
++                    </div>
++                  )}
++                  {data.total > 20 && (
++                    <div className="sm-pagination">
++                      <Button
++                        variant="outline"
++                        disabled={page === 0 || query.isFetching}
++                        onClick={() => setPage(page - 1)}
++                      >
++                        Назад
++                      </Button>
++                      <span>
++                        Страница {page + 1} из {Math.ceil(data.total / 20)}
++                      </span>
++                      <Button
++                        variant="outline"
++                        disabled={(page + 1) * 20 >= data.total || query.isFetching}
++                        onClick={() => setPage(page + 1)}
++                      >
++                        Далее
++                      </Button>
++                    </div>
++                  )}
++                  <p className="sm-footnote">
++                    Статусы обновляются каждые 30 секунд, пока открыт кабинет. Время указано по
++                    Москве.
++                  </p>
++                </div>
++                <aside className="sm-aside">
++                  <ShieldCheck size={23} aria-hidden="true" />
++                  <h3>Что дальше</h3>
++                  <p>
++                    Решение по заявке появится в её карточке. Если понадобятся дополнительные
++                    сведения, здесь можно отправить уточнение.
++                  </p>
++                  <dl>
++                    <div>
++                      <dt>Участие</dt>
++                      <dd>Определяется отдельно для каждого события</dd>
++                    </div>
++                    <div>
++                      <dt>Оплата</dt>
++                      <dd>Пока недоступна</dd>
++                    </div>
++                    <div>
++                      <dt>Пропуск</dt>
++                      <dd>В этом режиме не выдаётся</dd>
++                    </div>
++                    <div>
++                      <dt>Telegram и письма</dt>
++                      <dd>Уведомления не отправляются</dd>
++                    </div>
++                  </dl>
++                  <Link to="/events">
++                    Посмотреть события <ArrowUpRight size={15} />
++                  </Link>
++                  <Link to="/faq" search={{ event: undefined }}>
++                    Вопросы об участии <ArrowUpRight size={15} />
++                  </Link>
++                </aside>
++              </div>
++            ) : (
++              <ProfileSettings profile={data.profile} refresh={() => void query.refetch()} />
++            )}
++          </>
++        )}
++        <div className="sm-session">
++          <p>Заверши сеанс, если пользуешься общим устройством.</p>
++          <form method="post" action="/admin-logout">
++            <Button type="submit" variant="outline">
++              Выйти из кабинета
++            </Button>
++          </form>
++        </div>
++        {selected && <RequestDetail id={selected} close={() => setSelected(null)} />}
++      </section>
++    </PageShell>
++  );
++}
++
++function ProfileSettings({ profile, refresh }: { profile: MemberProfile; refresh: () => void }) {
++  const client = useQueryClient();
++  const [name, setName] = useState(profile.displayName),
++    [busy, setBusy] = useState(false),
++    [message, setMessage] = useState(""),
++    [error, setError] = useState<unknown>(null);
++  const [currentPassword, setCurrentPassword] = useState(""),
++    [password, setPassword] = useState(""),
++    [confirm, setConfirm] = useState("");
++  const sourceName = useRef(profile.displayName);
++  useEffect(() => {
++    if (sourceName.current !== profile.displayName) {
++      if (name === sourceName.current) setName(profile.displayName);
++      sourceName.current = profile.displayName;
++    }
++  }, [profile.displayName, name]);
++  async function save(e: FormEvent, kind: "profile" | "password") {
++    e.preventDefault();
++    setBusy(true);
++    setMessage("");
++    setError(null);
++    try {
++      const result = await memberRequest<{ profile: MemberProfile }>(
++        `/${kind}`,
++        kind === "profile"
++          ? { displayName: name, version: profile.version }
++          : { currentPassword, password, confirmPassword: confirm, version: profile.version },
++      );
++      client.setQueriesData<MemberList>({ queryKey: ["site-member"] }, (old) =>
++        old ? { ...old, profile: result.profile } : old,
++      );
++      await client.invalidateQueries({ queryKey: ["site-admin-session"] });
++      if (kind === "password") {
++        setCurrentPassword("");
++        setPassword("");
++        setConfirm("");
++      }
++      setMessage(
++        kind === "profile" ? "Имя сохранено." : "Пароль изменён. Другие сеансы завершены.",
++      );
++    } catch (e) {
++      setError(e);
++    } finally {
++      setBusy(false);
++    }
++  }
++  return (
++    <div className="sm-profile">
++      <form className="sm-card" onSubmit={(e) => void save(e, "profile")}>
++        <p className="sm-kicker">ЛИЧНОЕ / ПРОФИЛЬ</p>
++        <h2>Как к тебе обращаться</h2>
++        <label>
++          Логин
++          <input value={profile.username} readOnly autoComplete="username" />
++          <small>Логин выдан вместе с доступом.</small>
++        </label>
++        <label>
++          Имя
++          <input
++            value={name}
++            maxLength={80}
++            required
++            autoComplete="nickname"
++            onChange={(e) => setName(e.target.value)}
++          />
++        </label>
++        <Button
++          type="submit"
++          disabled={busy || !name.trim() || name.trim() === profile.displayName}
++        >
++          Сохранить имя
++        </Button>
++      </form>
++      <form className="sm-card" onSubmit={(e) => void save(e, "password")}>
++        <p className="sm-kicker">БЕЗОПАСНОСТЬ / ВХОД</p>
++        <h2>Сменить пароль</h2>
++        <input
++          className="sr-only"
++          tabIndex={-1}
++          aria-hidden="true"
++          value={profile.username}
++          autoComplete="username"
++          readOnly
++        />
++        <label>
++          Текущий пароль
++          <input
++            type="password"
++            value={currentPassword}
++            required
++            maxLength={200}
++            autoComplete="current-password"
++            onChange={(e) => setCurrentPassword(e.target.value)}
++          />
++        </label>
++        <label>
++          Новый пароль
++          <input
++            type="password"
++            value={password}
++            required
++            minLength={12}
++            maxLength={200}
++            autoComplete="new-password"
++            onChange={(e) => setPassword(e.target.value)}
++          />
++          <small>От 12 символов. После смены другие сеансы завершатся.</small>
++        </label>
++        <label>
++          Повтори новый пароль
++          <input
++            type="password"
++            value={confirm}
++            required
++            minLength={12}
++            maxLength={200}
++            autoComplete="new-password"
++            onChange={(e) => setConfirm(e.target.value)}
++            aria-invalid={Boolean(confirm && confirm !== password)}
++          />
++        </label>
++        {confirm && confirm !== password && <p className="sm-inline-error">Пароли не совпадают.</p>}
++        <Button
++          type="submit"
++          disabled={busy || password.length < 12 || password !== confirm || !currentPassword}
++        >
++          Изменить пароль
++        </Button>
++      </form>
++      {error != null && <Failure error={error} retry={refresh} />}
++      <p className="sm-form-status" role="status">
++        {busy ? "Сохраняем…" : message}
++      </p>
++    </div>
++  );
++}
++
++function RequestDetail({ id, close }: { id: string; close: () => void }) {
++  const client = useQueryClient(),
++    query = useQuery({
++      queryKey: ["site-member-detail", id],
++      queryFn: () => memberRequest<MemberDetail>(`?id=${encodeURIComponent(id)}`),
++      retry: false,
++      staleTime: 0,
++      refetchInterval: 30000,
++    });
++  const [reply, setReply] = useState(""),
++    [busy, setBusy] = useState(false),
++    [error, setError] = useState<unknown>(null),
++    [message, setMessage] = useState("");
++  const operation = useRef<{ key: string; id: string } | null>(null);
++  const data = query.data;
++  async function submit(e: FormEvent) {
++    e.preventDefault();
++    if (!data) return;
++    setBusy(true);
++    setError(null);
++    setMessage("");
++    const payload = { id, version: data.item.version, reply: reply.trim() },
++      key = JSON.stringify(payload);
++    if (operation.current?.key !== key) operation.current = { key, id: crypto.randomUUID() };
++    try {
++      await memberRequest("/reply", { ...payload, operationId: operation.current.id });
++      setReply("");
++      setMessage("Уточнение отправлено. Заявка снова на рассмотрении.");
++      await Promise.all([client.invalidateQueries({ queryKey: ["site-member"] }), query.refetch()]);
++    } catch (e) {
++      setError(e);
++    } finally {
++      setBusy(false);
++    }
++  }
++  return (
++    <Dialog
++      open
++      onOpenChange={(open) => {
++        if (!open) close();
++      }}
++    >
++      <DialogContent className="sm-dialog">
++        <DialogHeader>
++          <DialogTitle>Твоя заявка</DialogTitle>
++          <DialogDescription>Ответы, текущий статус и история рассмотрения.</DialogDescription>
++        </DialogHeader>
++        {query.isPending && <p role="status">Загружаем заявку…</p>}
++        {query.error && <Failure error={query.error} retry={() => void query.refetch()} />}
++        {data && !query.isError && (
++          <>
++            <div className="sm-detail-heading">
++              <span className="sm-badge" data-status={data.item.status}>
++                {REQUEST_STATUSES[data.item.status]}
++              </span>
++              <h3>{data.item.eventTitle || "Знакомство с ВНЕ"}</h3>
++              <p>{MEMBER_STATUS_TEXT[data.item.status]}</p>
++            </div>
++            <dl className="sm-details">
++              <div>
++                <dt>Номер заявки</dt>
++                <dd>{data.item.id}</dd>
++              </div>
++              <div>
++                <dt>Имя</dt>
++                <dd>{data.item.name}</dd>
++              </div>
++              <div>
++                <dt>Email</dt>
++                <dd>{data.item.email}</dd>
++              </div>
++              <div>
++                <dt>Telegram</dt>
++                <dd>@{data.item.telegram}</dd>
++              </div>
++              <div>
++                <dt>Отправлена</dt>
++                <dd>{date(data.item.createdAt)} · МСК</dd>
++              </div>
++            </dl>
++            <details className="sm-answers">
++              <summary>Посмотреть свои ответы</summary>
++              <p>{data.item.details || "Ответы не сохранены в этой заявке."}</p>
++            </details>
++            <section className="sm-history">
++              <h3>История заявки</h3>
++              <ol>
++                {data.history.map((h) => (
++                  <li key={h.id}>
++                    <strong>
++                      {h.action === "member_reply"
++                        ? "Твоё уточнение отправлено"
++                        : h.action === "guest_question"
++                          ? "Вопрос от команды"
++                          : REQUEST_STATUSES[h.toStatus]}
++                    </strong>
++                    <span>{date(h.createdAt)} · МСК</span>
++                    {(h.reply || h.message) && <p>{h.reply || h.message}</p>}
++                  </li>
++                ))}
++              </ol>
++            </section>
++            {data.item.status === "needs_info" && (
++              <form className="sm-reply" onSubmit={(e) => void submit(e)}>
++                <label>
++                  Уточнение к заявке
++                  <textarea
++                    rows={4}
++                    value={reply}
++                    minLength={3}
++                    maxLength={1000}
++                    required
++                    onChange={(e) => setReply(e.target.value)}
++                  />
++                </label>
++                <small>{reply.length}/1000</small>
++                <Button type="submit" disabled={busy || reply.trim().length < 3}>
++                  {busy ? "Отправляем…" : "Отправить уточнение"}
++                </Button>
++              </form>
++            )}
++          </>
++        )}
++        {error != null && <Failure error={error} retry={() => void query.refetch()} />}
++        <p role="status">{message}</p>
++      </DialogContent>
++    </Dialog>
++  );
++}
+diff --git a/src/components/member/site-member.css b/src/components/member/site-member.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..bd990bb3e5842a3e6bd76dbc035e370dac6dabea
+--- /dev/null
++++ b/src/components/member/site-member.css
+@@ -0,0 +1,478 @@
++.sm-layout {
++  max-width: 1200px;
++  margin: auto;
++  padding: 16px 24px 64px;
++}
++.sm-notice {
++  display: flex;
++  gap: 20px;
++  padding: 20px;
++  border: 1px solid #304f40;
++  border-radius: 12px;
++  background: #101f19;
++  color: #b7c9bf;
++  font-size: 13px;
++  line-height: 1.7;
++}
++.sm-notice > span {
++  color: #70e6bb;
++  flex-shrink: 0;
++  font-size: 11px;
++  padding-top: 2px;
++}
++.sm-tabs {
++  display: flex;
++  flex-wrap: wrap;
++  gap: 8px;
++  margin: 28px 0;
++  border-bottom: 1px solid #354039;
++}
++.sm-tabs button {
++  display: flex;
++  align-items: center;
++  gap: 9px;
++  padding: 16px 20px;
++  min-height: 48px;
++  color: #b6c1bb;
++  border-bottom: 2px solid transparent;
++  cursor: pointer;
++}
++.sm-tabs [aria-current] {
++  color: #86abff;
++  border-color: #86abff;
++}
++.sm-columns {
++  display: grid;
++  grid-template-columns: minmax(0, 1fr) 288px;
++  gap: 28px;
++}
++.sm-main {
++  min-width: 0;
++}
++.sm-heading {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 16px;
++  margin: 12px 0 24px;
++}
++.sm-kicker {
++  color: #8a9d90;
++  font-size: 10px;
++  letter-spacing: 0.1em;
++  margin-bottom: 10px;
++}
++.sm-heading h2,
++.sm-card h2 {
++  font-family: var(--font-display);
++  font-size: clamp(17px, 2vw, 23px);
++  font-weight: 400;
++  line-height: 1.5;
++  overflow-wrap: anywhere;
++}
++.sm-refresh {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  gap: 8px;
++  min-height: 44px;
++  color: #b6c1bb;
++  font-size: 12px;
++  cursor: pointer;
++}
++.sm-toolbar {
++  display: flex;
++  align-items: end;
++  justify-content: space-between;
++  flex-wrap: wrap;
++  gap: 16px;
++  margin-bottom: 20px;
++}
++.sm-toolbar label {
++  display: grid;
++  gap: 7px;
++  color: #a8b6ad;
++  font-size: 12px;
++}
++.sm-toolbar select,
++.sm-card input,
++.sm-reply textarea {
++  min-height: 46px;
++  border: 1px solid #526458;
++  border-radius: 6px;
++  background: #101a14;
++  color: #edf2ee;
++  padding: 10px 12px;
++  font: inherit;
++  width: 100%;
++  min-width: 0;
++}
++.sm-primary {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  gap: 15px;
++  background: #e55330;
++  color: #070a09;
++  border-radius: 6px;
++  min-height: 46px;
++  padding: 12px 18px;
++  font-size: 13px;
++  font-weight: 600;
++}
++.sm-requests {
++  display: grid;
++  gap: 12px;
++}
++.sm-request {
++  display: flex;
++  flex-direction: column;
++  gap: 14px;
++  width: 100%;
++  min-width: 0;
++  padding: 24px;
++  border: 1px solid #35473b;
++  background: #101811;
++  border-radius: 12px;
++  text-align: left;
++  cursor: pointer;
++  transition:
++    border-color 0.2s,
++    background 0.2s;
++}
++.sm-request-top {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 12px;
++  width: 100%;
++}
++.sm-request strong {
++  font-size: 19px;
++  font-weight: 500;
++  overflow-wrap: anywhere;
++}
++.sm-badge {
++  display: inline-flex;
++  align-items: center;
++  padding: 5px 10px;
++  border: 1px solid #566b5c;
++  border-radius: 99px;
++  font-size: 11px;
++  color: #c3d2c7;
++  width: fit-content;
++}
++.sm-badge[data-status="approved"] {
++  color: #70e6bb;
++  border-color: #427963;
++}
++.sm-badge[data-status="needs_info"] {
++  color: #ffd1bf;
++  border-color: #a26145;
++}
++.sm-badge[data-status="rejected"] {
++  color: #ffb7a4;
++}
++.sm-request-description,
++.sm-date,
++.sm-footnote {
++  color: #a8b6ad;
++  font-size: 13px;
++  line-height: 1.65;
++}
++.sm-date {
++  font-size: 11px;
++}
++.sm-footnote {
++  margin-top: 20px;
++  font-size: 11px;
++}
++.sm-aside {
++  padding: 28px;
++  background: #131d17;
++  border: 1px solid #334539;
++  border-radius: 12px;
++  height: fit-content;
++}
++.sm-aside > svg {
++  color: #86abff;
++}
++.sm-aside h3 {
++  margin: 18px 0 12px;
++  font-size: 19px;
++}
++.sm-aside p,
++.sm-aside dd {
++  color: #b6c1bb;
++  font-size: 12px;
++  line-height: 1.8;
++}
++.sm-aside dl {
++  margin: 24px 0;
++}
++.sm-aside dl > div {
++  padding: 13px 0;
++  border-top: 1px solid #35453b;
++}
++.sm-aside dt {
++  font-size: 12px;
++  margin-bottom: 4px;
++}
++.sm-aside a {
++  display: flex;
++  gap: 10px;
++  align-items: center;
++  min-height: 44px;
++  color: #86abff;
++  font-size: 12px;
++}
++.sm-empty {
++  display: grid;
++  justify-items: start;
++  gap: 15px;
++  border: 1px dashed #43564a;
++  border-radius: 12px;
++  padding: 32px;
++  color: #b6c1bb;
++  font-size: 14px;
++  line-height: 1.75;
++}
++.sm-empty h3 {
++  font-size: 19px;
++  color: #edf2ee;
++}
++.sm-pagination {
++  display: flex;
++  flex-wrap: wrap;
++  align-items: center;
++  justify-content: space-between;
++  gap: 12px;
++  margin-top: 20px;
++  font-size: 12px;
++}
++.sm-profile {
++  display: grid;
++  grid-template-columns: 1fr 1fr;
++  gap: 24px;
++}
++.sm-card {
++  padding: 28px;
++  border: 1px solid #35473b;
++  border-radius: 12px;
++  background: #101811;
++  min-width: 0;
++  height: fit-content;
++}
++.sm-card label,
++.sm-reply label {
++  display: grid;
++  gap: 9px;
++  margin: 20px 0;
++  font-size: 13px;
++}
++.sm-card small,
++.sm-reply small {
++  color: #a8b6ad;
++  font-size: 11px;
++  line-height: 1.7;
++}
++.sm-card input[readonly] {
++  color: #a8b6ad;
++  background: #121713;
++}
++.sm-error {
++  border-left: 2px solid #e55330;
++  background: #211911;
++  padding: 16px;
++  margin: 16px 0;
++  font-size: 13px;
++  line-height: 1.7;
++}
++.sm-error :is(button, a) {
++  margin-top: 12px;
++  min-height: 44px;
++  display: inline-flex;
++  align-items: center;
++  color: #a5beff;
++}
++.sm-inline-error {
++  color: #ffb7a4;
++  font-size: 12px;
++  margin-bottom: 16px;
++}
++.sm-form-status {
++  grid-column: 1/-1;
++  font-size: 13px;
++  color: #80e1b7;
++}
++.sm-session {
++  display: flex;
++  justify-content: space-between;
++  gap: 20px;
++  align-items: center;
++  border-top: 1px solid #35473b;
++  margin-top: 36px;
++  padding-top: 24px;
++}
++.sm-session p {
++  font-size: 12px;
++  color: #a8b6ad;
++}
++.sm-dialog {
++  width: min(640px, calc(100vw - 24px));
++  max-width: 640px !important;
++  max-height: calc(100dvh - 32px);
++  overflow-y: auto;
++  padding: 28px;
++}
++.sm-detail-heading h3 {
++  font-size: 20px;
++  margin: 16px 0 12px;
++}
++.sm-detail-heading p {
++  color: #b6c1bb;
++  font-size: 13px;
++  line-height: 1.7;
++}
++.sm-details > div {
++  display: grid;
++  grid-template-columns: 112px minmax(0, 1fr);
++  gap: 12px;
++  padding: 10px 0;
++  border-bottom: 1px solid #35473b;
++  font-size: 12px;
++}
++.sm-details dt {
++  color: #a8b6ad;
++}
++.sm-details dd {
++  overflow-wrap: anywhere;
++}
++.sm-answers {
++  padding: 16px 0;
++  border-bottom: 1px solid #35473b;
++}
++.sm-answers summary {
++  min-height: 44px;
++  cursor: pointer;
++  color: #86abff;
++  font-size: 13px;
++}
++.sm-answers p {
++  white-space: pre-wrap;
++  overflow-wrap: anywhere;
++  line-height: 1.8;
++  font-size: 13px;
++}
++.sm-history h3 {
++  font-size: 16px;
++  margin: 12px 0 20px;
++}
++.sm-history ol {
++  display: grid;
++  gap: 20px;
++  padding-left: 16px;
++  border-left: 1px solid #4b6355;
++}
++.sm-history li {
++  display: grid;
++  gap: 6px;
++  font-size: 12px;
++}
++.sm-history li > span {
++  color: #a8b6ad;
++  font-size: 11px;
++}
++.sm-history p {
++  white-space: pre-wrap;
++  overflow-wrap: anywhere;
++  color: #c7d7cd;
++  line-height: 1.7;
++}
++.sm-reply small {
++  display: block;
++  margin-bottom: 12px;
++}
++.sm-reply textarea {
++  resize: vertical;
++}
++:is(.sm-layout, .sm-dialog) :is(button, a, input, select, textarea, summary):focus-visible {
++  outline: 2px solid #86abff;
++  outline-offset: 4px;
++}
++.sm-layout button:disabled {
++  opacity: 0.55;
++  cursor: not-allowed;
++}
++@media (hover: hover) {
++  .sm-request:hover {
++    border-color: #86abff;
++    background: #14211a;
++  }
++  .sm-aside a:hover {
++    text-decoration: underline;
++  }
++}
++@media (max-width: 899px) {
++  .sm-columns {
++    grid-template-columns: minmax(0, 1fr);
++  }
++  .sm-aside dl {
++    display: grid;
++    grid-template-columns: 1fr 1fr;
++    gap: 16px;
++  }
++}
++@media (max-width: 599px) {
++  .sm-layout {
++    padding-inline: 20px;
++  }
++  .sm-notice {
++    flex-direction: column;
++    gap: 7px;
++    padding: 16px;
++  }
++  .sm-profile {
++    grid-template-columns: minmax(0, 1fr);
++  }
++  .sm-tabs {
++    gap: 0;
++  }
++  .sm-tabs button {
++    padding: 14px 11px;
++    font-size: 12px;
++  }
++  .sm-heading {
++    align-items: flex-start;
++  }
++  .sm-heading h2 {
++    max-width: 190px;
++  }
++  .sm-toolbar > * {
++    width: 100%;
++  }
++  .sm-request,
++  .sm-card,
++  .sm-aside {
++    padding: 20px;
++  }
++  .sm-session {
++    flex-direction: column;
++    align-items: flex-start;
++  }
++  .sm-dialog {
++    padding: 22px 18px;
++  }
++  .sm-details > div {
++    grid-template-columns: 1fr;
++    gap: 5px;
++  }
++  .sm-empty {
++    padding: 24px;
++  }
++}
++@media (prefers-reduced-motion: reduce) {
++  .sm-request {
++    transition: none;
++  }
++}
+diff --git a/src/lib/auth/auth.functions.ts b/src/lib/auth/auth.functions.ts
+index 3a9dda4d37130c1ec797aa17a9df6f27fa63e91a..cc661b8df53c4dfca8472cba203b300649f6791a 100644
+--- a/src/lib/auth/auth.functions.ts
++++ b/src/lib/auth/auth.functions.ts
+@@ -43,7 +43,10 @@ export const getAuthAvailability = createServerFn({ method: "GET" }).handler(asy
+ 
+ export const getMemberState = createServerFn({ method: "GET" }).handler(async () => {
+   const ctx = await open();
+-  if (!ctx) return { state: "unconfigured" as const };
++  if (!ctx)
++    return getRequest().headers.get("x-vne-site-preview") === "true"
++      ? { state: "preview" as const }
++      : { state: "unconfigured" as const };
+   try {
+     // getUser() проверяет токен на сервере Auth; getSession() для подлинности не используется.
+     const { data, error } = await ctx.supabase.auth.getUser();
+diff --git a/src/lib/motion-settings.ts b/src/lib/motion-settings.ts
+index 81f9f2f3b7f7d867c9c0c87cd969547d9bd9e7c4..7a829fe057362954b5fddcbf3c0685ced1d93e2f 100644
+--- a/src/lib/motion-settings.ts
++++ b/src/lib/motion-settings.ts
+@@ -4,6 +4,11 @@ import {
+   type LoadingSettings,
+ } from "./loading-settings";
+ import { motionTokens } from "./motion";
++import {
++  defaultNavbarSettings,
++  sanitizeNavbarSettings,
++  type NavbarSettings,
++} from "./navbar-settings";
+ import {
+   defaultEventBackgrounds,
+   sanitizeEventBackgrounds,
+@@ -101,6 +106,7 @@ export type MotionSettings = {
+   /** Independent digital-rain palettes and motion for every event page. */
+   eventBackgrounds: Record<string, EventBackgroundSettings>;
+   loading: LoadingSettings;
++  navbar: NavbarSettings;
+ };
+ 
+ export const defaultMotionSettings: MotionSettings = {
+@@ -183,6 +189,7 @@ export const defaultMotionSettings: MotionSettings = {
+   sectionEnd: 0.92,
+   eventBackgrounds: defaultEventBackgrounds,
+   loading: defaultLoadingSettings,
++  navbar: defaultNavbarSettings,
+ };
+ 
+ export type PresetKey = "signature" | "calm" | "cinematic" | "crisp" | "off";
+@@ -437,6 +444,7 @@ export function sanitizeMotionSettings(input: unknown): MotionSettings {
+     sectionEnd: num("sectionEnd", 0.55, 1),
+     eventBackgrounds: sanitizeEventBackgrounds(raw["eventBackgrounds"]),
+     loading: sanitizeLoadingSettings(raw["loading"]),
++    navbar: sanitizeNavbarSettings(raw["navbar"]),
+   };
+ }
+ 
+@@ -488,7 +496,7 @@ export function matchPreset(settings: MotionSettings): PresetKey | null {
+ }
+ 
+ /** Версия схемы экспорта настроек. */
+-export const MOTION_SCHEMA_VERSION = 8;
++export const MOTION_SCHEMA_VERSION = 9;
+ 
+ export function exportMotionSettings(settings: MotionSettings) {
+   return JSON.stringify({ schemaVersion: MOTION_SCHEMA_VERSION, ...settings }, null, 2);
+@@ -539,7 +547,12 @@ export function parseImportedSettings(raw: string, current: MotionSettings): Imp
+         }
+         merged[k] = backgrounds;
+       } else merged[k] = incoming;
+-    } else if (k === "scrambleGroups" || k === "scrambleTargets" || k === "loading") {
++    } else if (
++      k === "scrambleGroups" ||
++      k === "scrambleTargets" ||
++      k === "loading" ||
++      k === "navbar"
++    ) {
+       const incoming = obj[k];
+       merged[k] =
+         incoming && typeof incoming === "object" && !Array.isArray(incoming)
+diff --git a/src/lib/navbar-settings.ts b/src/lib/navbar-settings.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..df27e3f435dbf2266909b1d97e9e287ae306bc8a
+--- /dev/null
++++ b/src/lib/navbar-settings.ts
+@@ -0,0 +1,85 @@
++export const NAVBAR_ACCENTS = {
++  orange: { label: "Оранжевый ВНЕ", color: "#E55330" },
++  blue: { label: "Голубой ВНЕ", color: "#86ABFF" },
++  mint: { label: "Мятный ВНЕ", color: "#30E5AD" },
++} as const;
++export const NAVBAR_RANGES = {
++  width: { label: "Ширина на компьютере", min: 960, max: 1440, step: 16, unit: "px" },
++  height: { label: "Высота панели", min: 52, max: 72, step: 2, unit: "px" },
++  radius: { label: "Скругление", min: 0, max: 28, step: 1, unit: "px" },
++  offset: { label: "Отступ сверху", min: 4, max: 16, step: 1, unit: "px" },
++  opacity: { label: "Плотность фона", min: 0.7, max: 1, step: 0.01, unit: "%" },
++  heroOpacity: { label: "Плотность на главной", min: 0.4, max: 1, step: 0.01, unit: "%" },
++  blur: { label: "Размытие фона", min: 0, max: 32, step: 1, unit: "px" },
++  logoWidth: { label: "Размер логотипа", min: 64, max: 120, step: 2, unit: "px" },
++} as const;
++export type NavbarSettings = Record<keyof typeof NAVBAR_RANGES, number> & {
++  accent: keyof typeof NAVBAR_ACCENTS;
++  inviteLabel: string;
++  showInvite: boolean;
++  showEvents: boolean;
++  showAbout: boolean;
++  showMember: boolean;
++  showChapters: boolean;
++};
++export const defaultNavbarSettings: NavbarSettings = {
++  width: 1136,
++  height: 52,
++  radius: 12,
++  offset: 6,
++  opacity: 0.94,
++  heroOpacity: 0.67,
++  blur: 22,
++  logoWidth: 80,
++  accent: "orange",
++  inviteLabel: "Приглашение",
++  showInvite: true,
++  showEvents: true,
++  showAbout: true,
++  showMember: true,
++  showChapters: true,
++};
++export function sanitizeNavbarSettings(input: unknown): NavbarSettings {
++  const raw =
++    input && typeof input === "object" && !Array.isArray(input)
++      ? (input as Record<string, unknown>)
++      : {};
++  const result = { ...defaultNavbarSettings };
++  for (const key of Object.keys(NAVBAR_RANGES) as (keyof typeof NAVBAR_RANGES)[]) {
++    const value = raw[key],
++      range = NAVBAR_RANGES[key];
++    if (typeof value === "number" && Number.isFinite(value))
++      result[key] = Math.min(range.max, Math.max(range.min, value));
++  }
++  for (const key of [
++    "showInvite",
++    "showEvents",
++    "showAbout",
++    "showMember",
++    "showChapters",
++  ] as const)
++    if (typeof raw[key] === "boolean") result[key] = raw[key];
++  if (typeof raw["accent"] === "string" && Object.hasOwn(NAVBAR_ACCENTS, raw["accent"]))
++    result.accent = raw["accent"] as NavbarSettings["accent"];
++  if (typeof raw["inviteLabel"] === "string") {
++    const label = raw["inviteLabel"]
++      .replace(/[\u0000-\u001f\u007f]/g, "")
++      .trim()
++      .slice(0, 18);
++    if (label) result.inviteLabel = label;
++  }
++  return result;
++}
++export function navbarVariables(s: NavbarSettings): Record<string, string> {
++  return {
++    "--navbar-width": `${s.width}px`,
++    "--navbar-height": `${s.height}px`,
++    "--navbar-radius": `${s.radius}px`,
++    "--navbar-offset": `${s.offset}px`,
++    "--navbar-opacity": String(s.opacity),
++    "--navbar-hero-opacity": String(s.heroOpacity),
++    "--navbar-blur": `${s.blur}px`,
++    "--navbar-logo-width": `${s.logoWidth}px`,
++    "--navbar-accent": NAVBAR_ACCENTS[s.accent].color,
++  };
++}
+diff --git a/src/lib/preview-defaults.ts b/src/lib/preview-defaults.ts
+index b169f4f0d5f964dbb3ec442a7b864ccdb0ed2722..6283ae282a8e66111d07a397af1b1bb54774e38a 100644
+--- a/src/lib/preview-defaults.ts
++++ b/src/lib/preview-defaults.ts
+@@ -59,6 +59,7 @@ export const PREVIEW_GROUPS = [
+     keys: ["eventBackgrounds"],
+   },
+   { id: "loading", label: "Загрузка сайта", keys: ["loading"] },
++  { id: "navbar", label: "Навбар", keys: ["navbar"] },
+ ] as const;
+ export type PreviewGroupId = (typeof PREVIEW_GROUPS)[number]["id"];
+ export type PreviewDefaults = {
+diff --git a/src/lib/site-member.ts b/src/lib/site-member.ts
+new file mode 100644
+index 0000000000000000000000000000000000000000..1bce3fa1c4955aef9024fbfd9555c394625fe7bd
+--- /dev/null
++++ b/src/lib/site-member.ts
+@@ -0,0 +1,80 @@
++import type { RequestStatus } from "./site-requests";
++export type MemberProfile = {
++  username: string;
++  displayName: string;
++  version: number;
++  createdAt: string;
++};
++export type MemberRequest = {
++  id: string;
++  name: string;
++  email: string;
++  telegram: string;
++  eventKey: string;
++  eventTitle: string;
++  details: string;
++  status: RequestStatus;
++  version: number;
++  createdAt: string;
++  updatedAt: string;
++};
++export type MemberList = {
++  profile: MemberProfile;
++  items: MemberRequest[];
++  total: number;
++  page: number;
++  pageSize: number;
++};
++export type MemberDetail = {
++  item: MemberRequest;
++  history: {
++    id: string;
++    action: string;
++    toStatus: RequestStatus;
++    reply: string;
++    message?: string;
++    createdAt: string;
++  }[];
++};
++export const MEMBER_STATUS_TEXT: Record<RequestStatus, string> = {
++  submitted: "Заявка сохранена и ожидает рассмотрения.",
++  under_review: "Команда рассматривает заявку. Новый статус появится здесь.",
++  needs_info: "Для рассмотрения нужны дополнительные сведения. Добавь уточнение в карточке заявки.",
++  waitlisted: "Заявка в листе ожидания. Это ещё не подтверждение участия.",
++  approved: "Заявка одобрена в тестовой очереди. Это не подтверждает участие и не создаёт пропуск.",
++  rejected: "Рассмотрение этой тестовой заявки завершено без одобрения.",
++};
++const messages: Record<string, string> = {
++  AUTH_REQUIRED: "Сеанс завершён. Войди снова.",
++  STORAGE_UNAVAILABLE: "Не удалось загрузить данные. Повтори попытку.",
++  VERSION_CONFLICT: "Данные изменились. Обнови кабинет перед повторной попыткой.",
++  REQUESTS_MODE_DISABLED:
++    "Тестовый кабинет отключён. Обнови страницу, чтобы перейти к текущему кабинету.",
++  NOT_FOUND: "Эта заявка недоступна в твоём кабинете.",
++  PROFILE_INVALID_INPUT: "Укажи имя от 1 до 80 символов.",
++  PASSWORD_INVALID_INPUT:
++    "Новый пароль должен содержать от 12 до 200 символов, а повтор — совпадать с ним.",
++  PASSWORD_INCORRECT: "Текущий пароль не совпадает.",
++  PASSWORD_RATE_LIMITED: "Слишком много попыток. Повтори через 15 минут.",
++  REPLY_INVALID_INPUT: "Уточнение должно содержать от 3 до 1000 символов.",
++  REQUEST_TRANSITION_INVALID: "Сейчас уточнение не требуется. Обнови карточку заявки.",
++};
++export class MemberApiError extends Error {
++  constructor(public code: string) {
++    super(messages[code] || "Не удалось выполнить действие. Повтори попытку.");
++  }
++}
++export async function memberRequest<T>(path = "", data?: unknown): Promise<T> {
++  const response = await fetch("/api/site-member" + path, {
++    method: data === undefined ? "GET" : "POST",
++    credentials: "same-origin",
++    cache: "no-store",
++    redirect: "error",
++    ...(data === undefined
++      ? {}
++      : { headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) }),
++  });
++  const result = await response.json();
++  if (!response.ok || !result.ok) throw new MemberApiError(result.error);
++  return result;
++}
+diff --git a/src/routes/apply.tsx b/src/routes/apply.tsx
+index 2f789912e8562135c9d9a7b0cb6304c4fd7f0d8a..138bc56df525a41dbf0f410fe9d58b6a3bb7ac9f 100644
+--- a/src/routes/apply.tsx
++++ b/src/routes/apply.tsx
+@@ -407,6 +407,11 @@ function ApplyPage() {
+               </DialogDescription>
+             </DialogHeader>
+             <DialogFooter>
++              <Button asChild type="button" className="min-h-11">
++                <Link to="/member" search={{ event: selected?.slug }}>
++                  Открыть кабинет
++                </Link>
++              </Button>
+               <Button type="button" className="min-h-11" onClick={() => setDialogOpen(false)}>
+                 Понятно
+               </Button>
+diff --git a/src/routes/member.tsx b/src/routes/member.tsx
+index ca54221de63fb3d1e02e189630ca699e8d32884a..f4a0efb45589580a0feb9e0159ecae1e31ca4157 100644
+--- a/src/routes/member.tsx
++++ b/src/routes/member.tsx
+@@ -11,6 +11,7 @@ import { getTelegramAvailability } from "@/lib/auth/telegram.functions";
+ import { MemberTelegram } from "@/components/auth/MemberTelegram";
+ import { MemberApplications } from "@/components/member/MemberApplications";
+ import { MemberOrders } from "@/components/member/MemberOrders";
++import { SiteMember } from "@/components/member/SiteMember";
+ import { getMyCommerce } from "@/lib/orders.functions";
+ import { listMyApplications, listPublishedEvents } from "@/lib/applications.functions";
+ 
+@@ -54,6 +55,7 @@ function MemberPage() {
+   const navigate = useNavigate();
+   const out = useServerFn(signOut);
+   const [outError, setOutError] = useState("");
++  if (s.state === "preview") return <SiteMember event={search.event} />;
+   if (s.state === "unconfigured")
+     return (
+       <>
+diff --git a/tests/preview-defaults.test.mjs b/tests/preview-defaults.test.mjs
+index 51e0ece857c5472f92a75c1e3b6391bfb22b5edf..d722e7543e5fddfe8939f059010ff7bc39110090 100644
+--- a/tests/preview-defaults.test.mjs
++++ b/tests/preview-defaults.test.mjs
+@@ -289,6 +289,57 @@ assert.equal(sanitizeMotionSettings({ loading: { percentScale: -1 } }).loading.p
+ assert.equal(sanitizeMotionSettings({ loading: { percentGap: 100 } }).loading.percentGap, 48);
+ assert.equal(sanitizeMotionSettings({ loading: { percentScale: NaN } }).loading.percentScale, 0.65);
+ assert.equal(motionPresets.off.values.loading.mode, "static");
++const navbarEdit = {
++  ...loadingSaved.settings,
++  navbar: {
++    ...loadingSaved.settings.navbar,
++    accent: "blue",
++    width: 1280,
++    radius: 0,
++    blur: 0,
++    showInvite: false,
++    showMember: false,
++    inviteLabel: "Присоединиться",
++  },
++};
++const navbarPatch = {
++  expectedVersion: loadingSaved.version,
++  groups: ["navbar"],
++  settings: navbarEdit,
++};
++assert.equal((await settingsApi(req(review, navbarPatch), env)).status, 403);
++assert.equal((await settingsApi(req(admin, navbarPatch), env)).status, 200);
++const navbarSaved = await get(review);
++assert.deepEqual(navbarSaved.settings.navbar, navbarEdit.navbar);
++assert.deepEqual(navbarSaved.settings.loading, loadingSaved.settings.loading);
++assert.deepEqual(changedPreviewGroups(navbarEdit, loadingSaved.settings), ["navbar"]);
++assert.deepEqual(
++  parseImportedSettings(exportMotionSettings(navbarEdit), defaultMotionSettings).settings.navbar,
++  navbarEdit.navbar,
++);
++assert.equal(
++  parseImportedSettings(JSON.stringify({ navbar: { width: 1200 } }), navbarEdit).settings.navbar
++    .showInvite,
++  false,
++);
++const unsafeNavbar = sanitizeMotionSettings({
++  navbar: {
++    accent: "url(https://invalid.test)",
++    width: 9999,
++    height: -100,
++    radius: NaN,
++    blur: -10,
++    showMember: "false",
++    inviteLabel: " ",
++  },
++}).navbar;
++assert.equal(unsafeNavbar.accent, "orange");
++assert.equal(unsafeNavbar.width, 1440);
++assert.equal(unsafeNavbar.height, 52);
++assert.equal(unsafeNavbar.radius, 12);
++assert.equal(unsafeNavbar.blur, 0);
++assert.equal(unsafeNavbar.showMember, true);
++assert.equal(unsafeNavbar.inviteLabel, "Приглашение");
+ const { default: withLoadingPresentation, loadingBootstrapMarkup } = await moduleFrom(
+   "scripts/auth/loading-presentation.ts",
+ );
+diff --git a/tests/site-member.test.mjs b/tests/site-member.test.mjs
+new file mode 100644
+index 0000000000000000000000000000000000000000..c9065fc6429fd4fe275c0b4af813662277e4ae98
+--- /dev/null
++++ b/tests/site-member.test.mjs
+@@ -0,0 +1,304 @@
++import { test } from "node:test";
++import assert from "node:assert/strict";
++import { build } from "esbuild";
++import gate from "../scripts/auth/admin-gate.mjs";
++import { testEnv } from "./site-access-fixture.mjs";
++async function bundle(file) {
++  const r = await build({
++    entryPoints: [file],
++    bundle: true,
++    format: "esm",
++    platform: "node",
++    write: false,
++  });
++  return (
++    await import(
++      "data:text/javascript;base64," + Buffer.from(r.outputFiles[0].text).toString("base64")
++    )
++  ).default;
++}
++const withMember = await bundle("scripts/auth/member-api.ts"),
++  withRequests = await bundle("scripts/auth/requests-api.ts");
++globalThis.fetch = async () => {
++  throw new Error("Network disabled in cabinet tests");
++};
++const origin = "https://vne.example.test";
++async function fixture() {
++  const env = testEnv(),
++    app = withMember(
++      withRequests(gate({ fetch: async (r) => new Response(r.headers.get("x-vne-site-preview")) })),
++    );
++  const call = (path, cookie = "", data, headers = {}) =>
++    app.fetch(
++      new Request(origin + path, {
++        method: data === undefined ? "GET" : "POST",
++        headers: { cookie, origin, "content-type": "application/json", ...headers },
++        ...(data === undefined ? {} : { body: JSON.stringify(data) }),
++      }),
++      env,
++      {},
++    );
++  const login = async (username, password) => {
++    const r = await app.fetch(
++      new Request(origin + "/admin-login", {
++        method: "POST",
++        headers: { origin },
++        body: new URLSearchParams({ username, password }),
++      }),
++      env,
++      {},
++    );
++    return { status: r.status, cookie: r.headers.get("set-cookie")?.split(";")[0] };
++  };
++  const owner = (await login(env.VNE_ADMIN_USERNAME, env.VNE_ADMIN_PASSWORD)).cookie;
++  await call("/api/site-admin/accounts", owner, {
++    action: "create",
++    username: "guest-a",
++    password: "synthetic-guest-password",
++    displayName: "Синтетический гость",
++    permissions: [],
++  });
++  const guest = (await login("guest-a", "synthetic-guest-password")).cookie;
++  const guestOther = (await login("guest-a", "synthetic-guest-password")).cookie;
++  const reviewer = (await login("testrev1", env.VNE_REVIEW_PASSWORD)).cookie;
++  return { env, call, login, owner, guest, guestOther, reviewer };
++}
++const form = () => ({
++  id: crypto.randomUUID(),
++  name: "Синтетический гость",
++  email: "test@example.com",
++  telegram: "test_guest",
++  consent: true,
++  questionnaire: [
++    "interests",
++    "social_role",
++    "meeting_style",
++    "trust",
++    "boundaries",
++    "discomfort",
++    "motivation",
++  ].map((questionId) => ({
++    questionId,
++    answers: [{ answer: "Тестовый ответ", source: "manual" }],
++  })),
++  ratings: { social_energy: 1, evening_pace: 100, spontaneity: 55 },
++  age: 27,
++});
++const question = (id, version = 1) => ({
++  id,
++  version,
++  operationId: crypto.randomUUID(),
++  action: "request_info",
++  note: "Internal secret must remain private",
++  guestMessage: "Какой формат знакомства тебе ближе?",
++});
++
++test("cabinet requires a session, rejects cross-origin writes and stays separate from configured membership", async () => {
++  const f = await fixture();
++  assert.equal((await f.call("/api/site-member")).status, 401);
++  assert.equal(
++    (await f.call("/api/site-member", f.guest, undefined, { "sec-fetch-site": "cross-site" }))
++      .status,
++    403,
++  );
++  assert.equal(
++    (
++      await f.call(
++        "/api/site-member/profile",
++        f.guest,
++        { version: 1, displayName: "Имя" },
++        { origin: "https://other.test" },
++      )
++    ).status,
++    403,
++  );
++  assert.equal((await f.call("/api/site-admin/requests", f.guest)).status, 403);
++  const own = await f.call("/api/site-member", f.guest);
++  assert.equal(own.status, 200);
++  assert.equal(own.headers.get("cache-control"), "private, no-store");
++  assert.doesNotMatch(await own.text(), /password|permissions|token|role/);
++  f.env.SUPABASE_URL = "https://configured.example.test";
++  assert.equal((await f.call("/api/site-member", f.guest)).status, 409);
++  f.env.sql.close();
++});
++test("only form submissions created by this account are shown; email coincidence and staff role grant no ownership", async () => {
++  const f = await fixture(),
++    a = form(),
++    b = form();
++  assert.equal((await f.call("/api/site-admin/requests/submit", f.guest, a)).status, 200);
++  assert.equal((await f.call("/api/site-admin/requests/submit", f.reviewer, b)).status, 200);
++  const list = await (await f.call("/api/site-member", f.guest)).json();
++  assert.equal(list.total, 1);
++  assert.equal(list.items[0].id, a.id);
++  assert.equal((await f.call(`/api/site-member?id=${b.id}`, f.guest)).status, 404);
++  assert.equal((await f.call(`/api/site-member?id=${a.id}`, f.owner)).status, 404);
++  assert.equal((await f.call(`/api/site-member?page=-1`, f.guest)).status, 400);
++  assert.equal((await f.call(`/api/site-member?status=forged`, f.guest)).status, 400);
++  const manual = { ...form(), action: "create", kind: "membership", details: "Manual staff entry" };
++  assert.equal((await f.call("/api/site-admin/requests", f.owner, manual)).status, 200);
++  assert.equal((await (await f.call("/api/site-member", f.owner)).json()).total, 0);
++  f.env.sql.close();
++});
++test("staff question and guest answer complete a real round trip without exposing private notes or duplicating actions", async () => {
++  const f = await fixture(),
++    data = form();
++  await f.call("/api/site-admin/requests/submit", f.guest, data);
++  const q = question(data.id);
++  assert.equal((await f.call("/api/site-admin/requests", f.owner, q)).status, 200);
++  assert.equal((await f.call("/api/site-admin/requests", f.owner, q)).status, 200);
++  const detail = await (await f.call(`/api/site-member?id=${data.id}`, f.guest)).json();
++  assert.equal(detail.item.status, "needs_info");
++  assert.equal(detail.history.filter((h) => h.action === "guest_question").length, 1);
++  assert.equal(detail.history.find((h) => h.action === "guest_question").message, q.guestMessage);
++  assert.doesNotMatch(JSON.stringify(detail), /Internal secret|actorName|actor_name/);
++  const reply = {
++    id: data.id,
++    version: 2,
++    operationId: crypto.randomUUID(),
++    reply: "Знакомство через общее занятие",
++  };
++  assert.equal((await f.call("/api/site-member/reply", f.reviewer, reply)).status, 404);
++  assert.equal(
++    (await f.call("/api/site-member/reply", f.guest, { ...reply, version: 1 })).status,
++    409,
++  );
++  assert.equal((await f.call("/api/site-member/reply", f.guest, reply)).status, 200);
++  assert.equal((await f.call("/api/site-member/reply", f.guest, reply)).status, 200);
++  assert.equal(
++    (await f.call("/api/site-member/reply", f.guest, { ...reply, reply: "Другой ответ" })).status,
++    409,
++  );
++  const updated = await (await f.call(`/api/site-admin/requests?id=${data.id}`, f.owner)).json();
++  assert.equal(updated.item.status, "under_review");
++  assert.equal(updated.item.version, 3);
++  assert.equal(updated.item.note, q.note);
++  assert.equal(updated.history.at(-1).note, reply.reply);
++  assert.equal(updated.history.filter((h) => h.action === "member_reply").length, 1);
++  const own = await (await f.call(`/api/site-member?id=${data.id}`, f.guest)).json();
++  assert.equal(own.history.at(-1).reply, reply.reply);
++  assert.equal(
++    (
++      await f.call("/api/site-member/reply", f.guest, {
++        ...reply,
++        version: 3,
++        operationId: crypto.randomUUID(),
++      })
++    ).status,
++    409,
++  );
++  assert.equal(
++    (await (await f.call("/api/site-member?status=under_review", f.guest)).json()).total,
++    1,
++  );
++  assert.equal(
++    (await (await f.call("/api/site-member?status=needs_info", f.guest)).json()).total,
++    0,
++  );
++  f.env.sql.close();
++});
++test("profile updates persist, preserve permissions and use version checks", async () => {
++  const f = await fixture();
++  assert.equal(
++    (await f.call("/api/site-member/profile", f.guest, { version: 1, displayName: "   " })).status,
++    400,
++  );
++  const saved = await f.call("/api/site-member/profile", f.guest, {
++    version: 1,
++    displayName: "Новое имя",
++    role: "owner",
++    permissions: ["admin.view"],
++  });
++  assert.equal(saved.status, 200);
++  assert.equal((await saved.json()).profile.version, 2);
++  assert.equal(
++    (await (await f.call("/api/site-member", f.guest)).json()).profile.displayName,
++    "Новое имя",
++  );
++  assert.equal(
++    (await f.call("/api/site-member/profile", f.guest, { version: 1, displayName: "Устаревшее" }))
++      .status,
++    409,
++  );
++  assert.equal((await f.call("/api/site-admin/accounts", f.guest)).status, 403);
++  assert.equal((await f.call("/api/site-member", f.guestOther)).status, 200);
++  const relogged = await f.login("guest-a", "synthetic-guest-password");
++  assert.equal(relogged.status, 303);
++  assert.equal(
++    (await (await f.call("/api/site-member", relogged.cookie)).json()).profile.displayName,
++    "Новое имя",
++  );
++  f.env.sql.close();
++});
++test("password change verifies current password, revokes other sessions and never records plaintext", async () => {
++  const f = await fixture(),
++    change = {
++      version: 1,
++      currentPassword: "synthetic-guest-password",
++      password: "synthetic-new-password",
++      confirmPassword: "synthetic-new-password",
++    };
++  assert.equal(
++    (
++      await f.call("/api/site-member/password", f.guest, {
++        ...change,
++        currentPassword: "incorrect",
++      })
++    ).status,
++    400,
++  );
++  assert.equal(
++    (await f.call("/api/site-member/password", f.guest, { ...change, confirmPassword: "mismatch" }))
++      .status,
++    400,
++  );
++  assert.equal((await f.call("/api/site-member/password", f.guest, change)).status, 200);
++  assert.equal((await f.call("/api/site-member", f.guest)).status, 200);
++  assert.equal((await f.call("/api/site-member", f.guestOther)).status, 401);
++  assert.equal((await f.login("guest-a", "synthetic-guest-password")).status, 401);
++  assert.equal((await f.login("guest-a", "synthetic-new-password")).status, 303);
++  assert.doesNotMatch(
++    JSON.stringify(f.env.sql.prepare("SELECT * FROM site_audit").all()),
++    /synthetic-new-password|synthetic-guest-password/,
++  );
++  const out = await f.call("/admin-logout", f.guest, {});
++  assert.equal(out.status, 303);
++  assert.equal((await f.call("/api/site-member", f.guest)).status, 401);
++  f.env.sql.close();
++});
++test("password guessing is bounded and request spoofing cannot turn off the real membership backend", async () => {
++  const f = await fixture();
++  for (let i = 0; i < 5; i++)
++    assert.equal(
++      (
++        await f.call("/api/site-member/password", f.guest, {
++          version: 1,
++          currentPassword: "wrong",
++          password: "synthetic-new-password",
++          confirmPassword: "synthetic-new-password",
++        })
++      ).status,
++      400,
++    );
++  assert.equal(
++    (
++      await f.call("/api/site-member/password", f.guest, {
++        version: 1,
++        currentPassword: "wrong",
++        password: "synthetic-new-password",
++        confirmPassword: "synthetic-new-password",
++      })
++    ).status,
++    429,
++  );
++  assert.equal(await (await f.call("/member", f.guest)).text(), "true");
++  assert.equal(
++    (await f.call("/login?redirect=%2Fmember", f.guest)).headers.get("location"),
++    "/member",
++  );
++  f.env.SUPABASE_URL = "https://configured.example.test";
++  assert.equal(
++    await (await f.call("/member", f.guest, undefined, { "x-vne-site-preview": "true" })).text(),
++    "",
++  );
++  f.env.sql.close();
++});
