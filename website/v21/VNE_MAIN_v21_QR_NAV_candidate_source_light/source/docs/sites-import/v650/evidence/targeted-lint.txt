@@ -1,0 +1,6 @@
+
+/workspace/scratch/b9be800b9f4a/vne-sites-audit/src/components/tickets/PassView.tsx
+  13:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+✖ 1 problem (0 errors, 1 warning)
+

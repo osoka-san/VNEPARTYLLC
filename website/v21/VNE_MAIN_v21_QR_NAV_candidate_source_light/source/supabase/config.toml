@@ -1,0 +1,5 @@
+project_id = "zguyzxobplahlxuobwaw"
+# The handler validates server key + forwarded user JWT; guest read uses a separate bearer token.
+# Every privileged RPC rechecks staff/MFA and event scope in the canonical database.
+[functions.vne-ticket-issuer]
+verify_jwt = false

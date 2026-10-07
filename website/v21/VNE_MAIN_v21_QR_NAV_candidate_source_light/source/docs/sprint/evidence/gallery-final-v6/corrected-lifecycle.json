@@ -1,0 +1,405 @@
+{
+  "delayed_A_B_A": {
+    "before": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "after": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "delayedRequests": 1,
+    "pass": true
+  },
+  "finish_activate": {
+    "inactiveBetween": true,
+    "visible": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "pass": true
+  },
+  "route_back_active": {
+    "before": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+        "chapter": null,
+        "naturalWidth": 1672,
+        "opacity": 0,
+        "sourceKey": null,
+        "pending": "belonging:desktop:1672:1672:1"
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+          "chapter": null,
+          "naturalWidth": 1672,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": "belonging:desktop:1672:1672:1"
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+          "chapter": "hero",
+          "naturalWidth": 1672,
+          "opacity": 0,
+          "sourceKey": "hero:desktop:1672:1672:1",
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "after": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+        "chapter": "belonging",
+        "naturalWidth": 1672,
+        "opacity": 0.996936,
+        "sourceKey": "belonging:desktop:1672:1672:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-belonging-gallery-v6-desktop-1672.avif",
+          "chapter": "belonging",
+          "naturalWidth": 1672,
+          "opacity": 0.996936,
+          "sourceKey": "belonging:desktop:1672:1672:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "pass": true
+  },
+  "finish_route_back_inactive": {
+    "activeRunways": 0,
+    "pass": true
+  },
+  "responsive_same_scene": {
+    "mobileBefore": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "desktop": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+        "chapter": "hero",
+        "naturalWidth": 1280,
+        "opacity": 0.762822,
+        "sourceKey": "hero:desktop:1280:1280:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+          "chapter": "hero",
+          "naturalWidth": 1280,
+          "opacity": 0.762822,
+          "sourceKey": "hero:desktop:1280:1280:1",
+          "pending": null
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 0.0851669,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "mobileAfter": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 0.762834,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 0.762834,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1280.avif",
+          "chapter": "hero",
+          "naturalWidth": 1280,
+          "opacity": 0,
+          "sourceKey": "hero:desktop:1280:1280:1",
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "scrollY": [
+      5687,
+      5898,
+      5687
+    ],
+    "pass": true
+  },
+  "reduced_pending_decode": {
+    "before": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "after": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+        "chapter": "hero",
+        "naturalWidth": 480,
+        "opacity": 1,
+        "sourceKey": "hero:mobile:480:480:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-mobile-480.avif",
+          "chapter": "hero",
+          "naturalWidth": 480,
+          "opacity": 1,
+          "sourceKey": "hero:mobile:480:480:1",
+          "pending": null
+        },
+        {
+          "src": "",
+          "chapter": null,
+          "naturalWidth": 0,
+          "opacity": 0,
+          "sourceKey": null,
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "24"
+    },
+    "frozenMessage": 1,
+    "pass": true
+  },
+  "deep_reverse_structure": {
+    "deep": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+        "chapter": "invitation",
+        "naturalWidth": 1672,
+        "opacity": 0,
+        "sourceKey": "invitation:desktop:1672:1672:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+          "chapter": "invitation",
+          "naturalWidth": 1672,
+          "opacity": 0,
+          "sourceKey": "invitation:desktop:1672:1672:1",
+          "pending": null
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-threshold-gallery-v5-c-desktop-1672.avif",
+          "chapter": "hero",
+          "naturalWidth": 1672,
+          "opacity": 0,
+          "sourceKey": "hero:desktop:1672:1672:1",
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "88"
+    },
+    "reverse": {
+      "visible": {
+        "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.avif",
+        "chapter": "space",
+        "naturalWidth": 1672,
+        "opacity": 0.467956,
+        "sourceKey": "space:desktop:1672:1672:1",
+        "pending": null
+      },
+      "layers": [
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-space-gallery-v6-desktop-1672.avif",
+          "chapter": "space",
+          "naturalWidth": 1672,
+          "opacity": 0.467956,
+          "sourceKey": "space:desktop:1672:1672:1",
+          "pending": null
+        },
+        {
+          "src": "http://localhost:8080/media/gallery-of-light/final-v6/vne-invitation-gallery-v6-desktop-1672.avif",
+          "chapter": "invitation",
+          "naturalWidth": 1672,
+          "opacity": 0,
+          "sourceKey": "invitation:desktop:1672:1672:1",
+          "pending": null
+        }
+      ],
+      "pictures": 2,
+      "canvas": 1,
+      "allocated": "88"
+    },
+    "pass": true
+  },
+  "allPass": true
+}

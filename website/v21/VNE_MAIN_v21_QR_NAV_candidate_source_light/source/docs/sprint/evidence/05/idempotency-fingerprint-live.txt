@@ -1,0 +1,15 @@
+# run 2026-09-25T23:23:07Z
+PASS create → outcome=created
+PASS fingerprint stored (64 hex)
+PASS identical retry → same id, outcome=replay
+PASS same key + changed name → PT422
+PASS same key + changed consent_version → PT422
+PASS same key + changed age_confirmed → PT422
+PASS conflicts changed nothing (row + count)
+PASS legitimate edit name → v2, fingerprint unchanged
+PASS identical retry after edit → same id, replay, actual name returned (not overwritten)
+PASS new key on existing active app → outcome=existing, same id, actual data, name NOT saved
+PASS legacy public submit_application wrapper → same id
+cleanup(manifest run=f5e2f151): requested users=1 events=1 apps=1 assignments=0; remaining {"applications":0,"assignments":0,"events":0,"invites":0,"requests":0,"users":0}; VERIFIED removed
+RESULT: ALL PASS
+exit=0

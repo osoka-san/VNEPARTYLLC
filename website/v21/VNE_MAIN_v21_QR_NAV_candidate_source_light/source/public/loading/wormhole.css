@@ -1,0 +1,314 @@
+/* Wormhole by elijahgummer / Uiverse, MIT. See /licenses/uiverse-wormhole.txt. */
+:root {
+  --loading-mint: #4dffd0;
+  --loading-cyan: #60ffe9;
+  --loading-mint-rgb: 77 255 208;
+  --loading-cyan-rgb: 96 255 233;
+  --loading-highlight-rgb: 224 255 249;
+  --loading-background-rgb: 7 10 9;
+  --loading-darkness: 0.44;
+  --loading-blur: 12.5px;
+  --loading-mobile-blur: 10px;
+  --loading-saturation: 0.72;
+  --loading-transition: 220ms;
+  --loading-display: grid;
+  --loading-brand-display: block;
+  --loading-label-display: inline;
+  --loading-percent-display: flex;
+  --loading-percent-scale: 0.65;
+  --loading-percent-gap: 14px;
+  --loader-animation: vne-wormhole-scale;
+  --loader-static-opacity: 0;
+  --loader-direction: normal;
+  --loader-duration: 3s;
+  --loader-count: 10;
+  --loader-size: 50px;
+  --loader-mobile-scale: 1;
+  --loader-spread: 2;
+  --loader-travel: 5px;
+  --loader-stroke: 1px;
+  --loader-brightness: 1;
+  --loader-opacity: 1;
+  --loader-glow: 1;
+  --loader-glow-alpha: 1;
+  --wormhole-core: 6px;
+  --wormhole-glow: 26px;
+  --wormhole-aura: 48px;
+  --wormhole-inner: 10px;
+}
+.vne-loading-glass {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: var(--loading-display);
+  place-content: center;
+  justify-items: center;
+  box-sizing: border-box;
+  padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
+  background: rgb(var(--loading-background-rgb) / var(--loading-darkness));
+  -webkit-backdrop-filter: blur(var(--loading-blur)) saturate(var(--loading-saturation));
+  backdrop-filter: blur(var(--loading-blur)) saturate(var(--loading-saturation));
+  color: #edf2ee;
+  font-family: Onest, system-ui, sans-serif;
+  text-align: center;
+  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity var(--loading-transition) ease,
+    visibility var(--loading-transition);
+}
+.vne-loading-glass[data-state="hidden"],
+.vne-loading-glass[hidden] {
+  opacity: 0;
+  visibility: hidden;
+}
+.vne-loading-glass[hidden] {
+  display: none;
+}
+.vne-loading-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 320px);
+  transform: translateY(-12px);
+}
+.vne-wormhole {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 184px;
+  height: 184px;
+  flex: none;
+  isolation: isolate;
+  opacity: var(--loader-opacity);
+  filter: brightness(var(--loader-brightness));
+}
+.vne-wormhole > i {
+  --ring-visible: clamp(0, calc(var(--loader-count) - var(--ring-index)), 1);
+  display: block;
+  position: absolute;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  box-sizing: border-box;
+  border: var(--loader-stroke) solid rgb(var(--loading-cyan-rgb) / 0.7);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow:
+    0 0 var(--wormhole-core) rgb(var(--loading-highlight-rgb) / var(--loader-glow-alpha)),
+    0 8px var(--wormhole-glow) rgb(var(--loading-cyan-rgb) / var(--loader-glow-alpha)),
+    0 0 var(--wormhole-aura) rgb(var(--loading-mint-rgb) / calc(var(--loader-glow-alpha) * 0.7)),
+    inset 0 0 var(--wormhole-inner)
+      rgb(var(--loading-cyan-rgb) / calc(var(--loader-glow-alpha) * 0.45));
+  animation: var(--loader-animation) var(--loader-duration) linear infinite;
+  animation-direction: var(--loader-direction);
+  animation-delay: calc(var(--loader-duration) * (var(--ring-index) / var(--loader-count) - 1));
+  will-change: transform, opacity;
+}
+.vne-wormhole > i:nth-child(5) {
+  opacity: var(--loader-static-opacity);
+}
+@keyframes vne-wormhole-scale {
+  0% {
+    transform: scale(var(--loader-spread));
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1) translateY(calc(var(--loader-travel) * -1));
+    opacity: var(--ring-visible);
+  }
+  100% {
+    transform: scale(0.1) translateY(var(--loader-travel));
+    opacity: 0;
+  }
+}
+@keyframes vne-wormhole-pulse {
+  0% {
+    transform: scale(0.4) translateY(calc(var(--loader-travel) * -0.5));
+    opacity: 0;
+  }
+  35% {
+    opacity: var(--ring-visible);
+  }
+  100% {
+    transform: scale(var(--loader-spread)) translateY(var(--loader-travel));
+    opacity: 0;
+  }
+}
+@keyframes vne-wormhole-orbit {
+  0% {
+    transform: rotate(0deg)
+      translateX(
+        calc(var(--loader-size) * (var(--loader-spread) - 1) * 0.35 + var(--loader-travel))
+      )
+      scale(0.7);
+    opacity: var(--ring-visible);
+  }
+  50% {
+    transform: rotate(180deg)
+      translateX(
+        calc(var(--loader-size) * (var(--loader-spread) - 1) * 0.35 + var(--loader-travel))
+      )
+      scale(1);
+    opacity: var(--ring-visible);
+  }
+  100% {
+    transform: rotate(360deg)
+      translateX(
+        calc(var(--loader-size) * (var(--loader-spread) - 1) * 0.35 + var(--loader-travel))
+      )
+      scale(0.7);
+    opacity: var(--ring-visible);
+  }
+}
+.vne-loading-brand {
+  display: var(--loading-brand-display);
+  width: 112px;
+  height: 33.872px;
+  flex: none;
+  margin-bottom: 12px;
+  color: var(--loading-mint);
+  background: currentColor;
+  -webkit-mask: url("/brand/wordmark/wordmark-flow-light.svg") center / contain no-repeat;
+  mask: url("/brand/wordmark/wordmark-flow-light.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 9px rgb(var(--loading-mint-rgb) / 0.25));
+}
+/* Percent composition inspired by beUI; progress comes from the tracked tasks. */
+.vne-loading-percent {
+  display: var(--loading-percent-display);
+  flex-direction: column;
+  align-items: center;
+  gap: calc(9px * var(--loading-percent-scale));
+  width: calc(clamp(84px, calc(var(--loader-size) * 1.8), 144px) * var(--loading-percent-scale));
+  margin: var(--loading-percent-gap) 0 calc(22px * var(--loading-percent-scale));
+  color: var(--loading-mint);
+  opacity: var(--loader-opacity);
+  filter: brightness(var(--loader-brightness));
+}
+.vne-loading-percent-value {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: calc(
+    clamp(16px, calc(var(--loader-size) * 0.42), 32px) * var(--loading-percent-scale)
+  );
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-shadow: 0 0 14px rgb(var(--loading-mint-rgb) / 0.25);
+}
+.vne-loading-percent-track {
+  display: block;
+  width: 100%;
+  height: calc(3px * var(--loading-percent-scale));
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(var(--loading-mint-rgb) / 0.16);
+}
+.vne-loading-percent-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: currentColor;
+  background: linear-gradient(90deg, currentColor, var(--loading-cyan));
+  transform: scaleX(var(--loading-progress, 0));
+  transform-origin: left;
+  transition: transform calc(var(--loading-transition) * (1 - var(--loader-static-opacity)))
+    ease-out;
+}
+.vne-loading-label {
+  display: var(--loading-label-display);
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d5e5dd;
+  letter-spacing: 0.02em;
+}
+.vne-loading-slow {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #a3b7ac;
+}
+.vne-loading-continue {
+  pointer-events: auto;
+  width: auto;
+  min-height: 44px;
+  margin: 16px 0 0;
+  padding: 10px 18px;
+  border: 1px solid rgb(var(--loading-mint-rgb) / 0.35);
+  border-radius: 24px;
+  background: rgb(7 10 9 / 0.6);
+  color: #b9f4df;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.vne-loading-continue:focus-visible {
+  outline: 2px solid var(--loading-mint);
+  outline-offset: 4px;
+}
+.vne-loading-glass[data-state="hidden"] .vne-wormhole > i {
+  animation-play-state: paused;
+}
+.vne-wormhole--compact {
+  --loader-size: 9px;
+  --loader-travel: 1px;
+  --wormhole-core: calc(2px * var(--loader-glow));
+  --wormhole-glow: calc(6px * var(--loader-glow));
+  --wormhole-aura: calc(12px * var(--loader-glow));
+  --wormhole-inner: calc(3px * var(--loader-glow));
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+/* A failed JS bootstrap must never leave a permanent veil on server-rendered content. */
+.vne-loading-glass[data-bootstrap] {
+  animation: vne-loading-fail-open 1ms 12s forwards;
+}
+@keyframes vne-loading-fail-open {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .vne-wormhole:not(.vne-wormhole--compact) {
+    width: 156px;
+    height: 156px;
+    transform: scale(var(--loader-mobile-scale));
+  }
+  .vne-loading-glass {
+    -webkit-backdrop-filter: blur(var(--loading-mobile-blur)) saturate(var(--loading-saturation));
+    backdrop-filter: blur(var(--loading-mobile-blur)) saturate(var(--loading-saturation));
+  }
+  .vne-loading-percent {
+    transform: scale(var(--loader-mobile-scale));
+  }
+}
+html[data-reduce-motion="true"] .vne-wormhole > i {
+  animation: none !important;
+  opacity: 0;
+}
+html[data-reduce-motion="true"] .vne-wormhole > i:nth-child(5) {
+  opacity: 1;
+}
+html[data-reduce-motion="true"] .vne-loading-percent-fill {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-loading-glass {
+    transition: none;
+  }
+  .vne-wormhole > i {
+    animation: none !important;
+    opacity: 0;
+  }
+  .vne-wormhole > i:nth-child(5) {
+    opacity: 1;
+  }
+  .vne-loading-percent-fill {
+    transition: none;
+  }
+}

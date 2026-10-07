@@ -1,0 +1,32 @@
+{
+  "checks": 512,
+  "failures": [],
+  "palettes": {
+    "GENERAL": {
+      "ink": 12.460280291629857,
+      "accent": 8.48044339529953
+    },
+    "VIP": {
+      "ink": 12.743943796666716,
+      "accent": 9.37257369970904
+    },
+    "SECURITY": {
+      "ink": 12.647431563536257,
+      "accent": 8.12178595938164
+    },
+    "ARTIST": {
+      "ink": 10.16799595819834,
+      "accent": 5.691931374181324
+    }
+  },
+  "matrixAndQuietZones": "PASS",
+  "originalSvgRegression": "16 byte-identical",
+  "sizes": [
+    420,
+    280,
+    204,
+    160
+  ],
+  "payloads": "synthetic",
+  "browser": "NOT VERIFIED"
+}

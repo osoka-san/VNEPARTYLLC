@@ -1,0 +1,117 @@
+{
+  "candidateStatus": "PUBLISHED MAIN v21",
+  "sourceTreeSha256": "f4970f5e47c0eceda962938888072738d3aabd5ad7e0ec290eeacfc1765328bd",
+  "combinedChecks": [
+    {
+      "check": "unit",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-worker",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-library",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "mocked-issuer",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-routing",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-catalog",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-preview-contract",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-legacy",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "qr-assets",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "navigation",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "typecheck",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "lint-changed",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "cookie-regression",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "build",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "existingWarnings": 5
+  },
+  "frozenQrUpstreamEvidence": {
+    "decoderChecksPerDecoder": 1806,
+    "decoders": [
+      "jsQR",
+      "ZXing-C++"
+    ],
+    "failures": 0,
+    "roleCardCrops": 24,
+    "cropPixels": 204,
+    "notRerunDuringIntegration": true,
+    "all79QrSourceHashesConfirmed": true
+  },
+  "limits": [
+    "Real browser interactions, CSS and viewport layout: NOT VERIFIED",
+    "Physical camera and print: NOT VERIFIED",
+    "Production backend changes or live issuance: not performed"
+  ],
+  "sourceFilesUnchangedDuringChecks": true,
+  "independentReview": {
+    "verdict": "APPROVE for exact local source-integration scope; not publication authorization",
+    "independentChecks": {
+      "fourRoleSsrCases": 24,
+      "nonblankWebpAndCornerPalettes": 24,
+      "additionalLegacyFullObjectComparisons": 12,
+      "invalidInputRejections": 18,
+      "exactDemoEventRoutes": 2
+    },
+    "browser": "NOT VERIFIED"
+  },
+  "publishedCommit": "a86b3271c1996e0cff8e58f38fd4580e426b6ff5",
+  "publishedVersion": 21,
+  "publication": "succeeded",
+  "runtimeRevision": 3,
+  "accessMode": "public",
+  "accessRevision": 2,
+  "nativeReadback": "PASS",
+  "packagedWorkerSmoke": "PASS; synthetic in-memory database, network disabled;35 SSR routes plus unchanged permission controls"
+}

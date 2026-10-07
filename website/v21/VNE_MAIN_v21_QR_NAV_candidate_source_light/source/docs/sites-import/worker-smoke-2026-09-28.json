@@ -1,0 +1,65 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 72947,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/events",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 39334,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/about",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 42891,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/space",
+    "status": 404,
+    "html": "text/html; charset=utf-8",
+    "bytes": 6396,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 23659,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/member",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 27614,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  },
+  {
+    "route": "/admin",
+    "status": 200,
+    "html": "text/html; charset=utf-8",
+    "bytes": 190075,
+    "location": null,
+    "hasVne": true,
+    "hasSSRerror": false
+  }
+]

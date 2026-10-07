@@ -1,0 +1,18 @@
+✔ no backend or inaccessible storage does not prevent mount and cleanup (5.278835ms)
+✔ synchronous client failures and rejected requests keep the embedded settings (2.119845ms)
+✔ configured remote defaults load while personal settings retain priority (1.807231ms)
+✔ late responses do not overwrite a new personal choice or update an unmounted provider (1.7738ms)
+✔ unconfigured gate and unauthenticated requests never reach the app (4.562849ms)
+✔ cross-origin login is rejected (0.694363ms)
+✔ bad credentials do not create a session (8.344315ms)
+✔ synthetic login protects the session and preserves the destination (3.572418ms)
+✔ tampered session is rejected (1.821432ms)
+✔ unsafe next cannot redirect off-site; logout requires same-origin POST (1.75421ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 340.32694

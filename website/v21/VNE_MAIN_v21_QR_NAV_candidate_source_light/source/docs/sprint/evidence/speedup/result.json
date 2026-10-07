@@ -1,0 +1,176 @@
+[
+ {
+  "viewport": "1440x900",
+  "throttle": false,
+  "reduced": false,
+  "hero_ready_ms": 731,
+  "media_requests": [
+   {
+    "name": "vne-threshold-gallery-v5-c-desktop-1672.avif",
+    "dur": 212,
+    "size": 204884
+   },
+   {
+    "name": "vne-space-gallery-v6-desktop-1672.avif",
+    "dur": 34,
+    "size": 234872
+   }
+  ],
+  "images": [
+   {
+    "src": "vne-threshold-gallery-v5-c-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-space-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-belonging-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-invitation-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   }
+  ],
+  "lqip_count": 2,
+  "warm_hero_ready_ms": null,
+  "warm_media": null
+ },
+ {
+  "viewport": "390x844",
+  "throttle": true,
+  "reduced": false,
+  "hero_ready_ms": 1969,
+  "media_requests": [
+   {
+    "name": "vne-threshold-gallery-v5-c-mobile-941.avif",
+    "dur": 1015,
+    "size": 165332
+   }
+  ],
+  "images": [
+   {
+    "src": "vne-threshold-gallery-v5-c-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-space-gallery-v6-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-belonging-gallery-v5-d-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-invitation-gallery-v5-c-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   }
+  ],
+  "lqip_count": 2,
+  "warm_hero_ready_ms": null,
+  "warm_media": null
+ },
+ {
+  "viewport": "390x844",
+  "throttle": true,
+  "reduced": false,
+  "hero_ready_ms": 2273,
+  "media_requests": [
+   {
+    "name": "vne-threshold-gallery-v5-c-mobile-941.avif",
+    "dur": 852,
+    "size": 165332
+   }
+  ],
+  "images": [
+   {
+    "src": "vne-threshold-gallery-v5-c-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-space-gallery-v6-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-belonging-gallery-v5-d-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   },
+   {
+    "src": "vne-invitation-gallery-v5-c-mobile-941.avif",
+    "nw": 390,
+    "complete": true
+   }
+  ],
+  "lqip_count": 2,
+  "warm_hero_ready_ms": 3830,
+  "warm_media": [
+   {
+    "name": "vne-threshold-gallery-v5-c-mobile-941.avif",
+    "size": 0
+   },
+   {
+    "name": "vne-space-gallery-v6-mobile-941.avif",
+    "size": 0
+   },
+   {
+    "name": "vne-belonging-gallery-v5-d-mobile-941.avif",
+    "size": 0
+   },
+   {
+    "name": "vne-invitation-gallery-v5-c-mobile-941.avif",
+    "size": 0
+   }
+  ]
+ },
+ {
+  "viewport": "1440x900",
+  "throttle": true,
+  "reduced": true,
+  "hero_ready_ms": 1874,
+  "media_requests": [
+   {
+    "name": "vne-threshold-gallery-v5-c-desktop-1672.avif",
+    "dur": 1156,
+    "size": 204884
+   }
+  ],
+  "images": [
+   {
+    "src": "vne-threshold-gallery-v5-c-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-space-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-belonging-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   },
+   {
+    "src": "vne-invitation-gallery-v6-desktop-1672.avif",
+    "nw": 1440,
+    "complete": true
+   }
+  ],
+  "lqip_count": 2,
+  "warm_hero_ready_ms": null,
+  "warm_media": null
+ }
+]

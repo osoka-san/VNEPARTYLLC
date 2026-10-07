@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "unconfigured",
+  "browser": "NOT VERIFIED",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "htmlBytes": 73294
+    },
+    {
+      "route": "/events",
+      "status": 200,
+      "htmlBytes": 40200
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "htmlBytes": 43757
+    },
+    {
+      "route": "/rules",
+      "status": 200,
+      "htmlBytes": 31523
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "htmlBytes": 32783
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "htmlBytes": 24884
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "htmlBytes": 192436
+    },
+    {
+      "route": "/admin/tickets",
+      "status": 200,
+      "htmlBytes": 109001
+    },
+    {
+      "route": "/admin/qr-studio",
+      "status": 200,
+      "htmlBytes": 51265
+    },
+    {
+      "route": "/pass",
+      "status": 200,
+      "htmlBytes": 8209
+    },
+    {
+      "route": "/scan",
+      "status": 200,
+      "htmlBytes": 26841
+    }
+  ]
+}

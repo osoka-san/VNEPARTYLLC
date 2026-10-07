@@ -1,0 +1,243 @@
+.vne-cookie-notice {
+  /* The header is exactly 35% of the full card. The separate OK anchor never moves. */
+  --cookie-full-height: min(300px, calc(100dvh - 10rem));
+  --cookie-header-height: max(44px, calc(var(--cookie-full-height) * 0.35));
+  --cookie-action-width: 124px;
+  position: fixed;
+  right: 24px;
+  bottom: calc(4.9rem + env(safe-area-inset-bottom));
+  z-index: 45;
+  width: min(710px, calc(100% - 48px));
+  height: var(--cookie-header-height);
+  border: 1px solid oklch(0.717 0.207 32 / 0.4);
+  border-radius: 10px;
+  background: oklch(0.18 0.012 175 / 0.97);
+  color: var(--foreground);
+  box-shadow: 0 18px 70px oklch(0 0 0 / 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition:
+    height 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.36s,
+    transform 0.36s;
+}
+.vne-cookie-notice[data-expanded="true"] {
+  height: var(--cookie-full-height);
+}
+.vne-cookie-notice[data-phase="leaving"] {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+.vne-cookie-copy {
+  height: 100%;
+  padding-right: var(--cookie-action-width);
+}
+.vne-cookie-heading {
+  height: var(--cookie-header-height);
+  margin: 0;
+}
+.vne-cookie-disclosure {
+  width: 100%;
+  height: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 9px 0 0 0;
+}
+.vne-cookie-heading-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.vne-cookie-dot {
+  flex: 0 0 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vne-neon-coral);
+  box-shadow: 0 0 12px var(--vne-neon-coral);
+}
+.vne-cookie-chevron {
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+.vne-cookie-notice[data-expanded="true"] .vne-cookie-chevron {
+  transform: rotate(180deg);
+}
+.vne-cookie-body {
+  height: calc(100% - var(--cookie-header-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 0 24px 16px;
+}
+.vne-cookie-body[hidden] {
+  display: none;
+}
+.vne-cookie-body p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+.vne-cookie-body .vne-cookie-scope {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.vne-cookie-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  margin-top: 5px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.vne-cookie-accept {
+  /* Absolute bottom anchoring prevents hover expansion from evading the first click. */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--cookie-action-width);
+  height: calc(var(--cookie-header-height) - 2px);
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-left: 1px solid oklch(0.717 0.207 32 / 0.24);
+  border-radius: 0 0 9px 0;
+  color: var(--vne-neon-coral);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+.vne-cookie-accept-hint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 10px;
+}
+.vne-cookie-ok {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 650;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+.vne-cookie-notice[data-phase="accepted"] .vne-cookie-accept,
+.vne-cookie-notice[data-phase="leaving"] .vne-cookie-accept {
+  color: #30e5ad;
+  background: rgb(48 229 173 / 0.12);
+  box-shadow:
+    inset 0 0 24px rgb(48 229 173 / 0.14),
+    0 0 24px rgb(48 229 173 / 0.12);
+  text-shadow: 0 0 18px rgb(48 229 173 / 0.65);
+}
+.vne-cookie-body:focus-visible,
+.vne-cookie-disclosure:focus-visible,
+.vne-cookie-accept:focus-visible {
+  outline: 2px solid var(--vne-neon-coral);
+  outline-offset: -5px;
+}
+.vne-cookie-notice:focus-visible,
+.vne-cookie-details:focus-visible {
+  outline: 2px solid var(--vne-neon-coral);
+  outline-offset: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .vne-cookie-disclosure:hover,
+  .vne-cookie-accept:hover {
+    background: oklch(0.717 0.207 32 / 0.09);
+  }
+}
+@media (max-width: 599px) {
+  .vne-cookie-notice {
+    --cookie-full-height: min(400px, calc(100dvh - 10rem - env(safe-area-inset-bottom)));
+    --cookie-action-width: 88px;
+    right: max(12px, env(safe-area-inset-right));
+    width: calc(
+      100% - max(12px, env(safe-area-inset-left)) - max(12px, env(safe-area-inset-right))
+    );
+    bottom: calc(4.7rem + env(safe-area-inset-bottom));
+  }
+  .vne-cookie-disclosure {
+    padding: 14px;
+    gap: 6px;
+  }
+  .vne-cookie-heading-label {
+    font-size: 9px;
+    gap: 6px;
+  }
+  .vne-cookie-body {
+    padding: 0 14px 12px;
+  }
+  .vne-cookie-body p {
+    line-height: 1.55;
+  }
+  .vne-cookie-accept {
+    padding: 10px;
+  }
+  .vne-cookie-accept-hint {
+    font-size: 9px;
+  }
+  .vne-cookie-accept-hint svg {
+    width: 12px;
+  }
+  .vne-cookie-ok {
+    font-size: 38px;
+  }
+}
+@media (max-height: 480px) {
+  .vne-cookie-notice {
+    --cookie-full-height: max(88px, min(300px, calc(100dvh - 9rem - env(safe-area-inset-bottom))));
+    bottom: min(calc(4.9rem + env(safe-area-inset-bottom)), calc(100dvh - 168px));
+  }
+  .vne-cookie-accept-hint {
+    display: none;
+  }
+  .vne-cookie-ok {
+    font-size: 30px;
+  }
+  .vne-cookie-disclosure {
+    padding-block: 4px;
+  }
+}
+.vne-cookie-notice[data-motion="false"],
+.vne-cookie-notice[data-motion="false"] * {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-cookie-notice,
+  .vne-cookie-notice * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .vne-cookie-notice[data-phase="leaving"] {
+    transform: none;
+  }
+}
+
+/* At extreme zoom/short viewports, preserve usable controls over the 35% ratio. */
+@media (max-height: 280px) {
+  .vne-cookie-notice {
+    --cookie-full-height: max(88px, min(128px, calc(100dvh - 80px - env(safe-area-inset-bottom))));
+    bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+}
