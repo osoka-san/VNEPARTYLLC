@@ -1,0 +1,52 @@
+{
+  "directReload": {
+    "/": {
+      "staticVisible": 1,
+      "pauseVisible": 1,
+      "connected": true
+    },
+    "/about": {
+      "staticVisible": 1,
+      "pauseVisible": 1,
+      "connected": true
+    }
+  },
+  "loopToggles": {
+    "before": 1,
+    "reducedStatic": 0,
+    "restored": 1,
+    "textEnabledOff": 0,
+    "textEnabledOn": 1,
+    "loopEnabledOff": 0,
+    "loopEnabledOn": 1
+  },
+  "card": {
+    "cardCount": 2,
+    "hoverCount": 1,
+    "pointerEvents": "none",
+    "focusCount": 1,
+    "movedToSecond": 1,
+    "touchCount": 1
+  },
+  "faq": {
+    "enabledContent": "0.26s",
+    "enabledIcon": "0.26s",
+    "reducedContent": "0s",
+    "reducedIcon": "0s",
+    "offContent": "0s",
+    "offIcon": "0s"
+  },
+  "apply": {
+    "escapeFocus": true,
+    "valuesAfterEscape": [
+      "Тест",
+      "test@example.invalid"
+    ],
+    "buttonFocus": true,
+    "valuesAfterButton": [
+      "Тест",
+      "test@example.invalid"
+    ]
+  },
+  "errors": []
+}

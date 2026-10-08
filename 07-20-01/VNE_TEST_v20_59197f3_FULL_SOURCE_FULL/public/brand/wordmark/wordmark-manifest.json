@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "name": "ВНЕ Flow custom wordmark",
+  "sourceFile": "6A88EF87-BBE8-4463-8518-29BCE4C85482(1).png",
+  "sourceSha256": "90ed68bf571c5ae5f679ffc3e389fab8c0dd465c14910f45bf2a66442921c04b",
+  "matchesPreviouslyApprovedFlowByteForByte": true,
+  "sourceTrace": "vne_vector_work/traced/flow.svg",
+  "viewBox": [
+    63.051952557107626,
+    272.16009458332303,
+    1410.928487774483,
+    426.68784185144716
+  ],
+  "pathBoundsXYXY": [
+    79.05195255710763,
+    288.16009458332303,
+    1457.9804403315907,
+    682.8479364347702
+  ],
+  "transparentPaddingSvgUnits": 16,
+  "aspectRatio": 3.3066995339082164,
+  "files": {
+    "currentColor": "wordmark-flow.svg",
+    "darkHeroLightInk": "wordmark-flow-light.svg"
+  },
+  "fillRule": "nonzero",
+  "compoundSubpathCount": 3,
+  "svgContainsRaster": false,
+  "note": "This is an outlined custom wordmark, not an installable font. Keep its path data and counters; do not recreate the word with a font.",
+  "currentColorNote": "currentColor inherits from CSS only for inline SVG (or SVG used through a suitable symbol). For a plain img element use the explicit light file on a dark background."
+}

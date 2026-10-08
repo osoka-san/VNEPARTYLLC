@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "network": "fully mocked",
+  "expiredSessionSSR": [
+    "/auth/v1/token?grant_type=refresh_token",
+    "/auth/v1/user",
+    "/auth/v1/user",
+    "/rest/v1/rpc/vne_read_my_membership_questionnaires"
+  ],
+  "expiredSessionLogout": [
+    "/auth/v1/token?grant_type=refresh_token",
+    "/auth/v1/user",
+    "/auth/v1/logout?scope=local"
+  ],
+  "logoutCookies": "deletion only",
+  "realAccount": "NOT USED"
+}
+{"mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"mockedLogin":"other UUID rejected and cookie cleared","status":"PASS"}

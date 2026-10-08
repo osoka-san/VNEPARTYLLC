@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "unconfigured",
+  "browser": "NOT VERIFIED",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "htmlBytes": 73578
+    },
+    {
+      "route": "/events",
+      "status": 200,
+      "htmlBytes": 39965
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "htmlBytes": 43522
+    },
+    {
+      "route": "/rules",
+      "status": 200,
+      "htmlBytes": 31288
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "htmlBytes": 32548
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "htmlBytes": 24649
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "htmlBytes": 191407
+    },
+    {
+      "route": "/admin/tickets",
+      "status": 200,
+      "htmlBytes": 108766
+    },
+    {
+      "route": "/pass",
+      "status": 200,
+      "htmlBytes": 7974
+    },
+    {
+      "route": "/scan",
+      "status": 200,
+      "htmlBytes": 26606
+    }
+  ]
+}

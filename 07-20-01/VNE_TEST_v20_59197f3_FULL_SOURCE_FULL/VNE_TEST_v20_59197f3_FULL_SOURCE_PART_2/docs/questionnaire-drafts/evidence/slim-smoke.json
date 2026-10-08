@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "synthetic public config; no account session",
+  "browser": "NOT VERIFIED",
+  "results": [
+    {
+      "route": "/login",
+      "status": 200,
+      "htmlBytes": 4942
+    },
+    {
+      "function": "getAuthAvailability",
+      "status": 200
+    },
+    {
+      "route": "/apply",
+      "status": 303,
+      "unauthenticated": true
+    },
+    {
+      "route": "/member",
+      "status": 303,
+      "unauthenticated": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+PASS состояния заказов подготовлены — awaiting_payment,failed,needs_review,paid
+PASS finance с событием отклоняется — 23514
+PASS finance (общая) выдаётся через grant_staff_assignment
+PASS назначение finance общее (event_id null)
+PASS finance без aal2 → отказ — 42501
+PASS finance с aal2 → частичный sandbox-возврат
+run=d6ui115b88
+cleanup {"ok":true,"remaining":{"applications":0,"assignments":0,"events":0,"invites":0,"requests":0,"users":0},"errors":[]}

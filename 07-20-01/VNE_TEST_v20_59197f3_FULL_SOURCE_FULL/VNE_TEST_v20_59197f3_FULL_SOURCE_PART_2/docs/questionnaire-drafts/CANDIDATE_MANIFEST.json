@@ -1,0 +1,98 @@
+{
+  "base": "c0ad4b246f7b5a38887c63f0a06caed986cef5ff",
+  "scope": "Final daily-purge TEST candidate; source commit recorded separately; main v20 unchanged",
+  "files": [
+    {
+      "path": "docs/questionnaire-drafts/draft_activation_cutover.sql",
+      "sha256": "3c7af2d9f0efd4675cfdf526b3605e56ae901dd1d9126eeed1da5703be713524"
+    },
+    {
+      "path": "docs/questionnaire-drafts/draft_activation_separate_approval.sql",
+      "sha256": "e9b37be63796a7333ddb86a0b546e1a4030dbfd874b2773b6ca36174379d1578"
+    },
+    {
+      "path": "docs/questionnaire-drafts/draft_activation_stage.sql",
+      "sha256": "a61f1308a7234eed90c3f547457654e878f301155911c4c064e0f98c3de53199"
+    },
+    {
+      "path": "docs/questionnaire-drafts/draft_daily_purge.sql",
+      "sha256": "03ba81e7a06ced6b23687c70fa5216c90c7039435d654674262ab0c38fcc2e86"
+    },
+    {
+      "path": "docs/questionnaire-drafts/draft_storage_closed_proposal.sql",
+      "sha256": "9d3f8e00080bc7eaae55cc0a26f1e850f58a8f657fc7a084c687008d2cab87cb"
+    },
+    {
+      "path": "docs/questionnaire-drafts/purge_schedule_unapproved_example.sql",
+      "sha256": "2cc7e043f2328bf6fa9beb774736ab8f1b72927949c3d26a6a51e9125aba8248"
+    },
+    {
+      "path": "scripts/prepare-test-output.mjs",
+      "sha256": "c28fba5fc660e94f850554d592d2093f72c0d93a1f66a3596b4f55440f0852f2"
+    },
+    {
+      "path": "src/components/app/ApplyDraft.tsx",
+      "sha256": "5749af90d0a85c135106ffabca551b45954139301e4b2e8d8ba4d12b4798ae2c"
+    },
+    {
+      "path": "src/lib/questionnaire-draft-controller.ts",
+      "sha256": "aa98078b35c8663e4367934246ddcc7720f893586a6fdfec001eb1a8bf11d504"
+    },
+    {
+      "path": "src/lib/questionnaire-draft-session.ts",
+      "sha256": "4335cd2ecbc4caa665237d48cc2f9f29a1e12d072a7a47372b3e19d48b3bd11b"
+    },
+    {
+      "path": "src/lib/questionnaire-draft.functions.ts",
+      "sha256": "48b9f2fff4d92a93849197608bf0a2370d125af5c4e0d5ee778352fa4c9b12a3"
+    },
+    {
+      "path": "src/lib/questionnaire-draft.server.ts",
+      "sha256": "3b8a4380c71b1f807092feb7dbf19e21ae261de87f51d6abffbb514822d9ce15"
+    },
+    {
+      "path": "src/lib/questionnaire-draft.ts",
+      "sha256": "a1ebf8ce2ad84c797fd3ba46287ad4b262f32794cf1f5fc8010b4a074f8bc8a3"
+    },
+    {
+      "path": "src/lib/questionnaire-persistence.server.ts",
+      "sha256": "52a3a1f808cb7990bbd07bcd004415db5aa396c77bc7851316f233aa13e27a75"
+    },
+    {
+      "path": "src/lib/questionnaire-supabase.server.ts",
+      "sha256": "46ca126f3093e609520dbfdb195c2ac4153fb7ee02ade0fca48838a659d9b482"
+    },
+    {
+      "path": "src/lib/questionnaire.functions.ts",
+      "sha256": "e29670ab153638471f89fb9fdc7e8256eb51d8281e501eaabc5fba4c1a11c293"
+    },
+    {
+      "path": "src/routes/apply.tsx",
+      "sha256": "81352c190a16aba98e0b89c247aaefd043043d84e9a24b2e50e13445b60a4474"
+    },
+    {
+      "path": "src/routes/member.tsx",
+      "sha256": "a5b3b232d51a6f0b99f019ab29912858855d73ef9ed892792504938f95e8fa56"
+    },
+    {
+      "path": "test-stand/routes/apply.tsx",
+      "sha256": "b7433125ac79f89dd6ffbcfa0bf2c6762f2a9cd1d715df7c600b8b689a39c4e2"
+    },
+    {
+      "path": "test-stand/routes/member.tsx",
+      "sha256": "4a82f0097cc675b1f59c7b32f6bbee08b603f95f4de1d3c98f8b340e66da2967"
+    },
+    {
+      "path": "tests/db/questionnaire-drafts.mjs",
+      "sha256": "522aa85ffebf4d50385276ca96910aac807c2cdc41236549eb120b23369ee572"
+    },
+    {
+      "path": "tests/questionnaire-draft-handlers.test.mjs",
+      "sha256": "a813e24e564f7b354e1ed1c7f9a3539f9a9c052d71819f4e0b85d8a6bc058bce"
+    },
+    {
+      "path": "tests/questionnaire-drafts.test.mjs",
+      "sha256": "42a0ad0de70b3ff68a2a311aebb1089660dab3c86b1ba413e8e7f448b678d8e7"
+    }
+  ]
+}

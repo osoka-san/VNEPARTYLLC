@@ -1,0 +1,314 @@
+.timed-qa {
+  --qa-ink: #edf2ee;
+  --qa-muted: #b5c0b9;
+  --qa-border: #65736b;
+  --qa-panel: #151d19;
+  color: var(--qa-ink);
+  font-family: Onest, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px clamp(16px, 4vw, 40px) 64px;
+}
+.timed-qa *,
+.timed-qa *::before,
+.timed-qa *::after {
+  box-sizing: border-box;
+}
+.timed-qa p {
+  margin: 0;
+}
+.timed-qa-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--qa-border);
+}
+.timed-qa-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--qa-ink);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.timed-qa-session a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--qa-ink);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.timed-qa-session [role="status"] {
+  overflow-wrap: anywhere;
+}
+.timed-qa-header {
+  display: grid;
+  gap: 16px;
+  padding: 28px 0;
+}
+.timed-qa .timed-qa-kicker {
+  color: #f49b81;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.timed-qa h1 {
+  margin: 0;
+  font:
+    400 clamp(25px, 4vw, 42px)/1.25 Unbounded,
+    Onest,
+    sans-serif;
+  letter-spacing: -0.035em;
+}
+.timed-qa-status,
+.timed-qa-step,
+.timed-qa-report {
+  min-width: 0;
+  border: 1px solid var(--qa-border);
+  border-radius: 8px;
+  padding: clamp(16px, 3vw, 24px);
+  background: var(--qa-panel);
+  margin-bottom: 20px;
+}
+.timed-qa-status {
+  border-left: 4px solid #b0e7d0;
+}
+.timed-qa-status[data-stopped] {
+  border-left-color: #f49b81;
+}
+.timed-qa-status strong {
+  display: block;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+.timed-qa-status p {
+  overflow-wrap: anywhere;
+}
+.timed-qa .timed-qa-count {
+  margin-top: 8px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+.timed-qa-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.timed-qa-plan {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+  font-size: 13px;
+}
+.timed-qa-plan dt {
+  color: var(--qa-muted);
+}
+.timed-qa-plan dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.timed-qa-countdown {
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+}
+.timed-qa-stages,
+.timed-qa-samples {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.timed-qa-stages {
+  margin-top: 12px;
+  color: var(--qa-muted);
+}
+.timed-qa-samples {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 0;
+}
+.timed-qa-samples [data-quality="slow"],
+.timed-qa-samples [data-quality="fatal"] {
+  color: #ffd6ca;
+}
+.timed-qa-step {
+  display: grid;
+  gap: 16px;
+}
+.timed-qa-step h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font:
+    500 20px/1.4 Onest,
+    sans-serif;
+  margin: 0 0 4px;
+}
+.timed-qa-step h2 span {
+  color: #f49b81;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+.timed-qa fieldset {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.timed-qa legend {
+  padding: 0;
+  margin-bottom: 12px;
+}
+.timed-qa-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+}
+.timed-qa-wide {
+  grid-column: 1 / -1;
+}
+.timed-qa label {
+  display: grid;
+  min-width: 0;
+  gap: 8px;
+  align-content: start;
+  font-size: 14px;
+  font-weight: 500;
+}
+.timed-qa :is(input, select, textarea) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #83968a;
+  border-radius: 4px;
+  background: #09110c;
+  color: var(--qa-ink);
+  font:
+    400 14px/1.6 ui-monospace,
+    SFMono-Regular,
+    Consolas,
+    monospace;
+}
+.timed-qa select {
+  font-family: Onest, Arial, sans-serif;
+  color-scheme: dark;
+}
+.timed-qa textarea {
+  resize: vertical;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.timed-qa :is(input, textarea)::placeholder {
+  color: #9aa99f;
+  opacity: 1;
+}
+.timed-qa :is(input, select, textarea):disabled {
+  color: #b5c0b9;
+  border-color: #536058;
+  background: #1c2520;
+  cursor: not-allowed;
+  opacity: 1;
+  -webkit-text-fill-color: #b5c0b9;
+}
+.timed-qa button {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid #ef886d;
+  border-radius: 4px;
+  background: #b83820;
+  color: #fff9f5;
+  font:
+    500 14px/1.5 Onest,
+    Arial,
+    sans-serif;
+  text-align: center;
+  white-space: normal;
+  cursor: pointer;
+}
+.timed-qa button:not(:disabled):hover {
+  background: #96301c;
+}
+.timed-qa button.timed-qa-secondary {
+  background: transparent;
+  border-color: #a0b6a8;
+  color: var(--qa-ink);
+}
+.timed-qa button.timed-qa-secondary:not(:disabled):hover {
+  background: #26382d;
+}
+.timed-qa button:disabled {
+  background: #29312c;
+  border-color: #66756c;
+  color: #bdc7c0;
+  cursor: not-allowed;
+}
+.timed-qa :is(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid #b0e7d0;
+  outline-offset: 4px;
+}
+.timed-qa .timed-qa-hint {
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--qa-muted);
+  overflow-wrap: anywhere;
+}
+.timed-qa-status > .timed-qa-hint {
+  margin-top: 12px;
+}
+.timed-qa-id {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  user-select: text;
+}
+.timed-qa .timed-qa-error {
+  padding: 16px;
+  margin: 0 0 20px;
+  border: 1px solid #f49b81;
+  border-radius: 4px;
+  color: #ffd6ca;
+  background: #321d16;
+  overflow-wrap: anywhere;
+}
+.timed-qa-report summary {
+  min-height: 44px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.timed-qa-report[open] summary {
+  margin-bottom: 16px;
+}
+.timed-qa-report button {
+  margin: 16px 0 8px;
+}
+.timed-qa .timed-qa-footnote {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--qa-muted);
+}
+@media (max-width: 600px) {
+  .timed-qa-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .timed-qa button {
+    width: 100%;
+  }
+  .timed-qa-actions {
+    flex-direction: column;
+  }
+  .timed-qa :is(input, textarea) {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+}

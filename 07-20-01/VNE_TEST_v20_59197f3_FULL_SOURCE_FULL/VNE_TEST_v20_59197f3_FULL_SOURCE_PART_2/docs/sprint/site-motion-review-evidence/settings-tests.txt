@@ -1,0 +1,11 @@
+bun test v1.3.3 (274e01c7)
+
+tests/motion-settings.test.ts:
+(pass) motion settings v4 > exports v4 and round-trips all known settings [1.44ms]
+(pass) motion settings v4 > migrates v1-v3 and preserves new current values [4.51ms]
+(pass) motion settings v4 > rejects invalid shapes and clamps v4 ranges [0.18ms]
+
+ 3 pass
+ 0 fail
+ 20 expect() calls
+Ran 3 tests across 1 file. [34.00ms]

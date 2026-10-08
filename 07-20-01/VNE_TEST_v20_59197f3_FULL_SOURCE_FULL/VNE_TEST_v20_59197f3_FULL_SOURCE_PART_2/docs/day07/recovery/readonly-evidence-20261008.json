@@ -1,0 +1,250 @@
+{
+  "observedAt": "2026-10-08T07:51:00Z",
+  "target": {
+    "site": "appgprj_6ac605807bf88191b7f2d0b5a717505d",
+    "supabase": "xrocuwlofxhxoxajukne"
+  },
+  "site": {
+    "latestVersion": 8,
+    "liveUrl": "https://vne-test-20261007.can-avci48.chatgpt.site",
+    "source": "96280851b63b1c4d36a25bedffaa4ab3ba154bf3",
+    "runtimeRevision": 7,
+    "runtimeMode": "questionnaire-only"
+  },
+  "readiness": {
+    "observed_at": "2026-10-08 07:48:15.400879+00",
+    "readiness": {
+      "config": {
+        "enabled": false,
+        "singleton": true,
+        "project_ref": "xrocuwlofxhxoxajukne",
+        "synthetic_admission": false
+      },
+      "scanners": [
+        {
+          "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+          "is_anonymous": false,
+          "email_confirmed": true,
+          "currently_banned": null,
+          "verified_totp_count": 0,
+          "staff_assignment_count": 0,
+          "aal2_sessions_with_verified_own_factor_and_unexpired_not_after": 0
+        },
+        {
+          "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+          "is_anonymous": false,
+          "email_confirmed": true,
+          "currently_banned": null,
+          "verified_totp_count": 0,
+          "staff_assignment_count": 0,
+          "aal2_sessions_with_verified_own_factor_and_unexpired_not_after": 0
+        }
+      ],
+      "private_function": {
+        "settings": [
+          "search_path=\"\"",
+          "lock_timeout=3s"
+        ],
+        "body_sha256": "ad5e6d8a373ad9a93bcce234e3a7d640bd423717966c821837485357acc2f5bf",
+        "anon_execute": false,
+        "security_definer": true,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      "public_rpc_absent": true,
+      "synthetic_fixture_event_count": 0
+    }
+  },
+  "acl": {
+    "observed_at": "2026-10-08 07:50:43.39059+00",
+    "qr_tables": [
+      {
+        "rls": true,
+        "name": "qr_admission_config",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "qr_command_receipts",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "qr_token_history",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "qr_scan_limits",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "event_private_details",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "ticket_checkins",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "ticket_events",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "ticket_operations",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      },
+      {
+        "rls": true,
+        "name": "ticket_passes",
+        "schema": "private",
+        "force_rls": false,
+        "anon_insert": false,
+        "anon_select": false,
+        "authenticated_insert": false,
+        "authenticated_select": false
+      }
+    ],
+    "primary_constraints": [
+      {
+        "name": "qr_one_primary_per_participation",
+        "type": "u",
+        "table": "ticket_checkins",
+        "definition": "UNIQUE (participation_id)"
+      },
+      {
+        "name": "ticket_checkins_actor_operation_id_key",
+        "type": "u",
+        "table": "ticket_checkins",
+        "definition": "UNIQUE (actor, operation_id)"
+      },
+      {
+        "name": "ticket_checkins_event_id_fkey",
+        "type": "f",
+        "table": "ticket_checkins",
+        "definition": "FOREIGN KEY (event_id) REFERENCES events(id)"
+      },
+      {
+        "name": "ticket_checkins_participation_id_fkey",
+        "type": "f",
+        "table": "ticket_checkins",
+        "definition": "FOREIGN KEY (participation_id) REFERENCES participations(id) ON DELETE RESTRICT"
+      },
+      {
+        "name": "ticket_checkins_pass_id_fkey",
+        "type": "f",
+        "table": "ticket_checkins",
+        "definition": "FOREIGN KEY (pass_id) REFERENCES private.ticket_passes(id)"
+      },
+      {
+        "name": "ticket_checkins_pkey",
+        "type": "p",
+        "table": "ticket_checkins",
+        "definition": "PRIMARY KEY (pass_id)"
+      }
+    ],
+    "qr_functions": [
+      {
+        "name": "qr_command",
+        "definer": true,
+        "signature": "_command jsonb",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_hash",
+        "definer": false,
+        "signature": "_text text",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_outcome",
+        "definer": true,
+        "signature": "_participation uuid",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_pass_dto",
+        "definer": true,
+        "signature": "_participation uuid",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_require_actor",
+        "definer": true,
+        "signature": "",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_require_mfa",
+        "definer": true,
+        "signature": "",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      },
+      {
+        "name": "qr_require_staff",
+        "definer": true,
+        "signature": "_event uuid, _manage boolean",
+        "anon_execute": false,
+        "service_role_execute": false,
+        "authenticated_execute": false
+      }
+    ]
+  },
+  "checksScope": "Fresh read-only PostgreSQL/Sites metadata, no commands/fixtures/roles/QR issue; not a fresh code regression run."
+}

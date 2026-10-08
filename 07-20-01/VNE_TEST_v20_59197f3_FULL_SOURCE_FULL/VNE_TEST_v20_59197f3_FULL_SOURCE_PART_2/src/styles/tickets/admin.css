@@ -1,0 +1,453 @@
+.vne-admin-page {
+  max-width: 1260px;
+  margin: auto;
+  padding: 34px 36px 80px;
+}
+.vne-admin-back {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #a5afa9;
+  text-decoration: none;
+  font-size: 12px;
+}
+.vne-ticket-admin {
+  --adm-ink: #edf2ee;
+  --adm-dim: #87938c;
+  --adm-line: #27322d;
+  --adm-bg: #0b100e;
+  font-family: Onest, Arial, sans-serif;
+  color: var(--adm-ink);
+  background: var(--adm-bg);
+  padding: 38px;
+  border: 1px solid var(--adm-line);
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+.vne-ticket-admin * {
+  box-sizing: border-box;
+}
+.vne-admin-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.vne-admin-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.19em;
+  font-weight: 600;
+  color: var(--adm-dim);
+}
+.vne-admin-header h1 {
+  font:
+    500 clamp(25px, 3vw, 39px)/1.3 Unbounded,
+    sans-serif;
+  letter-spacing: -0.035em;
+  margin: 16px 0;
+}
+.vne-admin-header h1 span {
+  color: #e55330;
+}
+.vne-admin-header p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #9da9a1;
+  margin: 0;
+  max-width: 620px;
+}
+.vne-admin-private {
+  align-self: start;
+  white-space: nowrap;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  border: 1px solid #3d5045;
+  border-radius: 20px;
+  padding: 10px 12px;
+  color: #b1c4b8;
+}
+.vne-ticket-admin label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+  color: #c5d0c8;
+  margin: 0;
+}
+.vne-ticket-admin input,
+.vne-ticket-admin select {
+  width: 100%;
+  min-height: 48px;
+  background: #111a15;
+  color: #eef2ed;
+  border: 1px solid #2c3a32;
+  border-radius: 7px;
+  padding: 12px 13px;
+  font: inherit;
+  color-scheme: dark;
+}
+.vne-ticket-admin input::placeholder {
+  color: #5f7166;
+  font-size: 11px;
+}
+.vne-ticket-admin small {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #82948a;
+}
+.vne-ticket-admin input:focus-visible,
+.vne-ticket-admin select:focus-visible,
+.vne-ticket-admin button:focus-visible,
+.vne-ticket-admin a:focus-visible {
+  outline: 2px solid #30e5ad;
+  outline-offset: 3px;
+}
+.vne-admin-key {
+  max-width: 510px;
+  margin-bottom: 34px !important;
+}
+.vne-ticket-admin fieldset {
+  margin: 0;
+  padding: 26px 0 30px;
+  border: 0;
+  border-top: 1px solid var(--adm-line);
+}
+.vne-ticket-admin legend {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  padding: 0 16px 0 0;
+  color: #dde6df;
+}
+.vne-ticket-admin legend b {
+  font-weight: 400;
+  font-size: 10px;
+  color: #688173;
+  margin-right: 12px;
+}
+.vne-admin-types {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.vne-admin-ember {
+  --type-accent: #f48158;
+  --type-wash: #352019;
+}
+.vne-admin-gold {
+  --type-accent: #e5cb8f;
+  --type-wash: #302918;
+}
+.vne-admin-mint {
+  --type-accent: #30e5ad;
+  --type-wash: #132d24;
+}
+.vne-admin-ice {
+  --type-accent: #86abff;
+  --type-wash: #172039;
+}
+.vne-admin-type {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #29362e;
+  background: #101713;
+  border-radius: 11px;
+  padding: 17px 16px;
+  gap: 17px;
+  cursor: pointer;
+  min-height: 136px;
+  color: var(--type-accent);
+  transition:
+    background 0.18s,
+    border-color 0.18s,
+    transform 0.18s;
+}
+.vne-admin-type.is-selected {
+  border-color: var(--type-accent);
+  background: linear-gradient(135deg, var(--type-wash), #111814);
+}
+.vne-admin-type:hover {
+  transform: translateY(-2px);
+  border-color: var(--type-accent);
+}
+.vne-admin-type-code {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.vne-admin-type strong {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+.vne-admin-type small {
+  font-size: 10px;
+}
+.vne-admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 36px;
+}
+.vne-admin-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px 20px;
+}
+.vne-admin-span {
+  grid-column: 1/-1;
+}
+.vne-admin-summary {
+  background: radial-gradient(ellipse at 95% 0, var(--type-wash), transparent 75%), #111a15;
+  border: 1px solid #304036;
+  border-radius: 15px;
+  padding: 23px;
+  align-self: start;
+  position: sticky;
+  top: 24px;
+}
+.vne-admin-summary-type {
+  display: block;
+  font:
+    500 16px/1.6 Unbounded,
+    sans-serif;
+  margin: 20px 0;
+  color: var(--type-accent);
+}
+.vne-admin-summary-rule {
+  height: 1px;
+  background: var(--type-accent);
+  opacity: 0.45;
+  margin: 20px 0;
+}
+.vne-admin-summary-event {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.vne-admin-summary-guest {
+  font-size: 13px;
+  color: #b9c8be;
+  overflow-wrap: anywhere;
+}
+.vne-admin-summary dl {
+  display: grid;
+  gap: 15px;
+  margin: 28px 0;
+}
+.vne-admin-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 10px;
+}
+.vne-admin-summary dt {
+  color: #7f9587;
+}
+.vne-admin-summary dd {
+  margin: 0;
+  text-align: right;
+  overflow-wrap: anywhere;
+  max-width: 130px;
+}
+.vne-admin-summary-edition {
+  font:
+    400 42px Unbounded,
+    sans-serif;
+  color: var(--type-accent);
+  margin: 30px 0 22px;
+}
+.vne-admin-summary-edition span {
+  font-size: 20px;
+  color: #7a8d80;
+}
+.vne-admin-submit {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--adm-line);
+  padding-top: 24px;
+}
+.vne-admin-submit p {
+  font-size: 11px;
+  color: #809589;
+  line-height: 1.8;
+}
+.vne-admin-submit button,
+.vne-admin-open {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  align-items: center;
+  background: #e55330;
+  border: 1px solid #e55330;
+  border-radius: 8px;
+  color: #170a06;
+  padding: 18px 24px;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  text-decoration: none;
+}
+.vne-admin-submit button span {
+  font-size: 23px;
+  line-height: 0.7;
+}
+.vne-admin-error {
+  padding: 18px;
+  border-left: 2px solid #e55330;
+  background: #361b14;
+  color: #ffd3c6;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.vne-admin-issued {
+  padding-top: 25px;
+  border-top: 1px solid var(--adm-line);
+}
+.vne-admin-issued-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.vne-admin-issued-head h2 {
+  font:
+    500 24px Unbounded,
+    sans-serif;
+}
+.vne-admin-issued-head p,
+.vne-admin-issued > p {
+  font-size: 12px;
+  color: #9bb1a3;
+  line-height: 1.7;
+}
+.vne-admin-issued-head > strong {
+  font:
+    400 38px Unbounded,
+    sans-serif;
+  color: var(--type-accent);
+}
+.vne-admin-code {
+  overflow-wrap: anywhere;
+  letter-spacing: 0.04em;
+  margin: 12px 0 26px;
+}
+.vne-admin-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+}
+.vne-admin-actions button,
+.vne-admin-new {
+  border: 1px solid #385044;
+  border-radius: 7px;
+  color: #c9ded0;
+  background: #15231b;
+  padding: 14px 18px;
+  font-size: 12px;
+}
+.vne-admin-new {
+  margin-top: 18px;
+}
+.vne-ticket-admin button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.vne-ticket-admin button {
+  font-family: inherit;
+}
+@media (max-width: 900px) {
+  .vne-admin-page {
+    padding: 24px 18px 60px;
+  }
+  .vne-ticket-admin {
+    padding: 25px;
+  }
+  .vne-admin-layout {
+    grid-template-columns: 1fr;
+  }
+  .vne-admin-summary {
+    position: static;
+    display: none;
+  }
+  .vne-admin-types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vne-admin-private {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .vne-admin-page {
+    padding: 20px 12px 50px;
+  }
+  .vne-ticket-admin {
+    padding: 23px 16px;
+    border-radius: 15px;
+  }
+  .vne-admin-header h1 {
+    font-size: 24px;
+  }
+  .vne-admin-header p {
+    font-size: 12px;
+  }
+  .vne-admin-fields {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vne-admin-type {
+    padding: 14px 12px;
+    min-height: 126px;
+  }
+  .vne-admin-type strong {
+    font-size: 11px;
+  }
+  .vne-admin-type small {
+    font-size: 9px;
+  }
+  .vne-admin-submit {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .vne-admin-submit button {
+    justify-content: space-between;
+  }
+  .vne-admin-issued-head {
+    align-items: start;
+  }
+  .vne-admin-issued-head h2 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .vne-admin-issued-head > strong {
+    font-size: 25px;
+  }
+  .vne-admin-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .vne-admin-actions > * {
+    text-align: center;
+    justify-content: center;
+  }
+  .vne-admin-eyebrow {
+    font-size: 8px;
+  }
+  .vne-admin-back {
+    margin-bottom: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-admin-type {
+    transition: none;
+  }
+  .vne-admin-type:hover {
+    transform: none;
+  }
+}

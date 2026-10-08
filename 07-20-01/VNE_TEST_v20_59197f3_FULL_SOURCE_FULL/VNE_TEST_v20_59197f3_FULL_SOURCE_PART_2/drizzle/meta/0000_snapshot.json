@@ -1,0 +1,114 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "9616a9d3-d69b-4f64-b06e-cb5b8dd2fd18",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "qr_pattern_versions": {
+      "name": "qr_pattern_versions",
+      "columns": {
+        "pattern_id": {
+          "name": "pattern_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "recipe": {
+          "name": "recipe",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "search_text": {
+          "name": "search_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "engine_version": {
+          "name": "engine_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "archived": {
+          "name": "archived",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "operation_id": {
+          "name": "operation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "qr_pattern_operation_unique": {
+          "name": "qr_pattern_operation_unique",
+          "columns": [
+            "operation_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "qr_pattern_versions_pattern_id_version_pk": {
+          "columns": [
+            "pattern_id",
+            "version"
+          ],
+          "name": "qr_pattern_versions_pattern_id_version_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "qr_pattern_version_positive": {
+          "name": "qr_pattern_version_positive",
+          "value": "\"qr_pattern_versions\".\"version\" > 0"
+        },
+        "qr_pattern_archived_boolean": {
+          "name": "qr_pattern_archived_boolean",
+          "value": "\"qr_pattern_versions\".\"archived\" IN (0,1)"
+        },
+        "qr_pattern_recipe_json": {
+          "name": "qr_pattern_recipe_json",
+          "value": "json_valid(\"qr_pattern_versions\".\"recipe\")"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

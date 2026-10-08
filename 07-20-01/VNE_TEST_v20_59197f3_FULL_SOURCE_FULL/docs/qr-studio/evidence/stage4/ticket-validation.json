@@ -1,0 +1,188 @@
+[
+  {
+    "name": "syncopa-0",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-1",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-2",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": false
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-0",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-1",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  },
+  {
+    "name": "flow-2",
+    "centres": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true,
+        "opencvTextWithInversionIfNeeded": true
+      }
+    ]
+  }
+]

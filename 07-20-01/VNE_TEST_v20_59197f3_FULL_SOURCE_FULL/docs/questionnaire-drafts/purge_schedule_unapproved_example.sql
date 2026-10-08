@@ -1,0 +1,11 @@
+-- EXAMPLE ONLY. Nothing in this file is executable because the whole proposal is commented.
+-- Requires separate approval of exact TEST target, trusted maintenance role, schedule and deletion scope.
+-- Verify pg_cron is already available. Do not install an extension or create credentials implicitly.
+-- At activation, verify one existing job or use the exact returned new job ID. No duplicate schedules.
+-- SELECT cron.schedule(
+--   'vne-questionnaire-drafts-expiry',
+--   '*/5 * * * *',
+--   $job$SELECT private.purge_expired_questionnaire_drafts(1000);$job$
+-- );
+-- Observe count/oldest expired timestamp only. No payload should enter monitoring or SQL logs.
+-- Any backlog or failed invocation invalidates a claim of deletion within five minutes.

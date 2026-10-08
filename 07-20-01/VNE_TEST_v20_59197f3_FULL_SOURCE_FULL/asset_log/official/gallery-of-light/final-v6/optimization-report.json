@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "asset_count": 14,
+  "selected_preserved_count": 7,
+  "new_generated_count": 7,
+  "masters_total_bytes": 33309577,
+  "responsive_export_count": 88,
+  "responsive_exports_total_bytes": 13130664,
+  "native_format_total_bytes": {
+    "webp": 3913044,
+    "avif": 2687679
+  },
+  "native_savings_vs_png_percent": {
+    "webp": 88.25,
+    "avif": 91.93
+  },
+  "encoding": {
+    "webp": {
+      "quality": 90,
+      "method": 6
+    },
+    "avif": {
+      "quality": 70,
+      "subsampling": "4:4:4",
+      "speed": 6
+    }
+  },
+  "transformations": {
+    "upscale": false,
+    "crop": false,
+    "visual_retouch": false,
+    "embedded_css_overlay": false,
+    "resize": "Lanczos downsampling only",
+    "color_mode": "RGB"
+  },
+  "validation": {
+    "all_masters_hash_matched": true,
+    "all_exports_decoded": true,
+    "all_export_dimensions_matched": true
+  },
+  "limits": "Lossy exports; unchanged PNG masters included. Byte savings are against the same 14 masters at native dimensions, not against an arbitrary screenshot. No live-site rendering or smooth-scroll acceptance is asserted by this report."
+}

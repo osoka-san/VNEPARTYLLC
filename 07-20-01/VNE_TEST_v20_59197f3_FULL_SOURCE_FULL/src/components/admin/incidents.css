@@ -1,0 +1,147 @@
+.iw-root {
+  min-width: 0;
+}
+.iw-guidance {
+  position: sticky;
+  top: calc(var(--vne-admin-nav-height, 0px) + 8px);
+  z-index: 20;
+  background: var(--background, #070b09);
+  border: 1px solid var(--border, #ffffff20);
+  border-left: 3px solid var(--mint, #30e5ad);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.iw-guidance strong {
+  color: var(--mint, #30e5ad);
+}
+.iw-guidance p {
+  margin-top: 6px;
+}
+.iw-grow {
+  flex: 1;
+  min-width: 160px;
+}
+.iw-root select,
+.iw-root input:not([type="checkbox"]),
+.iw-root textarea {
+  width: 100%;
+  min-height: 44px;
+  background: var(--surface, #101712);
+  border: 1px solid var(--border, #ffffff20);
+  padding: 12px;
+  color: inherit;
+  font: inherit;
+}
+.iw-root .aw-toolbar > select {
+  width: auto;
+}
+.iw-root textarea {
+  resize: vertical;
+}
+.iw-card {
+  border: 1px solid var(--border, #ffffff20);
+  padding: 24px;
+  margin: 22px 0;
+  min-width: 0;
+}
+.iw-card h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.iw-card code,
+.iw-candidates code,
+.iw-row code {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.iw-card small {
+  display: block;
+  color: var(--muted-foreground, #a5b5ac);
+  margin-top: 10px;
+}
+.iw-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+}
+.iw-check input {
+  margin-top: 5px;
+}
+.iw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.iw-card form,
+.iw-card label {
+  display: block;
+  margin-bottom: 16px;
+}
+.iw-candidates {
+  display: grid;
+  gap: 10px;
+}
+.iw-candidates button,
+.iw-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  padding: 14px;
+  border: 1px solid var(--border, #ffffff20);
+  background: transparent;
+  color: inherit;
+  min-height: 44px;
+}
+.iw-candidates button {
+  flex-wrap: wrap;
+}
+.iw-row + .iw-row {
+  border-top: 0;
+}
+.iw-history {
+  padding: 16px 0;
+  border-top: 1px solid var(--border, #ffffff20);
+}
+.iw-history p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin-top: 8px;
+}
+.iw-root button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.iw-root :focus-visible {
+  outline: 2px solid var(--mint, #30e5ad);
+  outline-offset: 3px;
+}
+@media (max-width: 650px) {
+  .iw-grid {
+    grid-template-columns: 1fr;
+  }
+  .iw-card {
+    padding: 18px;
+  }
+  .iw-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .iw-guidance {
+    font-size: 11px;
+    line-height: 1.5;
+    padding: 12px;
+  }
+  .iw-root input,
+  .iw-root select,
+  .iw-root textarea {
+    font-size: 16px;
+  }
+}
