@@ -1,0 +1,33 @@
+✔ GET missing or throwing binding fails closed without a response body leak (10.322198ms)
+✔ GET rejects asset 200/text/html/redirect=false (1.132043ms)
+✔ GET rejects asset 200/Text/Html; charset=utf-8/redirect=false (0.93187ms)
+✔ GET rejects asset 404/text/javascript/redirect=false (0.670204ms)
+✔ GET rejects asset 500/text/plain/redirect=false (0.421858ms)
+✔ GET rejects asset 302/text/javascript/redirect=true (0.61448ms)
+✔ GET rejects asset 200/text/css/redirect=false (0.624825ms)
+✔ GET rejects asset 200/text/javascript/redirect=true (0.399604ms)
+✔ GET allows only matching successful emitted-file content type (4.975729ms)
+✔ HEAD missing or throwing binding fails closed without a response body leak (0.418213ms)
+✔ HEAD rejects asset 200/text/html/redirect=false (0.193102ms)
+✔ HEAD rejects asset 200/Text/Html; charset=utf-8/redirect=false (0.683003ms)
+✔ HEAD rejects asset 404/text/javascript/redirect=false (0.256388ms)
+✔ HEAD rejects asset 500/text/plain/redirect=false (0.251761ms)
+✔ HEAD rejects asset 302/text/javascript/redirect=true (0.279072ms)
+✔ HEAD rejects asset 200/text/css/redirect=false (0.262607ms)
+✔ HEAD rejects asset 200/text/javascript/redirect=true (0.345823ms)
+✔ HEAD allows only matching successful emitted-file content type (1.043409ms)
+✔ all presentation documents require one of the six existing verified TEST identities (26.879151ms)
+✔ diagnostics document + SPA authorization read accept exact ADMIN_TEST only (2.727387ms)
+✔ new surfaces are GET/HEAD only, exact paths, no additional backend or query shortcuts (3.282557ms)
+✔ assets and login remain readable without authentication; no invented business rights (1.984132ms)
+✔ unlisted static GET/HEAD never reach Auth or SSR and HEAD is empty (2.937935ms)
+✔ anonymous login → admin → presentation cannot bypass the document gate through SPA (161.983205ms)
+✔ each navigation and history restore revalidates; a former valid session is never reused (158.973005ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 777.787644

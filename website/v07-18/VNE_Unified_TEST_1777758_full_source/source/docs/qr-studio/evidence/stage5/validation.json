@@ -1,0 +1,2162 @@
+[
+  {
+    "name": "coupling-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "coupling-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "coupling-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "coupling-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "coupling-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "syncopa-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "dialogue-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "dialogue-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "dialogue-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "dialogue-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "dialogue-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "flow-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "flow-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "flow-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "flow-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "flow-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "circle-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "circle-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "circle-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "circle-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "circle-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "shift-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "shift-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "shift-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "shift-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "shift-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "ribs-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "ribs-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "ribs-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "ribs-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "ribs-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "folds-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "folds-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "folds-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "folds-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "folds-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "enamel-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "enamel-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "enamel-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "enamel-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "enamel-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "relief-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "relief-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "relief-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "relief-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "relief-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "basalt-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "basalt-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "basalt-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "basalt-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "basalt-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "portals-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "portals-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "portals-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "portals-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "portals-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "weave-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "weave-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "weave-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "weave-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "weave-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "origami-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "origami-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "origami-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "origami-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "origami-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "constellation-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "constellation-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "constellation-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "constellation-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "constellation-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "marble-0",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "marble-1",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "marble-2",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "marble-3",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  },
+  {
+    "name": "marble-4",
+    "samplingCore": "PASS",
+    "quiet": "PASS",
+    "checks": [
+      {
+        "variant": "900",
+        "zxingBytes": true
+      },
+      {
+        "variant": "420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "280",
+        "zxingBytes": true
+      },
+      {
+        "variant": "jpeg420",
+        "zxingBytes": true
+      },
+      {
+        "variant": "blur420",
+        "zxingBytes": true
+      }
+    ]
+  }
+]

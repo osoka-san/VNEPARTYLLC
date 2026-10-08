@@ -1,0 +1,80 @@
+{
+  "provenance": "root independent virtual browser",
+  "app_sha": "d9a05fc0bedd5e37b23225f7b7ae52facb302d5e",
+  "scramble_05": {
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "setup": "fresh home",
+    "wheel_delta_y": 1850,
+    "target": "#belonging p",
+    "target_y": 678.328125,
+    "sample_interval_ms": 45,
+    "selector": "span[aria-hidden=true].absolute",
+    "visible_frames": [
+      "05 / ШЖРЦ",
+      "05 / СЖЯХ",
+      "05 / САМГ",
+      "05 / СВОЕ",
+      "05 / СВКП",
+      "05 / СВОВ"
+    ],
+    "final_plain_text": "05 / СВОИ"
+  },
+  "apply_invalid_contact": {
+    "input": "-------",
+    "dialogs": 0,
+    "focus": "#contact",
+    "aria_invalid": true,
+    "aria_describedby": "contact-error",
+    "status": "Проверьте выделенные поля.",
+    "hydrated": true,
+    "url": "/apply",
+    "personal_data_in_url": false
+  },
+  "apply_valid_contact_dialog": {
+    "input": "audit@example.invalid",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "client_width": 1348
+    },
+    "dialog_rect": {
+      "x": 418,
+      "y": 381,
+      "width": 512,
+      "height": 174
+    },
+    "transform": "none",
+    "translate": "-50% -50%",
+    "acknowledge_button": {
+      "width": 89.390625,
+      "height": 44
+    },
+    "close_button": {
+      "width": 44,
+      "height": 44
+    }
+  },
+  "apply_dialog_escape": {
+    "focus": "Проверить заполнение",
+    "dialogs": 0
+  },
+  "apply_event_and_draft": {
+    "selected_event": "threshold-study-02",
+    "url": "/apply?event=threshold-study-02",
+    "rules_href": "/rules?event=threshold-study-02",
+    "faq_href": "/faq?event=threshold-study-02",
+    "return_action": "Вернуться к форме",
+    "restored_name": "Проверка 03.8",
+    "restored_contact": "audit@example.invalid",
+    "restored_event": "threshold-study-02",
+    "contact_visually_restored": true,
+    "hydrated": true
+  },
+  "screenshots": {
+    "location": "separately supplied ChatGPT report",
+    "repository_paths_claimed": false
+  }
+}

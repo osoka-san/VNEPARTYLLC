@@ -1,0 +1,61 @@
+{
+  "scope": "OFFLINE SYNTHETIC PGLITE ONLY",
+  "baselineHash": "a6f2a6b0266634fad7563f78ef396a5f2522a35429b42b269cc138feb7bc781e",
+  "idExtensionHash": "ac9643bd381f20c2a228e643c260ebeb078225224c8a0579d286d62725a6fa18",
+  "proposalHash": "b7488e9a007b6dd737362621062ff8b6d54e901eadba3e79fdbcc70095921cc9",
+  "testsHash": "d3f9c364547fa29ee971b01dfda4f932ce075c894b72088a70cb580e5d88fd49",
+  "results": [
+    "DDL transaction rollback restores columns, index, functions and legacy row",
+    "Index drift preflight aborts safely without changing baseline",
+    "Existing unowned legacy request remains unchanged and unlinked",
+    "PUBLIC and API roles remain closed; actual role reads/writes/RPC denied; no wrappers or policies",
+    "Frozen SQL question labels/options/scale meanings exactly match current TypeScript v3 definition",
+    "Full 7×3 maximum snapshot, consent, request and metadata-only audit saved atomically without truncation",
+    "Unverified contact email is separate from account identity; no admission/invitation/outbox/event/role writes",
+    "Owner+key replay preserves ID/correlation with zero new writes; changed payload or new key while pending conflicts",
+    "Foreign/legacy reads return null; same key/contact independent per owner; legacy email uniqueness preserved",
+    "64 malformed/spoofed/boundary commands rejected by DB with zero writes",
+    "Canonical TS→SQL parity covers ECMAScript Unicode whitespace, UTF16 maximum, age 1 and permitted repeated manual answers",
+    "Missing/malformed/foreign/anonymous/expired/deleted sessions rejected; real matching nonexpired session required",
+    "Immutable original request/owner/snapshot/key/correlation/consent enforced; legacy linking and invitation fields blocked",
+    "Legacy invitation-producing approval aborts atomically with no status/invite/audit/outbox side effects",
+    "Forced audit failure rolls back request, entire questionnaire and consent without partial persistence",
+    "Moderation status remains readable; 30/hour new-write limit is owner-scoped and never blocks a valid replay",
+    "Eight queued same-key retries preserve one request/correlation and no extra audit (not multi-session concurrency proof)"
+  ],
+  "invalidCases": 64,
+  "indexes": [
+    {
+      "indexname": "membership_requests_owner_created_idx",
+      "indexdef": "CREATE INDEX membership_requests_owner_created_idx ON public.membership_requests USING btree (owner_user_id, created_at DESC, id) WHERE (owner_user_id IS NOT NULL)"
+    },
+    {
+      "indexname": "membership_requests_owner_idempotency_uq",
+      "indexdef": "CREATE UNIQUE INDEX membership_requests_owner_idempotency_uq ON public.membership_requests USING btree (owner_user_id, idempotency_key) WHERE (owner_user_id IS NOT NULL)"
+    },
+    {
+      "indexname": "membership_requests_pending_email_uq",
+      "indexdef": "CREATE UNIQUE INDEX membership_requests_pending_email_uq ON public.membership_requests USING btree (lower(email)) WHERE ((status = 'pending'::membership_request_status) AND (owner_user_id IS NULL))"
+    },
+    {
+      "indexname": "membership_requests_pending_owner_uq",
+      "indexdef": "CREATE UNIQUE INDEX membership_requests_pending_owner_uq ON public.membership_requests USING btree (owner_user_id) WHERE ((status = 'pending'::membership_request_status) AND (owner_user_id IS NOT NULL))"
+    },
+    {
+      "indexname": "membership_requests_pkey",
+      "indexdef": "CREATE UNIQUE INDEX membership_requests_pkey ON public.membership_requests USING btree (id)"
+    },
+    {
+      "indexname": "membership_requests_status_created_idx",
+      "indexdef": "CREATE INDEX membership_requests_status_created_idx ON public.membership_requests USING btree (status, created_at DESC)"
+    }
+  ],
+  "limitations": [
+    "No live DDL/grants/Auth/records/network calls",
+    "PGlite test identity stub is not GoTrue/JWT verification",
+    "No PostgREST/request-scoped transport/UI/browser E2E",
+    "Queued requests are not multi-session contention; real PostgreSQL concurrent same/different key tests remain before activation",
+    "No authority to apply this proposal or expose API roles",
+    "Draft consent/age and Telegram-first identity policy remain separate activation decisions"
+  ]
+}

@@ -1,0 +1,4 @@
+{"source":"read-only SQL via platform DB tool after run 3e8d31e7, before outbox cleanup","apps":{
+"7af76cae-f782-4cdc-886c-0022aafd3ff6":{"audit_ok":["application.submit","application.take","application.request_info","application.guest_reply","application.approve"],"audit_each_count":1,"audit_denied":0,"outbox_status_changed_held":5,"history_rows":5},
+"72e74e9a-058a-47c2-b2b3-02c107740fc7":{"audit_ok":["application.submit","application.guest_rename","application.guest_withdraw"],"audit_each_count":1,"audit_denied":0,"outbox_status_changed_held":2,"history_rows":2,"note":"rename is not a status change: audit only, no history/outbox by design"}},
+"refusals":"stale/null/forbidden produced 0 audit rows, 0 outbox rows, unchanged row+history (see e2e-application-live.txt step 5/7)"}

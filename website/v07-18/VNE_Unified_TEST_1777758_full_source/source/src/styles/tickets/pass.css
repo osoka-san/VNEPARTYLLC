@@ -1,0 +1,1126 @@
+/* Everything is scoped to the ticket module. Nominal card: 360 × 570. */
+.vne-pass,
+.vne-design-sheet {
+  font-family: Onest, Arial, sans-serif;
+  color: #edf2ee;
+  background: #070a09;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+.vne-pass *,
+.vne-design-sheet * {
+  box-sizing: border-box;
+}
+.vne-brand-mark {
+  display: inline-block;
+  width: 92px;
+  height: 28px;
+  background: currentColor;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  flex-shrink: 0;
+}
+.vne-micro {
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.vne-pass {
+  min-height: 100svh;
+  padding: 28px 5vw 0;
+  background: radial-gradient(ellipse at 80% 40%, #252c263d, transparent 48%), #070a09;
+}
+.vne-header {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 24px;
+  border-bottom: 1px solid #ffffff1c;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: #9da7a1;
+}
+.vne-header a {
+  color: #edf2ee;
+}
+.vne-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 8px;
+  border: 1px solid #a5b2aa40;
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+.vne-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #30e5ad;
+}
+.vne-layout {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 70px;
+}
+.vne-intro {
+  padding-top: 90px;
+}
+.vne-kicker {
+  font-size: 9px;
+  letter-spacing: 1.6px;
+  color: var(--vne-accent);
+}
+.vne-intro h1 {
+  font:
+    500 clamp(35px, 4.1vw, 65px)/1.22 Unbounded,
+    sans-serif;
+  letter-spacing: -2.8px;
+  margin: 30px 0;
+}
+.vne-intro h1 em {
+  font-style: normal;
+  color: var(--vne-accent);
+}
+.vne-lead {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #a1aaa4;
+}
+.vne-event-info {
+  border-top: 1px solid #a5b2aa30;
+  margin-top: 34px;
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 18px;
+}
+.vne-event-info > span {
+  font-size: 8px;
+  letter-spacing: 1.7px;
+  color: #8b978e;
+}
+.vne-event-info strong {
+  font-size: 12px;
+  font-weight: 400;
+  white-space: pre-line;
+  line-height: 1.6;
+}
+.vne-invitation-note {
+  display: flex;
+  gap: 16px;
+  margin: 30px 0;
+  color: #9ba99f;
+  max-width: 360px;
+}
+.vne-invitation-note svg {
+  flex-shrink: 0;
+  color: var(--vne-accent);
+}
+.vne-invitation-note p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+.vne-intro-small {
+  display: block;
+  margin-top: 25px;
+  font-size: 10px;
+  color: #8d9891;
+}
+.vne-type-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  max-width: 420px;
+}
+.vne-type-picker button,
+.vne-design-nav button {
+  border: 1px solid #536057;
+  background: transparent;
+  color: #aeb9b1;
+  font:
+    500 9px Onest,
+    sans-serif;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 4px;
+  letter-spacing: 0.6px;
+}
+.vne-type-picker button[aria-pressed="true"],
+.vne-design-nav button[aria-pressed="true"] {
+  color: #edf2ee;
+  border-color: var(--vne-accent, var(--sheet-accent));
+}
+.vne-type-picker i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.vne-exhibit {
+  min-width: 0;
+  position: relative;
+  margin: 30px 0 0;
+  background: radial-gradient(ellipse at 50% 58%, #7d806523, transparent 62%);
+}
+.vne-exhibit-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #a5b1a8;
+  border-top: 1px solid #87998e33;
+  padding-top: 16px;
+}
+.vne-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  max-width: 100%;
+  font-family: Onest, sans-serif;
+}
+.vne-card-controls {
+  position: relative;
+  margin-top: -24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.vne-flip-button {
+  border: 1px solid #bfc6b657;
+  background: #e6e8df;
+  color: #111b15;
+  min-width: 260px;
+  padding: 16px 19px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  font:
+    600 10px Onest,
+    sans-serif;
+  letter-spacing: 1px;
+}
+.vne-flip-button:hover {
+  background: #fff;
+}
+.vne-motion-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.vne-motion-controls button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #aab5ac;
+  background: transparent;
+  border: 1px solid #84958830;
+  border-radius: 4px;
+  padding: 8px 11px;
+  font:
+    400 10px Onest,
+    sans-serif;
+}
+.vne-drag-hint {
+  text-align: center;
+  color: #8f9d93;
+  font-size: 9px;
+  margin: 18px 0 20px;
+  letter-spacing: 0.4px;
+}
+.vne-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1440px;
+  margin: 26px auto 0;
+  border-top: 1px solid #a5b2aa2b;
+  padding: 22px 0;
+  font-size: 8px;
+  color: #9caaa1;
+  letter-spacing: 1px;
+}
+.vne-primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--vne-accent, #e55330);
+  color: #101410;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font:
+    600 13px Onest,
+    sans-serif;
+}
+/* Cards: 3D faces retain native HTML, QR has a clear four-module quiet zone. */
+.vne-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1);
+  user-select: none;
+  color: #17201b;
+}
+.vne-card.vne-flipped {
+  transform: rotateY(180deg);
+}
+.vne-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: calc(16px * var(--ticket-scale));
+  overflow: hidden;
+  border: 1px solid #e7e7d999;
+  background: linear-gradient(118deg, #f3f1e8 0%, #deded1 35%, #e9e8de 68%, #c9cfc3 100%);
+  box-shadow:
+    inset 0 1px 0 #fff9,
+    inset 0 -2px 2px #0002;
+}
+.vne-back {
+  transform: rotateY(180deg);
+}
+.vne-card-inner {
+  width: 360px;
+  height: 570px;
+  position: relative;
+  transform: scale(var(--ticket-scale));
+  transform-origin: top left;
+  padding: 51px 28px 0;
+  display: flex;
+  flex-direction: column;
+}
+.vne-face:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(105deg, #ffffff09 0 1px, transparent 1px 3px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+.vne-eyelet {
+  position: absolute;
+  top: 20px;
+  left: 170px;
+  width: 20px;
+  height: 16px;
+  border-radius: 9px;
+  border: 2px solid #8c918b;
+  background: #101612;
+  box-shadow:
+    0 1px 0 #fff7,
+    inset 0 1px 2px #000;
+}
+.vne-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+.vne-card-top .vne-brand-mark {
+  width: 72px;
+  height: 24px;
+}
+.vne-top-meta {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.vne-top-meta > span {
+  font-size: 6px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  opacity: 0.6;
+}
+.vne-top-meta strong {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.vne-front-event {
+  margin-top: 29px;
+}
+.vne-front-event > .vne-micro {
+  opacity: 0.65;
+  font-size: 7px;
+}
+.vne-front-event h2 {
+  font:
+    500 23px/1.24 Unbounded,
+    sans-serif;
+  letter-spacing: -0.85px;
+  margin: 11px 0 0;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  max-height: 89px;
+  overflow: hidden;
+}
+.vne-person {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 22px;
+  border-top: 1px solid #29392935;
+  padding-top: 16px;
+}
+.vne-person > .vne-micro {
+  font-size: 6px;
+  opacity: 0.65;
+  letter-spacing: 1.6px;
+}
+.vne-person > strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  max-height: 42px;
+  overflow: hidden;
+}
+.vne-role-art {
+  position: relative;
+  flex: 1;
+  min-height: 130px;
+  margin: 5px -28px 0;
+  overflow: hidden;
+  color: #283f30;
+}
+.vne-engraving {
+  width: 360px;
+  height: 220px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  opacity: 0.3;
+}
+.vne-role-type {
+  position: absolute;
+  left: 28px;
+  bottom: 36px;
+  z-index: 2;
+}
+.vne-role-type > span {
+  font-size: 6px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 11px;
+  font-weight: 600;
+}
+.vne-role-type > strong {
+  display: block;
+  font:
+    500 32px/1.08 Unbounded,
+    sans-serif;
+  letter-spacing: -1.1px;
+}
+.vne-role-type em {
+  font-style: normal;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+.vne-role-type .vne-role-large {
+  font-size: 69px;
+  letter-spacing: -4px;
+}
+.vne-card-edition {
+  font-size: 5.5px;
+  letter-spacing: 1.5px;
+  position: absolute;
+  right: 28px;
+  bottom: 18px;
+}
+.vne-front-strip {
+  height: 65px;
+  flex-shrink: 0;
+  margin: 0 -28px;
+  padding: 16px 28px;
+  background: #e55330;
+  color: #111a13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.vne-front-strip > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.vne-front-strip > div:last-child {
+  text-align: right;
+}
+.vne-front-strip span {
+  font-size: 5.5px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.vne-front-strip strong {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.vne-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 4;
+}
+.vne-qr-block {
+  align-self: center;
+  margin-top: 14px;
+  flex-shrink: 0;
+  background: var(--ticket-qr-paper, #f0eade);
+  border: 1px solid var(--ticket-accent);
+  border-radius: 5px;
+  padding: 3px 4px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px #0001;
+  position: relative;
+  z-index: 3;
+}
+.vne-qr-block svg {
+  width: 204px;
+  height: 204px;
+  display: block;
+}
+.vne-qr-block > span {
+  font-size: 5px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: var(--ticket-qr-ink, #262820);
+  margin: 1px 0 0;
+}
+.vne-transfer {
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  position: relative;
+  z-index: 3;
+}
+.vne-transfer dt {
+  font-size: 5.5px;
+  letter-spacing: 1.05px;
+  font-weight: 600;
+  opacity: 0.72;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.vne-transfer dt b {
+  font-size: 6px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.vne-transfer dd {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 4px 0 0 17px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.vne-transfer dd small {
+  font-size: 9px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+.vne-transfer .vne-ticket-identity dd {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  overflow-wrap: anywhere;
+}
+.vne-serial-block {
+  margin-top: auto;
+  min-height: 64px;
+  border-top: 1px solid #31432e44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.vne-serial-block > span {
+  font-size: 5.5px;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+  font-weight: 600;
+  opacity: 0.72;
+}
+.vne-serial-block strong {
+  font:
+    500 33px/1 Unbounded,
+    sans-serif;
+  letter-spacing: -2px;
+}
+.vne-serial-block i {
+  font:
+    400 22px Onest,
+    sans-serif;
+  letter-spacing: -1px;
+  opacity: 0.5;
+}
+/* VIP: warm metal inset, fine champagne edge, gold signature band. */
+.vne-ticket-vip {
+  color: #e0cc9e;
+}
+.vne-ticket-vip .vne-face {
+  border-color: #b59b678c;
+  background:
+    radial-gradient(ellipse at 0 0, #6a604049, transparent 50%),
+    linear-gradient(119deg, #39372c, #111713 39%, #20281f 70%, #34382a);
+  box-shadow:
+    inset 0 0 0 4px #161b13,
+    inset 0 0 0 5px #d7b97844,
+    inset 0 1px 2px #efdda387;
+}
+.vne-ticket-vip .vne-person {
+  border-color: #c6ae6e38;
+}
+.vne-ticket-vip .vne-front-event h2 {
+  color: #f2e5c8;
+}
+.vne-ticket-vip .vne-role-art {
+  color: #ddc991;
+}
+.vne-ticket-vip .vne-engraving {
+  opacity: 0.34;
+}
+.vne-ticket-vip .vne-role-type .vne-role-large {
+  font-size: 103px;
+  letter-spacing: -7px;
+  background: linear-gradient(110deg, #e3c989, #f9efd2 35%, #aa8947 59%, #f5dfaf);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.vne-ticket-vip .vne-front-strip {
+  background: linear-gradient(110deg, #b99b5f, #ecdbad 47%, #bda068);
+  color: #141910;
+}
+.vne-ticket-vip .vne-eyelet {
+  border-color: #bda575;
+  background: #11150f;
+}
+.vne-ticket-vip .vne-serial-block {
+  border-color: #bba66d44;
+}
+.vne-ticket-vip .vne-card-top .vne-brand-mark {
+  color: #f2ddb0;
+}
+.vne-ticket-vip .vne-top-meta {
+  color: #f2ddb0;
+}
+.vne-ticket-vip .vne-qr-block {
+  box-shadow:
+    0 0 0 3px #dbc79422,
+    0 0 0 4px #dbc79433;
+}
+.vne-ticket-vip .vne-back:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 90px;
+  top: 60%;
+  left: -50%;
+  transform: rotate(-50deg);
+  background: linear-gradient(transparent, #f4dc9420, transparent);
+  pointer-events: none;
+}
+/* Staff: high-contrast service green with a distinct utility stripe. */
+.vne-ticket-security {
+  color: #e1ecdf;
+}
+.vne-ticket-security .vne-face {
+  border-color: #778778;
+  background: linear-gradient(125deg, #3a473a, #1c2a21 44%, #28382c);
+}
+.vne-ticket-security .vne-person {
+  border-color: #bce7bc3a;
+}
+.vne-ticket-security .vne-front-event h2 {
+  color: #ecf3e8;
+}
+.vne-ticket-security .vne-role-art {
+  color: #c6eac0;
+}
+.vne-ticket-security .vne-role-type > strong {
+  font-size: 28px;
+  letter-spacing: -1.2px;
+}
+.vne-ticket-security .vne-role-type em {
+  font-size: 49px;
+}
+.vne-ticket-security .vne-front-strip {
+  background: #bce7bc;
+  color: #0d2414;
+  border-top: 5px solid #17261b;
+  position: relative;
+}
+.vne-ticket-security .vne-front-strip:before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(115deg, #bce7bc 0 11px, #17261b 11px 20px);
+}
+.vne-ticket-security .vne-serial-block {
+  border-color: #bce7bc44;
+}
+.vne-ticket-security .vne-engraving {
+  opacity: 0.17;
+}
+/* Artist: silver/lilac foil and a vertical score through the engraving. */
+.vne-ticket-artist .vne-face {
+  border-color: #e0e3f8;
+  background: linear-gradient(124deg, #f0effa, #bdc5db 40%, #e0e3ec 75%, #aab5ce);
+}
+.vne-ticket-artist .vne-role-art {
+  color: #394564;
+}
+.vne-ticket-artist .vne-role-type .vne-role-large {
+  font-size: 46px;
+  letter-spacing: -2.4px;
+}
+.vne-ticket-artist .vne-engraving {
+  transform: scaleX(-1);
+  opacity: 0.44;
+}
+.vne-ticket-artist .vne-front-strip {
+  background: linear-gradient(100deg, #8fa7e9, #becbfa);
+  color: #101e37;
+}
+.vne-ticket-artist .vne-role-art:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 8px;
+  bottom: 0;
+  right: 74px;
+  background: #39456444;
+  box-shadow:
+    6px 0 0 #39456433,
+    12px 0 0 #39456422;
+}
+/* Four real browser presentation sheets. */
+.vne-design-sheet {
+  padding: 32px 64px 24px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 24% 42%, #34372b44, transparent 48%),
+    radial-gradient(ellipse at 77% 52%, #3a413338, transparent 50%), #0b100d;
+}
+.vne-design-sheet > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dae2d125;
+  padding-bottom: 22px;
+  color: #d9e0d2;
+}
+.vne-design-sheet > header > span:not(.vne-brand-mark) {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #9ca896;
+}
+.vne-sheet-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 27px;
+  gap: 20px;
+}
+.vne-sheet-title .vne-micro {
+  font-size: 7px;
+  letter-spacing: 1.6px;
+  color: #a4b09b;
+}
+.vne-sheet-title h1 {
+  font:
+    500 35px/1.15 Unbounded,
+    sans-serif;
+  letter-spacing: -1.4px;
+  margin: 12px 0 0;
+  color: var(--sheet-accent);
+}
+.vne-sheet-title p {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #aab6a2;
+  margin: 0;
+  text-align: right;
+}
+.vne-sheet-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  max-width: 1030px;
+  margin: 16px auto 0;
+}
+.vne-sheet-cards > div {
+  min-width: 0;
+  position: relative;
+}
+.vne-sheet-cards > div:before {
+  content: "";
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  height: 50px;
+  bottom: 55px;
+  border-radius: 50%;
+  background: #ccd3a510;
+  filter: blur(25px);
+}
+.vne-sheet-cards .vne-stage {
+  height: 718px !important;
+}
+.vne-sheet-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 45px;
+  padding-top: 14px;
+  border-top: 1px solid #a8b79d30;
+  font-size: 7px;
+  letter-spacing: 1.4px;
+  color: #a5b299;
+}
+.vne-sheet-side i {
+  font-size: 6px;
+  font-style: normal;
+  color: #7d8e72;
+}
+.vne-design-sheet > footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #dae2d120;
+  padding-top: 21px;
+  margin-top: 31px;
+  font-size: 6px;
+  letter-spacing: 1.4px;
+  color: #9ca98f;
+}
+.vne-sheet-vip {
+  background: radial-gradient(ellipse at 50% 42%, #63533535, transparent 63%), #0d100b;
+}
+.vne-sheet-security {
+  background: radial-gradient(ellipse at 50% 52%, #3751403b, transparent 63%), #09100b;
+}
+.vne-sheet-artist {
+  background: radial-gradient(ellipse at 50% 42%, #4a527b30, transparent 63%), #0b0e12;
+}
+.vne-design-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+.vne-scan-dialog {
+  width: min(420px, calc(100vw - 30px));
+  box-sizing: border-box;
+  padding: 32px;
+  color: #17241c;
+  background: #f4f3eb;
+  border: 0;
+  border-radius: 14px;
+  text-align: center;
+  max-height: 92svh;
+  overflow: auto;
+}
+.vne-scan-dialog::backdrop {
+  background: #020906e0;
+  backdrop-filter: blur(12px);
+}
+.vne-scan-dialog > button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+}
+.vne-scan-dialog h2 {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 26px 0 18px;
+}
+.vne-scan-dialog > svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fff;
+  margin: 0 0 20px;
+}
+.vne-scan-dialog p {
+  font-size: 11px;
+}
+.vne-scan-dialog small {
+  font-size: 10px;
+}
+@media (max-width: 1000px) {
+  .vne-layout {
+    gap: 25px;
+  }
+  .vne-intro {
+    padding-top: 70px;
+  }
+  .vne-intro h1 {
+    font-size: 38px;
+  }
+  .vne-pass {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .vne-header > span:nth-child(2) {
+    display: none;
+  }
+  .vne-design-sheet {
+    padding: 25px 30px;
+  }
+  .vne-sheet-cards {
+    gap: 20px;
+  }
+  .vne-sheet-title h1 {
+    font-size: 28px;
+  }
+  .vne-sheet-title p {
+    max-width: 240px;
+  }
+  .vne-sheet-side {
+    margin: 0 20px;
+  }
+  .vne-sheet-cards .vne-stage {
+    height: 710px !important;
+  }
+}
+@media (max-width: 760px) {
+  .vne-pass {
+    padding: 22px 18px 0;
+  }
+  .vne-header {
+    padding-bottom: 19px;
+  }
+  .vne-brand-mark {
+    width: 80px;
+    height: 25px;
+  }
+  .vne-status {
+    font-size: 6px;
+    padding: 8px 10px;
+    letter-spacing: 1px;
+  }
+  .vne-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .vne-intro {
+    padding-top: 33px;
+  }
+  .vne-intro h1 {
+    font-size: 36px;
+    letter-spacing: -1.7px;
+    margin: 20px 0;
+  }
+  .vne-lead {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .vne-event-info {
+    margin-top: 22px;
+    padding-top: 18px;
+    gap: 11px;
+  }
+  .vne-invitation-note {
+    margin: 20px 0;
+  }
+  .vne-intro-small {
+    font-size: 9px;
+    margin-top: 19px;
+  }
+  .vne-exhibit {
+    margin-top: 30px;
+  }
+  .vne-card-controls {
+    margin-top: -24px;
+  }
+  .vne-drag-hint {
+    font-size: 8px;
+  }
+  .vne-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 6px;
+    margin-top: 8px;
+  }
+  .vne-design-sheet {
+    padding: 22px 15px;
+  }
+  .vne-design-sheet > header > span:nth-child(2) {
+    display: none;
+  }
+  .vne-sheet-title {
+    display: block;
+  }
+  .vne-sheet-title h1 {
+    font-size: 24px;
+  }
+  .vne-sheet-title p {
+    margin-top: 15px;
+    text-align: left;
+  }
+  .vne-sheet-cards {
+    display: block;
+    max-width: 400px;
+  }
+  .vne-sheet-cards > div + div {
+    margin-top: 20px;
+  }
+  .vne-sheet-cards .vne-stage {
+    height: 730px !important;
+  }
+  .vne-design-sheet > footer {
+    gap: 10px;
+    line-height: 1.7;
+  }
+  .vne-design-sheet > footer > span:first-child {
+    display: none;
+  }
+  .vne-design-nav {
+    flex-wrap: wrap;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vne-card {
+    transition: none;
+  }
+}
+/* Readability at the physical card scale. */
+.vne-transfer {
+  gap: 14px;
+}
+.vne-transfer dt {
+  font-size: 7px;
+  letter-spacing: 0.6px;
+}
+.vne-transfer dd {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.vne-transfer dd small {
+  font-size: 10px;
+}
+.vne-transfer .vne-ticket-identity dd {
+  font-size: 8px;
+}
+.vne-front-strip span {
+  font-size: 6.5px;
+  letter-spacing: 0.8px;
+}
+.vne-front-strip strong {
+  font-size: 11px;
+}
+.vne-top-meta > span {
+  font-size: 7px;
+}
+.vne-serial-block > span {
+  font-size: 6.5px;
+  letter-spacing: 0.7px;
+}
+.vne-qr-block > span {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+.vne-role-art {
+  min-height: 80px;
+}
+.vne-front-event h2 {
+  font-size: 22px;
+  max-height: 3.72em;
+  -webkit-line-clamp: 3;
+}
+
+/* The fixed-size card shows a bounded summary; complete values remain selectable below. */
+.vne-front-event h2,
+.vne-person > strong,
+.vne-transfer dd {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.vne-person > strong {
+  -webkit-line-clamp: 2;
+  max-height: 2.5em;
+}
+.vne-transfer dd {
+  -webkit-line-clamp: 2;
+  max-height: 2.9em;
+}
+.vne-back .vne-card-inner > * {
+  flex-shrink: 0;
+}
+.vne-back .vne-card-inner {
+  line-height: 1.5;
+}
+.vne-intro,
+.vne-event-info > *,
+.vne-footer > * {
+  min-width: 0;
+}
+.vne-event-info strong,
+.vne-footer > *,
+.vne-pass-details dd,
+.vne-scan-dialog > strong {
+  overflow-wrap: anywhere;
+}
+.vne-pass-details {
+  margin-top: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.vne-pass-details summary {
+  cursor: pointer;
+}
+.vne-pass-details dt {
+  margin-top: 14px;
+  color: #9da7a1;
+}
+.vne-pass-details dd {
+  margin: 4px 0 0;
+  white-space: pre-wrap;
+  user-select: text;
+}

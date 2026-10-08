@@ -1,0 +1,1 @@
+{"status":"ready","worker":"dist/server/index.js","assets":"dist/client"}

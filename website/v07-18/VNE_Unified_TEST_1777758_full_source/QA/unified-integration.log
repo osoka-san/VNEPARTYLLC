@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "scope": "compiled offline Worker SSR and auth gates; synthetic Auth; no live QR",
+  "functionCount": 18,
+  "backend": "mocked identity GET and membership read only; no QR/mutation",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 68004
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "bytes": 38697
+    },
+    {
+      "path": "/events",
+      "status": 200,
+      "bytes": 35665
+    },
+    {
+      "path": "/events/",
+      "status": 200,
+      "bytes": 35665
+    },
+    {
+      "path": "/events/light-study-01",
+      "status": 200,
+      "bytes": 49976
+    },
+    {
+      "path": "/events/threshold-study-02",
+      "status": 200,
+      "bytes": 45736
+    },
+    {
+      "path": "/faq",
+      "status": 200,
+      "bytes": 28611
+    },
+    {
+      "path": "/rules",
+      "status": 200,
+      "bytes": 26885
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "bytes": 20535
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "bytes": 22458
+    },
+    {
+      "path": "/consent",
+      "status": 200,
+      "bytes": 22446
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "bytes": 22408
+    },
+    {
+      "path": "/refunds",
+      "status": 200,
+      "bytes": 22371
+    },
+    {
+      "path": "/cookies",
+      "status": 200,
+      "bytes": 22708
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "other TEST",
+      "status": 403
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "ADMIN_TEST",
+      "status": 200
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "other TEST",
+      "status": 403
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "other TEST",
+      "status": 403
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "other TEST",
+      "status": 403
+    },
+    {
+      "surface": "diagnostics",
+      "accountScope": "other TEST",
+      "status": 403
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/apply",
+      "status": 200
+    },
+    {
+      "path": "/member",
+      "status": 200
+    },
+    {
+      "path": "/admin",
+      "status": 200
+    },
+    {
+      "path": "/admin/mfa",
+      "status": 200
+    }
+  ]
+}
+✔ unified-stand/tests/compiled-integration.mjs (516.872508ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 523.720711

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-05",
+  "database": {
+    "tests": 38,
+    "status": "PASS",
+    "engine": "PGlite PostgreSQL WASM",
+    "claims": "synthetic",
+    "independentConnections": "NOT VERIFIED"
+  },
+  "issuer": {
+    "tests": 23,
+    "status": "PASS",
+    "upstream": "controlled PostgREST adapter"
+  },
+  "publicBoundary": {
+    "status": "PASS",
+    "guestRoutes": [
+      "GET|HEAD /pass",
+      "POST /api/tickets/read"
+    ],
+    "otherRoutes": "protected"
+  },
+  "legacyContracts": {
+    "tests": 28,
+    "status": "PASS"
+  },
+  "typescript": "PASS",
+  "build": "PASS",
+  "SSR": {
+    "routes": 19,
+    "status": "PASS"
+  },
+  "liveSupabase": "BLOCKED: connector permission denied for source project",
+  "browserAndPhysicalCamera": "NOT VERIFIED"
+}

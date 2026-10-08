@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "evidence": "HarfBuzz shaped outlines, clusters, advances and offsets",
+  "comparisons": 64
+}

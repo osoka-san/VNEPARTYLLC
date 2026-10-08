@@ -1,0 +1,25 @@
+{
+  "project": "xrocuwlofxhxoxajukne",
+  "audits": [
+    {
+      "id": 12,
+      "transaction_utc": "2026-10-08 09:35:50.807916+00",
+      "action": "day07.synthetic_disable",
+      "result": "ok",
+      "approval_ref": null,
+      "roles_revoked": null,
+      "admissions_revoked": null,
+      "evidence_preserved": null
+    },
+    {
+      "id": 13,
+      "transaction_utc": "2026-10-08 09:36:04.402017+00",
+      "action": "day07.synthetic_cleanup",
+      "result": "ok",
+      "approval_ref": "Sentinel_ae22efd58c1c8191ad5b657a0a0d11be",
+      "roles_revoked": "8",
+      "admissions_revoked": "3",
+      "evidence_preserved": "true"
+    }
+  ]
+}

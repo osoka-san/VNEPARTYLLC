@@ -1,0 +1,142 @@
+{
+  "status": "LOCAL_PROPOSAL_ONLY_NOT_PUBLISHED",
+  "base": "30e1ec9b5e0b012cc99512b5bf6485be328ed7b2",
+  "underlying_deployed_base": "e2d08521f4d09311777c2351a744c0d6842a5448",
+  "scope": "TEST self-service MFA bootstrap; no SQL or staff/admission writes",
+  "files": [
+    {
+      "path": "scripts/build-test-stand.mjs",
+      "sha256": "d20193281e54f99cfcb02b796a21923b82b08c074167c97695ef07825b87ae79",
+      "base_sha256": "99ace0f7be37025c14c172993d6e2c005193623dbd3249c668395e79ff5d1115"
+    },
+    {
+      "path": "scripts/prepare-test-output.mjs",
+      "sha256": "082999dbf3e4ccf39c62cd34b15656d4bfc291e37c6caa8375f8e59de5743c77",
+      "base_sha256": "c28fba5fc660e94f850554d592d2093f72c0d93a1f66a3596b4f55440f0852f2"
+    },
+    {
+      "path": "test-stand/guard.mjs",
+      "sha256": "e70dc99777afb6f9b45e3919b8870a6a47e417aebe3e3d861d5e04281766331d",
+      "base_sha256": "3c5ee55dc3e424adda9b7ac7bc77447eaa7671f15b388dfee289f0455b7af74e"
+    },
+    {
+      "path": "test-stand/routes/__root.tsx",
+      "sha256": "65045fa950d3286f6c808f56df9e017a40e85efd101beedb726541023ad6666a",
+      "base_sha256": "a69c2b3c43d0d76d41abfe9c2cb85aab2b6880b70a2a55d94622b36ee7d7205f"
+    },
+    {
+      "path": "test-stand/routes/login.tsx",
+      "sha256": "a760e8cf21f4ceb3e0f6529bd4efe8fe249e58318a21df8356afbad3efd792cd",
+      "base_sha256": "65af920cb3e04ba236e09226a57d1ea7fff1db2f0dbe558b99fc07f574fa6ebe"
+    },
+    {
+      "path": "test-stand/session.mjs",
+      "sha256": "7c5289173f599f47a9d57d424ffc684b8f10b3c1409ff358fa17bc0bd83be4d6",
+      "base_sha256": "b592430c242e17f4bd013485b11047cea6293076e7ac7cad52ad516bd6253bf4"
+    },
+    {
+      "path": "src/lib/auth/admin-mfa-core.ts",
+      "sha256": "73dcb38f8ceb3e4ea866dce1f853387e45a22c9cf2e0583f07d1015f4f30f79d",
+      "base_sha256": null
+    },
+    {
+      "path": "src/lib/auth/admin-mfa.functions.ts",
+      "sha256": "7ca04c43804606fe1a3410ffd583636e08d506c5ec8f7724f0218acfe61d611e",
+      "base_sha256": null
+    },
+    {
+      "path": "src/lib/auth/test-admin-alias.server.ts",
+      "sha256": "95a7281499f9e17c24134e663a0e47f4a280eee754d4da9fb95de2d8799bd23d",
+      "base_sha256": null
+    },
+    {
+      "path": "tests/admin-mfa/core.test.ts",
+      "sha256": "bffc8ae0af3315617644b516df53a7fec42d65ba6be47f014c764c0c5241dee6",
+      "base_sha256": null
+    },
+    {
+      "path": "tests/admin-mfa/guard.test.mjs",
+      "sha256": "ec542eddf5c4fb7a1bc9776a983e93fcda8c35a998d0204c515687e3e30a1274",
+      "base_sha256": null
+    },
+    {
+      "path": "test-stand/routes/admin.mfa.tsx",
+      "sha256": "1eabb13755d01bc81e5b4669c24a3aa3c37c425bae059d690423f8b2c5c9fbf9",
+      "base_sha256": null
+    },
+    {
+      "path": "scripts/verify-admin-mfa-transport.mjs",
+      "sha256": "0744b438de1ad0d171647e71c52d2f4ea4b1ba2dec43c66cd6beeb169dd6c648",
+      "base_sha256": null
+    },
+    {
+      "path": "tests/test-stand-session.test.mjs",
+      "sha256": "f81eb8c2fb25f815c68602a50bf38d8e3d56d7ce89f07bb8616f825d8a6cb6a0",
+      "base_sha256": "f81eb8c2fb25f815c68602a50bf38d8e3d56d7ce89f07bb8616f825d8a6cb6a0"
+    },
+    {
+      "path": "scripts/verify-test-session-lifecycle.mjs",
+      "sha256": "23b61902550d7f34923eb7a32308ffad74095320d61b3b1524f8fd59d11435c9",
+      "base_sha256": "23b61902550d7f34923eb7a32308ffad74095320d61b3b1524f8fd59d11435c9"
+    },
+    {
+      "path": "docs/admin-mfa/README_RU.md",
+      "sha256": "363461867bfd51ed67d4bc1c60f42c34ce8942fa4903f590b8412be9d9365fdc",
+      "base_sha256": null
+    },
+    {
+      "path": "src/lib/auth/admin-mfa-lifecycle.ts",
+      "sha256": "222698c480f841d32706f5e89c60624a6222463620dd5d2cc2692996532d190f",
+      "base_sha256": null
+    },
+    {
+      "path": "tests/admin-mfa/lifecycle.test.ts",
+      "sha256": "788c2c6cbf73e6f3a700483172c49a0ef430f803dcad7628ea5841fff8d05000",
+      "base_sha256": null
+    },
+    {
+      "path": "src/lib/questionnaire-draft-session.ts",
+      "sha256": "4335cd2ecbc4caa665237d48cc2f9f29a1e12d072a7a47372b3e19d48b3bd11b",
+      "base_sha256": "4335cd2ecbc4caa665237d48cc2f9f29a1e12d072a7a47372b3e19d48b3bd11b"
+    }
+  ],
+  "checks": {
+    "build": {
+      "sha256": "7c358cb2485052068d5c4db35f43463a09025110aede2139ee77807432edb47d",
+      "bytes": 17007
+    },
+    "package": {
+      "sha256": "65199c2d60e07c05397cdb83a14f600daf6037ce7647c847e63c84d677012981",
+      "bytes": 1488
+    },
+    "typecheck": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "smoke": {
+      "sha256": "9a3fa3e5f3f4934eb9aef7ce6b539ef8ebdef0420b0af9fc9930988c059d94c4",
+      "bytes": 492
+    },
+    "unit": {
+      "sha256": "3171dc907f25ac1db48e2d391668f08e4e17165c39153494b453a0fbbe1e36c6",
+      "bytes": 1858
+    },
+    "base-session-tests": {
+      "sha256": "59d79902c75e29aebe52f0e44c466701a0f06ce7ce5574bedeb06ef84f178647",
+      "bytes": 417
+    },
+    "base-lifecycle": {
+      "sha256": "ee0b91e2abd74c6c7b75ccad08fa6925f49cb16f449586133b5161516316af40",
+      "bytes": 760
+    },
+    "transport": {
+      "sha256": "a08a446dc6eb7a8b43b710f7a64b6e98aa071b61aae490422b6e7ada372ee36b",
+      "bytes": 283
+    },
+    "lint": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "revision": "logout generation fence + MFA anti-framing headers"
+}

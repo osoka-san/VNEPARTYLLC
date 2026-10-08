@@ -1,0 +1,14 @@
+{
+  "status": "succeeded",
+  "siteVersion": 18,
+  "sha": "1777758d2a044652605615de0d66f5b39bfe5541",
+  "url": "https://vne-test-20261007.can-avci48.chatgpt.site",
+  "runtimeRevision": 9,
+  "accessMode": "public",
+  "accessPolicyRevision": 2,
+  "applicationAccountCount": 6,
+  "deploymentId": "appgdep_6ac7f7e4bbc48191bb9a672497825bdb",
+  "publishedAt": "2026-10-08T20:07:16.816832+00:00",
+  "remoteQrPosts": 0,
+  "newWindowOpened": false
+}

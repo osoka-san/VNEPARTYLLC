@@ -1,0 +1,79 @@
+{
+  "scope": "OFFLINE SYNTHETIC ACCESS-EXPANSION PROPOSAL ONLY; NO APPLY AUTHORIZED",
+  "persistenceHash": "b7488e9a007b6dd737362621062ff8b6d54e901eadba3e79fdbcc70095921cc9",
+  "activationHash": "f649a44131c09ebe7c6f38dbe6e7acd4b887c292dba0681c3805b3065fe5d70d",
+  "testsHash": "85dfdcaf1bbe2009dd4347147dd66333d8210e0f79abd42086377e72376dd2d0",
+  "results": [
+    "Separate activation DDL/ACL rolls back completely and trusted-owner drift fails closed",
+    "Only exact two public wrappers grant authenticated EXECUTE; no PUBLIC/anon/service-role/private/table access",
+    "Both wrappers use trusted matching owner, SECURITY DEFINER and empty search_path",
+    "Actual authenticated role can submit/replay and read receipt arrays while direct table/private access stays denied",
+    "Public read wrapper returns [] for foreign/missing requests and only own singleton/list receipts",
+    "Anon/service-role execution denied; authenticated missing/foreign/deleted/anonymous session or wrong claim role forbidden",
+    "Public wrappers preserve atomic zero-side-effect intake boundary and sanitized receipt projection"
+  ],
+  "metadata": [
+    {
+      "proname": "vne_read_my_membership_questionnaires",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres"
+    },
+    {
+      "proname": "vne_submit_membership_questionnaire",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "owner": "postgres"
+    }
+  ],
+  "acl": [
+    {
+      "rolname": "anon",
+      "proname": "vne_read_my_membership_questionnaires",
+      "allowed": false
+    },
+    {
+      "rolname": "anon",
+      "proname": "vne_submit_membership_questionnaire",
+      "allowed": false
+    },
+    {
+      "rolname": "authenticated",
+      "proname": "vne_read_my_membership_questionnaires",
+      "allowed": true
+    },
+    {
+      "rolname": "authenticated",
+      "proname": "vne_submit_membership_questionnaire",
+      "allowed": true
+    },
+    {
+      "rolname": "service_role",
+      "proname": "vne_read_my_membership_questionnaires",
+      "allowed": false
+    },
+    {
+      "rolname": "service_role",
+      "proname": "vne_submit_membership_questionnaire",
+      "allowed": false
+    }
+  ],
+  "counts": {
+    "requests": 2,
+    "audits": 2,
+    "outbox": 0,
+    "invites": 0,
+    "admission": 0,
+    "applications": 0
+  },
+  "limitations": [
+    "Not real Auth JWT or PostgREST gateway testing",
+    "No live DDL, grants, Auth changes, accounts or records",
+    "No independent PostgreSQL transaction concurrency test",
+    "Explicit separate approval and live gates required before applying either proposal"
+  ]
+}

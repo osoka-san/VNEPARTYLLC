@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "network": "disabled",
+  "backend": "synthetic public config; no account session",
+  "browser": "NOT VERIFIED",
+  "results": [
+    {
+      "route": "/login",
+      "status": 200,
+      "htmlBytes": 11048
+    },
+    {
+      "function": "getAuthAvailability",
+      "status": 200
+    },
+    {
+      "route": "/apply",
+      "status": 303,
+      "unauthenticated": true
+    },
+    {
+      "route": "/member",
+      "status": 303,
+      "unauthenticated": true
+    }
+  ]
+}
+{
+  "status": "PASS",
+  "network": "fully mocked",
+  "aliasExactIdentity": true,
+  "thirdQaMfaDenied": true,
+  "noAutoEnrollment": true,
+  "selfEnrollment": true,
+  "challengeCookieRefresh": true,
+  "freshAal2": true,
+  "noFactorReplacement": true,
+  "noDatabaseOrAdminAPI": true,
+  "realAccount": "NOT USED"
+}
+{
+  "status": "PASS",
+  "network": "fully mocked",
+  "sixExactLogins": true,
+  "exactScannerReturn": true,
+  "scannerCannotUseAdminAlias": true,
+  "memberAndOriginalQaMfaDenied": true,
+  "bothScannersOwnMfa": true,
+  "getDoesNotEnroll": true,
+  "noAutoEnrollment": true,
+  "selfEnrollment": true,
+  "challengeCookieRefresh": true,
+  "freshAal2": true,
+  "ownScannerIdentity": true,
+  "verifiedFactorDoesNotPromoteNewAal1Session": true,
+  "readinessRequiresNoQrRpcOrOpenWindow": true,
+  "noFactorReplacement": true,
+  "noDatabaseOrAdminAPI": true,
+  "realAccount": "NOT USED"
+}
+{
+  "status": "PASS",
+  "network": "fully mocked",
+  "expiredSessionSSR": [
+    "/auth/v1/token?grant_type=refresh_token",
+    "/auth/v1/user",
+    "/auth/v1/user",
+    "/rest/v1/rpc/vne_read_my_membership_questionnaires"
+  ],
+  "expiredSessionLogout": [
+    "/auth/v1/token?grant_type=refresh_token",
+    "/auth/v1/user",
+    "/auth/v1/logout?scope=local"
+  ],
+  "logoutCookies": "deletion only",
+  "realAccount": "NOT USED"
+}
+{"loginId":"2b321688-f5fe-4099-9de2-f316bf07c3d3","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"02e03845-bc0d-4a9b-8500-87bb1f11ccf6","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"996a7a9c-04fc-43f2-9251-7d5a8dd9a92b","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"15cbc7a4-92f6-48d8-abb2-ed68f7612271","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"1e7259c2-ad13-43a1-b34b-cba71533e844","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"ed2433cb-bc6e-4b23-aa57-000839292ec4","mockedLogin":"allowed UUID accepted","status":"PASS"}
+{"loginId":"00000000-0000-4000-8000-000000000002","mockedLogin":"other UUID rejected and cookie cleared","status":"PASS"}
+{"status":"PASS","exactFourReturnPaths":true,"invalidArraysAndExternalURLsRejected":true,"adminAliasPreservesExplicitTarget":true,"sameUuid403AndApiBoundaries":true,"network":"none"}
+PASS inherited TEST SSR, admin/scanner MFA, exact login IDs and session lifecycle on Day07 artifact
+✔ scripts/verify-day07-inherited.mjs (1766.494061ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1774.690353

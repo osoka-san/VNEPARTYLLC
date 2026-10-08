@@ -1,0 +1,80 @@
+[
+  {
+    "check": "typecheck",
+    "command": [
+      "/workspace/scratch/b9be800b9f4a/bun-runtime/node_modules/.bin/bun",
+      "run",
+      "typecheck"
+    ],
+    "started_at": "2026-10-05T08:55:47.592473+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "targeted-tests",
+    "command": [
+      "/workspace/scratch/b9be800b9f4a/bun-runtime/node_modules/.bin/bun",
+      "test",
+      "tests/tickets-contract.test.ts",
+      "tests/tickets-content.test.tsx",
+      "tests/auth-core.test.ts",
+      "tests/safe-redirect.test.ts",
+      "tests/contact-validation.test.ts",
+      "tests/telegram.test.ts",
+      "tests/portal-motion.test.ts",
+      "tests/gallery-continuation.test.ts"
+    ],
+    "started_at": "2026-10-05T08:55:49.675862+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "sites-loading-and-gate",
+    "command": [
+      "node",
+      "--test",
+      "tests/motion-provider-resilience.test.mjs",
+      "tests/sites-admin-gate.test.mjs"
+    ],
+    "started_at": "2026-10-05T08:55:49.940695+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "targeted-lint",
+    "command": [
+      "node_modules/.bin/eslint",
+      "src/lib/tickets/pass-proxy.server.ts",
+      "src/components/tickets/BadgeCard.tsx",
+      "src/components/tickets/PassView.tsx",
+      "tests/tickets-contract.test.ts",
+      "tests/tickets-content.test.tsx"
+    ],
+    "started_at": "2026-10-05T08:55:50.359264+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "build",
+    "command": [
+      "node",
+      "/root/.codex/plugins/cache/openai-curated-remote/sites/0.1.75/scripts/build-site.mjs"
+    ],
+    "started_at": "2026-10-05T08:55:51.677169+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "sites-adapter",
+    "command": [
+      "node",
+      "scripts/prepare-sites-output.mjs"
+    ],
+    "started_at": "2026-10-05T08:55:56.624579+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "worker-ssr",
+    "command": [
+      "node",
+      "scripts/verify-sites-build.mjs"
+    ],
+    "started_at": "2026-10-05T08:55:56.839252+00:00",
+    "exit_code": 0
+  }
+]

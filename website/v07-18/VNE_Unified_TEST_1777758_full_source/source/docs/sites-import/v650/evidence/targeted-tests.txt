@@ -1,0 +1,114 @@
+bun test v1.3.3 (274e01c7)
+
+tests/telegram.test.ts:
+(pass) telegram username > required and format [0.45ms]
+(pass) telegram login signature > valid, forged, expired [3.54ms]
+
+tests/safe-redirect.test.ts:
+(pass) safeRedirect > keeps allowed internal routes [0.18ms]
+(pass) safeRedirect > rejects https://evil.example [0.01ms]
+(pass) safeRedirect > rejects //evil.example
+(pass) safeRedirect > rejects /\evil.example
+(pass) safeRedirect > rejects javascript:alert(1)
+(pass) safeRedirect > rejects /memberx
+(pass) safeRedirect > rejects /unknown
+(pass) safeRedirect > rejects 
+(pass) safeRedirect > rejects %s
+(pass) safeRedirect > rejects /member
+
+
+tests/contact-validation.test.ts:
+(pass) isValidContact > rejects "" [0.06ms]
+(pass) isValidContact > rejects "   "
+(pass) isValidContact > rejects "-------" [0.03ms]
+(pass) isValidContact > rejects "((((((("
+(pass) isValidContact > rejects "+ ( ) -"
+(pass) isValidContact > rejects "123456"
+(pass) isValidContact > rejects "1234567890123456"
+(pass) isValidContact > rejects "a@b@c.ru" [0.01ms]
+(pass) isValidContact > rejects "name@example"
+(pass) isValidContact > rejects "name @example.com"
+(pass) isValidContact > rejects "abc"
+(pass) isValidContact > rejects "+7 abc 123 45 67"
+(pass) isValidContact > accepts "test@example.invalid" [0.02ms]
+(pass) isValidContact > accepts "+7 (999) 123-45-67"
+(pass) isValidContact > accepts "8 999 123 45 67"
+(pass) isValidContact > accepts "1234567"
+
+tests/tickets-content.test.tsx:
+(pass) long synthetic pass values remain complete outside the fixed-size card [80.47ms]
+
+tests/portal-motion.test.ts:
+(pass) portal premium motion > damping follows the same path at 30, 60, and 120 Hz [0.30ms]
+(pass) portal premium motion > damping never overshoots in either direction [0.42ms]
+(pass) portal premium motion > long resume delta is clamped [0.03ms]
+(pass) portal premium motion > quintic easing has fixed endpoints and continuous endpoint velocity [0.07ms]
+(pass) portal premium motion > hidden and assembled endpoints remain exact [0.29ms]
+(pass) portal premium motion > every link keeps moving after reveal until final hold [0.12ms]
+
+tests/auth-core.test.ts:
+(pass) config fail-closed > empty env disabled [0.15ms]
+(pass) config fail-closed > cloud fallback enables staging [0.06ms]
+(pass) config fail-closed > cloud fallback refuses production [0.03ms]
+(pass) config fail-closed > cloud fallback refuses secret key [0.06ms]
+(pass) config fail-closed > explicit VNE wins over cloud [0.04ms]
+(pass) config fail-closed > partial env disabled [0.04ms]
+(pass) config fail-closed > production env refused [0.02ms]
+(pass) config fail-closed > http refused for staging [0.03ms]
+(pass) config fail-closed > local http allowed only in development [0.03ms]
+(pass) config fail-closed > owner-confirmed test project allowed as staging [0.02ms]
+(pass) config fail-closed > test project still refused as production [0.01ms]
+(pass) config fail-closed > secret key refused [0.02ms]
+(pass) config fail-closed > valid staging enabled [0.01ms]
+(pass) sign-in contract > success uses safe redirect [0.36ms]
+(pass) sign-in contract > allowed redirect kept [0.09ms]
+(pass) sign-in contract > unknown user and wrong password same message [0.20ms]
+(pass) sign-in contract > network error [0.30ms]
+(pass) sign-in contract > invalid input never calls client [0.07ms]
+(pass) recovery contract > same answer for existing and missing account [0.20ms]
+(pass) recovery contract > weak password refused [0.16ms]
+(pass) callback, origin, staff > expired [0.05ms]
+(pass) callback, origin, staff > invalid [0.02ms]
+(pass) callback, origin, staff > network [0.01ms]
+(pass) callback, origin, staff > origin [0.05ms]
+(pass) callback, origin, staff > staff AND semantics [0.09ms]
+
+tests/gallery-continuation.test.ts:
+(pass) gallery continuation math > maps forward and backward positions with modulo four [0.12ms]
+(pass) gallery continuation math > keeps exact boundaries deterministic [0.04ms]
+(pass) gallery continuation math > supports arbitrary far jumps without accumulated state [0.02ms]
+(pass) gallery continuation math > grows in chunks and clamps to the practical limit [0.04ms]
+
+tests/tickets-contract.test.ts:
+(pass) current ticket staff permissions > no client, no identity, aal1 or failed claims deny before RPC [0.39ms]
+(pass) current ticket staff permissions > admin access refusal/error stops before capability lookup [0.33ms]
+(pass) current ticket staff permissions > missing, malformed or failed capability denies access [0.30ms]
+(pass) current ticket staff permissions > aal2, current admin access and events_manage are all required [0.11ms]
+(pass) current ticket staff permissions > revocation is observed by the next check [0.13ms]
+(pass) current ticket staff permissions > issue, get and revoke cannot call the service without capability [0.98ms]
+(pass) config > no config → null [0.09ms]
+(pass) config > http localhost only in development [0.12ms]
+(pass) config > short admin key is ignored [0.03ms]
+(pass) manual contract > valid [0.04ms]
+(pass) manual contract > name or telegram [0.02ms]
+(pass) manual contract > bad telegram [0.03ms]
+(pass) manual contract > bad access [0.02ms]
+(pass) manual contract > past validUntil [0.02ms]
+(pass) manual contract > non-integer total [0.07ms]
+(pass) manual contract > bad date [0.04ms]
+(pass) admin actions fail closed > no config → not_configured, no network [0.19ms]
+(pass) admin actions fail closed > unauthorized staff → no network [0.20ms]
+(pass) admin actions fail closed > cross origin → forbidden, staff not even checked [0.09ms]
+(pass) admin actions fail closed > invalid action / input [0.16ms]
+(pass) admin actions fail closed > issue: fixed path, bearer + idempotency, sanitized DTO, site pass path [0.90ms]
+(pass) admin actions fail closed > service unauthorized hides details [0.14ms]
+(pass) read pass > invalid token, no network [0.24ms]
+(pass) read pass > unconfigured [0.06ms]
+(pass) read pass > no admin key sent; revoked has no QR [0.19ms]
+(pass) read pass > network failure → unavailable, never active [0.18ms]
+(pass) read pass > helpers [0.05ms]
+
+ 91 pass
+ 0 fail
+ 1158 expect() calls
+Ran 91 tests across 8 files. [245.00ms]

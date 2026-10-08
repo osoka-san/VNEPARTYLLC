@@ -1,0 +1,92 @@
+✔ disabled endpoints perform no Auth calls (2.578034ms)
+✔ other user, anonymous user and mismatched claims cannot read or enroll (0.843357ms)
+✔ status is read-only and returns no QR/secret/token (0.275227ms)
+✔ enrollment occurs only on explicit begin for own account without verified factor (0.307796ms)
+✔ any existing verified factor blocks adding a new factor at aal1 (0.372524ms)
+✔ verification accepts only own selected factor and exactly six digits (0.745569ms)
+✔ unverified factor cannot replace existing verified factor during challenge (0.270049ms)
+✔ one existing verified TOTP can be challenged without client selecting IDs (0.372424ms)
+✔ multiple pending factors are not guessed (0.258421ms)
+✔ failed code does not claim MFA completion (0.331762ms)
+✔ factor presence is not an aal2 claim (1.683028ms)
+✔ verified aal2 session is reported without role mutation (0.207134ms)
+✔ only ADMIN_TEST reaches setup page and MFA methods (11.511903ms)
+✔ MFA route is default-off (0.714321ms)
+✔ same-origin POST required for enrollment (6.141972ms)
+✔ no role/admin/data route is enabled by MFA bootstrap (1.014676ms)
+✔ guest own questionnaire route remains accessible (1.058603ms)
+✔ MFA response stays no-store/no-referrer (0.478745ms)
+✔ third QA account cannot invoke any MFA method (1.375463ms)
+✔ same-tab logout clears state and blocks stale initial/enrollment/verify replies (2.286683ms)
+✔ cross-tab logout clears state and blocks stale initial/enrollment/verify replies (0.611596ms)
+✔ hide clears QR/code and blocks late enrollment while retaining nonsensitive factor (0.290269ms)
+✔ unmount invalidates outstanding completion and removes listeners/channel (0.217249ms)
+✔ logout between successful verify and fresh state read cannot re-enable UI (0.266924ms)
+PASS Day07 strict command/read/response contract, secret exclusions, replay policy, exact environment scope, closed redirect
+✔ tests/day07/contract.mjs (208.184405ms)
+PASS Day07 guard: six logins, three QR identities, methods/CSRF/8192 limit, header stripping, cookie precedence, safe URLs, four isolated previews, closed campaign redirect
+✔ tests/day07/guard.mjs (329.930262ms)
+PASS owner lifecycle: explicit issuance, immutable retry, stale mutation/read fences, hide/pagehide/unmount equivalent invalidation, failed focus recheck, generation/terminal gates, private address, confirmed rotation and bounded physics
+✔ tests/day07/owner-lifecycle.mjs (247.944432ms)
+✔ draft rollout defaults off and makes no Auth/database call (9.639268ms)
+✔ foreign/absent origin and oversized body are rejected before Auth/RPC (9.561029ms)
+✔ read projects verified owner/draft with private headers and refresh cookies (0.679339ms)
+✔ save calls only exact owner-bound RPC; partial payload succeeds (5.215178ms)
+✔ Auth/session rejection clears via signin and invalid payload is a definitive safe failure (1.493401ms)
+✔ enabled rollout cannot bypass finalizer by omitting or falsifying draftReference (1.195941ms)
+PASS Partial answers, both input modes, unfinished email and ratings round-trip; strict schema/bounds reject unknown owner/consent fields
+PASS Debounce saves latest edits once; refresh/new controller restores partial data; viewing does not save/extend TTL
+PASS Stale device/version stops without overwriting remote or silently discarding local answers; explicit reload resolves
+PASS Focus after committed-but-lost response resolves original mutation and saves later edits without false conflict/data loss
+PASS Definitive validation failure releases rejected mutation so corrected input can save normally
+PASS Edits during save queue serially; earlier acknowledgements never roll UI back to old answers
+PASS Logout-completion invalidation clears any old-session reload during logout and rejects a late load result
+PASS Lost response retries exact mutation/version/payload before later edits; network error never claims saved
+PASS Logout/session change blanks memory and invalidates late saves; old answers cannot return through stale callbacks
+PASS Expired drafts require explicit restart; submitted state clears memory and prevents autosave resurrection
+PASS Server validates Auth before RPC, rejects changed-session equality guard and foreign-owner responses
+✔ tests/questionnaire-drafts.test.mjs (290.28322ms)
+✔ disabled endpoints perform no Auth calls (2.242436ms)
+✔ other user, anonymous user and mismatched claims cannot read or enroll (0.45544ms)
+✔ status is read-only and returns no QR/secret/token (0.337301ms)
+✔ enrollment occurs only on explicit begin for own account without verified factor (0.231841ms)
+✔ any existing verified factor blocks adding a new factor at aal1 (0.421188ms)
+✔ verification accepts only own selected factor and exactly six digits (3.482179ms)
+✔ unverified factor cannot replace existing verified factor during challenge (0.334186ms)
+✔ one existing verified TOTP can be challenged without client selecting IDs (0.96399ms)
+✔ multiple pending factors are not guessed (2.152339ms)
+✔ failed code does not claim MFA completion (0.706731ms)
+✔ factor presence is not an aal2 claim (0.852672ms)
+✔ verified aal2 session is reported without role mutation (0.183929ms)
+✔ both exact scanners can read/enroll; every original QA and dedicated member is denied (0.662884ms)
+✔ only the exact two scanners reaches setup page and MFA methods (10.458238ms)
+✔ MFA route is default-off (0.742304ms)
+✔ same-origin POST required for enrollment (7.856568ms)
+✔ no role/admin/data route is enabled by MFA bootstrap (1.113256ms)
+✔ guest own questionnaire route remains accessible (0.880303ms)
+✔ MFA response stays no-store/no-referrer (0.518054ms)
+✔ third QA account cannot invoke any MFA method (1.181258ms)
+✔ same-tab logout clears state and blocks stale initial/enrollment/verify replies (1.9938ms)
+✔ cross-tab logout clears state and blocks stale initial/enrollment/verify replies (0.657125ms)
+✔ hide clears QR/code and blocks late enrollment while retaining nonsensitive factor (0.300816ms)
+✔ unmount invalidates outstanding completion and removes listeners/channel (0.186512ms)
+✔ logout between successful verify and fresh state read cannot re-enable UI (0.220945ms)
+✔ pagehide clears QR/code and fences late replies even without hidden visibility (0.186682ms)
+✔ actual plain-text access refusals remain forbidden through TanStack (4.357449ms)
+✔ disabled route has a separate safe reason (0.373085ms)
+✔ other HTTP errors discard arbitrary bodies and successful-looking failure payloads (0.981666ms)
+✔ successful GET keeps the actual status contract without extra requests (0.402149ms)
+✔ network failure and rejected parsing project no raw exception (0.288968ms)
+✔ scanner MFA return allows only the exact self-service endpoint (0.91134ms)
+✔ existing owner and ADMIN_TEST returns stay intact (0.20477ms)
+✔ only the six server-verified exact nonanonymous QA accounts are accepted; cookie claims cannot grant access (24.071975ms)
+✔ no cookie, rejected Auth, forged header and network failure fail closed (2.169596ms)
+✔ decoded cookie delimiters cannot inject a second inner Supabase cookie (2.376659ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 536.56552

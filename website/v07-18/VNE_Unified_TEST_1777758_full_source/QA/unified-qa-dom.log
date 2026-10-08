@@ -1,0 +1,33 @@
+✔ readiness works before run/window input, makes one GET and no QR POST, and projects safe fields (49.244503ms)
+✔ readiness gives distinct actionable MFA/account/server reasons with no enrollment or QR (175.903676ms)
+✔ readiness pending disables duplicate checks and calibration; actor changes fence stale replies (43.413101ms)
+✔ readiness is invalidated by lifecycle and late success/rejection cannot restore it (140.276757ms)
+✔ READY is not reused by the scheduled stage; fresh AAL1 stops before QR POST (5188.196505ms)
+✔ unmounted readiness reply cannot affect remount or start any automatic work (27.272029ms)
+✔ StrictMode and copying fields stay inert; one arm freezes fields and runs only at JIT (3032.277135ms)
+✔ UUID, canonical UTC and 30–120-second lead validation are local and actionable (52.68791ms)
+✔ Stop before JIT cancels with zero I/O; explicit reset is the only way to re-arm (116.584206ms)
+✔ cancel and reset during MFA fence stale completion after changed run/actor inputs (1658.338989ms)
+✔ all existing lifecycle fences stop the scheduled wait without automatic resumption (90.410213ms)
+✔ unmount during scheduled MFA rejects stale replies and leaves zero calls on remount (1511.013977ms)
+✔ MFA refusal and timeout stop with safe reasons and no QR POST (3434.56852ms)
+✔ closed server stops after one probe and consumed budget cannot reset (1486.358827ms)
+✔ late timer fails closed before JIT and shows reason without requests (27.267216ms)
+✔ one slow sample is shown safely and two good samples allow exactly one rehearsal (1627.904252ms)
+✔ insufficient sample quality shows metrics and stops after the three fixed probes (1404.73367ms)
+✔ hide after calibration stops final dispatch and does not reset consumed budget (1440.381058ms)
+✔ in-flight Stop preserves uncertainty and ignores late response (1635.639632ms)
+✔ second arm keeps external proof gate and schedules own MFA, three probes, ready check and one checkin (5116.713591ms)
+✔ explicit acknowledged winner replay gets fresh MFA and exactly one cached command, with no probes (4563.284185ms)
+✔ failed fresh MFA blocks replay once without an additional QR POST (5018.630434ms)
+✔ pending winner MFA disables duplicate replay and Stop fences the late GET (4192.180333ms)
+✔ unknown receipt fields are rejected and never copied into diagnostics (1992.660901ms)
+✔ safe report allowlists metadata and copy fallback; no credential or QR inputs are introduced (2110.458182ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46178.998707

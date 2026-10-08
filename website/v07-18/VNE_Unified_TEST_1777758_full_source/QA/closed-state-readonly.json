@@ -1,0 +1,31 @@
+{
+  "status": "CLOSED_VERIFIED_FRESH_READONLY",
+  "observedAt": "2026-10-08 19:52:30.301458+00",
+  "project": "xrocuwlofxhxoxajukne",
+  "runId": "062872f5-b46e-402e-ab6e-2c8b28c79288",
+  "remoteCalls": 1,
+  "remoteMutations": 0,
+  "flagsClosed": true,
+  "allClientAndPublicExecuteClosed": true,
+  "scopedRolesRevoked": 48,
+  "admissionsRevoked": 3,
+  "eventsArchived": 4,
+  "scopedCheckins": 0,
+  "scopedReceipts": 0,
+  "ticketEventCount": 26,
+  "auditCount": 62,
+  "cleanupEvidenceHashUnchanged": true,
+  "retainedPassIndependentlyReread": true,
+  "retainedPassStoredStatus": "active",
+  "retainedPassGeneration": 1,
+  "retainedPassVersion": 1,
+  "retainedPassValidUntil": "2026-10-08T18:58:00+00:00",
+  "retainedPassInterpretation": "Expired time window, archived event, closed flags and ACL. Stored active status does not grant current access.",
+  "sixthWindowOutcome": "Checkin not sent; concurrency NOT_VERIFIED; replay NOT_RUN. This read does not reopen or rerun anything.",
+  "queryScope": "Bounded read-only projection of frozen SCOPED_BASELINE_READONLY and 42_FIXTURE_READBACK_READONLY, plus same four-event/three-actor scoped checkin/receipt counts. No tokens, digests, credentials or private-detail rows exported.",
+  "evidence": {
+    "FRESH_CLOSED_READONLY.sql": "c8e907fefe485ee5f4ff255e33c858e51702d9e2f66fc24f00a7ad343f4fb3eb",
+    "fresh-closed-raw.json": "5b20c54dadaf049e8081f612d3788c1429a11aabbf6673b10a5eb366f27db20f",
+    "fresh-closed-parsed.json": "55def66a04d90f66d4eeaab9b3361adf113bdbf3ae599809508cf04983a2bce2"
+  }
+}

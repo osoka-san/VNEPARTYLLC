@@ -1,0 +1,45 @@
+PASS 1 exact original closed SQL and correction hashes recovered
+PASS 2 corrected command body equals deployed hash
+PASS 3 closed config/public RPC and all seven private function ACLs
+PASS 4 five new private tables retain RLS and no client CRUD
+PASS 5 disabled configuration blocks authenticated API
+PASS 6 anon and caller-supplied identity fields rejected
+PASS 7 populated owner list/status and both scanner catalogs
+PASS 8 other owner cannot read status or address
+PASS 9 explicit issue returns versioned 256-bit format and digest only at rest
+PASS 10 lost issue response replays receipt without recovering secret
+PASS 11 same operation ID with changed reason conflicts
+PASS 12 render/status/list have no rotation, writes or raw secret
+PASS 13 second independent issue is denied without replacing current pass
+PASS 14 explicit rotation revokes former generation atomically
+PASS 15 rotation replay does not reveal secret or increment generation
+PASS 16 wrong expected version cannot replace QR
+PASS 17 verify does not consume and one command records primary entry
+PASS 18 different scanner gets used; identical winner replay stays immutable
+PASS 19 reissue after primary entry cannot restore first-entry entitlement
+PASS 20 primary uniqueness follows participation rather than generation
+PASS 21 before release denied receipt remains immutable after time change
+PASS 22 entry time denied key stays denied when entry opens
+PASS 23 address separate reveal window and response excludes early address
+PASS 24 expiry checked by command without Cron
+PASS 25 owner explicit revoke and replay, no hidden replacement
+PASS 26 wrong-event and unknown token do not expose other participation
+PASS 27 legacy, malformed, oversized payloads and secret-like reason rejected
+PASS 28 invalid scans share authoritative per-actor rate limit
+PASS 29 ordinary member cannot scan and staff without matching event denied
+PASS 30 aal1 claim denied even with live aal2 session
+PASS 31 stale aal2 JWT rejected after live session downgrade
+PASS 32 unverified, removed and foreign MFA factors deny stale JWT
+PASS 33 expired and unknown live session cannot use signed claims
+PASS 34 revoked and expired event staff assignment immediately deny
+PASS 35 revoked owner admission blocks list,status,address,issue and scanner entry
+PASS 36 unapproved application, unpaid order and revoked participation deny issue
+PASS 37 non-synthetic event and live payment snapshot never enter demo issuer
+PASS 38 cancelled/unpublished event rejects issue
+PASS 39 staff revoke needs managing role; regular scanner cannot revoke another owner
+PASS 40 legacy stored pass is never silently issued or rotated
+PASS 41 outbox is held and audit/receipt payloads omit raw QR and secret fields
+PASS 42 observer refuses missing approval without taking a fixture lock
+PASS 43 bounded observer executes locally and cannot claim two-backend proof
+PASS 44 reconciliation projects exact receipt metadata without QR or hash fields
+{"status":"PASS","groups":44,"connections":1,"genuineAuth":"NOT_VERIFIED","realConcurrency":"NOT_VERIFIED","remoteCrypto":"NOT_VERIFIED","network":"NONE","bridge":"OFFLINE_ONLY"}

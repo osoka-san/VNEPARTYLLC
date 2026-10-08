@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "evidence": "static original-vs-derivative font data",
+  "results": [
+    {
+      "font": "subsets-v1/Unbounded-Variable-core.woff2",
+      "codepoints": 437,
+      "glyphLocationComparisons": 1311,
+      "bytes": 107748
+    },
+    {
+      "font": "subsets-v1/Unbounded-Variable-extended.woff2",
+      "codepoints": 701,
+      "glyphLocationComparisons": 2103,
+      "bytes": 147560
+    },
+    {
+      "font": "subsets-v1/Onest-Variable-core.woff2",
+      "codepoints": 415,
+      "glyphLocationComparisons": 1245,
+      "bytes": 58000
+    },
+    {
+      "font": "subsets-v1/Onest-Variable-extended.woff2",
+      "codepoints": 365,
+      "glyphLocationComparisons": 1095,
+      "bytes": 31868
+    }
+  ]
+}

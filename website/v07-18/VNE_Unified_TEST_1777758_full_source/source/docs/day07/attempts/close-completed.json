@@ -1,0 +1,357 @@
+{
+  "project": "xrocuwlofxhxoxajukne",
+  "link_id": "link_6ac5210948b481918ec5122ab5be26dc",
+  "authorization_ref": "Sentinel_ae22efd58c1c8191ad5b657a0a0d11be",
+  "close_reason": "Early close requested by parent on reported user stop and test UI failure",
+  "scheduled_window": {
+    "start_utc": "2026-10-08T09:25:00Z",
+    "deadline_utc": "2026-10-08T09:45:00Z"
+  },
+  "before_write": {
+    "config": [
+      {
+        "enabled": true,
+        "project_ref": "xrocuwlofxhxoxajukne",
+        "synthetic_admission": true
+      }
+    ],
+    "db_utc": "2026-10-08T09:35:37.945353+00:00",
+    "events": [
+      {
+        "id": "d0700000-0000-4000-8000-000000000001",
+        "slug": "day07-primary-race",
+        "status": "published",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000001",
+        "slug": "day07-rotation-revoke",
+        "status": "published",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000001",
+        "slug": "day07-future-boundaries",
+        "status": "published",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:29:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000001",
+        "slug": "day07-short-expiry",
+        "status": "published",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      }
+    ],
+    "admissions": [
+      {
+        "state": "admitted",
+        "source": "day07.synthetic-20261008",
+        "user_id": "15cbc7a4-92f6-48d8-abb2-ed68f7612271",
+        "no_invite": true,
+        "binding_ok": true
+      },
+      {
+        "state": "admitted",
+        "source": "day07.synthetic-20261008",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "no_invite": true,
+        "binding_ok": true
+      },
+      {
+        "state": "admitted",
+        "source": "day07.synthetic-20261008",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "no_invite": true,
+        "binding_ok": true
+      }
+    ],
+    "api_execute": {
+      "anon": false,
+      "PUBLIC": false,
+      "service_role": false,
+      "authenticated": true
+    },
+    "assignments": [
+      {
+        "id": "d0700000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0700000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0700000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0700000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0710000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0710000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0720000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0720000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0730000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0730000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": null,
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      }
+    ],
+    "cleanup_audits": 0,
+    "disable_audits": 0,
+    "api_function_present": true,
+    "effective_scanner_assignments": 8
+  },
+  "execution": {
+    "disable": {
+      "file": "90_EMERGENCY_DISABLE_PROPOSAL.sql",
+      "source_sha256": "31382a734c47f59bb89e8956aa215ceae34f05402af1343a55e2bcaba8df7ab5",
+      "request_utc": "2026-10-08T09:35:43.490Z",
+      "response_utc": "2026-10-08T09:35:50.912Z",
+      "tool_is_error": false,
+      "retries": 0
+    },
+    "cleanup": {
+      "file": "91_SCOPED_CLEANUP_PROPOSAL.sql",
+      "source_sha256": "8e67254d65645895c8992149070542cb16e4049588c57d4b1a64c5cf5be90323",
+      "request_utc": "2026-10-08T09:35:58.340Z",
+      "response_utc": "2026-10-08T09:36:05.185Z",
+      "tool_is_error": false,
+      "approval_ref_transaction_local": true,
+      "retries": 0
+    }
+  },
+  "verified_closed_state": {
+    "config": [
+      {
+        "enabled": false,
+        "project_ref": "xrocuwlofxhxoxajukne",
+        "synthetic_admission": false
+      }
+    ],
+    "db_utc": "2026-10-08T09:36:14.977375+00:00",
+    "events": [
+      {
+        "id": "d0700000-0000-4000-8000-000000000001",
+        "slug": "day07-primary-race",
+        "status": "archived",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000001",
+        "slug": "day07-rotation-revoke",
+        "status": "archived",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000001",
+        "slug": "day07-future-boundaries",
+        "status": "archived",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:29:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000001",
+        "slug": "day07-short-expiry",
+        "status": "archived",
+        "binding_ok": true,
+        "is_synthetic": true,
+        "qr_release_at": "2026-10-08T09:25:00+00:00"
+      }
+    ],
+    "admissions": [
+      {
+        "state": "revoked",
+        "source": "day07.synthetic-20261008",
+        "user_id": "15cbc7a4-92f6-48d8-abb2-ed68f7612271",
+        "no_invite": true,
+        "binding_ok": true
+      },
+      {
+        "state": "revoked",
+        "source": "day07.synthetic-20261008",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "no_invite": true,
+        "binding_ok": true
+      },
+      {
+        "state": "revoked",
+        "source": "day07.synthetic-20261008",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "no_invite": true,
+        "binding_ok": true
+      }
+    ],
+    "api_execute": {
+      "anon": false,
+      "PUBLIC": false,
+      "service_role": false,
+      "authenticated": false
+    },
+    "assignments": [
+      {
+        "id": "d0700000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0700000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.408169+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0700000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0700000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.409142+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0710000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.909002+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0710000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0710000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.909091+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0720000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.964479+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0720000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0720000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:04.964559+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000008",
+        "role": "scanner",
+        "user_id": "1e7259c2-ad13-43a1-b34b-cba71533e844",
+        "event_id": "d0730000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:05.020129+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      },
+      {
+        "id": "d0730000-0000-4000-8000-000000000009",
+        "role": "scanner",
+        "user_id": "ed2433cb-bc6e-4b23-aa57-000839292ec4",
+        "event_id": "d0730000-0000-4000-8000-000000000001",
+        "binding_ok": true,
+        "revoked_at": "2026-10-08T09:36:05.020209+00:00",
+        "valid_from": "2026-10-08T09:25:00+00:00",
+        "valid_until": "2026-10-08T09:45:00+00:00"
+      }
+    ],
+    "cleanup_audits": 1,
+    "disable_audits": 1,
+    "api_function_present": true,
+    "effective_scanner_assignments": 0
+  },
+  "assertions": {
+    "config_closed": true,
+    "public_API_execute_closed": true,
+    "all_8_assignments_retained_and_revoked": true,
+    "effective_scanner_assignments_zero": true,
+    "all_3_admissions_retained_and_revoked": true,
+    "all_4_events_retained_and_archived": true,
+    "exact_close_audits_once": true
+  },
+  "scope": "Executed only the two approved close-down statements. No deletion, Auth/factor/password, runtime flag, ADMIN_TEST, draft, MAIN, other-account or enablement operation."
+}

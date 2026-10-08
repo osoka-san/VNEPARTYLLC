@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "serverFunctions": 18,
+  "browserSerializer": "installed TanStack",
+  "network": "fully mocked",
+  "realDatabase": "NOT VERIFIED",
+  "getReadOnly": true,
+  "postCommandOnly": true,
+  "verifiedIdentity": true,
+  "threeExactQrAccounts": true,
+  "noTokenInGetOrErrors": true,
+  "noServiceRole": true,
+  "absentRpcFailsClosed": true,
+  "selectedScannerOnly": true,
+  "inertScannerSSR": true,
+  "noPrivateOwnerSSR": true,
+  "exactPublicProbeScope": true,
+  "nestedAdminMfaRendered": true,
+  "v10AdminBoundariesPreserved": true,
+  "immutableEnvelopesDeniedWithoutFrameworkLogs": true,
+  "latestAdminLoginReturnPreserved": true
+}

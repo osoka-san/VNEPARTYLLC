@@ -1,0 +1,27 @@
+Независимый security/integration review: APPROVE
+Точный чистый SHA: 1777758d2a044652605615de0d66f5b39bfe5541
+Проверено 8 октября 2026; отдельный проверяющий контекст, без изменений продукта.
+
+Оба блокера предыдущего кандидата исправлены и перепроверены:
+- SPA-обход /login → /admin → главная закрыт. Переходы и history revalidate существующую TEST-сессию; потеря сессии возвращает на /login.
+- Emitted assets обслуживаются напрямую через ASSETS. Отсутствующий binding, HTML fallback, неверный MIME и redirect закрываются без SSR; HEAD пустой, Set-Cookie удаляется.
+
+PASS, собственные проверки независимого reviewer:
+- 35 boundary/SSR/SPA/assets/telemetry тестов
+- 63 Day07/auth/MFA/session/draft регрессии
+- 3 независимых DOM-теста: diagnostics exact ADMIN_TEST, boolean-only loader projection, повторный вход после смены аккаунта
+- Compiled transport; после последнего косметического изменения compiled SSR и transport повторены: 2/2 PASS
+
+56 защищённых staged runtime файлов побайтово совпадают с Day07.
+Сохранены ровно 18 прежних server functions с прежними методами.
+Все 285 allowlisted assets присутствуют; SQL в dist отсутствует.
+Auth, draft, admission, QR, tickets, DB, sessions, hosting, package и lockfile не изменены.
+В клиентской сборке нет raw-error Lovable hooks или новых media/sections server handlers.
+Последний diff относительно проверенного 0d10669 содержит только исправление подписи диагностики.
+
+SHA-256 финальных артефактов:
+dist/server/index.js: b34d9f57e1614920cae8f7b011e2f1735921a3edcfb7233f84aa231ac76b00da
+dist/server/day07-guard.mjs: 6e234ce99e2f288f0ded6cbdfe3bfa23e7b71cc82b6f004401b9779f8048fd29
+dist/server/day07-allowlist.json: b1ea68170900d58e97ce65664fa3fa0c0788a434d8037f70ad2dcfe06ec755ce
+
+Ограничения: actual Site browser/визуальная проверка, физические устройства, настоящая Auth-интеграция и live QR race не подтверждены. БД и remote state не менялись; новое окно Day07 не открывалось. Verdict не заменяет формальную приёмку и разрешение на публикацию.

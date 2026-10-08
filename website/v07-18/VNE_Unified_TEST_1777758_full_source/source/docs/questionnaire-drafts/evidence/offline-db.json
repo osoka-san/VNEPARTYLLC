@@ -1,0 +1,38 @@
+{
+  "type": "offline-synthetic-only",
+  "testedAt": "2026-10-07T12:41:37.000Z",
+  "base": "c0ad4b246f7b5a38887c63f0a06caed986cef5ff",
+  "proposalSha256": "9d3f8e00080bc7eaae55cc0a26f1e850f58a8f657fc7a084c687008d2cab87cb",
+  "activationSha256": "e9b37be63796a7333ddb86a0b546e1a4030dbfd874b2773b6ca36174379d1578",
+  "tests": [
+    "Closed DDL fully rolls back; no table or draft access remains",
+    "New table has RLS; closed functions/table grant no PUBLIC, anon, authenticated or service-role access",
+    "Separate activation rolls back safely; only three exact owner-checked wrappers gain authenticated EXECUTE, old submit bypass is retired",
+    "SQL/TypeScript validators agree on partial input, both modes, missing fields and 16 malformed/oversized/foreign-key mutations",
+    "Authenticated owner saves incomplete draft; reload round-trips both modes/progress; TTL exactly 67×24h; reads/replays do not renew expiry",
+    "Old saves/retries and competing new drafts cannot replace a newer version; one draft per owner",
+    "Ownership comes from verified session; foreign accounts cannot read or write another account's draft, including session switch in flight",
+    "Submission still requires full final questionnaire/consent and exact draft version; failures leave draft intact",
+    "Forced audit failure rolls back submission and deletion; success atomically clears draft; replay keeps same request/correlation; late saves cannot resurrect",
+    "Expiry hides data without deletion; explicit new save retains old expired row, creates only one current row, and repeated views create nothing",
+    "Missing/foreign/revoked/anonymous sessions and anon/service-role execution fail closed",
+    "A new valid session for the same account resumes the saved draft without renewing expiry",
+    "Successful submission deletes only its current draft; retained expired rows are not physically removed",
+    "Daily 03:00 UTC job registration/ACL SQL passes with offline cron stub; exact purge deletes expired draft only and is idempotent",
+    "A purged/absent draft cannot be resurrected by stale first-create issuance; explicit fresh issuance saves and unexpired drafts survive purge"
+  ],
+  "counts": {
+    "requests": 2,
+    "audits": 2,
+    "outbox": 0,
+    "invites": 0,
+    "admission": 0,
+    "applications": 0
+  },
+  "limitations": [
+    "PGlite is single-session; real multi-connection PostgreSQL race tests not run",
+    "Auth/JWT, PostgREST and live project ACLs are not verified",
+    "Nothing applied to a remote database",
+    "Cron registration uses an offline stub; real extension/daemon remains an activation check"
+  ]
+}

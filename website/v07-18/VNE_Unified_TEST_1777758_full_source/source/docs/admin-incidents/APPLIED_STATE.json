@@ -1,0 +1,21 @@
+{
+  "date_utc": "2026-10-08",
+  "project_id": "xrocuwlofxhxoxajukne",
+  "module_migrations_applied": 7,
+  "target_user_id": "02e03845-bc0d-4a9b-8500-87bb1f11ccf6",
+  "roles": [
+    "incident_manager",
+    "membership_reviewer"
+  ],
+  "scope": "All current/future TEST events and general R2 review until revoked",
+  "admission": "exempt",
+  "approval_reference": "Sentinel_27b14a14167081919c334aa22437db32",
+  "live_totp_and_linked_aal2_verified": true,
+  "authenticated_rpc_count": 8,
+  "forbidden_private_table_grants": 0,
+  "audit_rows": 3,
+  "live_guard_source_md5": "79575344943435790f67016b82741ea8",
+  "ui_publication": "pending",
+  "source_review_freeze_sha256": "8796d719395411dde54b775f640664c67f9ff8565fbb8dd11111552f32a06366",
+  "additional_ui_patch": "login succeeds via document navigation to preserve server wrong-account MFA guidance"
+}

@@ -1,0 +1,205 @@
+{
+  "status": "LOCAL_ONLY_NOT_APPLIED_NOT_PUBLISHED",
+  "date_utc": "2026-10-08",
+  "recovered_incident_freeze_file_sha256": "6ee05ec778626bba95bd6dafed612e616cad3cd42f45db1637765a2a3f6cecaf",
+  "test_ui_base_commit": "76151bcb64e79c0a808dba2b491db736d60d3c66",
+  "publication_dependency": "MFA repair v9 preserved; recheck current TEST source for any later approved changes before publication",
+  "sql_groups": 35,
+  "assignment_groups": 11,
+  "domain_transport_tests": 41,
+  "site_guard_tests": 4,
+  "real_database_writes": 0,
+  "files": [
+    {
+      "tree": "hardening",
+      "file": "APPROVAL_SCOPE_RU.md",
+      "sha256": "05d4c341b4c0884ec0e7d1d6d379d0f57c4825e49800730bedde18507aaf879f"
+    },
+    {
+      "tree": "hardening",
+      "file": "fixtures/id_trace_extension.sql",
+      "sha256": "ac9643bd381f20c2a228e643c260ebeb078225224c8a0579d286d62725a6fa18"
+    },
+    {
+      "tree": "hardening",
+      "file": "fixtures/membership_questionnaire_proposal.sql",
+      "sha256": "b7488e9a007b6dd737362621062ff8b6d54e901eadba3e79fdbcc70095921cc9"
+    },
+    {
+      "tree": "hardening",
+      "file": "fixtures/restricted_test_baseline.sql",
+      "sha256": "a6f2a6b0266634fad7563f78ef396a5f2522a35429b42b269cc138feb7bc781e"
+    },
+    {
+      "tree": "hardening",
+      "file": "fixtures/supabase-stub.sql",
+      "sha256": "6e2a89d11ce719699b8d6a63ab65d20875a64f09b18b69c3f70cdd42bcac8c9b"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/admin_test_assignment.closed.sql",
+      "sha256": "35e14ee9975323514bfb2909cf060d2ef9603a09050173b22a6a810a7fba371d"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/intake_review_access.proposal.sql",
+      "sha256": "3abfdddc1132026b46fcce820bd4ceb5bdcfdeda2e786ef27e785be18f12bc6c"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/intake_review_closed.proposal.sql",
+      "sha256": "440984342a8972ef0bc080528a12e7bc256147273d5ed0934a06628dbc23216d"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/violations_access.proposal.sql",
+      "sha256": "03463a0334c1b3e040b8170c72cb301d7b725dd8c6222914e4eac515a627da63"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/violations_closed.proposal.sql",
+      "sha256": "3cdcfe7e690be0a63405716e7ebc64ecfcf84e6e03dae04d60a6903ea8acfaf4"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/violations_profiles.proposal.sql",
+      "sha256": "590f5c681ee6f86c364b46ff682c083110179ea4cc7f10c71f2c3330cbe84255"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/violations_reads_closed.proposal.sql",
+      "sha256": "0da72ed37dfd8814742e9da88deadc4240484084777ed7d11d6630d481cd4e4b"
+    },
+    {
+      "tree": "hardening",
+      "file": "sql/violations_session_closed.proposal.sql",
+      "sha256": "3885cee2264d28288ead90c1f55dbce6cc94f4f7b91a9556d30cdb60a18bd795"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/ViolationsPrototype.tsx",
+      "sha256": "24beb0abf6fd59a5faeda6a697ecfb0040bca36a6a5ea5145f99651cc3baab5e"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/admin-alias.server.ts",
+      "sha256": "85eea3e3364ce92137498b8e9320cdf01d5f0fc7c8921ff52b74c254c910dd5c"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/assets.d.ts",
+      "sha256": "f83b7112951261bc3f310dc01529e1665a5be628167274811ba99893dcd6a21c"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/incident-contract.ts",
+      "sha256": "5ee6f1ece76ff11b6d21b42857425af9fff951f3e1a27a65366e90b57b20121e"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/incident-qr-lookup.ts",
+      "sha256": "8d9dc9750301deafcf11edd378cde411d74bdf769798cdd0da76e99a1c37af7f"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/incident-server.ts",
+      "sha256": "e1e700c41001591ff3395b520cc20ec3099249ce543b37aaaec7bdbeaf3d70aa"
+    },
+    {
+      "tree": "hardening",
+      "file": "src/preview-entry.tsx",
+      "sha256": "985711be5b3958e91ae9d220106d129ad250b4c5e056c25f41ffbe3775641785"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/admin-alias.test.ts",
+      "sha256": "b4506318d1cfc568d812c057230adce161a5148869f0eb73ba2a45340e8a2f23"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/assignment-local.mjs",
+      "sha256": "2b7b2efc5cea8c9c0f6603ed506cdd51214b55129ba76d1eacc5cac1af84e7fb"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/incident-contract.test.ts",
+      "sha256": "e72d493d2201a660c805034b9692b8b49d086f6d703042bb15ed6da308063094"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/incident-db.mjs",
+      "sha256": "cdca4d85777fe009a1d783d0df19d47e7c2386282cba7ae8f0ed67d7f836c144"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/incident-qr-lookup.test.ts",
+      "sha256": "6127584104776a4432b74278643d4124c486fdd96a4c36c176e56b0ad654dc11"
+    },
+    {
+      "tree": "hardening",
+      "file": "tests/incident-server.test.ts",
+      "sha256": "d022919b40e6e8d955b83755f529d6bbef43fe55667a194a6e5828fd44b30152"
+    },
+    {
+      "tree": "ui",
+      "file": "test-stand/guard.mjs",
+      "sha256": "b10cd509e500d70e67f767cd6f49cedeb91b89a7e938c2da7f017965c807f1b9"
+    },
+    {
+      "tree": "ui",
+      "file": "test-stand/routes/__root.tsx",
+      "sha256": "7c2fb0ebeb0cfffbc263269980124ba1aa03663e40f4d2c5f35fd641cb5bd2dd"
+    },
+    {
+      "tree": "ui",
+      "file": "test-stand/routes/admin.violations.tsx",
+      "sha256": "38b39f41566111fef71eea00e3fdb8e40d7258cba0f0fff9c5538111dd245bff"
+    },
+    {
+      "tree": "ui",
+      "file": "test-stand/routes/admin.intakes.tsx",
+      "sha256": "5e27874dc00352894bd3eacf1475d9ad297f1f5892b805b6c54bb17ceb096450"
+    },
+    {
+      "tree": "ui",
+      "file": "scripts/prepare-test-output.mjs",
+      "sha256": "dec02b7bfc7517d9765ae3c72b9955045b9ddcd8f4e93e388d76437f030b3f90"
+    },
+    {
+      "tree": "ui",
+      "file": "src/lib/incidents/incident-contract.ts",
+      "sha256": "823d51d0dd67ab96a352200d2af37a2f61e82483a75c1acc44f86ba73daa2985"
+    },
+    {
+      "tree": "ui",
+      "file": "src/lib/incidents/incident-server.ts",
+      "sha256": "61a7bea11e18645a23c219ef1a1e140370b4825f369a53fedf11e8cceda14626"
+    },
+    {
+      "tree": "ui",
+      "file": "src/lib/incidents/incidents.functions.ts",
+      "sha256": "330ad961f99a659e17ae9cfffeea418928f7921f70bd38aeeac5c2518c137825"
+    },
+    {
+      "tree": "ui",
+      "file": "src/components/admin/IncidentWorkspace.tsx",
+      "sha256": "547559ce1a6aa35ce95340bee6d94bfc0a834e822af881afe31a6f300782f936"
+    },
+    {
+      "tree": "ui",
+      "file": "src/components/admin/IntakeReviewWorkspace.tsx",
+      "sha256": "341a524839c356377a966d26d1e2b57ba8b865c55201534b5daa6f249c08e844"
+    },
+    {
+      "tree": "ui",
+      "file": "src/components/admin/incidents.css",
+      "sha256": "d13349231d76300055b4a914a60ca3267a6dd1f50075d87f35d1ca92ceb77ea4"
+    },
+    {
+      "tree": "ui",
+      "file": "tests/admin-incidents-guard.test.mjs",
+      "sha256": "ee19b9605e7f6e75dc8273e53b611461bed1e86b2eee71202e6c2533734c05a8"
+    }
+  ],
+  "revision": "total boolean guard; missing/null JWT claims regression; UI on deployed MFA fix v9"
+}
